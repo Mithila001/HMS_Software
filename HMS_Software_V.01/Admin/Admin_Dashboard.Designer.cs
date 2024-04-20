@@ -30,13 +30,13 @@
         {
             this.sidePanel = new System.Windows.Forms.Panel();
             this.sidePanel_FlowLP = new System.Windows.Forms.FlowLayoutPanel();
-            this.admin_mainPanel = new System.Windows.Forms.Panel();
             this.admin_home_btn = new System.Windows.Forms.Button();
             this.admin_doctors_btn = new System.Windows.Forms.Button();
             this.admin_nurse_btn = new System.Windows.Forms.Button();
             this.admin_patiets_btn = new System.Windows.Forms.Button();
             this.admin_Reception_btn = new System.Windows.Forms.Button();
             this.admin_Appointment_btn = new System.Windows.Forms.Button();
+            this.admin_mainPanel = new System.Windows.Forms.Panel();
             this.admin_Appointment1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Appointment();
             this.admin_Reception1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Reception();
             this.admin_Patients1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Patients();
@@ -73,20 +73,6 @@
             this.sidePanel_FlowLP.Name = "sidePanel_FlowLP";
             this.sidePanel_FlowLP.Size = new System.Drawing.Size(70, 537);
             this.sidePanel_FlowLP.TabIndex = 0;
-            // 
-            // admin_mainPanel
-            // 
-            this.admin_mainPanel.Controls.Add(this.admin_Appointment1);
-            this.admin_mainPanel.Controls.Add(this.admin_Reception1);
-            this.admin_mainPanel.Controls.Add(this.admin_Patients1);
-            this.admin_mainPanel.Controls.Add(this.admin_Nurses1);
-            this.admin_mainPanel.Controls.Add(this.admin_home1);
-            this.admin_mainPanel.Controls.Add(this.admin_Doctors1);
-            this.admin_mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.admin_mainPanel.Location = new System.Drawing.Point(70, 0);
-            this.admin_mainPanel.Name = "admin_mainPanel";
-            this.admin_mainPanel.Size = new System.Drawing.Size(938, 537);
-            this.admin_mainPanel.TabIndex = 1;
             // 
             // admin_home_btn
             // 
@@ -182,6 +168,20 @@
             this.admin_Appointment_btn.UseVisualStyleBackColor = true;
             this.admin_Appointment_btn.Click += new System.EventHandler(this.admin_Appointment_btn_Click);
             // 
+            // admin_mainPanel
+            // 
+            this.admin_mainPanel.Controls.Add(this.admin_Appointment1);
+            this.admin_mainPanel.Controls.Add(this.admin_Reception1);
+            this.admin_mainPanel.Controls.Add(this.admin_Patients1);
+            this.admin_mainPanel.Controls.Add(this.admin_Nurses1);
+            this.admin_mainPanel.Controls.Add(this.admin_home1);
+            this.admin_mainPanel.Controls.Add(this.admin_Doctors1);
+            this.admin_mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.admin_mainPanel.Location = new System.Drawing.Point(70, 0);
+            this.admin_mainPanel.Name = "admin_mainPanel";
+            this.admin_mainPanel.Size = new System.Drawing.Size(938, 537);
+            this.admin_mainPanel.TabIndex = 1;
+            // 
             // admin_Appointment1
             // 
             this.admin_Appointment1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -241,6 +241,7 @@
             this.Controls.Add(this.sidePanel);
             this.MinimumSize = new System.Drawing.Size(1024, 576);
             this.Name = "Admin_Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Dashboard";
             this.sidePanel.ResumeLayout(false);
             this.sidePanel_FlowLP.ResumeLayout(false);

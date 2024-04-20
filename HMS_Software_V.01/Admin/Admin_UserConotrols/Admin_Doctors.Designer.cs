@@ -38,6 +38,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
             this.bottom_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonPanel = new System.Windows.Forms.Panel();
             this.searchDoctor_btn = new System.Windows.Forms.Button();
             this.registerDoctor_btn = new System.Windows.Forms.Button();
             this.Ad_home_bottom_panel = new System.Windows.Forms.Panel();
@@ -53,18 +54,17 @@
             this.TopTable_Panel2 = new System.Windows.Forms.Panel();
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
             this.Ad_home_top_panel = new System.Windows.Forms.Panel();
-            this.buttonPanel = new System.Windows.Forms.Panel();
             this.materialCard1.SuspendLayout();
             this.materialCard3.SuspendLayout();
             this.materialCard4.SuspendLayout();
             this.bottom_tableLayoutPanel1.SuspendLayout();
+            this.buttonPanel.SuspendLayout();
             this.Ad_home_bottom_panel.SuspendLayout();
             this.TopTable_Panel.SuspendLayout();
             this.TopTable_Panel3.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
             this.Ad_home_top_panel.SuspendLayout();
-            this.buttonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -207,6 +207,17 @@
             this.bottom_tableLayoutPanel1.Size = new System.Drawing.Size(938, 402);
             this.bottom_tableLayoutPanel1.TabIndex = 0;
             // 
+            // buttonPanel
+            // 
+            this.bottom_tableLayoutPanel1.SetColumnSpan(this.buttonPanel, 3);
+            this.buttonPanel.Controls.Add(this.searchDoctor_btn);
+            this.buttonPanel.Controls.Add(this.registerDoctor_btn);
+            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPanel.Location = new System.Drawing.Point(3, 204);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(932, 195);
+            this.buttonPanel.TabIndex = 9;
+            // 
             // searchDoctor_btn
             // 
             this.searchDoctor_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -223,6 +234,7 @@
             this.searchDoctor_btn.TabIndex = 8;
             this.searchDoctor_btn.Text = "Search";
             this.searchDoctor_btn.UseVisualStyleBackColor = false;
+            this.searchDoctor_btn.Click += new System.EventHandler(this.searchDoctor_btn_Click);
             // 
             // registerDoctor_btn
             // 
@@ -240,6 +252,7 @@
             this.registerDoctor_btn.TabIndex = 7;
             this.registerDoctor_btn.Text = "Register";
             this.registerDoctor_btn.UseVisualStyleBackColor = false;
+            this.registerDoctor_btn.Click += new System.EventHandler(this.registerDoctor_btn_Click);
             // 
             // Ad_home_bottom_panel
             // 
@@ -389,17 +402,6 @@
             this.Ad_home_top_panel.Size = new System.Drawing.Size(938, 135);
             this.Ad_home_top_panel.TabIndex = 2;
             // 
-            // buttonPanel
-            // 
-            this.bottom_tableLayoutPanel1.SetColumnSpan(this.buttonPanel, 3);
-            this.buttonPanel.Controls.Add(this.searchDoctor_btn);
-            this.buttonPanel.Controls.Add(this.registerDoctor_btn);
-            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPanel.Location = new System.Drawing.Point(3, 204);
-            this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(932, 195);
-            this.buttonPanel.TabIndex = 9;
-            // 
             // Admin_Doctors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +417,7 @@
             this.materialCard4.ResumeLayout(false);
             this.materialCard4.PerformLayout();
             this.bottom_tableLayoutPanel1.ResumeLayout(false);
+            this.buttonPanel.ResumeLayout(false);
             this.Ad_home_bottom_panel.ResumeLayout(false);
             this.TopTable_Panel.ResumeLayout(false);
             this.TopTable_Panel.PerformLayout();
@@ -425,7 +428,6 @@
             this.top_tableLayoutPanle.ResumeLayout(false);
             this.top_tableLayoutPanle.PerformLayout();
             this.Ad_home_top_panel.ResumeLayout(false);
-            this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

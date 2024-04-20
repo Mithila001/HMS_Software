@@ -16,5 +16,26 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
         {
             InitializeComponent();
         }
+
+        private void searchDoctor_btn_Click(object sender, EventArgs e)
+        {
+            Admin_DoctorSearch admin_DoctorSearch = new Admin_DoctorSearch();  
+            admin_DoctorSearch.Show();
+
+            Form parentForm = this.FindForm();
+            parentForm.Hide();
+
+
+        }
+
+        private void registerDoctor_btn_Click(object sender, EventArgs e)
+        {
+            Admin_DoctorRegister admin_DoctorRegister   = new Admin_DoctorRegister();
+            admin_DoctorRegister.Show();
+
+            Form parentForm = this.FindForm();  
+            parentForm.Hide();
+            
+        }
     }
 }

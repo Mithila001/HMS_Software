@@ -35,6 +35,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.buttonPanel = new System.Windows.Forms.Panel();
+            this.RegisterNurse_btn = new System.Windows.Forms.Button();
+            this.SearchNurse_btn = new System.Windows.Forms.Button();
             this.Ad_home_bottom_panel = new System.Windows.Forms.Panel();
             this.Ad_home_top_panel = new System.Windows.Forms.Panel();
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
@@ -48,19 +51,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.label5 = new System.Windows.Forms.Label();
-            this.buttonPanel = new System.Windows.Forms.Panel();
-            this.SearchNurse_btn = new System.Windows.Forms.Button();
-            this.RegisterNurse_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.materialCard1.SuspendLayout();
+            this.buttonPanel.SuspendLayout();
             this.Ad_home_bottom_panel.SuspendLayout();
             this.Ad_home_top_panel.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
             this.TopTable_Panel3.SuspendLayout();
             this.TopTable_Panel.SuspendLayout();
-            this.buttonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -161,6 +161,54 @@
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(232, 121);
             this.materialCard1.TabIndex = 0;
+            // 
+            // buttonPanel
+            // 
+            this.buttonPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel1.SetColumnSpan(this.buttonPanel, 3);
+            this.buttonPanel.Controls.Add(this.RegisterNurse_btn);
+            this.buttonPanel.Controls.Add(this.SearchNurse_btn);
+            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPanel.Location = new System.Drawing.Point(3, 204);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(932, 195);
+            this.buttonPanel.TabIndex = 7;
+            // 
+            // RegisterNurse_btn
+            // 
+            this.RegisterNurse_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RegisterNurse_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.RegisterNurse_btn.FlatAppearance.BorderSize = 0;
+            this.RegisterNurse_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.RegisterNurse_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.RegisterNurse_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegisterNurse_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterNurse_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.RegisterNurse_btn.Location = new System.Drawing.Point(337, 63);
+            this.RegisterNurse_btn.Name = "RegisterNurse_btn";
+            this.RegisterNurse_btn.Size = new System.Drawing.Size(240, 81);
+            this.RegisterNurse_btn.TabIndex = 9;
+            this.RegisterNurse_btn.Text = "Register";
+            this.RegisterNurse_btn.UseVisualStyleBackColor = false;
+            this.RegisterNurse_btn.Click += new System.EventHandler(this.RegisterNurse_btn_Click);
+            // 
+            // SearchNurse_btn
+            // 
+            this.SearchNurse_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchNurse_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.SearchNurse_btn.FlatAppearance.BorderSize = 0;
+            this.SearchNurse_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.SearchNurse_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.SearchNurse_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchNurse_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchNurse_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.SearchNurse_btn.Location = new System.Drawing.Point(659, 63);
+            this.SearchNurse_btn.Name = "SearchNurse_btn";
+            this.SearchNurse_btn.Size = new System.Drawing.Size(240, 81);
+            this.SearchNurse_btn.TabIndex = 8;
+            this.SearchNurse_btn.Text = "Search";
+            this.SearchNurse_btn.UseVisualStyleBackColor = false;
+            this.SearchNurse_btn.Click += new System.EventHandler(this.SearchNurse_btn_Click);
             // 
             // Ad_home_bottom_panel
             // 
@@ -310,52 +358,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "LOGO";
             // 
-            // buttonPanel
-            // 
-            this.buttonPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel1.SetColumnSpan(this.buttonPanel, 3);
-            this.buttonPanel.Controls.Add(this.RegisterNurse_btn);
-            this.buttonPanel.Controls.Add(this.SearchNurse_btn);
-            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPanel.Location = new System.Drawing.Point(3, 204);
-            this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(932, 195);
-            this.buttonPanel.TabIndex = 7;
-            // 
-            // SearchNurse_btn
-            // 
-            this.SearchNurse_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchNurse_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.SearchNurse_btn.FlatAppearance.BorderSize = 0;
-            this.SearchNurse_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.SearchNurse_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.SearchNurse_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchNurse_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchNurse_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.SearchNurse_btn.Location = new System.Drawing.Point(659, 63);
-            this.SearchNurse_btn.Name = "SearchNurse_btn";
-            this.SearchNurse_btn.Size = new System.Drawing.Size(240, 81);
-            this.SearchNurse_btn.TabIndex = 8;
-            this.SearchNurse_btn.Text = "Search";
-            this.SearchNurse_btn.UseVisualStyleBackColor = false;
-            // 
-            // RegisterNurse_btn
-            // 
-            this.RegisterNurse_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RegisterNurse_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.RegisterNurse_btn.FlatAppearance.BorderSize = 0;
-            this.RegisterNurse_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.RegisterNurse_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.RegisterNurse_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterNurse_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterNurse_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.RegisterNurse_btn.Location = new System.Drawing.Point(337, 63);
-            this.RegisterNurse_btn.Name = "RegisterNurse_btn";
-            this.RegisterNurse_btn.Size = new System.Drawing.Size(240, 81);
-            this.RegisterNurse_btn.TabIndex = 9;
-            this.RegisterNurse_btn.Text = "Register";
-            this.RegisterNurse_btn.UseVisualStyleBackColor = false;
-            // 
             // Admin_Nurses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +371,7 @@
             this.materialCard2.PerformLayout();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
+            this.buttonPanel.ResumeLayout(false);
             this.Ad_home_bottom_panel.ResumeLayout(false);
             this.Ad_home_top_panel.ResumeLayout(false);
             this.top_tableLayoutPanle.ResumeLayout(false);
@@ -379,7 +382,6 @@
             this.TopTable_Panel3.PerformLayout();
             this.TopTable_Panel.ResumeLayout(false);
             this.TopTable_Panel.PerformLayout();
-            this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

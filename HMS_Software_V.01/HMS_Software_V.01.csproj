@@ -62,6 +62,24 @@
     <Compile Include="Admin\Admin_DoctorRegister.Designer.cs">
       <DependentUpon>Admin_DoctorRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin_DoctorSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_DoctorSearch.Designer.cs">
+      <DependentUpon>Admin_DoctorSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_NurseRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_NurseRegister.Designer.cs">
+      <DependentUpon>Admin_NurseRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_NurseSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_NurseSearch.Designer.cs">
+      <DependentUpon>Admin_NurseSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin_UserConotrols\Admin_Appointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,6 +123,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_DoctorRegister.resx">
       <DependentUpon>Admin_DoctorRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_DoctorSearch.resx">
+      <DependentUpon>Admin_DoctorSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_NurseRegister.resx">
+      <DependentUpon>Admin_NurseRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_NurseSearch.resx">
+      <DependentUpon>Admin_NurseSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Appointment.resx">
       <DependentUpon>Admin_Appointment.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HMS_Software_V._01.Admin
 {
-    public partial class Admin_DoctorRegister : Form
+    public partial class Admin_NurseRegister : Form
     {
-        public Admin_DoctorRegister()
+        public Admin_NurseRegister()
         {
             InitializeComponent();
             this.FormClosed += (s, e) => new Admin_Dashboard().Show();
