@@ -83,6 +83,26 @@ namespace HMS_Software_V._01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nurse_icon {
+            get {
+                object obj = ResourceManager.GetObject("Nurse_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Patient_icon {
+            get {
+                object obj = ResourceManager.GetObject("Patient_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Reception_icon {
             get {
                 object obj = ResourceManager.GetObject("Reception_icon", resourceCulture);

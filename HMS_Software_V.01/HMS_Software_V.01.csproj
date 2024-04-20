@@ -68,6 +68,18 @@
     <Compile Include="Admin\Admin_UserConotrols\Admin_home.Designer.cs">
       <DependentUpon>Admin_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Nurses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Nurses.Designer.cs">
+      <DependentUpon>Admin_Nurses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Patients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Patients.Designer.cs">
+      <DependentUpon>Admin_Patients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\Admin_Dashboard.resx">
@@ -78,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_home.resx">
       <DependentUpon>Admin_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Nurses.resx">
+      <DependentUpon>Admin_Nurses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Patients.resx">
+      <DependentUpon>Admin_Patients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +125,8 @@
   <ItemGroup>
     <Content Include="Assests\icons\Doctor_icon.png" />
     <Content Include="Assests\icons\Home_icon.png" />
+    <Content Include="Assests\icons\Nurse_icon.png" />
+    <Content Include="Assests\icons\Patient_icon.png" />
     <Content Include="Assests\icons\Reception_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

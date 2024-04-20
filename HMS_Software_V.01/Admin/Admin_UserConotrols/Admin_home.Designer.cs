@@ -44,6 +44,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard6 = new MaterialSkin.Controls.MaterialCard();
             this.AdminHome_TWard_lbl = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.materialCard5 = new MaterialSkin.Controls.MaterialCard();
             this.AdminHome_TClinics_lbl = new System.Windows.Forms.Label();
             this.lables = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.AdminHome_TDoc_lbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.Ad_home_top_panel.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
@@ -267,12 +267,23 @@
             // 
             this.AdminHome_TWard_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AdminHome_TWard_lbl.AutoSize = true;
-            this.AdminHome_TWard_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminHome_TWard_lbl.Location = new System.Drawing.Point(96, 67);
+            this.AdminHome_TWard_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminHome_TWard_lbl.Location = new System.Drawing.Point(96, 66);
             this.AdminHome_TWard_lbl.Name = "AdminHome_TWard_lbl";
-            this.AdminHome_TWard_lbl.Size = new System.Drawing.Size(34, 24);
+            this.AdminHome_TWard_lbl.Size = new System.Drawing.Size(44, 32);
             this.AdminHome_TWard_lbl.TabIndex = 5;
             this.AdminHome_TWard_lbl.Text = "51";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(53, 14);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(129, 24);
+            this.label32.TabIndex = 4;
+            this.label32.Text = "Total Wards";
             // 
             // materialCard5
             // 
@@ -296,10 +307,10 @@
             // 
             this.AdminHome_TClinics_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AdminHome_TClinics_lbl.AutoSize = true;
-            this.AdminHome_TClinics_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminHome_TClinics_lbl.Location = new System.Drawing.Point(96, 67);
+            this.AdminHome_TClinics_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminHome_TClinics_lbl.Location = new System.Drawing.Point(96, 68);
             this.AdminHome_TClinics_lbl.Name = "AdminHome_TClinics_lbl";
-            this.AdminHome_TClinics_lbl.Size = new System.Drawing.Size(34, 24);
+            this.AdminHome_TClinics_lbl.Size = new System.Drawing.Size(44, 32);
             this.AdminHome_TClinics_lbl.TabIndex = 5;
             this.AdminHome_TClinics_lbl.Text = "51";
             // 
@@ -336,10 +347,10 @@
             // 
             this.AdminHome_TReception_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AdminHome_TReception_lbl.AutoSize = true;
-            this.AdminHome_TReception_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminHome_TReception_lbl.Location = new System.Drawing.Point(96, 67);
+            this.AdminHome_TReception_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminHome_TReception_lbl.Location = new System.Drawing.Point(96, 66);
             this.AdminHome_TReception_lbl.Name = "AdminHome_TReception_lbl";
-            this.AdminHome_TReception_lbl.Size = new System.Drawing.Size(34, 24);
+            this.AdminHome_TReception_lbl.Size = new System.Drawing.Size(44, 32);
             this.AdminHome_TReception_lbl.TabIndex = 5;
             this.AdminHome_TReception_lbl.Text = "51";
             // 
@@ -376,10 +387,10 @@
             // 
             this.AdminHome_TPatient_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AdminHome_TPatient_lbl.AutoSize = true;
-            this.AdminHome_TPatient_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminHome_TPatient_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminHome_TPatient_lbl.Location = new System.Drawing.Point(96, 67);
             this.AdminHome_TPatient_lbl.Name = "AdminHome_TPatient_lbl";
-            this.AdminHome_TPatient_lbl.Size = new System.Drawing.Size(34, 24);
+            this.AdminHome_TPatient_lbl.Size = new System.Drawing.Size(44, 32);
             this.AdminHome_TPatient_lbl.TabIndex = 5;
             this.AdminHome_TPatient_lbl.Text = "51";
             // 
@@ -416,10 +427,10 @@
             // 
             this.AdminHome_TNurse_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AdminHome_TNurse_lbl.AutoSize = true;
-            this.AdminHome_TNurse_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminHome_TNurse_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminHome_TNurse_lbl.Location = new System.Drawing.Point(96, 67);
             this.AdminHome_TNurse_lbl.Name = "AdminHome_TNurse_lbl";
-            this.AdminHome_TNurse_lbl.Size = new System.Drawing.Size(34, 24);
+            this.AdminHome_TNurse_lbl.Size = new System.Drawing.Size(44, 32);
             this.AdminHome_TNurse_lbl.TabIndex = 5;
             this.AdminHome_TNurse_lbl.Text = "51";
             // 
@@ -456,10 +467,10 @@
             // 
             this.AdminHome_TDoc_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AdminHome_TDoc_lbl.AutoSize = true;
-            this.AdminHome_TDoc_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminHome_TDoc_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminHome_TDoc_lbl.Location = new System.Drawing.Point(96, 67);
             this.AdminHome_TDoc_lbl.Name = "AdminHome_TDoc_lbl";
-            this.AdminHome_TDoc_lbl.Size = new System.Drawing.Size(34, 24);
+            this.AdminHome_TDoc_lbl.Size = new System.Drawing.Size(44, 32);
             this.AdminHome_TDoc_lbl.TabIndex = 5;
             this.AdminHome_TDoc_lbl.Text = "51";
             // 
@@ -473,17 +484,6 @@
             this.label6.Size = new System.Drawing.Size(144, 24);
             this.label6.TabIndex = 4;
             this.label6.Text = "Total Doctors";
-            // 
-            // label32
-            // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(53, 14);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(129, 24);
-            this.label32.TabIndex = 4;
-            this.label32.Text = "Total Wards";
             // 
             // Admin_home
             // 
