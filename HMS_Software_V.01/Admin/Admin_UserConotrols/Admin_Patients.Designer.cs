@@ -42,6 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Ad_home_bottom_panel = new System.Windows.Forms.Panel();
             this.bottom_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonPanel = new System.Windows.Forms.Panel();
+            this.SearchPatient_btn = new System.Windows.Forms.Button();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.Ad_Doc_TotOPDDoc_lbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.Ad_Doc_TotalDoc_lbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttonPanel = new System.Windows.Forms.Panel();
-            this.SearchPatient_btn = new System.Windows.Forms.Button();
             this.Ad_home_top_panel.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
@@ -60,10 +60,10 @@
             this.TopTable_Panel.SuspendLayout();
             this.Ad_home_bottom_panel.SuspendLayout();
             this.bottom_tableLayoutPanel1.SuspendLayout();
+            this.buttonPanel.SuspendLayout();
             this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.materialCard1.SuspendLayout();
-            this.buttonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Ad_home_top_panel
@@ -236,6 +236,35 @@
             this.bottom_tableLayoutPanel1.Size = new System.Drawing.Size(938, 402);
             this.bottom_tableLayoutPanel1.TabIndex = 0;
             // 
+            // buttonPanel
+            // 
+            this.buttonPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.bottom_tableLayoutPanel1.SetColumnSpan(this.buttonPanel, 3);
+            this.buttonPanel.Controls.Add(this.SearchPatient_btn);
+            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPanel.Location = new System.Drawing.Point(3, 204);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(932, 195);
+            this.buttonPanel.TabIndex = 8;
+            // 
+            // SearchPatient_btn
+            // 
+            this.SearchPatient_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchPatient_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.SearchPatient_btn.FlatAppearance.BorderSize = 0;
+            this.SearchPatient_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.SearchPatient_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.SearchPatient_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchPatient_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchPatient_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.SearchPatient_btn.Location = new System.Drawing.Point(659, 63);
+            this.SearchPatient_btn.Name = "SearchPatient_btn";
+            this.SearchPatient_btn.Size = new System.Drawing.Size(240, 81);
+            this.SearchPatient_btn.TabIndex = 8;
+            this.SearchPatient_btn.Text = "Search";
+            this.SearchPatient_btn.UseVisualStyleBackColor = false;
+            this.SearchPatient_btn.Click += new System.EventHandler(this.SearchPatient_btn_Click);
+            // 
             // materialCard3
             // 
             this.materialCard3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -356,34 +385,6 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Total Inpatients";
             // 
-            // buttonPanel
-            // 
-            this.buttonPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.bottom_tableLayoutPanel1.SetColumnSpan(this.buttonPanel, 3);
-            this.buttonPanel.Controls.Add(this.SearchPatient_btn);
-            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPanel.Location = new System.Drawing.Point(3, 204);
-            this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(932, 195);
-            this.buttonPanel.TabIndex = 8;
-            // 
-            // SearchPatient_btn
-            // 
-            this.SearchPatient_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchPatient_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.SearchPatient_btn.FlatAppearance.BorderSize = 0;
-            this.SearchPatient_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.SearchPatient_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.SearchPatient_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchPatient_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchPatient_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.SearchPatient_btn.Location = new System.Drawing.Point(659, 63);
-            this.SearchPatient_btn.Name = "SearchPatient_btn";
-            this.SearchPatient_btn.Size = new System.Drawing.Size(240, 81);
-            this.SearchPatient_btn.TabIndex = 8;
-            this.SearchPatient_btn.Text = "Search";
-            this.SearchPatient_btn.UseVisualStyleBackColor = false;
-            // 
             // Admin_Patients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,13 +404,13 @@
             this.TopTable_Panel.PerformLayout();
             this.Ad_home_bottom_panel.ResumeLayout(false);
             this.bottom_tableLayoutPanel1.ResumeLayout(false);
+            this.buttonPanel.ResumeLayout(false);
             this.materialCard3.ResumeLayout(false);
             this.materialCard3.PerformLayout();
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
-            this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
