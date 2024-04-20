@@ -30,10 +30,10 @@
         {
             this.sidePanel = new System.Windows.Forms.Panel();
             this.sidePanel_FlowLP = new System.Windows.Forms.FlowLayoutPanel();
-            this.admin_mainPanel = new System.Windows.Forms.Panel();
             this.admin_home_btn = new System.Windows.Forms.Button();
             this.admin_doctors_btn = new System.Windows.Forms.Button();
             this.admin_nurse_btn = new System.Windows.Forms.Button();
+            this.admin_mainPanel = new System.Windows.Forms.Panel();
             this.admin_home1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_home();
             this.sidePanel.SuspendLayout();
             this.sidePanel_FlowLP.SuspendLayout();
@@ -62,15 +62,6 @@
             this.sidePanel_FlowLP.Size = new System.Drawing.Size(70, 537);
             this.sidePanel_FlowLP.TabIndex = 0;
             // 
-            // admin_mainPanel
-            // 
-            this.admin_mainPanel.Controls.Add(this.admin_home1);
-            this.admin_mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.admin_mainPanel.Location = new System.Drawing.Point(70, 0);
-            this.admin_mainPanel.Name = "admin_mainPanel";
-            this.admin_mainPanel.Size = new System.Drawing.Size(938, 537);
-            this.admin_mainPanel.TabIndex = 1;
-            // 
             // admin_home_btn
             // 
             this.admin_home_btn.FlatAppearance.BorderSize = 0;
@@ -81,6 +72,7 @@
             this.admin_home_btn.Location = new System.Drawing.Point(0, 130);
             this.admin_home_btn.Margin = new System.Windows.Forms.Padding(0, 130, 0, 20);
             this.admin_home_btn.Name = "admin_home_btn";
+            this.admin_home_btn.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.admin_home_btn.Size = new System.Drawing.Size(70, 53);
             this.admin_home_btn.TabIndex = 0;
             this.admin_home_btn.UseVisualStyleBackColor = true;
@@ -112,6 +104,15 @@
             this.admin_nurse_btn.Size = new System.Drawing.Size(70, 53);
             this.admin_nurse_btn.TabIndex = 2;
             this.admin_nurse_btn.UseVisualStyleBackColor = true;
+            // 
+            // admin_mainPanel
+            // 
+            this.admin_mainPanel.Controls.Add(this.admin_home1);
+            this.admin_mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.admin_mainPanel.Location = new System.Drawing.Point(70, 0);
+            this.admin_mainPanel.Name = "admin_mainPanel";
+            this.admin_mainPanel.Size = new System.Drawing.Size(938, 537);
+            this.admin_mainPanel.TabIndex = 1;
             // 
             // admin_home1
             // 
