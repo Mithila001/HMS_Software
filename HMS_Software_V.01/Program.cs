@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HMS_Software_V._01
+namespace HMS_Software_V._01.Admin
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace HMS_Software_V._01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Admin_Dashboard());
         }
     }
 }

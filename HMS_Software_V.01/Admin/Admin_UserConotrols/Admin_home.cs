@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HMS_Software_V._01
+namespace HMS_Software_V._01.Admin.Admin_UserConotrols
 {
-    public partial class Form1 : Form
+    public partial class Admin_home : UserControl
     {
-        public Form1()
+        public Admin_home()
         {
             InitializeComponent();
         }
