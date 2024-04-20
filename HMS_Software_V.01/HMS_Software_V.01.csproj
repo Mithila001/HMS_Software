@@ -86,6 +86,12 @@
     <Compile Include="Admin\Admin_PatientSearch.Designer.cs">
       <DependentUpon>Admin_PatientSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin_ReceptionRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_ReceptionRegistration.Designer.cs">
+      <DependentUpon>Admin_ReceptionRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin_UserConotrols\Admin_Appointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_PatientSearch.resx">
       <DependentUpon>Admin_PatientSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_ReceptionRegistration.resx">
+      <DependentUpon>Admin_ReceptionRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Appointment.resx">
       <DependentUpon>Admin_Appointment.cs</DependentUpon>

@@ -42,8 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Ad_home_bottom_panel = new System.Windows.Forms.Panel();
             this.bottom_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.RegisterReception_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RegisterReception_btn = new System.Windows.Forms.Button();
             this.reception_DataGView = new System.Windows.Forms.DataGridView();
             this.Ad_home_top_panel.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
@@ -222,6 +222,15 @@
             this.bottom_tableLayoutPanel1.Size = new System.Drawing.Size(938, 402);
             this.bottom_tableLayoutPanel1.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.RegisterReception_btn);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 313);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(932, 86);
+            this.panel1.TabIndex = 10;
+            // 
             // RegisterReception_btn
             // 
             this.RegisterReception_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -238,15 +247,7 @@
             this.RegisterReception_btn.TabIndex = 9;
             this.RegisterReception_btn.Text = "Register Reception";
             this.RegisterReception_btn.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.RegisterReception_btn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 313);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(932, 86);
-            this.panel1.TabIndex = 10;
+            this.RegisterReception_btn.Click += new System.EventHandler(this.RegisterReception_btn_Click);
             // 
             // reception_DataGView
             // 

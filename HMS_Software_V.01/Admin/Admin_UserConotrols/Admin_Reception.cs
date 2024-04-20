@@ -16,5 +16,14 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
         {
             InitializeComponent();
         }
+
+        private void RegisterReception_btn_Click(object sender, EventArgs e)
+        {
+            Admin_ReceptionRegistration admin_ReceptionRegistration = new Admin_ReceptionRegistration();
+            admin_ReceptionRegistration.Show();
+
+            Form parentForm = this.FindForm();
+            parentForm.Hide();
+        }
     }
 }
