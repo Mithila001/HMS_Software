@@ -35,6 +35,10 @@
             this.admin_doctors_btn = new System.Windows.Forms.Button();
             this.admin_nurse_btn = new System.Windows.Forms.Button();
             this.admin_patiets_btn = new System.Windows.Forms.Button();
+            this.admin_Reception_btn = new System.Windows.Forms.Button();
+            this.admin_Appointment_btn = new System.Windows.Forms.Button();
+            this.admin_Appointment1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Appointment();
+            this.admin_Reception1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Reception();
             this.admin_Patients1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Patients();
             this.admin_Nurses1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Nurses();
             this.admin_home1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_home();
@@ -61,6 +65,8 @@
             this.sidePanel_FlowLP.Controls.Add(this.admin_doctors_btn);
             this.sidePanel_FlowLP.Controls.Add(this.admin_nurse_btn);
             this.sidePanel_FlowLP.Controls.Add(this.admin_patiets_btn);
+            this.sidePanel_FlowLP.Controls.Add(this.admin_Reception_btn);
+            this.sidePanel_FlowLP.Controls.Add(this.admin_Appointment_btn);
             this.sidePanel_FlowLP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sidePanel_FlowLP.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sidePanel_FlowLP.Location = new System.Drawing.Point(0, 0);
@@ -70,6 +76,8 @@
             // 
             // admin_mainPanel
             // 
+            this.admin_mainPanel.Controls.Add(this.admin_Appointment1);
+            this.admin_mainPanel.Controls.Add(this.admin_Reception1);
             this.admin_mainPanel.Controls.Add(this.admin_Patients1);
             this.admin_mainPanel.Controls.Add(this.admin_Nurses1);
             this.admin_mainPanel.Controls.Add(this.admin_home1);
@@ -87,8 +95,8 @@
             this.admin_home_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.admin_home_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.admin_home_btn.Image = global::HMS_Software_V._01.Properties.Resources.Home_icon;
-            this.admin_home_btn.Location = new System.Drawing.Point(0, 132);
-            this.admin_home_btn.Margin = new System.Windows.Forms.Padding(0, 132, 0, 10);
+            this.admin_home_btn.Location = new System.Drawing.Point(0, 100);
+            this.admin_home_btn.Margin = new System.Windows.Forms.Padding(0, 100, 0, 10);
             this.admin_home_btn.Name = "admin_home_btn";
             this.admin_home_btn.Size = new System.Drawing.Size(70, 53);
             this.admin_home_btn.TabIndex = 0;
@@ -102,7 +110,7 @@
             this.admin_doctors_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.admin_doctors_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.admin_doctors_btn.Image = global::HMS_Software_V._01.Properties.Resources.Doctor_icon;
-            this.admin_doctors_btn.Location = new System.Drawing.Point(0, 205);
+            this.admin_doctors_btn.Location = new System.Drawing.Point(0, 173);
             this.admin_doctors_btn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.admin_doctors_btn.Name = "admin_doctors_btn";
             this.admin_doctors_btn.Size = new System.Drawing.Size(70, 53);
@@ -117,7 +125,7 @@
             this.admin_nurse_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.admin_nurse_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.admin_nurse_btn.Image = global::HMS_Software_V._01.Properties.Resources.Nurse_icon;
-            this.admin_nurse_btn.Location = new System.Drawing.Point(0, 278);
+            this.admin_nurse_btn.Location = new System.Drawing.Point(0, 246);
             this.admin_nurse_btn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.admin_nurse_btn.Name = "admin_nurse_btn";
             this.admin_nurse_btn.Padding = new System.Windows.Forms.Padding(5);
@@ -133,7 +141,7 @@
             this.admin_patiets_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
             this.admin_patiets_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.admin_patiets_btn.Image = global::HMS_Software_V._01.Properties.Resources.Patient_icon;
-            this.admin_patiets_btn.Location = new System.Drawing.Point(0, 351);
+            this.admin_patiets_btn.Location = new System.Drawing.Point(0, 319);
             this.admin_patiets_btn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.admin_patiets_btn.Name = "admin_patiets_btn";
             this.admin_patiets_btn.Padding = new System.Windows.Forms.Padding(5);
@@ -141,6 +149,54 @@
             this.admin_patiets_btn.TabIndex = 3;
             this.admin_patiets_btn.UseVisualStyleBackColor = true;
             this.admin_patiets_btn.Click += new System.EventHandler(this.admin_patiets_btn_Click);
+            // 
+            // admin_Reception_btn
+            // 
+            this.admin_Reception_btn.FlatAppearance.BorderSize = 0;
+            this.admin_Reception_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.admin_Reception_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.admin_Reception_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.admin_Reception_btn.Image = global::HMS_Software_V._01.Properties.Resources.Reception_icon;
+            this.admin_Reception_btn.Location = new System.Drawing.Point(0, 392);
+            this.admin_Reception_btn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.admin_Reception_btn.Name = "admin_Reception_btn";
+            this.admin_Reception_btn.Padding = new System.Windows.Forms.Padding(5);
+            this.admin_Reception_btn.Size = new System.Drawing.Size(70, 53);
+            this.admin_Reception_btn.TabIndex = 4;
+            this.admin_Reception_btn.UseVisualStyleBackColor = true;
+            this.admin_Reception_btn.Click += new System.EventHandler(this.admin_Reception_btn_Click);
+            // 
+            // admin_Appointment_btn
+            // 
+            this.admin_Appointment_btn.FlatAppearance.BorderSize = 0;
+            this.admin_Appointment_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.admin_Appointment_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(110)))), ((int)(((byte)(255)))));
+            this.admin_Appointment_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.admin_Appointment_btn.Image = global::HMS_Software_V._01.Properties.Resources.Appointment_icon;
+            this.admin_Appointment_btn.Location = new System.Drawing.Point(0, 465);
+            this.admin_Appointment_btn.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.admin_Appointment_btn.Name = "admin_Appointment_btn";
+            this.admin_Appointment_btn.Padding = new System.Windows.Forms.Padding(5);
+            this.admin_Appointment_btn.Size = new System.Drawing.Size(70, 53);
+            this.admin_Appointment_btn.TabIndex = 5;
+            this.admin_Appointment_btn.UseVisualStyleBackColor = true;
+            this.admin_Appointment_btn.Click += new System.EventHandler(this.admin_Appointment_btn_Click);
+            // 
+            // admin_Appointment1
+            // 
+            this.admin_Appointment1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.admin_Appointment1.Location = new System.Drawing.Point(0, 0);
+            this.admin_Appointment1.Name = "admin_Appointment1";
+            this.admin_Appointment1.Size = new System.Drawing.Size(938, 537);
+            this.admin_Appointment1.TabIndex = 5;
+            // 
+            // admin_Reception1
+            // 
+            this.admin_Reception1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.admin_Reception1.Location = new System.Drawing.Point(0, 0);
+            this.admin_Reception1.Name = "admin_Reception1";
+            this.admin_Reception1.Size = new System.Drawing.Size(938, 537);
+            this.admin_Reception1.TabIndex = 4;
             // 
             // admin_Patients1
             // 
@@ -206,5 +262,9 @@
         private Admin_UserConotrols.Admin_Nurses admin_Nurses1;
         private System.Windows.Forms.Button admin_patiets_btn;
         private Admin_UserConotrols.Admin_Patients admin_Patients1;
+        private System.Windows.Forms.Button admin_Reception_btn;
+        private Admin_UserConotrols.Admin_Reception admin_Reception1;
+        private System.Windows.Forms.Button admin_Appointment_btn;
+        private Admin_UserConotrols.Admin_Appointment admin_Appointment1;
     }
 }

@@ -56,6 +56,18 @@
     <Compile Include="Admin\Admin_Dashboard.Designer.cs">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin_DoctorRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_DoctorRegister.Designer.cs">
+      <DependentUpon>Admin_DoctorRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Appointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Appointment.Designer.cs">
+      <DependentUpon>Admin_Appointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin_UserConotrols\Admin_Doctors.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,10 +92,22 @@
     <Compile Include="Admin\Admin_UserConotrols\Admin_Patients.Designer.cs">
       <DependentUpon>Admin_Patients.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Reception.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_UserConotrols\Admin_Reception.Designer.cs">
+      <DependentUpon>Admin_Reception.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_DoctorRegister.resx">
+      <DependentUpon>Admin_DoctorRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Appointment.resx">
+      <DependentUpon>Admin_Appointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Doctors.resx">
       <DependentUpon>Admin_Doctors.cs</DependentUpon>
@@ -96,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Patients.resx">
       <DependentUpon>Admin_Patients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Reception.resx">
+      <DependentUpon>Admin_Reception.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +150,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assests\icons\Appointment_icon.png" />
     <Content Include="Assests\icons\Doctor_icon.png" />
     <Content Include="Assests\icons\Home_icon.png" />
     <Content Include="Assests\icons\Nurse_icon.png" />

@@ -20,6 +20,8 @@ namespace HMS_Software_V._01.Admin
             admin_home1.Visible = true;
             admin_Nurses1.Visible = false;
             admin_Patients1.Visible = false;
+            admin_Reception1.Visible = false;
+            admin_Appointment1.Visible = false;
         }
 
         private void admin_doctors_btn_Click(object sender, EventArgs e)
@@ -28,6 +30,8 @@ namespace HMS_Software_V._01.Admin
             admin_home1.Visible = false;
             admin_Nurses1.Visible = false;
             admin_Patients1.Visible = false;
+            admin_Reception1.Visible = false;
+            admin_Appointment1.Visible = false;
         }
 
         private void admin_home_btn_Click(object sender, EventArgs e)
@@ -36,6 +40,8 @@ namespace HMS_Software_V._01.Admin
             admin_home1.Visible = true;
             admin_Nurses1.Visible = false;
             admin_Patients1.Visible = false;
+            admin_Reception1.Visible = false;
+            admin_Appointment1.Visible = false;
         }
 
         private void admin_nurse_btn_Click(object sender, EventArgs e)
@@ -44,6 +50,8 @@ namespace HMS_Software_V._01.Admin
             admin_home1.Visible = false;
             admin_Nurses1.Visible = true;
             admin_Patients1.Visible = false;
+            admin_Reception1.Visible = false;
+            admin_Appointment1.Visible = false;
         }
 
         private void admin_patiets_btn_Click(object sender, EventArgs e)
@@ -52,6 +60,30 @@ namespace HMS_Software_V._01.Admin
             admin_home1.Visible = false;
             admin_Nurses1.Visible = false;
             admin_Patients1.Visible = true;
+            admin_Reception1.Visible = false;
+            admin_Appointment1.Visible = false;
+        }
+
+        private void admin_Reception_btn_Click(object sender, EventArgs e)
+        {
+
+            admin_Doctors1.Visible = false;
+            admin_home1.Visible = false;
+            admin_Nurses1.Visible = false;
+            admin_Patients1.Visible = false;
+            admin_Reception1.Visible = true;
+            admin_Appointment1.Visible = false;
+        }
+
+        private void admin_Appointment_btn_Click(object sender, EventArgs e)
+        {
+            admin_Doctors1.Visible = false;
+            admin_home1.Visible = false;
+            admin_Nurses1.Visible = false;
+            admin_Patients1.Visible = false;
+            admin_Reception1.Visible = false;
+            admin_Appointment1.Visible = true;
+
         }
     }
 }
