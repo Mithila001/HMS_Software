@@ -34,6 +34,7 @@
             this.admin_doctors_btn = new System.Windows.Forms.Button();
             this.admin_nurse_btn = new System.Windows.Forms.Button();
             this.admin_mainPanel = new System.Windows.Forms.Panel();
+            this.admin_Doctors1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Doctors();
             this.admin_home1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_home();
             this.sidePanel.SuspendLayout();
             this.sidePanel_FlowLP.SuspendLayout();
@@ -76,6 +77,7 @@
             this.admin_home_btn.Size = new System.Drawing.Size(70, 53);
             this.admin_home_btn.TabIndex = 0;
             this.admin_home_btn.UseVisualStyleBackColor = true;
+            this.admin_home_btn.Click += new System.EventHandler(this.admin_home_btn_Click);
             // 
             // admin_doctors_btn
             // 
@@ -90,6 +92,7 @@
             this.admin_doctors_btn.Size = new System.Drawing.Size(70, 53);
             this.admin_doctors_btn.TabIndex = 1;
             this.admin_doctors_btn.UseVisualStyleBackColor = true;
+            this.admin_doctors_btn.Click += new System.EventHandler(this.admin_doctors_btn_Click);
             // 
             // admin_nurse_btn
             // 
@@ -108,20 +111,29 @@
             // admin_mainPanel
             // 
             this.admin_mainPanel.Controls.Add(this.admin_home1);
+            this.admin_mainPanel.Controls.Add(this.admin_Doctors1);
             this.admin_mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.admin_mainPanel.Location = new System.Drawing.Point(70, 0);
             this.admin_mainPanel.Name = "admin_mainPanel";
             this.admin_mainPanel.Size = new System.Drawing.Size(938, 537);
             this.admin_mainPanel.TabIndex = 1;
             // 
+            // admin_Doctors1
+            // 
+            this.admin_Doctors1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.admin_Doctors1.Location = new System.Drawing.Point(0, 0);
+            this.admin_Doctors1.Name = "admin_Doctors1";
+            this.admin_Doctors1.Size = new System.Drawing.Size(938, 537);
+            this.admin_Doctors1.TabIndex = 0;
+            // 
             // admin_home1
             // 
-            this.admin_home1.BackColor = System.Drawing.Color.White;
+            this.admin_home1.BackColor = System.Drawing.Color.Gainsboro;
             this.admin_home1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.admin_home1.Location = new System.Drawing.Point(0, 0);
             this.admin_home1.Name = "admin_home1";
             this.admin_home1.Size = new System.Drawing.Size(938, 537);
-            this.admin_home1.TabIndex = 0;
+            this.admin_home1.TabIndex = 1;
             // 
             // Admin_Dashboard
             // 
@@ -149,6 +161,7 @@
         private System.Windows.Forms.Button admin_doctors_btn;
         private System.Windows.Forms.Button admin_nurse_btn;
         private System.Windows.Forms.Panel admin_mainPanel;
+        private Admin_UserConotrols.Admin_Doctors admin_Doctors1;
         private Admin_UserConotrols.Admin_home admin_home1;
     }
 }
