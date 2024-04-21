@@ -81,10 +81,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1_mid_mid = new System.Windows.Forms.Panel();
             this.panel1_mid_right = new System.Windows.Forms.Panel();
+            this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             this.A_N_Save_btn = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1_mid_left.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1_top.SuspendLayout();
@@ -737,6 +737,27 @@
             this.panel1_mid_right.Size = new System.Drawing.Size(330, 433);
             this.panel1_mid_right.TabIndex = 3;
             // 
+            // D_Register_DTimePicker
+            // 
+            this.D_Register_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.D_Register_DTimePicker.Location = new System.Drawing.Point(11, 111);
+            this.D_Register_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
+            this.D_Register_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
+            this.D_Register_DTimePicker.Name = "D_Register_DTimePicker";
+            this.D_Register_DTimePicker.Size = new System.Drawing.Size(310, 20);
+            this.D_Register_DTimePicker.TabIndex = 48;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 91);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 15);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Date of Birth";
+            // 
             // materialDivider3
             // 
             this.materialDivider3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -766,27 +787,6 @@
             this.A_N_Save_btn.Text = "Save";
             this.A_N_Save_btn.UseVisualStyleBackColor = false;
             this.A_N_Save_btn.Click += new System.EventHandler(this.A_N_Save_btn_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 91);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 15);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "Full Name:";
-            // 
-            // D_Register_DTimePicker
-            // 
-            this.D_Register_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.D_Register_DTimePicker.Location = new System.Drawing.Point(11, 111);
-            this.D_Register_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
-            this.D_Register_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
-            this.D_Register_DTimePicker.Name = "D_Register_DTimePicker";
-            this.D_Register_DTimePicker.Size = new System.Drawing.Size(310, 20);
-            this.D_Register_DTimePicker.TabIndex = 48;
             // 
             // Admin_NurseRegister
             // 

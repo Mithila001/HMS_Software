@@ -51,7 +51,9 @@
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -151,6 +153,30 @@
     <Compile Include="MyCommonConnecString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reception\Reception_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\Reception_Dashboard.Designer.cs">
+      <DependentUpon>Reception_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\Reception_PatientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\Reception_PatientRegistration.Designer.cs">
+      <DependentUpon>Reception_PatientRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\Reception_PatientSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\Reception_PatientSearch.Designer.cs">
+      <DependentUpon>Reception_PatientSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\UserControls\Recep_D_TodayClinics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reception\UserControls\Recep_D_TodayClinics.Designer.cs">
+      <DependentUpon>Recep_D_TodayClinics.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +226,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reception\Reception_Dashboard.resx">
+      <DependentUpon>Reception_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\Reception_PatientRegistration.resx">
+      <DependentUpon>Reception_PatientRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\Reception_PatientSearch.resx">
+      <DependentUpon>Reception_PatientSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\UserControls\Recep_D_TodayClinics.resx">
+      <DependentUpon>Recep_D_TodayClinics.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DatabaseMithilaHMSDataSet.xsc">
       <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
     </None>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HMS_Software_V._01.Reception;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace HMS_Software_V._01.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin_Dashboard());
+            Application.Run(new Reception_Dashboard());
         }
     }
 }
