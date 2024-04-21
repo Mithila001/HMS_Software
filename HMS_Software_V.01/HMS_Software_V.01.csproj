@@ -143,6 +143,11 @@
     <Compile Include="Admin\Admin_UserConotrols\Admin_Reception.Designer.cs">
       <DependentUpon>Admin_Reception.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseMithilaHMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MyCommonConnecString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,6 +200,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DatabaseMithilaHMSDataSet.xsc">
+      <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseMithilaHMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseMithilaHMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseMithilaHMSDataSet.xss">
+      <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
             this.TopTable_Panel2 = new System.Windows.Forms.Panel();
@@ -42,16 +43,21 @@
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1_top2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.doctorSearch_combobox = new System.Windows.Forms.ComboBox();
             this.A_D_search_tbx = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1_doctor = new System.Windows.Forms.DataGridView();
+            this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseMithilaHMSDataSet = new HMS_Software_V._01.DatabaseMithilaHMSDataSet();
+            this.doctorTableAdapter = new HMS_Software_V._01.DatabaseMithilaHMSDataSetTableAdapters.DoctorTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
             this.TopTable_Panel3.SuspendLayout();
             this.TopTable_Panel.SuspendLayout();
             this.panel1_top2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_doctor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseMithilaHMSDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,7 +66,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.top_tableLayoutPanle, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1_top2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView1_doctor, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -217,7 +223,7 @@
             // panel1_top2
             // 
             this.panel1_top2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.panel1_top2.Controls.Add(this.comboBox1);
+            this.panel1_top2.Controls.Add(this.doctorSearch_combobox);
             this.panel1_top2.Controls.Add(this.A_D_search_tbx);
             this.panel1_top2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1_top2.Location = new System.Drawing.Point(3, 104);
@@ -225,21 +231,23 @@
             this.panel1_top2.Size = new System.Drawing.Size(1002, 40);
             this.panel1_top2.TabIndex = 10;
             // 
-            // comboBox1
+            // doctorSearch_combobox
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.doctorSearch_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.doctorSearch_combobox.BackColor = System.Drawing.Color.White;
+            this.doctorSearch_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.doctorSearch_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doctorSearch_combobox.ForeColor = System.Drawing.Color.Black;
+            this.doctorSearch_combobox.FormattingEnabled = true;
+            this.doctorSearch_combobox.Items.AddRange(new object[] {
             "By ID",
             "By NIC"});
-            this.comboBox1.Location = new System.Drawing.Point(757, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 47;
+            this.doctorSearch_combobox.Location = new System.Drawing.Point(757, 9);
+            this.doctorSearch_combobox.Name = "doctorSearch_combobox";
+            this.doctorSearch_combobox.Size = new System.Drawing.Size(121, 24);
+            this.doctorSearch_combobox.TabIndex = 47;
+            this.doctorSearch_combobox.SelectedIndexChanged += new System.EventHandler(this.doctorSearch_combobox_SelectedIndexChanged);
             // 
             // A_D_search_tbx
             // 
@@ -252,17 +260,35 @@
             this.A_D_search_tbx.Name = "A_D_search_tbx";
             this.A_D_search_tbx.Size = new System.Drawing.Size(252, 25);
             this.A_D_search_tbx.TabIndex = 27;
+            this.A_D_search_tbx.TextChanged += new System.EventHandler(this.A_D_search_tbx_TextChanged);
             // 
-            // dataGridView1
+            // dataGridView1_doctor
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView1_doctor.AllowUserToAddRows = false;
+            this.dataGridView1_doctor.AllowUserToDeleteRows = false;
+            this.dataGridView1_doctor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1002, 384);
-            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1_doctor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1_doctor.Location = new System.Drawing.Point(3, 150);
+            this.dataGridView1_doctor.Name = "dataGridView1_doctor";
+            this.dataGridView1_doctor.ReadOnly = true;
+            this.dataGridView1_doctor.Size = new System.Drawing.Size(1002, 384);
+            this.dataGridView1_doctor.TabIndex = 11;
+            // 
+            // doctorBindingSource
+            // 
+            this.doctorBindingSource.DataMember = "Doctor";
+            this.doctorBindingSource.DataSource = this.databaseMithilaHMSDataSet;
+            // 
+            // databaseMithilaHMSDataSet
+            // 
+            this.databaseMithilaHMSDataSet.DataSetName = "DatabaseMithilaHMSDataSet";
+            this.databaseMithilaHMSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // doctorTableAdapter
+            // 
+            this.doctorTableAdapter.ClearBeforeFill = true;
             // 
             // Admin_DoctorSearch
             // 
@@ -274,6 +300,7 @@
             this.Name = "Admin_DoctorSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_DoctorSearch";
+            this.Load += new System.EventHandler(this.Admin_DoctorSearch_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.top_tableLayoutPanle.ResumeLayout(false);
             this.top_tableLayoutPanle.PerformLayout();
@@ -285,7 +312,9 @@
             this.TopTable_Panel.PerformLayout();
             this.panel1_top2.ResumeLayout(false);
             this.panel1_top2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_doctor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseMithilaHMSDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,8 +335,11 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1_top2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView1_doctor;
         private System.Windows.Forms.TextBox A_D_search_tbx;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox doctorSearch_combobox;
+        private DatabaseMithilaHMSDataSet databaseMithilaHMSDataSet;
+        private System.Windows.Forms.BindingSource doctorBindingSource;
+        private DatabaseMithilaHMSDataSetTableAdapters.DoctorTableAdapter doctorTableAdapter;
     }
 }
