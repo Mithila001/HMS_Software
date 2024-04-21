@@ -1,4 +1,14 @@
 # Ignore Visual Studio temporary files and build results
+
+
+HMS_Software_V.01/DatabaseMithilaHMS.mdf
+
+
+
+
+
+
+
 [Dd]ebug/
 [Rr]elease/
 x64/

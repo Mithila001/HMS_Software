@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1_top = new System.Windows.Forms.Panel();
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
@@ -54,19 +55,21 @@
             this.label16 = new System.Windows.Forms.Label();
             this.A_D_experiecedYears_tbx = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.A_D_psotion_tbx = new System.Windows.Forms.TextBox();
+            this.A_D_position_tbx = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.A_D_contactNo_tbx = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.A_D_nextOfKin_tbx = new System.Windows.Forms.TextBox();
             this.panel1_mid_right = new System.Windows.Forms.Panel();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
-            this.button1 = new System.Windows.Forms.Button();
-            this.RegisterAppointment_btn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.A_D_register_btn = new System.Windows.Forms.Button();
+            this.A_D_uploadImage_btn = new System.Windows.Forms.Button();
+            this.A_D_pictureBox = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.A_D_address_tbx = new System.Windows.Forms.TextBox();
             this.panel1_mid_left = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.A_D_Email_tbx = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.A_D_Specialty_tbx = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -85,8 +88,7 @@
             this.A_D_NameWithInitials_tbx = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.A_D_fullName_tbx = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.A_D_Email_tbx = new System.Windows.Forms.TextBox();
+            this.errorProvider1_A_D_registration = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1_top.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
@@ -95,8 +97,9 @@
             this.TopTable_Panel.SuspendLayout();
             this.panel1_mid_mid.SuspendLayout();
             this.panel1_mid_right.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A_D_pictureBox)).BeginInit();
             this.panel1_mid_left.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1_A_D_registration)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -284,7 +287,7 @@
             this.panel1_mid_mid.Controls.Add(this.label16);
             this.panel1_mid_mid.Controls.Add(this.A_D_experiecedYears_tbx);
             this.panel1_mid_mid.Controls.Add(this.label15);
-            this.panel1_mid_mid.Controls.Add(this.A_D_psotion_tbx);
+            this.panel1_mid_mid.Controls.Add(this.A_D_position_tbx);
             this.panel1_mid_mid.Controls.Add(this.label14);
             this.panel1_mid_mid.Controls.Add(this.A_D_contactNo_tbx);
             this.panel1_mid_mid.Controls.Add(this.label13);
@@ -317,7 +320,7 @@
             this.A_D_degree_tbx.Multiline = true;
             this.A_D_degree_tbx.Name = "A_D_degree_tbx";
             this.A_D_degree_tbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.A_D_degree_tbx.Size = new System.Drawing.Size(314, 51);
+            this.A_D_degree_tbx.Size = new System.Drawing.Size(300, 51);
             this.A_D_degree_tbx.TabIndex = 38;
             // 
             // label20
@@ -341,7 +344,7 @@
             this.A_D_certificate_tbx.Multiline = true;
             this.A_D_certificate_tbx.Name = "A_D_certificate_tbx";
             this.A_D_certificate_tbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.A_D_certificate_tbx.Size = new System.Drawing.Size(314, 76);
+            this.A_D_certificate_tbx.Size = new System.Drawing.Size(300, 76);
             this.A_D_certificate_tbx.TabIndex = 40;
             // 
             // label18
@@ -363,7 +366,7 @@
             this.A_D_graduatedYear_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_graduatedYear_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_graduatedYear_tbx.Name = "A_D_graduatedYear_tbx";
-            this.A_D_graduatedYear_tbx.Size = new System.Drawing.Size(314, 22);
+            this.A_D_graduatedYear_tbx.Size = new System.Drawing.Size(300, 22);
             this.A_D_graduatedYear_tbx.TabIndex = 36;
             // 
             // label17
@@ -385,7 +388,7 @@
             this.A_D_medicalSchool_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_medicalSchool_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_medicalSchool_tbx.Name = "A_D_medicalSchool_tbx";
-            this.A_D_medicalSchool_tbx.Size = new System.Drawing.Size(314, 22);
+            this.A_D_medicalSchool_tbx.Size = new System.Drawing.Size(300, 22);
             this.A_D_medicalSchool_tbx.TabIndex = 34;
             // 
             // label16
@@ -407,7 +410,7 @@
             this.A_D_experiecedYears_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_experiecedYears_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_experiecedYears_tbx.Name = "A_D_experiecedYears_tbx";
-            this.A_D_experiecedYears_tbx.Size = new System.Drawing.Size(314, 22);
+            this.A_D_experiecedYears_tbx.Size = new System.Drawing.Size(300, 22);
             this.A_D_experiecedYears_tbx.TabIndex = 32;
             // 
             // label15
@@ -420,17 +423,17 @@
             this.label15.TabIndex = 31;
             this.label15.Text = "Position: ";
             // 
-            // A_D_psotion_tbx
+            // A_D_position_tbx
             // 
-            this.A_D_psotion_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.A_D_position_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_D_psotion_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_D_psotion_tbx.Location = new System.Drawing.Point(8, 108);
-            this.A_D_psotion_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_D_psotion_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_D_psotion_tbx.Name = "A_D_psotion_tbx";
-            this.A_D_psotion_tbx.Size = new System.Drawing.Size(314, 22);
-            this.A_D_psotion_tbx.TabIndex = 30;
+            this.A_D_position_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_D_position_tbx.Location = new System.Drawing.Point(8, 108);
+            this.A_D_position_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.A_D_position_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.A_D_position_tbx.Name = "A_D_position_tbx";
+            this.A_D_position_tbx.Size = new System.Drawing.Size(300, 22);
+            this.A_D_position_tbx.TabIndex = 30;
             // 
             // label14
             // 
@@ -451,7 +454,7 @@
             this.A_D_contactNo_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_contactNo_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_contactNo_tbx.Name = "A_D_contactNo_tbx";
-            this.A_D_contactNo_tbx.Size = new System.Drawing.Size(314, 22);
+            this.A_D_contactNo_tbx.Size = new System.Drawing.Size(300, 22);
             this.A_D_contactNo_tbx.TabIndex = 28;
             // 
             // label13
@@ -473,15 +476,15 @@
             this.A_D_nextOfKin_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_nextOfKin_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_nextOfKin_tbx.Name = "A_D_nextOfKin_tbx";
-            this.A_D_nextOfKin_tbx.Size = new System.Drawing.Size(314, 22);
+            this.A_D_nextOfKin_tbx.Size = new System.Drawing.Size(300, 22);
             this.A_D_nextOfKin_tbx.TabIndex = 26;
             // 
             // panel1_mid_right
             // 
             this.panel1_mid_right.Controls.Add(this.materialDivider3);
-            this.panel1_mid_right.Controls.Add(this.button1);
-            this.panel1_mid_right.Controls.Add(this.RegisterAppointment_btn);
-            this.panel1_mid_right.Controls.Add(this.pictureBox1);
+            this.panel1_mid_right.Controls.Add(this.A_D_register_btn);
+            this.panel1_mid_right.Controls.Add(this.A_D_uploadImage_btn);
+            this.panel1_mid_right.Controls.Add(this.A_D_pictureBox);
             this.panel1_mid_right.Controls.Add(this.label21);
             this.panel1_mid_right.Controls.Add(this.A_D_address_tbx);
             this.panel1_mid_right.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -503,49 +506,51 @@
             this.materialDivider3.TabIndex = 47;
             this.materialDivider3.Text = "materialDivider3";
             // 
-            // button1
+            // A_D_register_btn
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.button1.Location = new System.Drawing.Point(66, 354);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 59);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.A_D_register_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.A_D_register_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.A_D_register_btn.FlatAppearance.BorderSize = 0;
+            this.A_D_register_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.A_D_register_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.A_D_register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A_D_register_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_D_register_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.A_D_register_btn.Location = new System.Drawing.Point(66, 354);
+            this.A_D_register_btn.Name = "A_D_register_btn";
+            this.A_D_register_btn.Size = new System.Drawing.Size(200, 59);
+            this.A_D_register_btn.TabIndex = 46;
+            this.A_D_register_btn.Text = "Save";
+            this.A_D_register_btn.UseVisualStyleBackColor = false;
+            this.A_D_register_btn.Click += new System.EventHandler(this.A_D_register_btn_Click);
             // 
-            // RegisterAppointment_btn
+            // A_D_uploadImage_btn
             // 
-            this.RegisterAppointment_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.RegisterAppointment_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.RegisterAppointment_btn.FlatAppearance.BorderSize = 0;
-            this.RegisterAppointment_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.RegisterAppointment_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.RegisterAppointment_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterAppointment_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterAppointment_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.RegisterAppointment_btn.Location = new System.Drawing.Point(105, 254);
-            this.RegisterAppointment_btn.Name = "RegisterAppointment_btn";
-            this.RegisterAppointment_btn.Size = new System.Drawing.Size(116, 37);
-            this.RegisterAppointment_btn.TabIndex = 45;
-            this.RegisterAppointment_btn.Text = "Upload";
-            this.RegisterAppointment_btn.UseVisualStyleBackColor = false;
+            this.A_D_uploadImage_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.A_D_uploadImage_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.A_D_uploadImage_btn.FlatAppearance.BorderSize = 0;
+            this.A_D_uploadImage_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.A_D_uploadImage_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.A_D_uploadImage_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.A_D_uploadImage_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_D_uploadImage_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.A_D_uploadImage_btn.Location = new System.Drawing.Point(105, 254);
+            this.A_D_uploadImage_btn.Name = "A_D_uploadImage_btn";
+            this.A_D_uploadImage_btn.Size = new System.Drawing.Size(116, 37);
+            this.A_D_uploadImage_btn.TabIndex = 45;
+            this.A_D_uploadImage_btn.Text = "Upload";
+            this.A_D_uploadImage_btn.UseVisualStyleBackColor = false;
+            this.A_D_uploadImage_btn.Click += new System.EventHandler(this.A_D_uploadImage_btn_Click);
             // 
-            // pictureBox1
+            // A_D_pictureBox
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 131);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 118);
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
+            this.A_D_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.A_D_pictureBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.A_D_pictureBox.Location = new System.Drawing.Point(105, 131);
+            this.A_D_pictureBox.Name = "A_D_pictureBox";
+            this.A_D_pictureBox.Size = new System.Drawing.Size(116, 118);
+            this.A_D_pictureBox.TabIndex = 44;
+            this.A_D_pictureBox.TabStop = false;
             // 
             // label21
             // 
@@ -568,7 +573,7 @@
             this.A_D_address_tbx.Multiline = true;
             this.A_D_address_tbx.Name = "A_D_address_tbx";
             this.A_D_address_tbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.A_D_address_tbx.Size = new System.Drawing.Size(313, 60);
+            this.A_D_address_tbx.Size = new System.Drawing.Size(302, 60);
             this.A_D_address_tbx.TabIndex = 42;
             // 
             // panel1_mid_left
@@ -600,15 +605,37 @@
             this.panel1_mid_left.Size = new System.Drawing.Size(330, 433);
             this.panel1_mid_left.TabIndex = 4;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(12, 378);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(42, 15);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Email:";
+            // 
+            // A_D_Email_tbx
+            // 
+            this.A_D_Email_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.A_D_Email_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_D_Email_tbx.Location = new System.Drawing.Point(12, 396);
+            this.A_D_Email_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.A_D_Email_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.A_D_Email_tbx.Name = "A_D_Email_tbx";
+            this.A_D_Email_tbx.Size = new System.Drawing.Size(290, 22);
+            this.A_D_Email_tbx.TabIndex = 26;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(12, 336);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 15);
+            this.label12.Size = new System.Drawing.Size(56, 15);
             this.label12.TabIndex = 25;
-            this.label12.Text = "Spceialty: ";
+            this.label12.Text = "Specialty";
             // 
             // A_D_Specialty_tbx
             // 
@@ -619,7 +646,7 @@
             this.A_D_Specialty_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_Specialty_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_Specialty_tbx.Name = "A_D_Specialty_tbx";
-            this.A_D_Specialty_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_Specialty_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_Specialty_tbx.TabIndex = 24;
             // 
             // label11
@@ -641,7 +668,7 @@
             this.A_D_LicenceNumber_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_LicenceNumber_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_LicenceNumber_tbx.Name = "A_D_LicenceNumber_tbx";
-            this.A_D_LicenceNumber_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_LicenceNumber_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_LicenceNumber_tbx.TabIndex = 22;
             // 
             // label10
@@ -663,7 +690,7 @@
             this.A_D_Natinality_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_Natinality_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_Natinality_tbx.Name = "A_D_Natinality_tbx";
-            this.A_D_Natinality_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_Natinality_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_Natinality_tbx.TabIndex = 20;
             // 
             // label9
@@ -685,7 +712,7 @@
             this.A_D_Nic_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_Nic_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_Nic_tbx.Name = "A_D_Nic_tbx";
-            this.A_D_Nic_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_Nic_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_Nic_tbx.TabIndex = 18;
             // 
             // label8
@@ -707,7 +734,7 @@
             this.A_D_bloodGroup_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_bloodGroup_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_bloodGroup_tbx.Name = "A_D_bloodGroup_tbx";
-            this.A_D_bloodGroup_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_bloodGroup_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_bloodGroup_tbx.TabIndex = 16;
             // 
             // label7
@@ -729,7 +756,7 @@
             this.A_D_gender_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_gender_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_gender_tbx.Name = "A_D_gender_tbx";
-            this.A_D_gender_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_gender_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_gender_tbx.TabIndex = 14;
             // 
             // label6
@@ -751,7 +778,7 @@
             this.A_D_age_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_age_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_age_tbx.Name = "A_D_age_tbx";
-            this.A_D_age_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_age_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_age_tbx.TabIndex = 12;
             // 
             // label4
@@ -773,7 +800,7 @@
             this.A_D_NameWithInitials_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_NameWithInitials_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_NameWithInitials_tbx.Name = "A_D_NameWithInitials_tbx";
-            this.A_D_NameWithInitials_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_NameWithInitials_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_NameWithInitials_tbx.TabIndex = 10;
             // 
             // label3
@@ -795,30 +822,12 @@
             this.A_D_fullName_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.A_D_fullName_tbx.MinimumSize = new System.Drawing.Size(241, 20);
             this.A_D_fullName_tbx.Name = "A_D_fullName_tbx";
-            this.A_D_fullName_tbx.Size = new System.Drawing.Size(310, 22);
+            this.A_D_fullName_tbx.Size = new System.Drawing.Size(290, 22);
             this.A_D_fullName_tbx.TabIndex = 8;
             // 
-            // label22
+            // errorProvider1_A_D_registration
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(12, 378);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(42, 15);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Email:";
-            // 
-            // A_D_Email_tbx
-            // 
-            this.A_D_Email_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_D_Email_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_D_Email_tbx.Location = new System.Drawing.Point(12, 396);
-            this.A_D_Email_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_D_Email_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_D_Email_tbx.Name = "A_D_Email_tbx";
-            this.A_D_Email_tbx.Size = new System.Drawing.Size(310, 20);
-            this.A_D_Email_tbx.TabIndex = 26;
+            this.errorProvider1_A_D_registration.ContainerControl = this;
             // 
             // Admin_DoctorRegister
             // 
@@ -845,9 +854,10 @@
             this.panel1_mid_mid.PerformLayout();
             this.panel1_mid_right.ResumeLayout(false);
             this.panel1_mid_right.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.A_D_pictureBox)).EndInit();
             this.panel1_mid_left.ResumeLayout(false);
             this.panel1_mid_left.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1_A_D_registration)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -896,7 +906,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox A_D_experiecedYears_tbx;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox A_D_psotion_tbx;
+        private System.Windows.Forms.TextBox A_D_position_tbx;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox A_D_contactNo_tbx;
         private System.Windows.Forms.Label label13;
@@ -907,11 +917,12 @@
         private System.Windows.Forms.TextBox A_D_address_tbx;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox A_D_certificate_tbx;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button RegisterAppointment_btn;
+        private System.Windows.Forms.PictureBox A_D_pictureBox;
+        private System.Windows.Forms.Button A_D_uploadImage_btn;
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button A_D_register_btn;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox A_D_Email_tbx;
+        private System.Windows.Forms.ErrorProvider errorProvider1_A_D_registration;
     }
 }
