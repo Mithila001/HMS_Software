@@ -573,7 +573,7 @@
             this.A_D_address_tbx.Multiline = true;
             this.A_D_address_tbx.Name = "A_D_address_tbx";
             this.A_D_address_tbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.A_D_address_tbx.Size = new System.Drawing.Size(302, 60);
+            this.A_D_address_tbx.Size = new System.Drawing.Size(302, 38);
             this.A_D_address_tbx.TabIndex = 42;
             // 
             // panel1_mid_left

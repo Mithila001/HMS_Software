@@ -62,7 +62,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.A_N_experiecedYears_tbx = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.A_N_psotion_tbx = new System.Windows.Forms.TextBox();
+            this.A_N_position_tbx = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.A_N_contactNo_tbx = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,8 +83,8 @@
             this.panel1_mid_right = new System.Windows.Forms.Panel();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             this.A_N_Save_btn = new System.Windows.Forms.Button();
-            this.A_N_uploadImage_btn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1_mid_left.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1_top.SuspendLayout();
@@ -94,7 +94,6 @@
             this.TopTable_Panel.SuspendLayout();
             this.panel1_mid_mid.SuspendLayout();
             this.panel1_mid_right.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // A_N_address_tbx
@@ -494,17 +493,17 @@
             this.label15.TabIndex = 31;
             this.label15.Text = "Position: ";
             // 
-            // A_N_psotion_tbx
+            // A_N_position_tbx
             // 
-            this.A_N_psotion_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.A_N_position_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_psotion_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_psotion_tbx.Location = new System.Drawing.Point(8, 67);
-            this.A_N_psotion_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_N_psotion_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_N_psotion_tbx.Name = "A_N_psotion_tbx";
-            this.A_N_psotion_tbx.Size = new System.Drawing.Size(314, 22);
-            this.A_N_psotion_tbx.TabIndex = 30;
+            this.A_N_position_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_N_position_tbx.Location = new System.Drawing.Point(8, 67);
+            this.A_N_position_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.A_N_position_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.A_N_position_tbx.Name = "A_N_position_tbx";
+            this.A_N_position_tbx.Size = new System.Drawing.Size(314, 22);
+            this.A_N_position_tbx.TabIndex = 30;
             // 
             // label14
             // 
@@ -713,7 +712,7 @@
             this.panel1_mid_mid.Controls.Add(this.label16);
             this.panel1_mid_mid.Controls.Add(this.A_N_experiecedYears_tbx);
             this.panel1_mid_mid.Controls.Add(this.label15);
-            this.panel1_mid_mid.Controls.Add(this.A_N_psotion_tbx);
+            this.panel1_mid_mid.Controls.Add(this.A_N_position_tbx);
             this.panel1_mid_mid.Controls.Add(this.label14);
             this.panel1_mid_mid.Controls.Add(this.A_N_contactNo_tbx);
             this.panel1_mid_mid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -725,10 +724,10 @@
             // 
             // panel1_mid_right
             // 
+            this.panel1_mid_right.Controls.Add(this.D_Register_DTimePicker);
+            this.panel1_mid_right.Controls.Add(this.label13);
             this.panel1_mid_right.Controls.Add(this.materialDivider3);
             this.panel1_mid_right.Controls.Add(this.A_N_Save_btn);
-            this.panel1_mid_right.Controls.Add(this.A_N_uploadImage_btn);
-            this.panel1_mid_right.Controls.Add(this.pictureBox1);
             this.panel1_mid_right.Controls.Add(this.label21);
             this.panel1_mid_right.Controls.Add(this.A_N_address_tbx);
             this.panel1_mid_right.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -766,33 +765,28 @@
             this.A_N_Save_btn.TabIndex = 46;
             this.A_N_Save_btn.Text = "Save";
             this.A_N_Save_btn.UseVisualStyleBackColor = false;
+            this.A_N_Save_btn.Click += new System.EventHandler(this.A_N_Save_btn_Click);
             // 
-            // A_N_uploadImage_btn
+            // label13
             // 
-            this.A_N_uploadImage_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.A_N_uploadImage_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.A_N_uploadImage_btn.FlatAppearance.BorderSize = 0;
-            this.A_N_uploadImage_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.A_N_uploadImage_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.A_N_uploadImage_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.A_N_uploadImage_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_uploadImage_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.A_N_uploadImage_btn.Location = new System.Drawing.Point(105, 254);
-            this.A_N_uploadImage_btn.Name = "A_N_uploadImage_btn";
-            this.A_N_uploadImage_btn.Size = new System.Drawing.Size(116, 37);
-            this.A_N_uploadImage_btn.TabIndex = 45;
-            this.A_N_uploadImage_btn.Text = "Upload";
-            this.A_N_uploadImage_btn.UseVisualStyleBackColor = false;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 91);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 15);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Full Name:";
             // 
-            // pictureBox1
+            // D_Register_DTimePicker
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(105, 131);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 118);
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
+            this.D_Register_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.D_Register_DTimePicker.Location = new System.Drawing.Point(11, 111);
+            this.D_Register_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
+            this.D_Register_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
+            this.D_Register_DTimePicker.Name = "D_Register_DTimePicker";
+            this.D_Register_DTimePicker.Size = new System.Drawing.Size(310, 20);
+            this.D_Register_DTimePicker.TabIndex = 48;
             // 
             // Admin_NurseRegister
             // 
@@ -820,14 +814,11 @@
             this.panel1_mid_mid.PerformLayout();
             this.panel1_mid_right.ResumeLayout(false);
             this.panel1_mid_right.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox A_N_address_tbx;
         private System.Windows.Forms.Panel panel1_mid_left;
         private System.Windows.Forms.Label label12;
@@ -860,7 +851,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox A_N_experiecedYears_tbx;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox A_N_psotion_tbx;
+        private System.Windows.Forms.TextBox A_N_position_tbx;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox A_N_contactNo_tbx;
         private System.Windows.Forms.Label label1;
@@ -881,8 +872,9 @@
         private System.Windows.Forms.Panel panel1_mid_right;
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
         private System.Windows.Forms.Button A_N_Save_btn;
-        private System.Windows.Forms.Button A_N_uploadImage_btn;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox A_N_Email_tbx;
+        private System.Windows.Forms.DateTimePicker D_Register_DTimePicker;
+        private System.Windows.Forms.Label label13;
     }
 }

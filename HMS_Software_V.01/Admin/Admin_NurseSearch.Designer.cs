@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView_nurse = new System.Windows.Forms.DataGridView();
+            this.nurseSearch_combobox = new System.Windows.Forms.ComboBox();
             this.panel1_top2 = new System.Windows.Forms.Panel();
             this.A_N_search_tbx = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
             this.TopTable_Panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nurse)).BeginInit();
             this.panel1_top2.SuspendLayout();
             this.TopTable_Panel.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
@@ -54,37 +54,39 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_nurse
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridView_nurse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1002, 384);
-            this.dataGridView1.TabIndex = 11;
+            this.dataGridView_nurse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_nurse.Location = new System.Drawing.Point(3, 150);
+            this.dataGridView_nurse.Name = "dataGridView_nurse";
+            this.dataGridView_nurse.Size = new System.Drawing.Size(1002, 384);
+            this.dataGridView_nurse.TabIndex = 11;
             // 
-            // comboBox1
+            // nurseSearch_combobox
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.nurseSearch_combobox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.nurseSearch_combobox.BackColor = System.Drawing.Color.White;
+            this.nurseSearch_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nurseSearch_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nurseSearch_combobox.ForeColor = System.Drawing.Color.Black;
+            this.nurseSearch_combobox.FormattingEnabled = true;
+            this.nurseSearch_combobox.Items.AddRange(new object[] {
             "By ID",
             "By NIC"});
-            this.comboBox1.Location = new System.Drawing.Point(757, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 47;
+            this.nurseSearch_combobox.Location = new System.Drawing.Point(757, 9);
+            this.nurseSearch_combobox.Name = "nurseSearch_combobox";
+            this.nurseSearch_combobox.Size = new System.Drawing.Size(121, 24);
+            this.nurseSearch_combobox.TabIndex = 47;
+            this.nurseSearch_combobox.SelectedIndexChanged += new System.EventHandler(this.nurseSearch_combobox_SelectedIndexChanged);
             // 
             // panel1_top2
             // 
             this.panel1_top2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.panel1_top2.Controls.Add(this.comboBox1);
+            this.panel1_top2.Controls.Add(this.nurseSearch_combobox);
             this.panel1_top2.Controls.Add(this.A_N_search_tbx);
             this.panel1_top2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1_top2.Location = new System.Drawing.Point(3, 104);
@@ -103,6 +105,7 @@
             this.A_N_search_tbx.Name = "A_N_search_tbx";
             this.A_N_search_tbx.Size = new System.Drawing.Size(252, 25);
             this.A_N_search_tbx.TabIndex = 27;
+            this.A_N_search_tbx.TextChanged += new System.EventHandler(this.A_N_search_tbx_TextChanged);
             // 
             // label5
             // 
@@ -253,7 +256,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.top_tableLayoutPanle, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1_top2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView_nurse, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -274,7 +277,8 @@
             this.Name = "Admin_NurseSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_NurseSearch";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Admin_NurseSearch_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nurse)).EndInit();
             this.panel1_top2.ResumeLayout(false);
             this.panel1_top2.PerformLayout();
             this.TopTable_Panel.ResumeLayout(false);
@@ -292,8 +296,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView_nurse;
+        private System.Windows.Forms.ComboBox nurseSearch_combobox;
         private System.Windows.Forms.Panel panel1_top2;
         private System.Windows.Forms.TextBox A_N_search_tbx;
         private System.Windows.Forms.Label label5;
