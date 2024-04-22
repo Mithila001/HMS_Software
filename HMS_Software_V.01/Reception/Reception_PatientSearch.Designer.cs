@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_R_PatS_top = new System.Windows.Forms.Panel();
-            this.panel_R_PatS_mid = new System.Windows.Forms.Panel();
-            this.panel_R_PatS_bot = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel_R_PatS_mid = new System.Windows.Forms.Panel();
             this.R_PaSearch_combobox = new System.Windows.Forms.ComboBox();
             this.R_PaSearch_tbx = new System.Windows.Forms.TextBox();
+            this.panel_R_PatS_bot = new System.Windows.Forms.Panel();
             this.dataGridView_R_PaSearch = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_R_PatS_top.SuspendLayout();
@@ -70,27 +73,6 @@
             this.panel_R_PatS_top.Size = new System.Drawing.Size(1002, 64);
             this.panel_R_PatS_top.TabIndex = 0;
             // 
-            // panel_R_PatS_mid
-            // 
-            this.panel_R_PatS_mid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.panel_R_PatS_mid.Controls.Add(this.R_PaSearch_combobox);
-            this.panel_R_PatS_mid.Controls.Add(this.R_PaSearch_tbx);
-            this.panel_R_PatS_mid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_R_PatS_mid.Location = new System.Drawing.Point(3, 73);
-            this.panel_R_PatS_mid.Name = "panel_R_PatS_mid";
-            this.panel_R_PatS_mid.Size = new System.Drawing.Size(1002, 57);
-            this.panel_R_PatS_mid.TabIndex = 1;
-            // 
-            // panel_R_PatS_bot
-            // 
-            this.panel_R_PatS_bot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.panel_R_PatS_bot.Controls.Add(this.dataGridView_R_PaSearch);
-            this.panel_R_PatS_bot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_R_PatS_bot.Location = new System.Drawing.Point(3, 136);
-            this.panel_R_PatS_bot.Name = "panel_R_PatS_bot";
-            this.panel_R_PatS_bot.Size = new System.Drawing.Size(1002, 398);
-            this.panel_R_PatS_bot.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -101,6 +83,17 @@
             this.label1.Size = new System.Drawing.Size(179, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Search Patient";
+            // 
+            // panel_R_PatS_mid
+            // 
+            this.panel_R_PatS_mid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.panel_R_PatS_mid.Controls.Add(this.R_PaSearch_combobox);
+            this.panel_R_PatS_mid.Controls.Add(this.R_PaSearch_tbx);
+            this.panel_R_PatS_mid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_R_PatS_mid.Location = new System.Drawing.Point(3, 73);
+            this.panel_R_PatS_mid.Name = "panel_R_PatS_mid";
+            this.panel_R_PatS_mid.Size = new System.Drawing.Size(1002, 57);
+            this.panel_R_PatS_mid.TabIndex = 1;
             // 
             // R_PaSearch_combobox
             // 
@@ -131,12 +124,44 @@
             this.R_PaSearch_tbx.Size = new System.Drawing.Size(252, 25);
             this.R_PaSearch_tbx.TabIndex = 48;
             // 
+            // panel_R_PatS_bot
+            // 
+            this.panel_R_PatS_bot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.panel_R_PatS_bot.Controls.Add(this.dataGridView_R_PaSearch);
+            this.panel_R_PatS_bot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_R_PatS_bot.Location = new System.Drawing.Point(3, 136);
+            this.panel_R_PatS_bot.Name = "panel_R_PatS_bot";
+            this.panel_R_PatS_bot.Size = new System.Drawing.Size(1002, 398);
+            this.panel_R_PatS_bot.TabIndex = 2;
+            // 
             // dataGridView_R_PaSearch
             // 
+            this.dataGridView_R_PaSearch.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_R_PaSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_R_PaSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView_R_PaSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView_R_PaSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_R_PaSearch.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_R_PaSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_R_PaSearch.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_R_PaSearch.Name = "dataGridView_R_PaSearch";
+            this.dataGridView_R_PaSearch.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_R_PaSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_R_PaSearch.Size = new System.Drawing.Size(1002, 398);
             this.dataGridView_R_PaSearch.TabIndex = 0;
             // 
@@ -146,10 +171,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 537);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(1024, 576);
+            this.MinimumSize = new System.Drawing.Size(1024, 576);
             this.Name = "Reception_PatientSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reception_PatientSearch";
+            this.Load += new System.EventHandler(this.Reception_PatientSearch_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_R_PatS_top.ResumeLayout(false);
             this.panel_R_PatS_top.PerformLayout();

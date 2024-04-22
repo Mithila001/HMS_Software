@@ -36,28 +36,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_left = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.A_N_contactNo_tbx = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.A_N_Nic_tbx = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.A_N_gender_tbx = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.A_N_age_tbx = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.A_N_NameWithInitials_tbx = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.A_N_fullName_tbx = new System.Windows.Forms.TextBox();
-            this.panel_right = new System.Windows.Forms.Panel();
-            this.R_P_Register_btn = new System.Windows.Forms.Button();
-            this.A_N_address_tbx = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.R_P_GuardenName_tbx = new System.Windows.Forms.TextBox();
+            this.R_P_Reg_GuardenName_tbx = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.R_P_Reg_contactNo_tbx = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.R_P_Reg_Nic_tbx = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.R_P_Reg_gender_tbx = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.R_P_Reg_age_tbx = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.R_P_Reg_NameWithInitials_tbx = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.R_P_Reg_fullName_tbx = new System.Windows.Forms.TextBox();
+            this.panel_right = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.R_P_GuardenCoNo_tbx = new System.Windows.Forms.TextBox();
+            this.R_P_Reg_GuardenCoNo_tbx = new System.Windows.Forms.TextBox();
+            this.R_P_Register_btn = new System.Windows.Forms.Button();
+            this.R_P_Reg_address_tbx = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.R_P_Reg_DTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.panel_left.SuspendLayout();
@@ -156,24 +156,46 @@
             // panel_left
             // 
             this.panel_left.Controls.Add(this.label10);
-            this.panel_left.Controls.Add(this.R_P_GuardenName_tbx);
+            this.panel_left.Controls.Add(this.R_P_Reg_GuardenName_tbx);
             this.panel_left.Controls.Add(this.label14);
-            this.panel_left.Controls.Add(this.A_N_contactNo_tbx);
+            this.panel_left.Controls.Add(this.R_P_Reg_contactNo_tbx);
             this.panel_left.Controls.Add(this.label9);
-            this.panel_left.Controls.Add(this.A_N_Nic_tbx);
+            this.panel_left.Controls.Add(this.R_P_Reg_Nic_tbx);
             this.panel_left.Controls.Add(this.label7);
-            this.panel_left.Controls.Add(this.A_N_gender_tbx);
+            this.panel_left.Controls.Add(this.R_P_Reg_gender_tbx);
             this.panel_left.Controls.Add(this.label6);
-            this.panel_left.Controls.Add(this.A_N_age_tbx);
+            this.panel_left.Controls.Add(this.R_P_Reg_age_tbx);
             this.panel_left.Controls.Add(this.label5);
-            this.panel_left.Controls.Add(this.A_N_NameWithInitials_tbx);
+            this.panel_left.Controls.Add(this.R_P_Reg_NameWithInitials_tbx);
             this.panel_left.Controls.Add(this.label8);
-            this.panel_left.Controls.Add(this.A_N_fullName_tbx);
+            this.panel_left.Controls.Add(this.R_P_Reg_fullName_tbx);
             this.panel_left.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_left.Location = new System.Drawing.Point(3, 103);
             this.panel_left.Name = "panel_left";
             this.panel_left.Size = new System.Drawing.Size(498, 431);
             this.panel_left.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(25, 346);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 15);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Guardian Name: ";
+            // 
+            // R_P_Reg_GuardenName_tbx
+            // 
+            this.R_P_Reg_GuardenName_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.R_P_Reg_GuardenName_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_GuardenName_tbx.Location = new System.Drawing.Point(25, 364);
+            this.R_P_Reg_GuardenName_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_GuardenName_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_GuardenName_tbx.Name = "R_P_Reg_GuardenName_tbx";
+            this.R_P_Reg_GuardenName_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_GuardenName_tbx.TabIndex = 32;
             // 
             // label14
             // 
@@ -185,17 +207,17 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Contact No:";
             // 
-            // A_N_contactNo_tbx
+            // R_P_Reg_contactNo_tbx
             // 
-            this.A_N_contactNo_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_contactNo_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_contactNo_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_contactNo_tbx.Location = new System.Drawing.Point(25, 310);
-            this.A_N_contactNo_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_N_contactNo_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_N_contactNo_tbx.Name = "A_N_contactNo_tbx";
-            this.A_N_contactNo_tbx.Size = new System.Drawing.Size(241, 20);
-            this.A_N_contactNo_tbx.TabIndex = 30;
+            this.R_P_Reg_contactNo_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_contactNo_tbx.Location = new System.Drawing.Point(25, 310);
+            this.R_P_Reg_contactNo_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_contactNo_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_contactNo_tbx.Name = "R_P_Reg_contactNo_tbx";
+            this.R_P_Reg_contactNo_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_contactNo_tbx.TabIndex = 30;
             // 
             // label9
             // 
@@ -207,17 +229,17 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "NIC:";
             // 
-            // A_N_Nic_tbx
+            // R_P_Reg_Nic_tbx
             // 
-            this.A_N_Nic_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_Nic_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_Nic_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_Nic_tbx.Location = new System.Drawing.Point(25, 252);
-            this.A_N_Nic_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_N_Nic_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_N_Nic_tbx.Name = "A_N_Nic_tbx";
-            this.A_N_Nic_tbx.Size = new System.Drawing.Size(241, 20);
-            this.A_N_Nic_tbx.TabIndex = 28;
+            this.R_P_Reg_Nic_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_Nic_tbx.Location = new System.Drawing.Point(25, 252);
+            this.R_P_Reg_Nic_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_Nic_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_Nic_tbx.Name = "R_P_Reg_Nic_tbx";
+            this.R_P_Reg_Nic_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_Nic_tbx.TabIndex = 28;
             // 
             // label7
             // 
@@ -229,17 +251,17 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "Gender:";
             // 
-            // A_N_gender_tbx
+            // R_P_Reg_gender_tbx
             // 
-            this.A_N_gender_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_gender_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_gender_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_gender_tbx.Location = new System.Drawing.Point(23, 196);
-            this.A_N_gender_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_N_gender_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_N_gender_tbx.Name = "A_N_gender_tbx";
-            this.A_N_gender_tbx.Size = new System.Drawing.Size(241, 20);
-            this.A_N_gender_tbx.TabIndex = 26;
+            this.R_P_Reg_gender_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_gender_tbx.Location = new System.Drawing.Point(23, 196);
+            this.R_P_Reg_gender_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_gender_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_gender_tbx.Name = "R_P_Reg_gender_tbx";
+            this.R_P_Reg_gender_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_gender_tbx.TabIndex = 26;
             // 
             // label6
             // 
@@ -251,17 +273,17 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Age:";
             // 
-            // A_N_age_tbx
+            // R_P_Reg_age_tbx
             // 
-            this.A_N_age_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_age_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_age_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_age_tbx.Location = new System.Drawing.Point(23, 142);
-            this.A_N_age_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_N_age_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_N_age_tbx.Name = "A_N_age_tbx";
-            this.A_N_age_tbx.Size = new System.Drawing.Size(241, 20);
-            this.A_N_age_tbx.TabIndex = 24;
+            this.R_P_Reg_age_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_age_tbx.Location = new System.Drawing.Point(23, 142);
+            this.R_P_Reg_age_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_age_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_age_tbx.Name = "R_P_Reg_age_tbx";
+            this.R_P_Reg_age_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_age_tbx.TabIndex = 24;
             // 
             // label5
             // 
@@ -273,17 +295,17 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Name With Initials:";
             // 
-            // A_N_NameWithInitials_tbx
+            // R_P_Reg_NameWithInitials_tbx
             // 
-            this.A_N_NameWithInitials_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_NameWithInitials_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_NameWithInitials_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_NameWithInitials_tbx.Location = new System.Drawing.Point(22, 94);
-            this.A_N_NameWithInitials_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_N_NameWithInitials_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_N_NameWithInitials_tbx.Name = "A_N_NameWithInitials_tbx";
-            this.A_N_NameWithInitials_tbx.Size = new System.Drawing.Size(241, 20);
-            this.A_N_NameWithInitials_tbx.TabIndex = 22;
+            this.R_P_Reg_NameWithInitials_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_NameWithInitials_tbx.Location = new System.Drawing.Point(22, 94);
+            this.R_P_Reg_NameWithInitials_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_NameWithInitials_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_NameWithInitials_tbx.Name = "R_P_Reg_NameWithInitials_tbx";
+            this.R_P_Reg_NameWithInitials_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_NameWithInitials_tbx.TabIndex = 22;
             // 
             // label8
             // 
@@ -295,32 +317,54 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Full Name:";
             // 
-            // A_N_fullName_tbx
+            // R_P_Reg_fullName_tbx
             // 
-            this.A_N_fullName_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_fullName_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_fullName_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_fullName_tbx.Location = new System.Drawing.Point(23, 40);
-            this.A_N_fullName_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.A_N_fullName_tbx.MinimumSize = new System.Drawing.Size(241, 50);
-            this.A_N_fullName_tbx.Name = "A_N_fullName_tbx";
-            this.A_N_fullName_tbx.Size = new System.Drawing.Size(241, 22);
-            this.A_N_fullName_tbx.TabIndex = 20;
+            this.R_P_Reg_fullName_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_fullName_tbx.Location = new System.Drawing.Point(23, 40);
+            this.R_P_Reg_fullName_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_fullName_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_fullName_tbx.Name = "R_P_Reg_fullName_tbx";
+            this.R_P_Reg_fullName_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_fullName_tbx.TabIndex = 20;
             // 
             // panel_right
             // 
             this.panel_right.Controls.Add(this.label11);
-            this.panel_right.Controls.Add(this.R_P_GuardenCoNo_tbx);
+            this.panel_right.Controls.Add(this.R_P_Reg_GuardenCoNo_tbx);
             this.panel_right.Controls.Add(this.R_P_Register_btn);
-            this.panel_right.Controls.Add(this.A_N_address_tbx);
+            this.panel_right.Controls.Add(this.R_P_Reg_address_tbx);
             this.panel_right.Controls.Add(this.label21);
-            this.panel_right.Controls.Add(this.D_Register_DTimePicker);
+            this.panel_right.Controls.Add(this.R_P_Reg_DTimePicker);
             this.panel_right.Controls.Add(this.label13);
             this.panel_right.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_right.Location = new System.Drawing.Point(507, 103);
             this.panel_right.Name = "panel_right";
             this.panel_right.Size = new System.Drawing.Size(498, 431);
             this.panel_right.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(26, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(125, 15);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Guardian Contact No:";
+            // 
+            // R_P_Reg_GuardenCoNo_tbx
+            // 
+            this.R_P_Reg_GuardenCoNo_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.R_P_Reg_GuardenCoNo_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_GuardenCoNo_tbx.Location = new System.Drawing.Point(26, 40);
+            this.R_P_Reg_GuardenCoNo_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_GuardenCoNo_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_GuardenCoNo_tbx.Name = "R_P_Reg_GuardenCoNo_tbx";
+            this.R_P_Reg_GuardenCoNo_tbx.Size = new System.Drawing.Size(241, 22);
+            this.R_P_Reg_GuardenCoNo_tbx.TabIndex = 34;
             // 
             // R_P_Register_btn
             // 
@@ -338,20 +382,21 @@
             this.R_P_Register_btn.TabIndex = 53;
             this.R_P_Register_btn.Text = "Save";
             this.R_P_Register_btn.UseVisualStyleBackColor = false;
+            this.R_P_Register_btn.Click += new System.EventHandler(this.R_P_Register_btn_Click);
             // 
-            // A_N_address_tbx
+            // R_P_Reg_address_tbx
             // 
-            this.A_N_address_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_address_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.A_N_address_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A_N_address_tbx.Location = new System.Drawing.Point(24, 91);
-            this.A_N_address_tbx.MaximumSize = new System.Drawing.Size(500, 76);
-            this.A_N_address_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.A_N_address_tbx.Multiline = true;
-            this.A_N_address_tbx.Name = "A_N_address_tbx";
-            this.A_N_address_tbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.A_N_address_tbx.Size = new System.Drawing.Size(295, 60);
-            this.A_N_address_tbx.TabIndex = 51;
+            this.R_P_Reg_address_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_P_Reg_address_tbx.Location = new System.Drawing.Point(24, 91);
+            this.R_P_Reg_address_tbx.MaximumSize = new System.Drawing.Size(500, 76);
+            this.R_P_Reg_address_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_address_tbx.Multiline = true;
+            this.R_P_Reg_address_tbx.Name = "R_P_Reg_address_tbx";
+            this.R_P_Reg_address_tbx.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.R_P_Reg_address_tbx.Size = new System.Drawing.Size(295, 60);
+            this.R_P_Reg_address_tbx.TabIndex = 51;
             // 
             // label21
             // 
@@ -363,16 +408,16 @@
             this.label21.TabIndex = 52;
             this.label21.Text = "Address:";
             // 
-            // D_Register_DTimePicker
+            // R_P_Reg_DTimePicker
             // 
-            this.D_Register_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.R_P_Reg_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.D_Register_DTimePicker.Location = new System.Drawing.Point(24, 193);
-            this.D_Register_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
-            this.D_Register_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
-            this.D_Register_DTimePicker.Name = "D_Register_DTimePicker";
-            this.D_Register_DTimePicker.Size = new System.Drawing.Size(295, 20);
-            this.D_Register_DTimePicker.TabIndex = 50;
+            this.R_P_Reg_DTimePicker.Location = new System.Drawing.Point(24, 193);
+            this.R_P_Reg_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
+            this.R_P_Reg_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_P_Reg_DTimePicker.Name = "R_P_Reg_DTimePicker";
+            this.R_P_Reg_DTimePicker.Size = new System.Drawing.Size(295, 20);
+            this.R_P_Reg_DTimePicker.TabIndex = 50;
             // 
             // label13
             // 
@@ -383,50 +428,6 @@
             this.label13.Size = new System.Drawing.Size(74, 15);
             this.label13.TabIndex = 49;
             this.label13.Text = "Date of Birth";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(25, 346);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 15);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Guardian Name: ";
-            // 
-            // R_P_GuardenName_tbx
-            // 
-            this.R_P_GuardenName_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.R_P_GuardenName_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_P_GuardenName_tbx.Location = new System.Drawing.Point(25, 364);
-            this.R_P_GuardenName_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.R_P_GuardenName_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.R_P_GuardenName_tbx.Name = "R_P_GuardenName_tbx";
-            this.R_P_GuardenName_tbx.Size = new System.Drawing.Size(241, 20);
-            this.R_P_GuardenName_tbx.TabIndex = 32;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(26, 22);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 15);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Guardian Contact No:";
-            // 
-            // R_P_GuardenCoNo_tbx
-            // 
-            this.R_P_GuardenCoNo_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.R_P_GuardenCoNo_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_P_GuardenCoNo_tbx.Location = new System.Drawing.Point(26, 40);
-            this.R_P_GuardenCoNo_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.R_P_GuardenCoNo_tbx.MinimumSize = new System.Drawing.Size(241, 20);
-            this.R_P_GuardenCoNo_tbx.Name = "R_P_GuardenCoNo_tbx";
-            this.R_P_GuardenCoNo_tbx.Size = new System.Drawing.Size(241, 20);
-            this.R_P_GuardenCoNo_tbx.TabIndex = 34;
             // 
             // Reception_PatientRegistration
             // 
@@ -460,26 +461,26 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel_left;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox A_N_Nic_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_Nic_tbx;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox A_N_gender_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_gender_tbx;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox A_N_age_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_age_tbx;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox A_N_NameWithInitials_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_NameWithInitials_tbx;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox A_N_fullName_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_fullName_tbx;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox A_N_contactNo_tbx;
-        private System.Windows.Forms.DateTimePicker D_Register_DTimePicker;
+        private System.Windows.Forms.TextBox R_P_Reg_contactNo_tbx;
+        private System.Windows.Forms.DateTimePicker R_P_Reg_DTimePicker;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox A_N_address_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_address_tbx;
         private System.Windows.Forms.Button R_P_Register_btn;
         private System.Windows.Forms.Panel panel_right;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox R_P_GuardenName_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_GuardenName_tbx;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox R_P_GuardenCoNo_tbx;
+        private System.Windows.Forms.TextBox R_P_Reg_GuardenCoNo_tbx;
     }
 }

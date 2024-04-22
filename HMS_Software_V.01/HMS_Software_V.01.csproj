@@ -177,6 +177,12 @@
     <Compile Include="Reception\UserControls\Recep_D_TodayClinics.Designer.cs">
       <DependentUpon>Recep_D_TodayClinics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reception\UserControls\Recep_ImergencyPatients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reception\UserControls\Recep_ImergencyPatients.Designer.cs">
+      <DependentUpon>Recep_ImergencyPatients.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\Admin_Dashboard.resx">
       <DependentUpon>Admin_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reception\UserControls\Recep_D_TodayClinics.resx">
       <DependentUpon>Recep_D_TodayClinics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\UserControls\Recep_ImergencyPatients.resx">
+      <DependentUpon>Recep_ImergencyPatients.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DatabaseMithilaHMSDataSet.xsc">
       <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>

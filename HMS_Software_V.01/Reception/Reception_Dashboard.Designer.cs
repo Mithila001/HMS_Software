@@ -40,10 +40,10 @@
             this.flowLayoutPanel_RD_mid = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel_RD_right = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_RD_midBot = new System.Windows.Forms.Panel();
-            this.R_register_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.R_search_btn = new System.Windows.Forms.Button();
             this.R_Clinic_btn = new System.Windows.Forms.Button();
+            this.R_search_btn = new System.Windows.Forms.Button();
+            this.R_register_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel_R_D.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.panel_RD_midBot.SuspendLayout();
@@ -78,7 +78,8 @@
             // flowLayoutPanel_RD_left
             // 
             this.flowLayoutPanel_RD_left.AutoScroll = true;
-            this.flowLayoutPanel_RD_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.flowLayoutPanel_RD_left.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanel_RD_left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel_RD_left.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_RD_left.Location = new System.Drawing.Point(3, 277);
             this.flowLayoutPanel_RD_left.Name = "flowLayoutPanel_RD_left";
@@ -170,6 +171,7 @@
             // 
             // flowLayoutPanel_RD_mid
             // 
+            this.flowLayoutPanel_RD_mid.AutoScroll = true;
             this.flowLayoutPanel_RD_mid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel_RD_mid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_RD_mid.Location = new System.Drawing.Point(339, 103);
@@ -200,24 +202,6 @@
             this.panel_RD_midBot.Size = new System.Drawing.Size(666, 170);
             this.panel_RD_midBot.TabIndex = 5;
             // 
-            // R_register_btn
-            // 
-            this.R_register_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.R_register_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.R_register_btn.FlatAppearance.BorderSize = 0;
-            this.R_register_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.R_register_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.R_register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R_register_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_register_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.R_register_btn.Location = new System.Drawing.Point(11, 42);
-            this.R_register_btn.Name = "R_register_btn";
-            this.R_register_btn.Size = new System.Drawing.Size(200, 85);
-            this.R_register_btn.TabIndex = 54;
-            this.R_register_btn.Text = "Register";
-            this.R_register_btn.UseVisualStyleBackColor = false;
-            this.R_register_btn.Click += new System.EventHandler(this.R_register_btn_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
@@ -235,23 +219,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(666, 170);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // R_search_btn
-            // 
-            this.R_search_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.R_search_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.R_search_btn.FlatAppearance.BorderSize = 0;
-            this.R_search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.R_search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.R_search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.R_search_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_search_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.R_search_btn.Location = new System.Drawing.Point(233, 42);
-            this.R_search_btn.Name = "R_search_btn";
-            this.R_search_btn.Size = new System.Drawing.Size(200, 85);
-            this.R_search_btn.TabIndex = 55;
-            this.R_search_btn.Text = "Search";
-            this.R_search_btn.UseVisualStyleBackColor = false;
-            // 
             // R_Clinic_btn
             // 
             this.R_Clinic_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -268,6 +235,42 @@
             this.R_Clinic_btn.TabIndex = 56;
             this.R_Clinic_btn.Text = "Clinics";
             this.R_Clinic_btn.UseVisualStyleBackColor = false;
+            // 
+            // R_search_btn
+            // 
+            this.R_search_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.R_search_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.R_search_btn.FlatAppearance.BorderSize = 0;
+            this.R_search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.R_search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.R_search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R_search_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_search_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.R_search_btn.Location = new System.Drawing.Point(233, 42);
+            this.R_search_btn.Name = "R_search_btn";
+            this.R_search_btn.Size = new System.Drawing.Size(200, 85);
+            this.R_search_btn.TabIndex = 55;
+            this.R_search_btn.Text = "Search";
+            this.R_search_btn.UseVisualStyleBackColor = false;
+            this.R_search_btn.Click += new System.EventHandler(this.R_search_btn_Click);
+            // 
+            // R_register_btn
+            // 
+            this.R_register_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.R_register_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.R_register_btn.FlatAppearance.BorderSize = 0;
+            this.R_register_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.R_register_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.R_register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.R_register_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_register_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.R_register_btn.Location = new System.Drawing.Point(11, 42);
+            this.R_register_btn.Name = "R_register_btn";
+            this.R_register_btn.Size = new System.Drawing.Size(200, 85);
+            this.R_register_btn.TabIndex = 54;
+            this.R_register_btn.Text = "Register";
+            this.R_register_btn.UseVisualStyleBackColor = false;
+            this.R_register_btn.Click += new System.EventHandler(this.R_register_btn_Click);
             // 
             // Reception_Dashboard
             // 

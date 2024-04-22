@@ -25,8 +25,10 @@ namespace HMS_Software_V._01.Reception
         {
             try
             {
+                // ----------------------------- Left FlowLayoutPanel ------------------------------------
                 connect.Open();
                 TimeSpan currentTime = DateTime.Now.TimeOfDay;
+                
 
                 string query = "SELECT cc.ClinicName AS ClinicName, d.D_NameWithInitials AS DoctorName, ce.CE_HallNumber AS HallNumber, ce.CE_StartTime AS StartTime, ce.CE_EndTime AS EndTime, ce.CE_Date as ClinicDate," +
                "CONVERT(varchar(15), ce.CE_StartTime, 100) + ' - ' + CONVERT(varchar(15), ce.CE_EndTime, 100) AS TimeRange " +
@@ -34,8 +36,8 @@ namespace HMS_Software_V._01.Reception
                "JOIN Doctor d ON ce.Doctor_ID = d.Doctor_ID " +
                "JOIN ClinicCategories cc ON ce.Clinic_ID = cc.Clinic_ID;";
 
-                SqlCommand command = new SqlCommand(query, connect);
-                SqlDataReader reader1 = command.ExecuteReader();
+                using (SqlCommand command = new SqlCommand(query, connect))
+                using (SqlDataReader reader1 = command.ExecuteReader())
 
                 while (reader1.Read())
                 {
@@ -58,7 +60,8 @@ namespace HMS_Software_V._01.Reception
                     
                     if (currentTime > endTime)
                     {
-                        recep_D_TodayClinics.RDTC_availability.Text = "Ended";
+                        recep_D_TodayClinics.RDTC_availability.Text = "  Ended  ";
+                        recep_D_TodayClinics.RDTC_availability.BackColor = Color.FromArgb(250, 192, 162);
                     }
                     else
                     {
@@ -74,10 +77,64 @@ namespace HMS_Software_V._01.Reception
 
                     flowLayoutPanel_RD_left.Controls.Add(recep_D_TodayClinics);
                 }
-                reader1.Close();
+                /*reader1.Close();*/
+
+                // ----------------------------- Left FlowLayoutPanel ------------------------------------
+
+                string query2 = "SELECT P_NameWithIinitials, P_Age, P_RegistrationID, P_RegisteredDate, P_RegisteredTime, P_Status, " +
+                                    "CONVERT(varchar(15), P_RegisteredTime, 100) AS TimeRange " +
+                                    "FROM Patient " +
+                                    "WHERE P_RegisteredDate >= DATEADD(day, -3, CAST(GETDATE() AS DATE)) " +
+                                    "ORDER BY P_RegisteredDate DESC, P_RegisteredTime DESC";
+
+
+                using (SqlCommand command2 = new SqlCommand(query2, connect))
+                using (SqlDataReader reader2 = command2.ExecuteReader())
+
+                while (reader2.Read())
+                {
+                    Recep_ImergencyPatients recep_ImergencyPatients = new Recep_ImergencyPatients();
+                    recep_ImergencyPatients.RIP_patientNameAge_lbl.Text = reader2["P_NameWithIinitials"].ToString() + " (" + reader2["P_Age"].ToString() + ")";
+                    recep_ImergencyPatients.RIP_patienRegistD_lbl.Text = reader2["P_RegistrationID"].ToString();
+                    recep_ImergencyPatients.RIP_patienAdmitDate_lbl.Text = ((DateTime)reader2["P_RegisteredDate"]).ToString("MM/dd/yyyy");
+                    recep_ImergencyPatients.RIP_patienAdmitTime_lbl.Text = reader2["TimeRange"].ToString();
+                    /*recep_ImergencyPatients.RIP_patienStatus_lbl.Text = reader2["P_Status"].ToString();*/
+
+                    if (reader2["P_Status"].ToString() == "OPD")
+                    {
+                            recep_ImergencyPatients.RIP_patienStatus_lbl.BackColor = Color.FromArgb(25, 217, 255);
+                            recep_ImergencyPatients.RIP_patienStatus_lbl.Text = "OPD";
+                    }
+                    else if(reader2["P_Status"].ToString() == "Ward")
+                    {
+                            recep_ImergencyPatients.RIP_patienStatus_lbl.BackColor = Color.FromArgb(237, 238, 168);
+                            recep_ImergencyPatients.RIP_patienStatus_lbl.Text = "Ward";
+                    }
+                    else if(reader2["P_Status"].ToString() == "Ward ETU")
+                    {
+                        recep_ImergencyPatients.RIP_patienStatus_lbl.BackColor = Color.FromArgb(250, 192, 162);
+                        recep_ImergencyPatients.RIP_patienStatus_lbl.Text = "ETU";
+                    }
+                    else if (reader2["P_Status"].ToString() == "Ward PCU")
+                    {
+                        recep_ImergencyPatients.RIP_patienStatus_lbl.BackColor = Color.FromArgb(250, 192, 162);
+                        recep_ImergencyPatients.RIP_patienStatus_lbl.Text = "PCU";
+                    }
+
+                        // Adjust the width of the user control to match the width of the parent container
+                        flowLayoutPanel_RD_mid.SizeChanged += (sender, e) =>
+                    {
+                        recep_ImergencyPatients.Width = flowLayoutPanel_RD_mid.ClientSize.Width - recep_ImergencyPatients.Margin.Horizontal;
+                    };
+
+                    flowLayoutPanel_RD_mid.Controls.Add(recep_ImergencyPatients);
+
+                }
+                /*reader2.Close();*/
+
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex);
@@ -92,6 +149,13 @@ namespace HMS_Software_V._01.Reception
         {
             Reception_PatientRegistration reception_PatientRegistration = new Reception_PatientRegistration();
             reception_PatientRegistration.Show();
+            this.Hide();
+        }
+
+        private void R_search_btn_Click(object sender, EventArgs e)
+        {
+            Reception_PatientSearch reception_PatientSearch = new Reception_PatientSearch();
+            reception_PatientSearch.Show();
             this.Hide();
         }
     }
