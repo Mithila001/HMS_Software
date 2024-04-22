@@ -130,6 +130,32 @@ namespace HMS_Software_V._01.Reception
                     flowLayoutPanel_RD_mid.Controls.Add(recep_ImergencyPatients);
 
                 }
+
+                // ----------------------------- Right FlowLayoutPanel ------------------------------------
+
+
+                string query3 = "SELECT PD_P_RegistrationID, PD_P_NameWithIinitials, PD_Ward_No " +
+                                    "FROM PatientDischarge";
+                using (SqlCommand command3 = new SqlCommand(query3, connect))
+                using (SqlDataReader reader3 = command3.ExecuteReader())
+
+                    while (reader3.Read())
+                    {
+                        Recep_PatientDischarge recep_PatientDischarge = new Recep_PatientDischarge();
+
+                        recep_PatientDischarge.RPD_patienName_lbl.Text = reader3["PD_P_NameWithIinitials"].ToString();
+                        recep_PatientDischarge.RPD_registrationNo_lbl.Text = reader3["PD_P_RegistrationID"].ToString();
+                        recep_PatientDischarge.RPD_warNo_lbl.Text = reader3["PD_Ward_No"].ToString();
+
+                        // Adjust the width of the user control to match the width of the parent container
+                        flowLayoutPanel_RD_right.SizeChanged += (sender, e) =>
+                        {
+                            recep_PatientDischarge.Width = flowLayoutPanel_RD_right.ClientSize.Width - recep_PatientDischarge.Margin.Horizontal;
+                        };
+
+                        flowLayoutPanel_RD_right.Controls.Add(recep_PatientDischarge);
+
+                    }
                 /*reader2.Close();*/
 
 
