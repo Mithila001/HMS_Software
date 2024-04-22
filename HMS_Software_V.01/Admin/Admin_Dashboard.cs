@@ -16,12 +16,12 @@ namespace HMS_Software_V._01.Admin
         public Admin_Dashboard()
         {
             InitializeComponent();
-            admin_Doctors1.Visible = false;
+            /*admin_Doctors1.Visible = false;
             admin_home1.Visible = true;
             admin_Nurses1.Visible = false;
             admin_Patients1.Visible = false;
             admin_Reception1.Visible = false;
-            admin_Appointment1.Visible = false;
+            admin_Appointment1.Visible = false;*/
         }
 
         private void admin_doctors_btn_Click(object sender, EventArgs e)

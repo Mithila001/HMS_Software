@@ -184,5 +184,12 @@ namespace HMS_Software_V._01.Reception
             reception_PatientSearch.Show();
             this.Hide();
         }
+
+        private void R_Clinic_btn_Click(object sender, EventArgs e)
+        {
+            Reception_Appointment reception_Appointment = new Reception_Appointment();
+            reception_Appointment.Show();
+            this.Hide();
+        }
     }
 }

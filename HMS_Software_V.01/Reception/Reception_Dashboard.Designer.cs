@@ -268,6 +268,7 @@
             this.R_Clinic_btn.TabIndex = 56;
             this.R_Clinic_btn.Text = "Clinics";
             this.R_Clinic_btn.UseVisualStyleBackColor = false;
+            this.R_Clinic_btn.Click += new System.EventHandler(this.R_Clinic_btn_Click);
             // 
             // R_search_btn
             // 
