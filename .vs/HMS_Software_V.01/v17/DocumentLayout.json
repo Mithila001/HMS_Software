@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "E:\\Programming\\Github\\HMS_Software_V.01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\mycommonconnecstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\mycommonconnecstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\doctor_opd\\doctoropd_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_opd\\doctoropd_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\admin\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\admin\\admin_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\reception\\reception_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\reception\\reception_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\reception\\reception_patientregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\reception\\reception_patientregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +34,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MyCommonConnecString.cs",
-              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\MyCommonConnecString.cs",
-              "RelativeDocumentMoniker": "HMS_Software_V.01\\MyCommonConnecString.cs",
-              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\MyCommonConnecString.cs",
-              "RelativeToolTip": "HMS_Software_V.01\\MyCommonConnecString.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
+              "DocumentIndex": 3,
+              "Title": "Reception_PatientRegistration.cs [Design]",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs [Design]",
+              "RelativeToolTip": "HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T12:32:06.585Z",
+              "WhenOpened": "2024-04-22T15:41:25.201Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Program.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Program.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Program.cs",
+              "RelativeToolTip": "HMS_Software_V.01\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T15:34:55.383Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Admin_Dashboard.cs [Design]",
-              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Admin\\Admin_Dashboard.cs",
-              "RelativeDocumentMoniker": "HMS_Software_V.01\\Admin\\Admin_Dashboard.cs",
-              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Admin\\Admin_Dashboard.cs [Design]",
-              "RelativeToolTip": "HMS_Software_V.01\\Admin\\Admin_Dashboard.cs [Design]",
+              "Title": "Reception_Dashboard.cs [Design]",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_Dashboard.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Reception\\Reception_Dashboard.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_Dashboard.cs [Design]",
+              "RelativeToolTip": "HMS_Software_V.01\\Reception\\Reception_Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T12:31:54.582Z",
+              "WhenOpened": "2024-04-22T15:28:40.412Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DoctorOPD_Dashboard.cs [Design]",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs [Design]",
+              "RelativeToolTip": "HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T15:26:36.33Z",
               "EditorCaption": " [Design]"
             }
           ]

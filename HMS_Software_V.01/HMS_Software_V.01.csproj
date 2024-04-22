@@ -150,6 +150,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_OPD\DoctorOPD_AddClinic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_OPD\DoctorOPD_AddClinic.Designer.cs">
+      <DependentUpon>DoctorOPD_AddClinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_OPD\DoctorOPD_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_OPD\DoctorOPD_Dashboard.Designer.cs">
+      <DependentUpon>DoctorOPD_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_OPD\UserControls\DoctorOPD_clincType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Doctor_OPD\UserControls\DoctorOPD_clincType.Designer.cs">
+      <DependentUpon>DoctorOPD_clincType.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyCommonConnecString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -252,6 +270,15 @@
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Reception.resx">
       <DependentUpon>Admin_Reception.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_OPD\DoctorOPD_AddClinic.resx">
+      <DependentUpon>DoctorOPD_AddClinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_OPD\DoctorOPD_Dashboard.resx">
+      <DependentUpon>DoctorOPD_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_OPD\UserControls\DoctorOPD_clincType.resx">
+      <DependentUpon>DoctorOPD_clincType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -335,6 +362,7 @@
     <Content Include="Assests\icons\Home_icon.png" />
     <Content Include="Assests\icons\Nurse_icon.png" />
     <Content Include="Assests\icons\Patient_icon.png" />
+    <Content Include="Assests\icons\Plus_icon.png" />
     <Content Include="Assests\icons\Reception_icon.png" />
     <Content Include="DatabaseMithilaHMS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

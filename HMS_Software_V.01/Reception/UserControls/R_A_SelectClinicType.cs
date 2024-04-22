@@ -16,6 +16,7 @@ namespace HMS_Software_V._01.Reception.UserControls
         {
             InitializeComponent();
             AttachClickEventHandlers(this);
+            
         }
 
         private void AttachClickEventHandlers(Control parentControl)
@@ -24,8 +25,8 @@ namespace HMS_Software_V._01.Reception.UserControls
             {
                 // Attach event handler for the current control
                 control.Click += Control_Click;
-               /* control.MouseEnter += panel1_MouseEnter;
-                control.MouseLeave += panel1_MouseLeave;*/
+                control.MouseEnter += materialCard1_MouseEnter;
+                control.MouseLeave += materialCard1_MouseLeave;
 
                 // If the current control has child controls, attach event handlers to them
                 if (control.HasChildren)
@@ -34,6 +35,8 @@ namespace HMS_Software_V._01.Reception.UserControls
                 }
             }
         }
+
+
         public event EventHandler<int> ClinicClicked;
         private void Control_Click(object sender, EventArgs e)
         {
@@ -53,5 +56,22 @@ namespace HMS_Software_V._01.Reception.UserControls
             // Trigger the UserControl click event
             OnClick(e);
         }
+
+        private void materialCard1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(223, 223, 223); // Change background color
+           
+            Console.WriteLine("Hover On::::::::::::: ");
+        }
+
+        private void materialCard1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(255, 255, 255); // Restore background color
+            
+            Console.WriteLine("Hover OFF::::::::::::: ");
+        }
+
+
+
     }
 }

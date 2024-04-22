@@ -1,4 +1,5 @@
-﻿using HMS_Software_V._01.Reception;
+﻿using HMS_Software_V._01.Doctor_OPD;
+using HMS_Software_V._01.Reception;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace HMS_Software_V._01.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Reception_Appointment());
+            Application.Run(new DoctorOPD_Dashboard());
         }
     }
 }
