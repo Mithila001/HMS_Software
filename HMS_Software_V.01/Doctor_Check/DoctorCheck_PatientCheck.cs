@@ -37,25 +37,30 @@ namespace HMS_Software_V._01.Doctor_OPD
 
 
         }
+        // =========================== Data Transporter =============================
+        public class MyDataStoringClass
+        {
+            public int DoctorID { get; set; }
+            public string DoctorName { get; set; }
+            public string DoctorPosition { get; set; }
+            public string PatientRID { get; set; }
+            public string PatientName { get; set; }
+            public string PatientAge { get; set; }
+            public string PatientGender { get; set; }
+            public string PatientMedicalEventID { get; set; }
+            // Add more properties as needed
+        }
 
-        //Variable Store area
 
-        private string G_doctorName;
-        private string G_doctorPosition;
-        private string G_patientName;
-        private string G_patientAge;
-        private string G_patientGender;
-       
 
 
         private void MyStartPatientMedicalEvent()
-            // This is also where we get patient deatils and going to send them acros the user control
+        // This is also where we get patient deatils and going to send them acros the user control
         {
-            // Get current date and time
+            
             DateTime currentDate = DateTime.Today;
             DateTime currentTime = DateTime.Now;
-
-            // Assign date and time to labels
+ 
             DOPDPC_date.Text = currentDate.ToShortDateString();
             DOPDPC_time.Text = currentTime.ToShortTimeString();
 
@@ -72,6 +77,11 @@ namespace HMS_Software_V._01.Doctor_OPD
                     DOPDPC_patietName_lbl.Text = reader2.GetString(0);
                     DOPDPC_patietage_lbl.Text = reader2.GetString(1);
                     DOPDPC_patietGender_lbl.Text = reader2.GetString(2);
+
+                    MyDataStoringClass transport = new MyDataStoringClass();
+                    transport.PatientName = reader2.GetString(0);
+                    transport.PatientAge = reader2.GetString(1);
+                    transport.PatientGender = reader2.GetString(2);
 
 
                 }
