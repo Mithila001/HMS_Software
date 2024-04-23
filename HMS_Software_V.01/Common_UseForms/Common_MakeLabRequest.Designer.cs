@@ -50,15 +50,18 @@
             this.flowLayoutPanel_CMLR_notAvailable = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_rightBot = new System.Windows.Forms.Panel();
             this.panel_top_left = new System.Windows.Forms.Panel();
-            this.DOPDPC_viewPatientProfiel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labInvestigationSearch_dataGrV = new System.Windows.Forms.DataGridView();
+            this.Investigation_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvestigationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CMLR_add_btn = new System.Windows.Forms.Button();
+            this.Speciment_tbx = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.LabInvestigations_tbx = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel_CMLR_selected = new System.Windows.Forms.FlowLayoutPanel();
-            this.labInvestigationSearch_dataGrV = new System.Windows.Forms.DataGridView();
-            this.Investigation_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvestigationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specimenSearch_dataGrV = new System.Windows.Forms.DataGridView();
+            this.labSpecimentTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specimenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -67,6 +70,7 @@
             this.panel_right.SuspendLayout();
             this.panel_top_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.labInvestigationSearch_dataGrV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specimenSearch_dataGrV)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -323,9 +327,10 @@
             // panel_top_left
             // 
             this.panel_top_left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_top_left.Controls.Add(this.specimenSearch_dataGrV);
             this.panel_top_left.Controls.Add(this.labInvestigationSearch_dataGrV);
-            this.panel_top_left.Controls.Add(this.DOPDPC_viewPatientProfiel);
-            this.panel_top_left.Controls.Add(this.textBox1);
+            this.panel_top_left.Controls.Add(this.CMLR_add_btn);
+            this.panel_top_left.Controls.Add(this.Speciment_tbx);
             this.panel_top_left.Controls.Add(this.label1);
             this.panel_top_left.Controls.Add(this.label13);
             this.panel_top_left.Controls.Add(this.LabInvestigations_tbx);
@@ -335,33 +340,74 @@
             this.panel_top_left.Size = new System.Drawing.Size(674, 111);
             this.panel_top_left.TabIndex = 10;
             // 
-            // DOPDPC_viewPatientProfiel
+            // labInvestigationSearch_dataGrV
             // 
-            this.DOPDPC_viewPatientProfiel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DOPDPC_viewPatientProfiel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.DOPDPC_viewPatientProfiel.FlatAppearance.BorderSize = 0;
-            this.DOPDPC_viewPatientProfiel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.DOPDPC_viewPatientProfiel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.DOPDPC_viewPatientProfiel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DOPDPC_viewPatientProfiel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOPDPC_viewPatientProfiel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.DOPDPC_viewPatientProfiel.Location = new System.Drawing.Point(502, 39);
-            this.DOPDPC_viewPatientProfiel.Name = "DOPDPC_viewPatientProfiel";
-            this.DOPDPC_viewPatientProfiel.Size = new System.Drawing.Size(133, 39);
-            this.DOPDPC_viewPatientProfiel.TabIndex = 57;
-            this.DOPDPC_viewPatientProfiel.Text = "Add";
-            this.DOPDPC_viewPatientProfiel.UseVisualStyleBackColor = false;
+            this.labInvestigationSearch_dataGrV.AllowUserToAddRows = false;
+            this.labInvestigationSearch_dataGrV.AllowUserToDeleteRows = false;
+            this.labInvestigationSearch_dataGrV.AllowUserToResizeColumns = false;
+            this.labInvestigationSearch_dataGrV.AllowUserToResizeRows = false;
+            this.labInvestigationSearch_dataGrV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labInvestigationSearch_dataGrV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.labInvestigationSearch_dataGrV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.labInvestigationSearch_dataGrV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.labInvestigationSearch_dataGrV.ColumnHeadersVisible = false;
+            this.labInvestigationSearch_dataGrV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Investigation_ID,
+            this.InvestigationName});
+            this.labInvestigationSearch_dataGrV.Location = new System.Drawing.Point(30, 51);
+            this.labInvestigationSearch_dataGrV.Name = "labInvestigationSearch_dataGrV";
+            this.labInvestigationSearch_dataGrV.RowHeadersVisible = false;
+            this.labInvestigationSearch_dataGrV.RowTemplate.Height = 30;
+            this.labInvestigationSearch_dataGrV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.labInvestigationSearch_dataGrV.Size = new System.Drawing.Size(179, 0);
+            this.labInvestigationSearch_dataGrV.TabIndex = 26;
+            this.labInvestigationSearch_dataGrV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.labInvestigationSearch_dataGrV_CellClick);
             // 
-            // textBox1
+            // Investigation_ID
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(270, 29);
-            this.textBox1.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox1.MinimumSize = new System.Drawing.Size(100, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 26;
+            this.Investigation_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Investigation_ID.DataPropertyName = "LabInvestigationType_ID";
+            this.Investigation_ID.FillWeight = 50.76142F;
+            this.Investigation_ID.HeaderText = "ID";
+            this.Investigation_ID.Name = "Investigation_ID";
+            // 
+            // InvestigationName
+            // 
+            this.InvestigationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.InvestigationName.DataPropertyName = "LIT_Name";
+            this.InvestigationName.FillWeight = 149.2386F;
+            this.InvestigationName.HeaderText = "Name";
+            this.InvestigationName.Name = "InvestigationName";
+            // 
+            // CMLR_add_btn
+            // 
+            this.CMLR_add_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CMLR_add_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.CMLR_add_btn.FlatAppearance.BorderSize = 0;
+            this.CMLR_add_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.CMLR_add_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.CMLR_add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMLR_add_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_add_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.CMLR_add_btn.Location = new System.Drawing.Point(502, 39);
+            this.CMLR_add_btn.Name = "CMLR_add_btn";
+            this.CMLR_add_btn.Size = new System.Drawing.Size(133, 39);
+            this.CMLR_add_btn.TabIndex = 57;
+            this.CMLR_add_btn.Text = "Add";
+            this.CMLR_add_btn.UseVisualStyleBackColor = false;
+            this.CMLR_add_btn.Click += new System.EventHandler(this.CMLR_add_btn_Click);
+            // 
+            // Speciment_tbx
+            // 
+            this.Speciment_tbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Speciment_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Speciment_tbx.Location = new System.Drawing.Point(270, 29);
+            this.Speciment_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.Speciment_tbx.MinimumSize = new System.Drawing.Size(100, 20);
+            this.Speciment_tbx.Name = "Speciment_tbx";
+            this.Speciment_tbx.Size = new System.Drawing.Size(179, 22);
+            this.Speciment_tbx.TabIndex = 26;
+            this.Speciment_tbx.TextChanged += new System.EventHandler(this.Speciment_tbx_TextChanged);
             // 
             // label1
             // 
@@ -393,7 +439,7 @@
             this.LabInvestigations_tbx.MaximumSize = new System.Drawing.Size(500, 4);
             this.LabInvestigations_tbx.MinimumSize = new System.Drawing.Size(100, 20);
             this.LabInvestigations_tbx.Name = "LabInvestigations_tbx";
-            this.LabInvestigations_tbx.Size = new System.Drawing.Size(179, 20);
+            this.LabInvestigations_tbx.Size = new System.Drawing.Size(179, 22);
             this.LabInvestigations_tbx.TabIndex = 24;
             this.LabInvestigations_tbx.TextChanged += new System.EventHandler(this.labInvestigationSearch_tbx_TextChanged_1);
             // 
@@ -407,44 +453,44 @@
             this.flowLayoutPanel_CMLR_selected.Size = new System.Drawing.Size(674, 314);
             this.flowLayoutPanel_CMLR_selected.TabIndex = 11;
             // 
-            // labInvestigationSearch_dataGrV
+            // specimenSearch_dataGrV
             // 
-            this.labInvestigationSearch_dataGrV.AllowUserToAddRows = false;
-            this.labInvestigationSearch_dataGrV.AllowUserToDeleteRows = false;
-            this.labInvestigationSearch_dataGrV.AllowUserToResizeColumns = false;
-            this.labInvestigationSearch_dataGrV.AllowUserToResizeRows = false;
-            this.labInvestigationSearch_dataGrV.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labInvestigationSearch_dataGrV.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.labInvestigationSearch_dataGrV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.labInvestigationSearch_dataGrV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.labInvestigationSearch_dataGrV.ColumnHeadersVisible = false;
-            this.labInvestigationSearch_dataGrV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Investigation_ID,
-            this.InvestigationName});
-            this.labInvestigationSearch_dataGrV.Location = new System.Drawing.Point(30, 50);
-            this.labInvestigationSearch_dataGrV.Name = "labInvestigationSearch_dataGrV";
-            this.labInvestigationSearch_dataGrV.RowHeadersVisible = false;
-            this.labInvestigationSearch_dataGrV.RowTemplate.Height = 30;
-            this.labInvestigationSearch_dataGrV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.labInvestigationSearch_dataGrV.Size = new System.Drawing.Size(179, 0);
-            this.labInvestigationSearch_dataGrV.TabIndex = 26;
-            this.labInvestigationSearch_dataGrV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.labInvestigationSearch_dataGrV_CellClick);
+            this.specimenSearch_dataGrV.AllowUserToAddRows = false;
+            this.specimenSearch_dataGrV.AllowUserToDeleteRows = false;
+            this.specimenSearch_dataGrV.AllowUserToResizeColumns = false;
+            this.specimenSearch_dataGrV.AllowUserToResizeRows = false;
+            this.specimenSearch_dataGrV.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.specimenSearch_dataGrV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.specimenSearch_dataGrV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.specimenSearch_dataGrV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.specimenSearch_dataGrV.ColumnHeadersVisible = false;
+            this.specimenSearch_dataGrV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.labSpecimentTypeID,
+            this.specimenName});
+            this.specimenSearch_dataGrV.Location = new System.Drawing.Point(270, 51);
+            this.specimenSearch_dataGrV.Name = "specimenSearch_dataGrV";
+            this.specimenSearch_dataGrV.RowHeadersVisible = false;
+            this.specimenSearch_dataGrV.RowTemplate.Height = 30;
+            this.specimenSearch_dataGrV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.specimenSearch_dataGrV.Size = new System.Drawing.Size(179, 0);
+            this.specimenSearch_dataGrV.TabIndex = 58;
+            this.specimenSearch_dataGrV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.specimenSearch_dataGrV_CellClick);
             // 
-            // Investigation_ID
+            // labSpecimentTypeID
             // 
-            this.Investigation_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Investigation_ID.DataPropertyName = "LabInvestigationType_ID";
-            this.Investigation_ID.FillWeight = 50.76142F;
-            this.Investigation_ID.HeaderText = "ID";
-            this.Investigation_ID.Name = "Investigation_ID";
+            this.labSpecimentTypeID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.labSpecimentTypeID.DataPropertyName = "Lab_SpeciementType_ID";
+            this.labSpecimentTypeID.FillWeight = 50.76142F;
+            this.labSpecimentTypeID.HeaderText = "ID";
+            this.labSpecimentTypeID.Name = "labSpecimentTypeID";
             // 
-            // InvestigationName
+            // specimenName
             // 
-            this.InvestigationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.InvestigationName.DataPropertyName = "LIT_Name";
-            this.InvestigationName.FillWeight = 149.2386F;
-            this.InvestigationName.HeaderText = "Name";
-            this.InvestigationName.Name = "InvestigationName";
+            this.specimenName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.specimenName.DataPropertyName = "LST_Name";
+            this.specimenName.FillWeight = 149.2386F;
+            this.specimenName.HeaderText = "Name";
+            this.specimenName.Name = "specimenName";
             // 
             // Common_MakeLabRequest
             // 
@@ -469,6 +515,7 @@
             this.panel_top_left.ResumeLayout(false);
             this.panel_top_left.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.labInvestigationSearch_dataGrV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.specimenSearch_dataGrV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,17 +542,20 @@
         private System.Windows.Forms.Panel panel_right;
         private System.Windows.Forms.Panel panel_rightBot;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Speciment_tbx;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CMLR_notAvailable;
         private System.Windows.Forms.Panel panel_top_left;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CMLR_selected;
-        private System.Windows.Forms.Button DOPDPC_viewPatientProfiel;
+        private System.Windows.Forms.Button CMLR_add_btn;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView labInvestigationSearch_dataGrV;
         private System.Windows.Forms.TextBox labInvestigationSearch_tbx;
         private System.Windows.Forms.DataGridViewTextBoxColumn Investigation_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvestigationName;
         private System.Windows.Forms.TextBox LabInvestigations_tbx;
+        private System.Windows.Forms.DataGridView specimenSearch_dataGrV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn labSpecimentTypeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specimenName;
     }
 }

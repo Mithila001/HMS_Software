@@ -65,6 +65,9 @@ namespace HMS_Software_V._01.Common_UseForms
         }
 
 
+        // ============================================= Lab Request Type Search =======================================
+
+        private int investigationID = 0;
         private void labInvestigationSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = this.labInvestigationSearch_dataGrV.Rows[e.RowIndex];
@@ -141,6 +144,106 @@ namespace HMS_Software_V._01.Common_UseForms
             finally
             {
                 connect.Close();
+            }
+
+        }
+
+        // ============================================= Specimen Search =======================================
+
+
+        private int specimenID = 0;
+        private void specimenSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = this.specimenSearch_dataGrV.Rows[e.RowIndex];
+            string speciementIDstring = row.Cells["labSpecimentTypeID"].Value.ToString();
+            Speciment_tbx.Text = row.Cells["specimenName"].Value.ToString();
+            specimenSearch_dataGrV.Height = 0;
+
+            
+
+            if (int.TryParse(speciementIDstring, out specimenID))
+            {
+                // Parsing successful, investigationID now holds the integer value
+                Console.WriteLine("Investigation ID: " + specimenID);
+            }
+            else
+            {
+                // Parsing failed, handle the error (e.g., display an error message)
+                Console.WriteLine("Failed to parse Investigation ID  InvestigationName");
+            }
+
+        }
+
+        private void Speciment_tbx_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                connect.Open();
+
+                if (Speciment_tbx.TextLength >= 1)
+                {
+                    string query = "SELECT Lab_SpeciementType_ID, LST_Name FROM Lab_SpeciementType ";
+                    query += "WHERE Lab_SpeciementType_ID LIKE @LabSpeciementTypeID OR LST_Name LIKE @LSTName";
+
+                    SqlCommand sqlCommand = connect.CreateCommand();
+                    sqlCommand.CommandText = query;
+
+                    sqlCommand.CommandText = query;
+                    sqlCommand.Parameters.AddWithValue("@LabSpeciementTypeID", Speciment_tbx.Text + "%");
+                    sqlCommand.Parameters.AddWithValue("@LSTName", Speciment_tbx.Text + "%");
+
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = sqlCommand;
+
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    if (dt != null && dt.Rows.Count > 0)
+                    {
+                        specimenSearch_dataGrV.DataSource = dt;
+                        specimenSearch_dataGrV.Height = specimenSearch_dataGrV.Rows.Count * 30;
+
+                    }
+                    else
+                    {
+                        specimenSearch_dataGrV.Height = 0;
+                    }
+
+                }
+                else if (Speciment_tbx.TextLength <= 0)
+                {
+                    specimenSearch_dataGrV.Height = 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Console.WriteLine(ex);
+
+            }
+            finally
+            {
+                connect.Close();
+            }
+
+        }
+
+        private void CMLR_add_btn_Click(object sender, EventArgs e)
+        {
+            int getSpecimenID = specimenID;
+            int getinvestigationID = investigationID;
+
+            if (!string.IsNullOrEmpty(LabInvestigations_tbx.Text) && !string.IsNullOrEmpty(Speciment_tbx.Text))
+            {
+                // LabInvestigations_tbx.Text exists and is not empty
+                // Your code here
+            }
+            else
+            {
+                // LabInvestigations_tbx.Text does not exist or is empty
+                MessageBox.Show("Fill blanks");
             }
 
         }
