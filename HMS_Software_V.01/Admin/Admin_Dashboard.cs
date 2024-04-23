@@ -13,7 +13,8 @@ namespace HMS_Software_V._01.Admin
 {
     public partial class Admin_Dashboard : Form
     {
-        public Admin_Dashboard()
+        private int userID;
+        public Admin_Dashboard(/*int userID*/)
         {
             InitializeComponent();
             /*admin_Doctors1.Visible = false;

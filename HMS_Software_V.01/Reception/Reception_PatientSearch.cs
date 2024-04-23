@@ -21,7 +21,7 @@ namespace HMS_Software_V._01.Reception
             InitializeComponent();
             R_PaSearch_combobox.SelectedIndex = 0;
 
-            this.FormClosed += (s, e) => new Reception_Dashboard().Show();
+            /*this.FormClosed += (s, e) => new Reception_Dashboard().Show();*/
 
         }
 

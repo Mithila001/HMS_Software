@@ -33,11 +33,11 @@
             this.flowLayoutPanel_RD_left = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_RD_top = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.time_lbl = new System.Windows.Forms.Label();
+            this.date_lbl = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RD_receptionName_lbl = new System.Windows.Forms.Label();
             this.panel_RD_midTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -130,11 +130,11 @@
             this.panel_RD_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.tableLayoutPanel_R_D.SetColumnSpan(this.panel_RD_top, 3);
             this.panel_RD_top.Controls.Add(this.label5);
-            this.panel_RD_top.Controls.Add(this.label4);
-            this.panel_RD_top.Controls.Add(this.label3);
+            this.panel_RD_top.Controls.Add(this.time_lbl);
+            this.panel_RD_top.Controls.Add(this.date_lbl);
             this.panel_RD_top.Controls.Add(this.materialDivider1);
             this.panel_RD_top.Controls.Add(this.label2);
-            this.panel_RD_top.Controls.Add(this.label1);
+            this.panel_RD_top.Controls.Add(this.RD_receptionName_lbl);
             this.panel_RD_top.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_RD_top.Location = new System.Drawing.Point(3, 3);
             this.panel_RD_top.Name = "panel_RD_top";
@@ -152,27 +152,27 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Time";
             // 
-            // label4
+            // time_lbl
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(427, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Time";
+            this.time_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.time_lbl.AutoSize = true;
+            this.time_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_lbl.Location = new System.Drawing.Point(427, 58);
+            this.time_lbl.Name = "time_lbl";
+            this.time_lbl.Size = new System.Drawing.Size(59, 24);
+            this.time_lbl.TabIndex = 5;
+            this.time_lbl.Text = "Time";
             // 
-            // label3
+            // date_lbl
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(427, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Date";
+            this.date_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.date_lbl.AutoSize = true;
+            this.date_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_lbl.Location = new System.Drawing.Point(427, 16);
+            this.date_lbl.Name = "date_lbl";
+            this.date_lbl.Size = new System.Drawing.Size(56, 24);
+            this.date_lbl.TabIndex = 4;
+            this.date_lbl.Text = "Date";
             // 
             // materialDivider1
             // 
@@ -198,16 +198,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Reception";
             // 
-            // label1
+            // RD_receptionName_lbl
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Reception Name";
+            this.RD_receptionName_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.RD_receptionName_lbl.AutoSize = true;
+            this.RD_receptionName_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD_receptionName_lbl.Location = new System.Drawing.Point(20, 16);
+            this.RD_receptionName_lbl.Name = "RD_receptionName_lbl";
+            this.RD_receptionName_lbl.Size = new System.Drawing.Size(200, 29);
+            this.RD_receptionName_lbl.TabIndex = 1;
+            this.RD_receptionName_lbl.Text = "Reception Name";
             // 
             // panel_RD_midTop
             // 
@@ -451,11 +451,11 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_RD_mid;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_RD_right;
         private System.Windows.Forms.Panel panel_RD_midBot;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label RD_receptionName_lbl;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label date_lbl;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label time_lbl;
         private System.Windows.Forms.Button R_register_btn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button R_Clinic_btn;

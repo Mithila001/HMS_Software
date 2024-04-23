@@ -12,7 +12,8 @@ namespace HMS_Software_V._01.Doctor_OPD
 {
     public partial class DoctorOPD_Dashboard : Form
     {
-        public DoctorOPD_Dashboard()
+        private int userID;
+        public DoctorOPD_Dashboard(int userID)
         {
             InitializeComponent();
         }

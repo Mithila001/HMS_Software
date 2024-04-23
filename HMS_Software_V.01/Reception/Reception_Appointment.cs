@@ -22,7 +22,7 @@ namespace HMS_Software_V._01.Reception
         {
             InitializeComponent();
             LoadUserData();
-            this.FormClosed += (s, e) => new Reception_Dashboard().Show();
+            /*this.FormClosed += (s, e) => new Reception_Dashboard().Show();*/
 
 
             this.SizeChanged += MyRe_Appointments_SizeChanged; //To fix clinicTypeAvailableDates Usercontrol scaling issues from small window to Full screen

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HMS_Software_V._01.Admin;
+using HMS_Software_V._01.Doctor_OPD;
+using HMS_Software_V._01.Reception;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,11 +37,12 @@ namespace HMS_Software_V._01.Common_UseForms
                     SqlDataReader reader = sqlCommand.ExecuteReader();
 
                     bool loginSuccessful = false; // Flag to track successful login
+                    int userID = -1;
 
                     while (reader.Read())
                     {
                         // Retrieve values from the current record
-                        int userID = reader.GetInt32(0);
+                        userID = reader.GetInt32(0);
                         string userPosition = reader.GetString(1);
                         string userName = reader.GetString(2);
                         string userPassword = reader.GetString(3);
@@ -55,7 +59,34 @@ namespace HMS_Software_V._01.Common_UseForms
                     if (loginSuccessful)
                     {
                         MessageBox.Show("Login Successful", "Infromation Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        if(comboB_selcePosition.Text == "Admin")
+                        {
+                            /*Admin_Dashboard admin_Dashboard = new Admin_Dashboard(userID);
+                            admin_Dashboard.Show();*/
+                            
+                        }
+                        else if(comboB_selcePosition.Text == "Doctor")
+                        {
+                            DoctorOPD_Dashboard doctorOPD = new DoctorOPD_Dashboard(userID);
+                            doctorOPD.Show();
+                            
+                        }
+                        else if(comboB_selcePosition.Text == "Nurse")
+                        {
+                            MessageBox.Show("Not Added Yet", "Infromation Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            Reception_Dashboard reception_Dashboard = new Reception_Dashboard(userID);
+                            reception_Dashboard.Show(); // To close the current from
+                           
+                        }
+
+                        UserLogin userLogin = new UserLogin();
+                        userLogin.Close();
                     }
+
                     else
                     {
                         MessageBox.Show("Invalid Username or Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);

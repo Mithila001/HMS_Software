@@ -15,10 +15,71 @@ namespace HMS_Software_V._01.Reception
     public partial class Reception_Dashboard : Form
     {
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
-        public Reception_Dashboard()
+
+        private int userID; // Getting userID from Login form
+        private string receptionName; 
+        public Reception_Dashboard(int userID)
         {
             InitializeComponent();
+
+            this.userID = userID; // Assign the parameter value to the class-level variable
+
+            MyGetGeneralDetails();
+            MyAddGeneralDetals();
             MyLoadUserData();
+        }
+
+        private void MyGetGeneralDetails()
+        {
+            try
+            {
+                connect.Open();
+                string query = "SELECT R_NameWithIinitials FROM Reception WHERE Reception_ID = @ReceptionId";
+
+                SqlCommand cmd = new SqlCommand(query,connect);
+                
+
+                cmd.Parameters.AddWithValue("@ReceptionId", userID);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    receptionName = reader.GetString(0);
+                    /*Console.WriteLine("=================Reception Name With Initials: " + receptionName);*/
+                }
+                else
+                {
+                    /*Console.WriteLine("=================No record found for Reception ID: " + userID);*/
+                }
+
+                reader.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message
+                                , "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Console.WriteLine(ex);
+
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+        private void MyAddGeneralDetals()
+        {
+            RD_receptionName_lbl.Text = receptionName;
+
+            DateTime currentDate = DateTime.Today;
+            string formattedDate = currentDate.ToString("d MMMM yyyy"); // Format the date like "24th August 2024"
+
+            DateTime currentTime = DateTime.Now;
+            string formattedTime = currentTime.ToString("h.mm tt"); // Format the time like "1.00 pm"
+
+            date_lbl.Text = formattedDate;
+            time_lbl.Text = formattedTime;
         }
 
         private void MyLoadUserData()
@@ -173,7 +234,7 @@ namespace HMS_Software_V._01.Reception
 
         private void R_register_btn_Click(object sender, EventArgs e)
         {
-            Reception_PatientRegistration reception_PatientRegistration = new Reception_PatientRegistration();
+            Reception_PatientRegistration reception_PatientRegistration = new Reception_PatientRegistration(userID);
             reception_PatientRegistration.Show();
             this.Hide();
         }
