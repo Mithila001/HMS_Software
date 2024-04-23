@@ -37,3 +37,6 @@ E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorOPD_AddClinic.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.UserControls.DoctorOPD_clincType.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorOPD_Dashboard.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorOPD_PatientCheck.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Common_UseForms.Common_MakeLabRequest.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Common_UseForms.UserControls.AddLabRequest.resources

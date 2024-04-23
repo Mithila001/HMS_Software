@@ -145,6 +145,18 @@
     <Compile Include="Admin\Admin_UserConotrols\Admin_Reception.Designer.cs">
       <DependentUpon>Admin_Reception.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common_UseForms\Common_MakeLabRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common_UseForms\Common_MakeLabRequest.Designer.cs">
+      <DependentUpon>Common_MakeLabRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common_UseForms\UserControls\AddLabRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common_UseForms\UserControls\AddLabRequest.Designer.cs">
+      <DependentUpon>AddLabRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseMithilaHMSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -161,6 +173,12 @@
     </Compile>
     <Compile Include="Doctor_OPD\DoctorOPD_Dashboard.Designer.cs">
       <DependentUpon>DoctorOPD_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_OPD\DoctorOPD_PatientCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_OPD\DoctorOPD_PatientCheck.Designer.cs">
+      <DependentUpon>DoctorOPD_PatientCheck.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctor_OPD\UserControls\DoctorOPD_clincType.cs">
       <SubType>UserControl</SubType>
@@ -270,11 +288,20 @@
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Reception.resx">
       <DependentUpon>Admin_Reception.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common_UseForms\Common_MakeLabRequest.resx">
+      <DependentUpon>Common_MakeLabRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common_UseForms\UserControls\AddLabRequest.resx">
+      <DependentUpon>AddLabRequest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor_OPD\DoctorOPD_AddClinic.resx">
       <DependentUpon>DoctorOPD_AddClinic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_OPD\DoctorOPD_Dashboard.resx">
       <DependentUpon>DoctorOPD_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_OPD\DoctorOPD_PatientCheck.resx">
+      <DependentUpon>DoctorOPD_PatientCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_OPD\UserControls\DoctorOPD_clincType.resx">
       <DependentUpon>DoctorOPD_clincType.cs</DependentUpon>
@@ -363,6 +390,7 @@
     <Content Include="Assests\icons\Nurse_icon.png" />
     <Content Include="Assests\icons\Patient_icon.png" />
     <Content Include="Assests\icons\Plus_icon.png" />
+    <Content Include="Assests\icons\Plus_icon33.png" />
     <Content Include="Assests\icons\Reception_icon.png" />
     <Content Include="DatabaseMithilaHMS.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
