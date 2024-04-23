@@ -68,7 +68,7 @@ namespace HMS_Software_V._01.Common_UseForms
                         }
                         else if(comboB_selcePosition.Text == "Doctor")
                         {
-                            DoctorOPD_Dashboard doctorOPD = new DoctorOPD_Dashboard(userID);
+                            DoctorCheck_Dashboard doctorOPD = new DoctorCheck_Dashboard(userID);
                             doctorOPD.Show();
                             
                         }

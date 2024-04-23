@@ -233,6 +233,9 @@ namespace HMS_Software_V._01.Common_UseForms
 
         }
 
+
+        // ============================================= Button Clicked =======================================
+
         private void CMLR_add_btn_Click(object sender, EventArgs e)
         {
             int getSpecimenID = specimenID;
@@ -256,6 +259,7 @@ namespace HMS_Software_V._01.Common_UseForms
 
         }
 
+        // ============================================= Button Clikced FlowLayoutPanel=======================================
         private void MyLoadUserData(int getSpecimenID, int getinvestigationID, string labInvestigations, string specimenName)
         {
             // Generate a number for the LabRequest
@@ -282,6 +286,7 @@ namespace HMS_Software_V._01.Common_UseForms
             
         }
 
+        // ============================================= Button Clikced Save Data =======================================
         private void CMLR_save_btn_Click(object sender, EventArgs e)
         {
             foreach (Control control in flowLayoutPanel_CMLR_selected.Controls)
@@ -303,6 +308,7 @@ namespace HMS_Software_V._01.Common_UseForms
             }
 
         }
+        // ============================================= Button Clikced Save Data and Send to databse =======================================
         private void InsertDataIntoDatabase(string investigationName, string scpecimenName, string generatedNumber )
         {
             try

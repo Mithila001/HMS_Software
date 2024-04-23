@@ -168,29 +168,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Doctor_OPD\DoctorOPD_AddClinic.cs">
+    <Compile Include="Doctor_Check\DoctorCheck_AddClinic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctor_OPD\DoctorOPD_AddClinic.Designer.cs">
-      <DependentUpon>DoctorOPD_AddClinic.cs</DependentUpon>
+    <Compile Include="Doctor_Check\DoctorCheck_AddClinic.Designer.cs">
+      <DependentUpon>DoctorCheck_AddClinic.cs</DependentUpon>
     </Compile>
-    <Compile Include="Doctor_OPD\DoctorOPD_Dashboard.cs">
+    <Compile Include="Doctor_Check\DoctorCheck_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctor_OPD\DoctorOPD_Dashboard.Designer.cs">
-      <DependentUpon>DoctorOPD_Dashboard.cs</DependentUpon>
+    <Compile Include="Doctor_Check\DoctorCheck_Dashboard.Designer.cs">
+      <DependentUpon>DoctorCheck_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Doctor_OPD\DoctorOPD_PatientCheck.cs">
+    <Compile Include="Doctor_Check\DoctorCheck_PatientCheck.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctor_OPD\DoctorOPD_PatientCheck.Designer.cs">
-      <DependentUpon>DoctorOPD_PatientCheck.cs</DependentUpon>
+    <Compile Include="Doctor_Check\DoctorCheck_PatientCheck.Designer.cs">
+      <DependentUpon>DoctorCheck_PatientCheck.cs</DependentUpon>
     </Compile>
-    <Compile Include="Doctor_OPD\UserControls\DoctorOPD_clincType.cs">
+    <Compile Include="Doctor_Check\UserControls\DoctorCheck_clincType.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Doctor_OPD\UserControls\DoctorOPD_clincType.Designer.cs">
-      <DependentUpon>DoctorOPD_clincType.cs</DependentUpon>
+    <Compile Include="Doctor_Check\UserControls\DoctorCheck_clincType.Designer.cs">
+      <DependentUpon>DoctorCheck_clincType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.Designer.cs">
+      <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
     </Compile>
     <Compile Include="MyCommonConnecString.cs" />
     <Compile Include="Program.cs" />
@@ -303,17 +309,20 @@
     <EmbeddedResource Include="Common_UseForms\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctor_OPD\DoctorOPD_AddClinic.resx">
-      <DependentUpon>DoctorOPD_AddClinic.cs</DependentUpon>
+    <EmbeddedResource Include="Doctor_Check\DoctorCheck_AddClinic.resx">
+      <DependentUpon>DoctorCheck_AddClinic.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctor_OPD\DoctorOPD_Dashboard.resx">
-      <DependentUpon>DoctorOPD_Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Doctor_Check\DoctorCheck_Dashboard.resx">
+      <DependentUpon>DoctorCheck_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctor_OPD\DoctorOPD_PatientCheck.resx">
-      <DependentUpon>DoctorOPD_PatientCheck.cs</DependentUpon>
+    <EmbeddedResource Include="Doctor_Check\DoctorCheck_PatientCheck.resx">
+      <DependentUpon>DoctorCheck_PatientCheck.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctor_OPD\UserControls\DoctorOPD_clincType.resx">
-      <DependentUpon>DoctorOPD_clincType.cs</DependentUpon>
+    <EmbeddedResource Include="Doctor_Check\UserControls\DoctorCheck_clincType.resx">
+      <DependentUpon>DoctorCheck_clincType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.resx">
+      <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -394,6 +403,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assests\icons\Appointment_icon.png" />
+    <Content Include="Assests\icons\Delete_icon33.png" />
     <Content Include="Assests\icons\Doctor_icon.png" />
     <Content Include="Assests\icons\Home_icon.png" />
     <Content Include="Assests\icons\Nurse_icon.png" />
