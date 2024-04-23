@@ -12,6 +12,9 @@ namespace HMS_Software_V._01.Common_UseForms.UserControls
 {
     public partial class AddLabRequest : UserControl
     {
+        // Come from the MakeLabRequest From
+        public int LabInvestigations { get; set; }
+        public int SpecimenName { get; set; }
         public AddLabRequest()
         {
             InitializeComponent();
