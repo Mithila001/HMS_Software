@@ -33,6 +33,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             DOPDPC_docPosition.Text = doctorPosition;
             DOPDPC_docID.Text = userID.ToString();
 
+            MyGetPatientDetails();
             MyStartPatientMedicalEvent();
 
 
@@ -54,13 +55,74 @@ namespace HMS_Software_V._01.Doctor_OPD
 
 
 
-        private void MyStartPatientMedicalEvent()
-        // This is also where we get patient deatils and going to send them acros the user control
+        private void MyStartPatientMedicalEvent() // Create PatientMedical_Event record
+
         {
             
             DateTime currentDate = DateTime.Today;
             DateTime currentTime = DateTime.Now;
- 
+            string timeString = currentTime.ToString("HH:mm");
+
+            DOPDPC_date.Text = currentDate.ToShortDateString();
+            DOPDPC_time.Text = timeString;
+
+            try
+            {
+                connect.Open();
+
+                string query = "INSERT INTO PatientMedical_Event (PatientRegistration_ID, Doctor_ID, PMRE_Location, PMRE_Date, PMRE_Time)"
+                    + "VALUES (@patietnRegistrationId, @doctorId, @location, @date, @time)";
+
+                using (SqlCommand command = new SqlCommand(query, connect))
+                {
+                    command.Parameters.AddWithValue("@patietnRegistrationId", patientRID);
+                    command.Parameters.AddWithValue("@doctorId", userID);
+                    command.Parameters.AddWithValue("@location", "OPD");
+                    command.Parameters.AddWithValue("@date", currentDate);
+                    command.Parameters.AddWithValue("@time", timeString);
+                    // Need to add PatientExaminatioNote
+
+                    MyDataStoringClass transport = new MyDataStoringClass();
+
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        // Retrieve the last inserted ID using SCOPE_IDENTITY()
+                        string getIdQuery = "SELECT SCOPE_IDENTITY()";
+                        SqlCommand getIdCommand = new SqlCommand(getIdQuery, connect);
+                        transport.PatientMedicalEventID = Convert.ToString(getIdCommand.ExecuteScalar());
+
+                        // Now you have the PatientMedicalEvent_ID in the insertedId variable
+                        MessageBox.Show($"PatientMedical_Event Record with ID {transport.PatientMedicalEventID} inserted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to insert PatientMedical_Event record.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Console.WriteLine("Error:  "+ex);
+            }
+            finally
+            {
+                connect.Close();
+            }
+
+
+        }
+
+        private void MyGetPatientDetails()
+        {
+            DateTime currentDate = DateTime.Today;
+            DateTime currentTime = DateTime.Now;
+
             DOPDPC_date.Text = currentDate.ToShortDateString();
             DOPDPC_time.Text = currentTime.ToShortTimeString();
 
@@ -91,43 +153,17 @@ namespace HMS_Software_V._01.Doctor_OPD
                     MessageBox.Show("Patien Registration ID not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-
-
-
-               /* string query = "INSERT INTO PatientMedical_Event (PatientRegistration_ID, Doctor_ID, PMRE_Location, PatientExaminatioNote )"
-                    +"VALUES (@patietnRegistrationId, @doctorId, @location, @examinationNote)";
-
-                using (SqlCommand command = new SqlCommand(query,connect))
-                {
-                    command.Parameters.AddWithValue("@patietnRegistrationId", patientRID);
-                    command.Parameters.AddWithValue("@doctorId", userID);
-                    command.Parameters.AddWithValue("@PMRE_Location", "OPD");
-                    // Need to add PatientExaminatioNote
-
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Record inserted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to insert record.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }*/
-
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                Console.WriteLine("DCPC;; "+ex);
+                Console.WriteLine("DCPC;; " + ex);
             }
             finally
             {
                 connect.Close();
             }
-
 
         }
 
