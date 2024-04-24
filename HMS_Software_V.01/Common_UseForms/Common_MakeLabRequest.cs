@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static HMS_Software_V._01.Doctor_OPD.DoctorCheck_PatientCheck;
 
+using Newtonsoft.Json; //To convert data to json fomat
+
+
 namespace HMS_Software_V._01.Common_UseForms
 {
     public partial class Common_MakeLabRequest : Form
@@ -87,7 +90,7 @@ namespace HMS_Software_V._01.Common_UseForms
         }
 
 
-        // ============================================= Lab Request Type Search =======================================
+        // ============================================= Lab Request Type Search =======================================================
         private int investigationID = 0;
         private void labInvestigationSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e) //Search bar click result
         {
@@ -171,7 +174,7 @@ namespace HMS_Software_V._01.Common_UseForms
         }
 
 
-        // ============================================= Specimen Search =======================================
+        // ============================================= Specimen Search ===============================================================
         private int specimenID = 0;
         private void specimenSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e) //Search bar click result
         {
@@ -252,7 +255,7 @@ namespace HMS_Software_V._01.Common_UseForms
         }
 
 
-        // ============================================= Button Clicked =======================================
+        // ============================================= Button Clicked ================================================================
         private void CMLR_add_btn_Click(object sender, EventArgs e)
         {
             int getSpecimenID = specimenID;
@@ -277,7 +280,7 @@ namespace HMS_Software_V._01.Common_UseForms
         }
 
 
-        // ============================================= Button Clikced FlowLayoutPanel=======================================
+        // ============================================= Button Clikced FlowLayoutPanel=================================================
         private void MyLoadUserData(int getSpecimenID, int getinvestigationID, string labInvestigations, string specimenName)
         {
             // Generate a number for the LabRequest
@@ -305,49 +308,112 @@ namespace HMS_Software_V._01.Common_UseForms
         }
 
 
-        // ============================================= Button Clikced Save Data =======================================
+        // ============================================= Button Clikced Save Data ======================================================
+
+        public class LabRequestData // To store the all the labRequest that collected and list below
+        {
+            public string InvestigationName { get; set; }
+            public string SpecimenName { get; set; }
+            public string GeneratedNumber { get; set; }
+        }
+        
         private void CMLR_save_btn_Click(object sender, EventArgs e)
         {
+            List<LabRequestData> dataList = new List<LabRequestData>();
+
             foreach (Control control in flowLayoutPanel_CMLR_selected.Controls)
             {
                 if (control is AddLabRequest addLabRequest)
-                {
-                    // Get data from the AddLabRequest user control
-                    int labInvestigations = addLabRequest.LabInvestigations;
-                    int specimenName = addLabRequest.SpecimenName;
+                {                  
 
                     string investigationName = addLabRequest.investigationType_lbl.Text;
                     string scpecimenName = addLabRequest.specimenName_lbl.Text;
                     string generatedNumber = addLabRequest.requestNumber_lbl.Text;
 
-
-                    // Insert data into the database
-                    MyInsertDataIntoDatabase(investigationName, scpecimenName, generatedNumber);
+                    // Create an instance of LabRequestData and add it to the list
+                    dataList.Add(new LabRequestData
+                    {
+                        InvestigationName = investigationName,
+                        SpecimenName = scpecimenName,
+                        GeneratedNumber = generatedNumber
+                    });   
                 }
+                
             }
+            // Serialize the list of LabRequestData objects into a JSON string
+            string labRequestJsonData = JsonConvert.SerializeObject(dataList);
+            // Insert data into the database
+            MyInsertDataIntoDatabase(labRequestJsonData); 
 
         }
 
 
         // ============================================= Button Clikced -> Save Data and Send to databse =======================================
-        private void MyInsertDataIntoDatabase(string investigationName, string scpecimenName, string generatedNumber )
+        private int getLabID;
+        private void MyInsertDataIntoDatabase(string labRequestJsonData)
         {
+            Console.WriteLine("JSon string ============="+ labRequestJsonData);
             try
             {
                 
                 connect.Open();
-                string query = "INSERT INTO Lab_Request (LR_Specimen, LR_InvestigatonType, LR_SpceimenNumber)" +
-                    " VALUES (@specimen, @investigationType, @specimentNumber)";
-                SqlCommand cmd = new SqlCommand(query, connect);
-               
-                cmd.Parameters.AddWithValue("@specimen", scpecimenName);
-                cmd.Parameters.AddWithValue("@investigationType", investigationName);
-                cmd.Parameters.AddWithValue("@specimentNumber", generatedNumber);
 
-                cmd.ExecuteNonQuery();
+                // Create a Lab Request record in Lab_Request table
+                string query = "INSERT INTO Lab_Request (LR_InvetigationJSON, PatientMedicalEvent_ID)" +
+                    " VALUES (@investigation, @patientMedicalEventID)";
+                using (SqlCommand cmd = new SqlCommand(query, connect))
+                {
+                    cmd.Parameters.AddWithValue("@investigation", labRequestJsonData); //Store all the lab request as a json in a single cell
+                    cmd.Parameters.AddWithValue("@patientMedicalEventID", dataImporter.PatientMedicalEventID);
 
-                MessageBox.Show("Success", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Using PatientMedicalEventID to find the lab record that now created and get the current LabRequest_ID
+                string query2 = "SELECT LabRequest_ID FROM Lab_Request WHERE PatientMedicalEvent_ID = @pmeID";
+                using (SqlCommand getIdCommand = new SqlCommand(query2, connect))
+                {
+                    getIdCommand.Parameters.AddWithValue("@pmeID", dataImporter.PatientMedicalEventID);
+
+                    object result = getIdCommand.ExecuteScalar();
+                    try
+                    {
+                        getLabID = Convert.ToInt32(result);
+                        Console.WriteLine($"Lab ID: {getLabID}");
+                    }
+                    catch (FormatException)
+                    {
+                        Console.WriteLine("Failed to parse Lab ID.");
+                    }
+                }
+
+                if(getLabID != 0)
+                {
+                    // Assigne LabRequest_ID to PatientMedical_Event table record 
+                    string updateQuery = "UPDATE PatientMedical_Event SET LabRequest_ID = @labRequestID WHERE PatientMedicalEvent_ID = @pmeID";
+                    using (SqlCommand updateCommand = new SqlCommand(updateQuery, connect))
+                    {
+                        updateCommand.Parameters.AddWithValue("@labRequestID", getLabID);
+                        updateCommand.Parameters.AddWithValue("@pmeID", dataImporter.PatientMedicalEventID);
+
+                        int rowsAffected = updateCommand.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            Console.WriteLine("LabRequest_ID updated successfully.");
+                            MessageBox.Show("Success", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Failed to update LabRequest_ID.");
+                        }
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Error: Didn't Assigne LabRequest_ID to PatientMedical_Event table record --> getLabID  = 0 ");
+                }
+
 
             }
             catch (Exception ex)

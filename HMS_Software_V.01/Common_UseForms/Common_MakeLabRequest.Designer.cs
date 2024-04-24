@@ -238,9 +238,9 @@
             this.CMLR_Pati_Gender.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CMLR_Pati_Gender.Location = new System.Drawing.Point(88, 60);
             this.CMLR_Pati_Gender.Name = "CMLR_Pati_Gender";
-            this.CMLR_Pati_Gender.Size = new System.Drawing.Size(44, 19);
+            this.CMLR_Pati_Gender.Size = new System.Drawing.Size(63, 19);
             this.CMLR_Pati_Gender.TabIndex = 12;
-            this.CMLR_Pati_Gender.Text = "Male";
+            this.CMLR_Pati_Gender.Text = "gender";
             // 
             // label9
             // 
@@ -260,9 +260,9 @@
             this.CMLR_Pati_Age.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CMLR_Pati_Age.Location = new System.Drawing.Point(88, 34);
             this.CMLR_Pati_Age.Name = "CMLR_Pati_Age";
-            this.CMLR_Pati_Age.Size = new System.Drawing.Size(27, 19);
+            this.CMLR_Pati_Age.Size = new System.Drawing.Size(37, 19);
             this.CMLR_Pati_Age.TabIndex = 10;
-            this.CMLR_Pati_Age.Text = "45";
+            this.CMLR_Pati_Age.Text = "age";
             // 
             // label8
             // 

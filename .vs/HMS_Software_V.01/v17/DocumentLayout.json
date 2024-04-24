@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "E:\\Programming\\Github\\HMS_Software_V.01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Common_MakeLabRequest.cs [Design]",
               "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
               "RelativeDocumentMoniker": "HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
@@ -42,37 +38,42 @@
               "RelativeToolTip": "HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T14:16:58.646Z",
+              "IsPinned": true,
               "EditorCaption": " [Design]"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Common_MakeLabRequest.cs",
               "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
               "RelativeDocumentMoniker": "HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
               "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
               "RelativeToolTip": "HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAIAwwBcAAAA5AAAA",
+              "ViewState": "AQIAAAABAAAAAAAAAAAIwEEBAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T14:03:00.333Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DoctorCheck_PatientCheck.cs",
               "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
               "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
               "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
               "RelativeToolTip": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAAADQAAAAgAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAA8wGAAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T13:50:59.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "DoctorCheck_PatientCheck.cs [Design]",
               "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
               "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
