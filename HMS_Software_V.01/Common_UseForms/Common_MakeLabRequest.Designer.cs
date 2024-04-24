@@ -32,23 +32,24 @@
             this.panel_RD_top = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.CMLR_time = new System.Windows.Forms.Label();
+            this.CMLR_date = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.CMLR_DocPosition = new System.Windows.Forms.Label();
+            this.CMLR_doctorName = new System.Windows.Forms.Label();
+            this.CMLR_DocID = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.CMLR_Pati_Gender = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.CMLR_Pati_Age = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.CMLR_Pati_Name = new System.Windows.Forms.Label();
             this.panel_right = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_CMLR_notAvailable = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_rightBot = new System.Windows.Forms.Panel();
+            this.CMLR_save_btn = new System.Windows.Forms.Button();
             this.panel_top_left = new System.Windows.Forms.Panel();
             this.specimenSearch_dataGrV = new System.Windows.Forms.DataGridView();
             this.labSpecimentTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +63,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.LabInvestigations_tbx = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel_CMLR_selected = new System.Windows.Forms.FlowLayoutPanel();
-            this.CMLR_save_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -124,39 +124,39 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.CMLR_time);
+            this.panel5.Controls.Add(this.CMLR_date);
             this.panel5.Controls.Add(this.materialDivider1);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.CMLR_DocPosition);
+            this.panel5.Controls.Add(this.CMLR_doctorName);
+            this.panel5.Controls.Add(this.CMLR_DocID);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(495, 88);
             this.panel5.TabIndex = 3;
             // 
-            // label6
+            // CMLR_time
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(373, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 22);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Time";
+            this.CMLR_time.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CMLR_time.AutoSize = true;
+            this.CMLR_time.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_time.Location = new System.Drawing.Point(345, 12);
+            this.CMLR_time.Name = "CMLR_time";
+            this.CMLR_time.Size = new System.Drawing.Size(56, 22);
+            this.CMLR_time.TabIndex = 9;
+            this.CMLR_time.Text = "Time";
             // 
-            // label5
+            // CMLR_date
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(373, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 22);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Date";
+            this.CMLR_date.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CMLR_date.AutoSize = true;
+            this.CMLR_date.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_date.Location = new System.Drawing.Point(345, 52);
+            this.CMLR_date.Name = "CMLR_date";
+            this.CMLR_date.Size = new System.Drawing.Size(52, 22);
+            this.CMLR_date.TabIndex = 8;
+            this.CMLR_date.Text = "Date";
             // 
             // materialDivider1
             // 
@@ -172,48 +172,48 @@
             this.materialDivider1.TabIndex = 3;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // label2
+            // CMLR_DocPosition
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Position";
+            this.CMLR_DocPosition.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CMLR_DocPosition.AutoSize = true;
+            this.CMLR_DocPosition.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_DocPosition.Location = new System.Drawing.Point(10, 34);
+            this.CMLR_DocPosition.Name = "CMLR_DocPosition";
+            this.CMLR_DocPosition.Size = new System.Drawing.Size(60, 17);
+            this.CMLR_DocPosition.TabIndex = 2;
+            this.CMLR_DocPosition.Text = "Position";
             // 
-            // label3
+            // CMLR_doctorName
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 24);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Doctor Name";
+            this.CMLR_doctorName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CMLR_doctorName.AutoSize = true;
+            this.CMLR_doctorName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_doctorName.Location = new System.Drawing.Point(8, 7);
+            this.CMLR_doctorName.Name = "CMLR_doctorName";
+            this.CMLR_doctorName.Size = new System.Drawing.Size(141, 24);
+            this.CMLR_doctorName.TabIndex = 7;
+            this.CMLR_doctorName.Text = "Doctor Name";
             // 
-            // label4
+            // CMLR_DocID
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 22);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "ID";
+            this.CMLR_DocID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CMLR_DocID.AutoSize = true;
+            this.CMLR_DocID.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_DocID.Location = new System.Drawing.Point(8, 63);
+            this.CMLR_DocID.Name = "CMLR_DocID";
+            this.CMLR_DocID.Size = new System.Drawing.Size(30, 22);
+            this.CMLR_DocID.TabIndex = 7;
+            this.CMLR_DocID.Text = "ID";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.CMLR_Pati_Gender);
             this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.CMLR_Pati_Age);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.CMLR_Pati_Name);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(504, 3);
             this.panel6.Name = "panel6";
@@ -231,16 +231,16 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "Gender:";
             // 
-            // label12
+            // CMLR_Pati_Gender
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(88, 60);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 19);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Male";
+            this.CMLR_Pati_Gender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CMLR_Pati_Gender.AutoSize = true;
+            this.CMLR_Pati_Gender.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_Pati_Gender.Location = new System.Drawing.Point(88, 60);
+            this.CMLR_Pati_Gender.Name = "CMLR_Pati_Gender";
+            this.CMLR_Pati_Gender.Size = new System.Drawing.Size(44, 19);
+            this.CMLR_Pati_Gender.TabIndex = 12;
+            this.CMLR_Pati_Gender.Text = "Male";
             // 
             // label9
             // 
@@ -253,16 +253,16 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "Age:";
             // 
-            // label10
+            // CMLR_Pati_Age
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(88, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 19);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "45";
+            this.CMLR_Pati_Age.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CMLR_Pati_Age.AutoSize = true;
+            this.CMLR_Pati_Age.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_Pati_Age.Location = new System.Drawing.Point(88, 34);
+            this.CMLR_Pati_Age.Name = "CMLR_Pati_Age";
+            this.CMLR_Pati_Age.Size = new System.Drawing.Size(27, 19);
+            this.CMLR_Pati_Age.TabIndex = 10;
+            this.CMLR_Pati_Age.Text = "45";
             // 
             // label8
             // 
@@ -275,16 +275,16 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Position:";
             // 
-            // label7
+            // CMLR_Pati_Name
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(88, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 19);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Patient Name";
+            this.CMLR_Pati_Name.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CMLR_Pati_Name.AutoSize = true;
+            this.CMLR_Pati_Name.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_Pati_Name.Location = new System.Drawing.Point(88, 9);
+            this.CMLR_Pati_Name.Name = "CMLR_Pati_Name";
+            this.CMLR_Pati_Name.Size = new System.Drawing.Size(110, 19);
+            this.CMLR_Pati_Name.TabIndex = 8;
+            this.CMLR_Pati_Name.Text = "Patient Name";
             // 
             // panel_right
             // 
@@ -326,6 +326,24 @@
             this.panel_rightBot.Name = "panel_rightBot";
             this.panel_rightBot.Size = new System.Drawing.Size(322, 54);
             this.panel_rightBot.TabIndex = 7;
+            // 
+            // CMLR_save_btn
+            // 
+            this.CMLR_save_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CMLR_save_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.CMLR_save_btn.FlatAppearance.BorderSize = 0;
+            this.CMLR_save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.CMLR_save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.CMLR_save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CMLR_save_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMLR_save_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.CMLR_save_btn.Location = new System.Drawing.Point(102, 6);
+            this.CMLR_save_btn.Name = "CMLR_save_btn";
+            this.CMLR_save_btn.Size = new System.Drawing.Size(133, 39);
+            this.CMLR_save_btn.TabIndex = 58;
+            this.CMLR_save_btn.Text = "Save";
+            this.CMLR_save_btn.UseVisualStyleBackColor = false;
+            this.CMLR_save_btn.Click += new System.EventHandler(this.CMLR_save_btn_Click);
             // 
             // panel_top_left
             // 
@@ -495,24 +513,6 @@
             this.flowLayoutPanel_CMLR_selected.Size = new System.Drawing.Size(674, 314);
             this.flowLayoutPanel_CMLR_selected.TabIndex = 11;
             // 
-            // CMLR_save_btn
-            // 
-            this.CMLR_save_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CMLR_save_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.CMLR_save_btn.FlatAppearance.BorderSize = 0;
-            this.CMLR_save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.CMLR_save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.CMLR_save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CMLR_save_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CMLR_save_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.CMLR_save_btn.Location = new System.Drawing.Point(102, 6);
-            this.CMLR_save_btn.Name = "CMLR_save_btn";
-            this.CMLR_save_btn.Size = new System.Drawing.Size(133, 39);
-            this.CMLR_save_btn.TabIndex = 58;
-            this.CMLR_save_btn.Text = "Save";
-            this.CMLR_save_btn.UseVisualStyleBackColor = false;
-            this.CMLR_save_btn.Click += new System.EventHandler(this.CMLR_save_btn_Click);
-            // 
             // Common_MakeLabRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,7 +523,6 @@
             this.Name = "Common_MakeLabRequest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Common_MakeLabRequest";
-            this.Load += new System.EventHandler(this.Common_MakeLabRequest_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_RD_top.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -548,19 +547,19 @@
         private System.Windows.Forms.Panel panel_RD_top;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label CMLR_time;
+        private System.Windows.Forms.Label CMLR_date;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label CMLR_DocPosition;
+        private System.Windows.Forms.Label CMLR_doctorName;
+        private System.Windows.Forms.Label CMLR_DocID;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label CMLR_Pati_Gender;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label CMLR_Pati_Age;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label CMLR_Pati_Name;
         private System.Windows.Forms.Panel panel_right;
         private System.Windows.Forms.Panel panel_rightBot;
         private System.Windows.Forms.Label label1;

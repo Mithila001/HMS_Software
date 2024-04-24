@@ -33,6 +33,8 @@ namespace HMS_Software_V._01.Doctor_OPD
             DOPDPC_docPosition.Text = doctorPosition;
             DOPDPC_docID.Text = userID.ToString();
 
+           
+
             MyGetPatientDetails();
             MyStartPatientMedicalEvent();
 
@@ -49,21 +51,24 @@ namespace HMS_Software_V._01.Doctor_OPD
             public string PatientAge { get; set; }
             public string PatientGender { get; set; }
             public string PatientMedicalEventID { get; set; }
-            // Add more properties as needed
+
         }
 
-
+        private string PatientMedicalEventID;
 
 
         private void MyStartPatientMedicalEvent() // Create PatientMedical_Event record
 
         {
-            
-            DateTime currentDate = DateTime.Today;
-            DateTime currentTime = DateTime.Now;
-            string timeString = currentTime.ToString("HH:mm");
 
-            DOPDPC_date.Text = currentDate.ToShortDateString();
+            // Adding date and time
+            DateTime currentDate = DateTime.Today;
+            string formattedDate = currentDate.ToString("d MMMM yyyy");
+
+            DateTime currentTime = DateTime.Now;
+            string timeString = currentTime.ToString("hh:mm tt");
+
+            DOPDPC_date.Text = formattedDate;
             DOPDPC_time.Text = timeString;
 
             try
@@ -82,23 +87,40 @@ namespace HMS_Software_V._01.Doctor_OPD
                     command.Parameters.AddWithValue("@time", timeString);
                     // Need to add PatientExaminatioNote
 
-                    MyDataStoringClass transport = new MyDataStoringClass();
-
 
                     int rowsAffected = command.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        // Retrieve the last inserted ID using SCOPE_IDENTITY()
-                        string getIdQuery = "SELECT SCOPE_IDENTITY()";
-                        SqlCommand getIdCommand = new SqlCommand(getIdQuery, connect);
-                        transport.PatientMedicalEventID = Convert.ToString(getIdCommand.ExecuteScalar());
+                        string getIdQuery = "SELECT PatientMedicalEvent_ID FROM PatientMedical_Event WHERE" +
+                            " PMRE_Date = @date AND PMRE_Time = @time AND Doctor_ID = @doctorId";
 
-                        // Now you have the PatientMedicalEvent_ID in the insertedId variable
-                        MessageBox.Show($"PatientMedical_Event Record with ID {transport.PatientMedicalEventID} inserted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        using (SqlCommand getIdCommand = new SqlCommand(getIdQuery, connect))
+                        {
+                            getIdCommand.Parameters.AddWithValue("@date", currentDate);
+                            getIdCommand.Parameters.AddWithValue("@time", timeString);
+                            getIdCommand.Parameters.AddWithValue("@doctorId", userID);
+
+                            // Executing the query
+                            object result = getIdCommand.ExecuteScalar();
+                            if (result != null)
+                            {
+                                PatientMedicalEventID = result.ToString();
+                                Console.WriteLine($"PatientMedical_Event Record with ID {PatientMedicalEventID} found successfully.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("PatientMedical_Event Record not found for the given criteria.");
+                            }
+                        }
+                    
+                        Console.WriteLine($"PatientMedical_Event Record with ID {PatientMedicalEventID} inserted successfully.");
+                     
+
                     }
                     else
                     {
-                        MessageBox.Show("Failed to insert PatientMedical_Event record.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Console.WriteLine("Failed to insert PatientMedical_Event record.");
+                        
                     }
                 }
 
@@ -169,7 +191,32 @@ namespace HMS_Software_V._01.Doctor_OPD
 
         private void DOPDPC_addLabRequest_Click(object sender, EventArgs e)
         {
-            Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest();
+            MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+
+            dataTranspoter.DoctorID = userID;
+            dataTranspoter.DoctorName = doctorName;
+            dataTranspoter.DoctorPosition = doctorPosition;
+            dataTranspoter.PatientRID = patientRID;
+
+            //Ensure that patient details are retrieved before populating these properties
+            dataTranspoter.PatientName = DOPDPC_patietName_lbl.Text;
+            dataTranspoter.PatientAge = DOPDPC_patietage_lbl.Text;
+            dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text;
+            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+
+
+            Console.WriteLine($"DoctorID: {dataTranspoter.DoctorID}");
+            Console.WriteLine($"DoctorName: {dataTranspoter.DoctorName}");
+            Console.WriteLine($"DoctorPosition: {dataTranspoter.DoctorPosition}");
+            Console.WriteLine($"PatientRID: {dataTranspoter.PatientRID}");
+            Console.WriteLine($"PatientName: {dataTranspoter.PatientName}");
+            Console.WriteLine($"PatientAge: {dataTranspoter.PatientAge}");
+            Console.WriteLine($"PatientGender: {dataTranspoter.PatientGender}");
+            Console.WriteLine($"PatientMedicalEventID: {dataTranspoter.PatientMedicalEventID}");
+
+
+
+            Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest(dataTranspoter);
             common_MakeLabRequest.Show();
             this.Hide();
         }

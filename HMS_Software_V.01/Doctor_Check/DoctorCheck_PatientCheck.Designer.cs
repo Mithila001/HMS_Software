@@ -33,6 +33,7 @@
             this.panel_RD_top = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.DOPDPC_time = new System.Windows.Forms.Label();
             this.DOPDPC_date = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -60,7 +61,6 @@
             this.DOPDPC_addPrescription = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DOPDPC_admit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -131,12 +131,23 @@
             this.panel5.Size = new System.Drawing.Size(495, 88);
             this.panel5.TabIndex = 3;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 22);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "ID:";
+            // 
             // DOPDPC_time
             // 
             this.DOPDPC_time.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DOPDPC_time.AutoSize = true;
             this.DOPDPC_time.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOPDPC_time.Location = new System.Drawing.Point(373, 12);
+            this.DOPDPC_time.Location = new System.Drawing.Point(322, 12);
             this.DOPDPC_time.Name = "DOPDPC_time";
             this.DOPDPC_time.Size = new System.Drawing.Size(56, 22);
             this.DOPDPC_time.TabIndex = 9;
@@ -147,7 +158,7 @@
             this.DOPDPC_date.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DOPDPC_date.AutoSize = true;
             this.DOPDPC_date.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOPDPC_date.Location = new System.Drawing.Point(373, 52);
+            this.DOPDPC_date.Location = new System.Drawing.Point(322, 52);
             this.DOPDPC_date.Name = "DOPDPC_date";
             this.DOPDPC_date.Size = new System.Drawing.Size(52, 22);
             this.DOPDPC_date.TabIndex = 8;
@@ -489,17 +500,6 @@
             this.DOPDPC_admit.TabIndex = 61;
             this.DOPDPC_admit.Text = "Admit";
             this.DOPDPC_admit.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 22);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "ID:";
             // 
             // DoctorCheck_PatientCheck
             // 

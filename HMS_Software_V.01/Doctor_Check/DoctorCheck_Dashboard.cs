@@ -76,7 +76,7 @@ namespace HMS_Software_V._01.Doctor_OPD
                     string query = "SELECT P_RegistrationID FROM Patient WHERE P_RegistrationID = @PatientID";
 
                     SqlCommand sqlCommand = new SqlCommand(query, connect);
-                    sqlCommand.Parameters.AddWithValue("@PatientID", DCD_enterPatientID_tbx.Text);
+                    sqlCommand.Parameters.AddWithValue("@PatientID", "P"+DCD_enterPatientID_tbx.Text);
 
                     SqlDataReader reader = sqlCommand.ExecuteReader();
 
@@ -86,7 +86,7 @@ namespace HMS_Software_V._01.Doctor_OPD
                         string patientID_str = reader.GetString(0);
                         /*int patientID = int.Parse(patientID_str);*/
 
-                        string inputIDstr = DCD_enterPatientID_tbx.Text;
+                        string inputIDstr = "P"+DCD_enterPatientID_tbx.Text;
                         /*int inputID = int.Parse(inputIDstr);*/
 
                         string doctorPosition = DCD_doctor_position_lbl.Text;

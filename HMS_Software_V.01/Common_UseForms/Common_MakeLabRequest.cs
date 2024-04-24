@@ -10,16 +10,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HMS_Software_V._01.Doctor_OPD.DoctorCheck_PatientCheck;
 
 namespace HMS_Software_V._01.Common_UseForms
 {
     public partial class Common_MakeLabRequest : Form
     {
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
-        public Common_MakeLabRequest()
+
+        private MyDataStoringClass dataImporter; 
+        public Common_MakeLabRequest(MyDataStoringClass dataImporter)
         {
+            this.dataImporter = dataImporter; // Put it befor MyLoadBasicDetails()  --ChatGPT
             InitializeComponent();
-            
+            MyLoadBasicDetails();
         }
 
         /*private void MyloadResult()
@@ -62,23 +66,38 @@ namespace HMS_Software_V._01.Common_UseForms
             }
         }*/
 
-        private void Common_MakeLabRequest_Load(object sender, EventArgs e)
+        private void MyLoadBasicDetails() //Load basic UI info
         {
-            /*MyloadResult();*/
+            CMLR_doctorName.Text = dataImporter.DoctorName;
+            CMLR_DocPosition.Text = dataImporter.DoctorPosition;
+            CMLR_DocID.Text = dataImporter.DoctorID.ToString();
+            CMLR_Pati_Name.Text = dataImporter.PatientName;
+            CMLR_Pati_Age.Text = dataImporter.PatientAge;
+            CMLR_Pati_Gender.Text = dataImporter.PatientGender;
+
+            // Adding date and time
+            DateTime currentDate = DateTime.Today;
+            string formattedDate = currentDate.ToString("d MMMM yyyy");
+
+            DateTime currentTime = DateTime.Now;
+            string timeString = currentTime.ToString("hh:mm tt");
+
+            CMLR_date.Text = formattedDate;
+            CMLR_time.Text = timeString;
         }
 
 
         // ============================================= Lab Request Type Search =======================================
-
         private int investigationID = 0;
-        private void labInvestigationSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void labInvestigationSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e) //Search bar click result
         {
+            
             DataGridViewRow row = this.labInvestigationSearch_dataGrV.Rows[e.RowIndex];
             string investigationIDstring  = row.Cells["Investigation_ID"].Value.ToString();
             LabInvestigations_tbx.Text = row.Cells["InvestigationName"].Value.ToString();
             labInvestigationSearch_dataGrV.Height = 0;
 
-            int investigationID = 0; 
+            int investigationID = 0; //Convert investigationId to int
 
             if (int.TryParse(investigationIDstring, out investigationID))
             {
@@ -95,7 +114,7 @@ namespace HMS_Software_V._01.Common_UseForms
 
         }
 
-        private void labInvestigationSearch_tbx_TextChanged_1(object sender, EventArgs e)
+        private void labInvestigationSearch_tbx_TextChanged_1(object sender, EventArgs e) //Search bar Show result
         {
             try
             {
@@ -151,11 +170,10 @@ namespace HMS_Software_V._01.Common_UseForms
 
         }
 
+
         // ============================================= Specimen Search =======================================
-
-
         private int specimenID = 0;
-        private void specimenSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void specimenSearch_dataGrV_CellClick(object sender, DataGridViewCellEventArgs e) //Search bar click result
         {
             DataGridViewRow row = this.specimenSearch_dataGrV.Rows[e.RowIndex];
             string speciementIDstring = row.Cells["labSpecimentTypeID"].Value.ToString();
@@ -177,7 +195,7 @@ namespace HMS_Software_V._01.Common_UseForms
 
         }
 
-        private void Speciment_tbx_TextChanged(object sender, EventArgs e)
+        private void Speciment_tbx_TextChanged(object sender, EventArgs e) //Search bar Show result
         {
             try
             {
@@ -235,7 +253,6 @@ namespace HMS_Software_V._01.Common_UseForms
 
 
         // ============================================= Button Clicked =======================================
-
         private void CMLR_add_btn_Click(object sender, EventArgs e)
         {
             int getSpecimenID = specimenID;
@@ -258,6 +275,7 @@ namespace HMS_Software_V._01.Common_UseForms
             }
 
         }
+
 
         // ============================================= Button Clikced FlowLayoutPanel=======================================
         private void MyLoadUserData(int getSpecimenID, int getinvestigationID, string labInvestigations, string specimenName)
@@ -286,6 +304,7 @@ namespace HMS_Software_V._01.Common_UseForms
             
         }
 
+
         // ============================================= Button Clikced Save Data =======================================
         private void CMLR_save_btn_Click(object sender, EventArgs e)
         {
@@ -303,13 +322,15 @@ namespace HMS_Software_V._01.Common_UseForms
 
 
                     // Insert data into the database
-                    InsertDataIntoDatabase(investigationName, scpecimenName, generatedNumber);
+                    MyInsertDataIntoDatabase(investigationName, scpecimenName, generatedNumber);
                 }
             }
 
         }
-        // ============================================= Button Clikced Save Data and Send to databse =======================================
-        private void InsertDataIntoDatabase(string investigationName, string scpecimenName, string generatedNumber )
+
+
+        // ============================================= Button Clikced -> Save Data and Send to databse =======================================
+        private void MyInsertDataIntoDatabase(string investigationName, string scpecimenName, string generatedNumber )
         {
             try
             {
