@@ -34,6 +34,11 @@ E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Reception.UserControls.R_A_SelectClinicType.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Reception.UserControls.Recep_D_ClinicEvents.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Reception.Reception_AppontmentRegister.resources
-E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorOPD_AddClinic.resources
-E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.UserControls.DoctorOPD_clincType.resources
-E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorOPD_Dashboard.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Common_UseForms.Common_MakeLabRequest.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Common_UseForms.UserControls.AddLabRequest.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Common_UseForms.UserLogin.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorCheck_AddClinic.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorCheck_Dashboard.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.DoctorCheck_PatientCheck.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.UserControls.DoctorCheck_clincType.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_OPD.UserControls.DoctorCheck_showAddedClinics.resources

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "E:\\Programming\\Github\\HMS_Software_V.01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\doctor_opd\\doctoropd_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_opd\\doctoropd_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\reception\\reception_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\reception\\reception_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|E:\\Programming\\Github\\HMS_Software_V.01\\hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\common_useforms\\common_makelabrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|E:\\Programming\\Github\\HMS_Software_V.01\\hms_software_v.01\\doctor_check\\doctorcheck_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_check\\doctorcheck_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|e:\\programming\\github\\hms_software_v.01\\hms_software_v.01\\reception\\reception_patientregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\reception\\reception_patientregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|E:\\Programming\\Github\\HMS_Software_V.01\\hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_check\\doctorcheck_patientcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|E:\\Programming\\Github\\HMS_Software_V.01\\hms_software_v.01\\doctor_check\\doctorcheck_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA404720-1D77-45E2-B45A-C42868E592E3}|HMS_Software_V.01\\HMS_Software_V.01.csproj|solutionrelative:hms_software_v.01\\doctor_check\\doctorcheck_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,51 +38,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Reception_PatientRegistration.cs [Design]",
-              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs",
-              "RelativeDocumentMoniker": "HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs",
-              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs [Design]",
-              "RelativeToolTip": "HMS_Software_V.01\\Reception\\Reception_PatientRegistration.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "DoctorCheck_Dashboard.cs [Design]",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs [Design]",
+              "RelativeToolTip": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T15:41:25.201Z",
+              "WhenOpened": "2024-04-23T16:23:18.866Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Program.cs",
-              "RelativeDocumentMoniker": "HMS_Software_V.01\\Program.cs",
-              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Program.cs",
-              "RelativeToolTip": "HMS_Software_V.01\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "DocumentIndex": 4,
+              "Title": "DoctorCheck_Dashboard.cs",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs",
+              "RelativeToolTip": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_Dashboard.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAADwvyEAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T15:34:55.383Z",
+              "WhenOpened": "2024-04-23T14:48:26.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Reception_Dashboard.cs [Design]",
-              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_Dashboard.cs",
-              "RelativeDocumentMoniker": "HMS_Software_V.01\\Reception\\Reception_Dashboard.cs",
-              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Reception\\Reception_Dashboard.cs [Design]",
-              "RelativeToolTip": "HMS_Software_V.01\\Reception\\Reception_Dashboard.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "DoctorCheck_PatientCheck.cs [Design]",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs [Design]",
+              "RelativeToolTip": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T15:28:40.412Z",
+              "WhenOpened": "2024-04-23T15:10:19.165Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DoctorOPD_Dashboard.cs [Design]",
-              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs",
-              "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs",
-              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs [Design]",
-              "RelativeToolTip": "HMS_Software_V.01\\Doctor_OPD\\DoctorOPD_Dashboard.cs [Design]",
+              "Title": "DoctorCheck_PatientCheck.cs",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
+              "RelativeToolTip": "HMS_Software_V.01\\Doctor_Check\\DoctorCheck_PatientCheck.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAF0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T15:26:36.33Z",
+              "WhenOpened": "2024-04-23T15:12:14.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Common_MakeLabRequest.cs [Design]",
+              "DocumentMoniker": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
+              "RelativeDocumentMoniker": "HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs",
+              "ToolTip": "E:\\Programming\\Github\\HMS_Software_V.01\\HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs [Design]",
+              "RelativeToolTip": "HMS_Software_V.01\\Common_UseForms\\Common_MakeLabRequest.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T16:17:20.77Z",
               "EditorCaption": " [Design]"
             }
           ]

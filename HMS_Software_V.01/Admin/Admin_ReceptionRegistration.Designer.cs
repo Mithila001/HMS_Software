@@ -73,6 +73,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.A_R_NameWithInitials_tbx = new System.Windows.Forms.TextBox();
             this.A_R_fullName_tbx = new System.Windows.Forms.TextBox();
+            this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1_top.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
@@ -280,6 +282,8 @@
             // 
             // panel1_mid_mid
             // 
+            this.panel1_mid_mid.Controls.Add(this.D_Register_DTimePicker);
+            this.panel1_mid_mid.Controls.Add(this.label13);
             this.panel1_mid_mid.Controls.Add(this.label20);
             this.panel1_mid_mid.Controls.Add(this.A_R_certificate_tbx);
             this.panel1_mid_mid.Controls.Add(this.label16);
@@ -630,6 +634,27 @@
             this.A_R_fullName_tbx.Size = new System.Drawing.Size(310, 22);
             this.A_R_fullName_tbx.TabIndex = 8;
             // 
+            // D_Register_DTimePicker
+            // 
+            this.D_Register_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.D_Register_DTimePicker.Location = new System.Drawing.Point(11, 299);
+            this.D_Register_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
+            this.D_Register_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
+            this.D_Register_DTimePicker.Name = "D_Register_DTimePicker";
+            this.D_Register_DTimePicker.Size = new System.Drawing.Size(310, 20);
+            this.D_Register_DTimePicker.TabIndex = 50;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 279);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 15);
+            this.label13.TabIndex = 49;
+            this.label13.Text = "Date of Birth";
+            // 
             // Admin_ReceptionRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -706,5 +731,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox A_R_NameWithInitials_tbx;
         private System.Windows.Forms.TextBox A_R_fullName_tbx;
+        private System.Windows.Forms.DateTimePicker D_Register_DTimePicker;
+        private System.Windows.Forms.Label label13;
     }
 }

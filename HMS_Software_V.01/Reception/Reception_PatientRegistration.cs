@@ -15,12 +15,14 @@ namespace HMS_Software_V._01.Reception
     public partial class Reception_PatientRegistration : Form
     {
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
-        public Reception_PatientRegistration()
+
+        private int userID;
+        public Reception_PatientRegistration(int userID)
         {
             InitializeComponent();
 
-            this.FormClosed += (s, e) => new Reception_Dashboard().Show();
-
+            this.FormClosed += (s, e) => new Reception_Dashboard(userID).Show();
+            this.userID = userID;
         }
         public string MyValidateTextBox(string value) // Method to validate textbox value and return the validated value
         {
