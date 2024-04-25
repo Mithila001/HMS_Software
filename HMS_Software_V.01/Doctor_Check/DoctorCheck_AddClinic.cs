@@ -46,13 +46,14 @@ namespace HMS_Software_V._01.Doctor_OPD
             }
         }
 
+        //================================= Show Clinic Types UserControls =================================
         private void LoadUserData()
         {
             try
             {
                 connect.Open();
                 DateTime today = DateTime.Today;
-                //================================= Show Clinic Types UserControls =================================
+                
                 string query = "SELECT CT_Name, CT_WardNo, ClincType_ID "
                     + "FROM ClincType";
 
@@ -151,8 +152,8 @@ namespace HMS_Software_V._01.Doctor_OPD
                 if (control is AddLabRequest addLabRequest)
                 {
                     // Get data from the AddLabRequest user control
-                    int labInvestigations = addLabRequest.LabInvestigations;
-                    int specimenName = addLabRequest.SpecimenName;
+                    int labInvestigations = addLabRequest.LabInvestigationsID;
+                    int specimenName = addLabRequest.SpecimenNameID;
 
                     string investigationName = addLabRequest.investigationType_lbl.Text;
                     string scpecimenName = addLabRequest.specimenName_lbl.Text;
