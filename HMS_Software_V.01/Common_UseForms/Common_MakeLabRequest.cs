@@ -131,26 +131,31 @@ namespace HMS_Software_V._01.Common_UseForms
                     SqlCommand sqlCommand = connect.CreateCommand();
                     sqlCommand.CommandText = query;
 
+                    // Warnig - This section need user error handling, currenly user can add empty vlaues to to request table
                     sqlCommand.CommandText = query;
                     sqlCommand.Parameters.AddWithValue("@LabInvestigationType_ID", LabInvestigations_tbx.Text + "%");
                     sqlCommand.Parameters.AddWithValue("@LIT_Name", LabInvestigations_tbx.Text + "%");
 
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    adapter.SelectCommand = sqlCommand;
-
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-
-                    if (dt != null && dt.Rows.Count > 0)
+                    using (SqlDataAdapter adapter = new SqlDataAdapter())
                     {
-                        labInvestigationSearch_dataGrV.DataSource = dt;
-                        labInvestigationSearch_dataGrV.Height = labInvestigationSearch_dataGrV.Rows.Count * 30;
+                        adapter.SelectCommand = sqlCommand;
+
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        if (dt != null && dt.Rows.Count > 0)
+                        {
+                            labInvestigationSearch_dataGrV.DataSource = dt;
+                            labInvestigationSearch_dataGrV.Height = labInvestigationSearch_dataGrV.Rows.Count * 30;
+
+                        }
+                        else
+                        {
+                            labInvestigationSearch_dataGrV.Height = 0;
+                        }
 
                     }
-                    else
-                    {
-                        labInvestigationSearch_dataGrV.Height = 0;
-                    }
+                    
 
                 }
                 else if (LabInvestigations_tbx.TextLength <= 0)
@@ -343,12 +348,13 @@ namespace HMS_Software_V._01.Common_UseForms
 
                     MyInsertLabDataIntoDatabase(getInvstigationID, getSpecimenID, generatedNumber, investigationName, scpecimenName);
                 }
-                
+
             }
             // Serialize the list of LabRequestData objects into a JSON string
             /*string labRequestJsonData = JsonConvert.SerializeObject(dataList);*/
             // Insert data into the database
             /*MyInsertDataIntoDatabase(dataList);*/
+            MySuccessfulyDataInsertMessage();
 
         }
 
@@ -366,8 +372,11 @@ namespace HMS_Software_V._01.Common_UseForms
                 connect.Open();
 
                 // Create a Lab Request record in Lab_Request table
-                string query = "INSERT INTO Lab_Request (LR_InvestigationID, LR_SpecimenID, PatientMedicalEvent_ID, LR_InvestigationName, LR_SpecimenName, LR_LabelNumber)" +
-                    " VALUES (@investigationID,@specimenID, @patientMedicalEventID, @investigationName, @specimenName, @lableNumber)";
+                string query = "INSERT INTO Lab_Request (LR_InvestigationID, LR_SpecimenID, PatientMedicalEvent_ID, LR_InvestigationName,"+
+                    " LR_SpecimenName, LR_LabelNumber, Patient_ID, Doctor_ID)" +
+
+                    " VALUES (@investigationID,@specimenID, @patientMedicalEventID, @investigationName,"+
+                    " @specimenName, @lableNumber, @patientID, @doctorID)";
                 using (SqlCommand cmd = new SqlCommand(query, connect))
                 {
                     cmd.Parameters.AddWithValue("@investigationID", getInvstigationID);
@@ -376,6 +385,8 @@ namespace HMS_Software_V._01.Common_UseForms
                     cmd.Parameters.AddWithValue("@investigationName", investigationName);
                     cmd.Parameters.AddWithValue("@specimenName", scpecimenName);
                     cmd.Parameters.AddWithValue("@lableNumber", generatedNumber);
+                    cmd.Parameters.AddWithValue("@patientID", dataImporter.PatientRID);
+                    cmd.Parameters.AddWithValue("@doctorID", dataImporter.DoctorID);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -422,11 +433,12 @@ namespace HMS_Software_V._01.Common_UseForms
                         if (rowsAffected > 0)
                         {
                             Console.WriteLine("LabRequest_ID updated successfully.");
-                            MessageBox.Show("Success", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            /*MessageBox.Show("Success", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
                         }
                         else
                         {
                             Console.WriteLine("Failed to update LabRequest_ID.");
+                            MessageBox.Show("Failed to update LabRequest_ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
 
@@ -446,6 +458,20 @@ namespace HMS_Software_V._01.Common_UseForms
             finally
             {
                 connect.Close();
+            }
+        }
+
+        // After saving the request, show the message if the Labrequest ID insert successful.
+        private void MySuccessfulyDataInsertMessage()
+        {
+            if (!string.IsNullOrEmpty(labRequestIDlistStrig))
+            {
+                MessageBox.Show("Successfully Added " + labRequestIDlistStrig.Substring(0, labRequestIDlistStrig.Length - 2)
+                    + " Request IDs", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Lab Request list is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

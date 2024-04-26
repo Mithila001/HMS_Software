@@ -30,16 +30,16 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_RD_top = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.DisplayUnittype_title = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.DCD_doctor_position_lbl = new System.Windows.Forms.Label();
             this.DCD_doctorName_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.DisplayUnittype_doctors = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.DisplayUnittype_patient = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -93,7 +93,7 @@
             // 
             this.panel_RD_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panel_RD_top, 4);
-            this.panel_RD_top.Controls.Add(this.label5);
+            this.panel_RD_top.Controls.Add(this.DisplayUnittype_title);
             this.panel_RD_top.Controls.Add(this.materialDivider1);
             this.panel_RD_top.Controls.Add(this.DCD_doctor_position_lbl);
             this.panel_RD_top.Controls.Add(this.DCD_doctorName_lbl);
@@ -103,16 +103,16 @@
             this.panel_RD_top.Size = new System.Drawing.Size(1002, 94);
             this.panel_RD_top.TabIndex = 2;
             // 
-            // label5
+            // DisplayUnittype_title
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(509, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(331, 34);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Outpatient Department";
+            this.DisplayUnittype_title.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DisplayUnittype_title.AutoSize = true;
+            this.DisplayUnittype_title.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayUnittype_title.Location = new System.Drawing.Point(509, 29);
+            this.DisplayUnittype_title.Name = "DisplayUnittype_title";
+            this.DisplayUnittype_title.Size = new System.Drawing.Size(331, 34);
+            this.DisplayUnittype_title.TabIndex = 6;
+            this.DisplayUnittype_title.Text = "Outpatient Department";
             // 
             // materialDivider1
             // 
@@ -162,9 +162,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.DisplayUnittype_doctors);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.DisplayUnittype_patient);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(255, 103);
             this.panel2.Name = "panel2";
@@ -182,16 +182,16 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "20";
             // 
-            // label8
+            // DisplayUnittype_doctors
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 180);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(205, 22);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Available OPD Doctors";
+            this.DisplayUnittype_doctors.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DisplayUnittype_doctors.AutoSize = true;
+            this.DisplayUnittype_doctors.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayUnittype_doctors.Location = new System.Drawing.Point(17, 180);
+            this.DisplayUnittype_doctors.Name = "DisplayUnittype_doctors";
+            this.DisplayUnittype_doctors.Size = new System.Drawing.Size(205, 22);
+            this.DisplayUnittype_doctors.TabIndex = 9;
+            this.DisplayUnittype_doctors.Text = "Available OPD Doctors";
             // 
             // label7
             // 
@@ -204,16 +204,16 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "20";
             // 
-            // label6
+            // DisplayUnittype_patient
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 22);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Total OPD Patients";
+            this.DisplayUnittype_patient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DisplayUnittype_patient.AutoSize = true;
+            this.DisplayUnittype_patient.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayUnittype_patient.Location = new System.Drawing.Point(38, 59);
+            this.DisplayUnittype_patient.Name = "DisplayUnittype_patient";
+            this.DisplayUnittype_patient.Size = new System.Drawing.Size(170, 22);
+            this.DisplayUnittype_patient.TabIndex = 7;
+            this.DisplayUnittype_patient.Text = "Total OPD Patients";
             // 
             // panel3
             // 
@@ -440,7 +440,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel_RD_top;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label DisplayUnittype_title;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Label DCD_doctor_position_lbl;
         private System.Windows.Forms.Label DCD_doctorName_lbl;
@@ -448,11 +448,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label DisplayUnittype_patient;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label DisplayUnittype_doctors;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;

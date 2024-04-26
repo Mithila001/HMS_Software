@@ -21,9 +21,11 @@ namespace HMS_Software_V._01.Doctor_OPD
         private string patientRID;
         private string doctorPosition;
         private string doctorName;
-        public DoctorCheck_PatientCheck(string patientID_str, int userID, string doctorPosition, string doctorName)
+        private string unitType;
+        public DoctorCheck_PatientCheck(string patientID_str, int userID, string doctorPosition, string doctorName, string unittype)
         {
             InitializeComponent();
+            this.unitType = unittype;
             this.patientRID = patientID_str;
             this.userID = userID;
             this.doctorPosition = doctorPosition;
@@ -53,8 +55,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             public string PatientMedicalEventID { get; set; }
 
         }
-
-        private string PatientMedicalEventID;
+        private string PatientMedicalEventID; //Storing PatientMedicalEventID 
 
 
         private void MyStartPatientMedicalEvent() // Create PatientMedical_Event record
@@ -82,7 +83,7 @@ namespace HMS_Software_V._01.Doctor_OPD
                 {
                     command.Parameters.AddWithValue("@patietnRegistrationId", patientRID);
                     command.Parameters.AddWithValue("@doctorId", userID);
-                    command.Parameters.AddWithValue("@location", "OPD");
+                    command.Parameters.AddWithValue("@location", unitType); // Warnig: this need to change
                     command.Parameters.AddWithValue("@date", currentDate);
                     command.Parameters.AddWithValue("@time", timeString);
                     // Need to add PatientExaminatioNote

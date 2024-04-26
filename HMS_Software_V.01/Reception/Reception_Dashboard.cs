@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,13 @@ namespace HMS_Software_V._01.Reception
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int userID; // Getting userID from Login form
+        
         private string receptionName; 
         public Reception_Dashboard(int userID)
         {
             InitializeComponent();
 
+            
             this.userID = userID; // Assign the parameter value to the class-level variable
 
             MyGetGeneralDetails();
