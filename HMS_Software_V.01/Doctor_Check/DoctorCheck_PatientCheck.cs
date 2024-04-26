@@ -22,6 +22,13 @@ namespace HMS_Software_V._01.Doctor_OPD
         private string doctorPosition;
         private string doctorName;
         private string unitType;
+
+
+
+
+
+
+
         public DoctorCheck_PatientCheck(string patientID_str, int userID, string doctorPosition, string doctorName, string unittype)
         {
             InitializeComponent();
@@ -39,9 +46,10 @@ namespace HMS_Software_V._01.Doctor_OPD
 
             MyGetPatientDetails();
             MyStartPatientMedicalEvent();
-
-
+         
         }
+
+
         // =========================== Data Transporter =============================
         public class MyDataStoringClass
         {
@@ -220,6 +228,41 @@ namespace HMS_Software_V._01.Doctor_OPD
             Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest(dataTranspoter);
             common_MakeLabRequest.Show();
             this.Hide();
+        }
+
+        private void DOPDPC_addPrescription_Click(object sender, EventArgs e)
+        {
+            MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+            
+            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+            dataTranspoter.DoctorID = userID;
+            dataTranspoter.DoctorName = doctorName;
+            dataTranspoter.DoctorPosition = doctorPosition;
+            dataTranspoter.PatientRID = patientRID;
+            dataTranspoter.PatientName = DOPDPC_patietName_lbl.Text;
+            dataTranspoter.PatientAge = DOPDPC_patietage_lbl.Text;
+            dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text;
+            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+
+
+            Common_MakePrescription common_MakePrescription = new Common_MakePrescription(dataTranspoter);
+            common_MakePrescription.Show();
+            this.Hide();
+
+            Console.WriteLine($"PatientMedicalEventID from PatientCkeck from: {dataTranspoter.PatientMedicalEventID}");
+        }
+
+        private void DOPDPC_addAppointment_Click(object sender, EventArgs e)
+        {
+            MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+
+            DoctorCheck_AddClinic doctorCheck_AddClinic = new DoctorCheck_AddClinic(dataTranspoter);
+            doctorCheck_AddClinic.Show();
+            this.Hide();
+
+            Console.WriteLine($"PatientMedicalEventID from PatientCkeck from: {dataTranspoter.PatientMedicalEventID}");
+
         }
     }
 }

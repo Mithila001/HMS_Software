@@ -452,6 +452,7 @@
             this.DOPDPC_addAppointment.Text = "Appointment";
             this.DOPDPC_addAppointment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DOPDPC_addAppointment.UseVisualStyleBackColor = false;
+            this.DOPDPC_addAppointment.Click += new System.EventHandler(this.DOPDPC_addAppointment_Click);
             // 
             // DOPDPC_addPrescription
             // 
@@ -473,6 +474,7 @@
             this.DOPDPC_addPrescription.Text = "Prescription";
             this.DOPDPC_addPrescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DOPDPC_addPrescription.UseVisualStyleBackColor = false;
+            this.DOPDPC_addPrescription.Click += new System.EventHandler(this.DOPDPC_addPrescription_Click);
             // 
             // panel4
             // 

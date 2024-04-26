@@ -154,11 +154,23 @@
     <Compile Include="Common_UseForms\Common_MakeLabRequest.Designer.cs">
       <DependentUpon>Common_MakeLabRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common_UseForms\Common_MakePrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common_UseForms\Common_MakePrescription.Designer.cs">
+      <DependentUpon>Common_MakePrescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common_UseForms\UserControls\AddLabRequest.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Common_UseForms\UserControls\AddLabRequest.Designer.cs">
       <DependentUpon>AddLabRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common_UseForms\UserControls\CMP_PrescriptionAdd_userControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common_UseForms\UserControls\CMP_PrescriptionAdd_userControl.Designer.cs">
+      <DependentUpon>CMP_PrescriptionAdd_userControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Common_UseForms\UserLogin.cs">
       <SubType>Form</SubType>
@@ -306,8 +318,14 @@
     <EmbeddedResource Include="Common_UseForms\Common_MakeLabRequest.resx">
       <DependentUpon>Common_MakeLabRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common_UseForms\Common_MakePrescription.resx">
+      <DependentUpon>Common_MakePrescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common_UseForms\UserControls\AddLabRequest.resx">
       <DependentUpon>AddLabRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common_UseForms\UserControls\CMP_PrescriptionAdd_userControl.resx">
+      <DependentUpon>CMP_PrescriptionAdd_userControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common_UseForms\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>

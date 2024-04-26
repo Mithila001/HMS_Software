@@ -19,7 +19,17 @@ namespace HMS_Software_V._01.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserLogin());
+            /*Application.Run(new DoctorCheck_AddClinic());*/
+
+
+            // Dummy values
+            string patientID_str = "P00005";
+            int userID = 5;
+            string doctorPosition = "Pediatrician";
+            string doctorName = "Mice";
+            string unittype = "Clinic";
+
+            Application.Run(new DoctorCheck_PatientCheck(patientID_str, userID, doctorPosition, doctorName, unittype));
         }
     }
 }
