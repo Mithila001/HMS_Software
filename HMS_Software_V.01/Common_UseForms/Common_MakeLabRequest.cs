@@ -12,13 +12,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static HMS_Software_V._01.Doctor_OPD.DoctorCheck_PatientCheck;
 
-using Newtonsoft.Json; //To convert data to json fomat
+using Newtonsoft.Json;
+using HMS_Software_V._01.Doctor_OPD; //To convert data to json fomat
 
 
 namespace HMS_Software_V._01.Common_UseForms
 {
     public partial class Common_MakeLabRequest : Form
     {
+        public Form DoctorCkeckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
+
+
+
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private MyDataStoringClass dataImporter; 
@@ -27,6 +32,17 @@ namespace HMS_Software_V._01.Common_UseForms
             this.dataImporter = dataImporter; // Put it befor MyLoadBasicDetails()  --ChatGPT
             InitializeComponent();
             MyLoadBasicDetails();
+
+
+
+            // In order form to close, DoctorCheck_PatientCheck required values. So we get original values from DoctorCheck_PatientCheck public class 
+            string FC_patientID_str = dataImporter.PatientRID;
+            int FC_userID = dataImporter.DoctorID;
+            string FC_doctorPosition = dataImporter.DoctorPosition;
+            string FC_doctorName = dataImporter.DoctorName;
+            string FC_unittype = dataImporter.EventUnitType;
+            /*this.FormClosed += (s, e) => new DoctorCheck_PatientCheck(FC_patientID_str, FC_userID, FC_doctorPosition, FC_doctorName, FC_unittype).Show();*/
+            /*this.FormClosed += (s, e) => this.Show()*/;
         }
 
         /*private void MyloadResult()
@@ -475,6 +491,9 @@ namespace HMS_Software_V._01.Common_UseForms
             }
         }
 
-        
+        private void Common_MakeLabRequest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DoctorCkeckFromReferece.Show();
+        }
     }
 }

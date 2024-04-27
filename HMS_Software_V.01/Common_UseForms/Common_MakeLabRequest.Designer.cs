@@ -523,6 +523,7 @@
             this.Name = "Common_MakeLabRequest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Common_MakeLabRequest";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Common_MakeLabRequest_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_RD_top.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);

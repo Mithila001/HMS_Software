@@ -15,6 +15,9 @@ namespace HMS_Software_V._01.Doctor_OPD
 {
     public partial class DoctorCheck_PatientCheck : Form
     {
+        public Form DoctorDashboardFromReferece {  get; set; }
+
+
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int userID;
@@ -61,6 +64,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             public string PatientAge { get; set; }
             public string PatientGender { get; set; }
             public string PatientMedicalEventID { get; set; }
+            public string EventUnitType { get; set; }
 
         }
         private string PatientMedicalEventID; //Storing PatientMedicalEventID 
@@ -149,7 +153,7 @@ namespace HMS_Software_V._01.Doctor_OPD
 
         }
 
-        private void MyGetPatientDetails()
+        private void MyGetPatientDetails() // Get Patient Details
         {
             DateTime currentDate = DateTime.Today;
             DateTime currentTime = DateTime.Now;
@@ -198,6 +202,8 @@ namespace HMS_Software_V._01.Doctor_OPD
 
         }
 
+
+        // Move To Lab Request form
         private void DOPDPC_addLabRequest_Click(object sender, EventArgs e)
         {
             MyDataStoringClass dataTranspoter = new MyDataStoringClass();
@@ -206,12 +212,12 @@ namespace HMS_Software_V._01.Doctor_OPD
             dataTranspoter.DoctorName = doctorName;
             dataTranspoter.DoctorPosition = doctorPosition;
             dataTranspoter.PatientRID = patientRID;
-
-            //Ensure that patient details are retrieved before populating these properties
+        
             dataTranspoter.PatientName = DOPDPC_patietName_lbl.Text;
             dataTranspoter.PatientAge = DOPDPC_patietage_lbl.Text;
             dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text;
             dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+            dataTranspoter.EventUnitType = unitType;
 
 
             Console.WriteLine($"DoctorID: {dataTranspoter.DoctorID}");
@@ -226,43 +232,99 @@ namespace HMS_Software_V._01.Doctor_OPD
 
 
             Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest(dataTranspoter);
+            common_MakeLabRequest.DoctorCkeckFromReferece = this; //crete a referece for this form
             common_MakeLabRequest.Show();
             this.Hide();
         }
 
+        // Move To Lab Prescription form
         private void DOPDPC_addPrescription_Click(object sender, EventArgs e)
         {
             MyDataStoringClass dataTranspoter = new MyDataStoringClass();
             
-            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
             dataTranspoter.DoctorID = userID;
             dataTranspoter.DoctorName = doctorName;
             dataTranspoter.DoctorPosition = doctorPosition;
             dataTranspoter.PatientRID = patientRID;
+            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
             dataTranspoter.PatientName = DOPDPC_patietName_lbl.Text;
             dataTranspoter.PatientAge = DOPDPC_patietage_lbl.Text;
-            dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text;
-            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+            dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text;;
+            dataTranspoter.EventUnitType = unitType;
 
 
             Common_MakePrescription common_MakePrescription = new Common_MakePrescription(dataTranspoter);
             common_MakePrescription.Show();
+            common_MakePrescription.DoctorCkeckFromReferece = this; //crete a referece for this form
             this.Hide();
 
             Console.WriteLine($"PatientMedicalEventID from PatientCkeck from: {dataTranspoter.PatientMedicalEventID}");
         }
 
+
+        // Move To Lab Appointment form
         private void DOPDPC_addAppointment_Click(object sender, EventArgs e)
         {
             MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+
+            dataTranspoter.DoctorID = userID;
+            dataTranspoter.DoctorName = doctorName;
+            dataTranspoter.DoctorPosition = doctorPosition;
+            dataTranspoter.PatientRID = patientRID;
             dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+            dataTranspoter.PatientName = DOPDPC_patietName_lbl.Text;
+            dataTranspoter.PatientAge = DOPDPC_patietage_lbl.Text;
+            dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text;
+            dataTranspoter.EventUnitType = unitType;
+            
 
             DoctorCheck_AddClinic doctorCheck_AddClinic = new DoctorCheck_AddClinic(dataTranspoter);
+            doctorCheck_AddClinic.DoctorCkeckFromReferece = this; //crete a referece for this form
             doctorCheck_AddClinic.Show();
             this.Hide();
 
             Console.WriteLine($"PatientMedicalEventID from PatientCkeck from: {dataTranspoter.PatientMedicalEventID}");
 
+        }
+
+        private void DOPDPC_confirmRequests_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connect.Open();
+                // Using PatientMedicalEventID to find the lab record that now created and get the current LabRequest_ID
+                string query2 = "UPDATE PatientMedical_Event SET PatientExaminatioNote = @examinationNotes WHERE PatientMedicalEvent_ID = @pmeID";
+                using (SqlCommand updateCommand = new SqlCommand(query2, connect))
+                {
+                    updateCommand.Parameters.AddWithValue("@examinationNotes", P_MedicalRecors_richTbx.Text);
+                    updateCommand.Parameters.AddWithValue("@pmeID", PatientMedicalEventID);
+
+                    int rowsAffected = updateCommand.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        Console.WriteLine("PatientExaminatioNote updated successfully.");
+                        MessageBox.Show("PatientExaminatioNote updated successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        DoctorDashboardFromReferece.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Failed to update PatientExaminatioNote.");
+                        MessageBox.Show("Failed to update PatientExaminatioNote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
     }
 }

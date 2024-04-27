@@ -18,6 +18,11 @@ namespace HMS_Software_V._01.Doctor_OPD
 {
     public partial class DoctorCheck_AddClinic : Form
     {
+        public Form DoctorCkeckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
+
+
+
+
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private MyDataStoringClass dataImporter;
@@ -25,6 +30,12 @@ namespace HMS_Software_V._01.Doctor_OPD
         {
             InitializeComponent();
             this.dataImporter = dataImporter;
+            string FC_patientID_str = dataImporter.PatientRID;
+            int FC_userID = dataImporter.DoctorID;
+            string FC_doctorPosition = dataImporter.DoctorPosition;
+            string FC_doctorName = dataImporter.DoctorName;
+            string FC_unittype = dataImporter.EventUnitType;
+            /*this.FormClosed += (s, e) => new DoctorCheck_PatientCheck(FC_patientID_str, FC_userID, FC_doctorPosition, FC_doctorName, FC_unittype).Show();*/
 
             LoadUserData();
 
@@ -36,6 +47,9 @@ namespace HMS_Software_V._01.Doctor_OPD
                 _clinicId = clinicId;
 
             };*/
+
+            // In order form to close, DoctorCheck_PatientCheck required values. So we get original values from DoctorCheck_PatientCheck public class 
+           ;
 
         }
         private void MyRe_Appointments_SizeChanged(object sender, EventArgs e)
@@ -114,7 +128,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine("Error1:" + ex);
             }
             finally
@@ -213,13 +227,18 @@ namespace HMS_Software_V._01.Doctor_OPD
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error3: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
             {
                 connect.Close();
             }
+        }
+
+        private void DoctorCheck_AddClinic_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DoctorCkeckFromReferece.Show();
         }
     }
 }

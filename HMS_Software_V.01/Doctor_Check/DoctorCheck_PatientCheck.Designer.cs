@@ -48,7 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.DOPDPC_patietName_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.P_MedicalRecors_richTbx = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -294,21 +294,21 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.P_MedicalRecors_richTbx);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 103);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(702, 431);
             this.panel2.TabIndex = 1;
             // 
-            // richTextBox1
+            // P_MedicalRecors_richTbx
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(702, 431);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.P_MedicalRecors_richTbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.P_MedicalRecors_richTbx.Location = new System.Drawing.Point(0, 0);
+            this.P_MedicalRecors_richTbx.Name = "P_MedicalRecors_richTbx";
+            this.P_MedicalRecors_richTbx.Size = new System.Drawing.Size(702, 431);
+            this.P_MedicalRecors_richTbx.TabIndex = 0;
+            this.P_MedicalRecors_richTbx.Text = "";
             // 
             // tableLayoutPanel2
             // 
@@ -409,6 +409,7 @@
             this.DOPDPC_confirmRequests.TabIndex = 60;
             this.DOPDPC_confirmRequests.Text = "Confirm";
             this.DOPDPC_confirmRequests.UseVisualStyleBackColor = false;
+            this.DOPDPC_confirmRequests.Click += new System.EventHandler(this.DOPDPC_confirmRequests_Click);
             // 
             // DOPDPC_addLabRequest
             // 
@@ -548,7 +549,7 @@
         private System.Windows.Forms.Button DOPDPC_addPrescription;
         private System.Windows.Forms.Button DOPDPC_admit;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox P_MedicalRecors_richTbx;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;

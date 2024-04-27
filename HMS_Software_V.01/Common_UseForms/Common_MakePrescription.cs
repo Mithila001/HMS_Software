@@ -1,4 +1,5 @@
 ﻿using HMS_Software_V._01.Common_UseForms.UserControls;
+using HMS_Software_V._01.Doctor_OPD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,14 +17,29 @@ namespace HMS_Software_V._01.Common_UseForms
 {
     public partial class Common_MakePrescription : Form
     {
+        public Form DoctorCkeckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
+
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
+
         private MyDataStoringClass dataImporter;
+
+
+
 
         public Common_MakePrescription(MyDataStoringClass dataImporter)
         {
             InitializeComponent();
             this.dataImporter = dataImporter; // Put it befor MyLoadBasicDetails()  --ChatGPT
             MyLoadBasicDetails();
+
+            // In order form to close, DoctorCheck_PatientCheck required values. So we get original values from DoctorCheck_PatientCheck public class 
+            string FC_patientID_str = dataImporter.PatientRID;
+            int FC_userID = dataImporter.DoctorID;
+            string FC_doctorPosition = dataImporter.DoctorPosition;
+            string FC_doctorName = dataImporter.DoctorName;
+            string FC_unittype = dataImporter.EventUnitType;
+            /*this.FormClosed += (s, e) => new DoctorCheck_PatientCheck(FC_patientID_str, FC_userID, FC_doctorPosition, FC_doctorName, FC_unittype).Show();*/
+           /* this.FormClosed += (s, e) => this.Show();*/
         }
 
         private void MyLoadBasicDetails() //Load basic UI info
@@ -372,6 +388,11 @@ namespace HMS_Software_V._01.Common_UseForms
             {
                 MessageBox.Show("Lab Request list is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Common_MakePrescription_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DoctorCkeckFromReferece.Show();
         }
     }
 }

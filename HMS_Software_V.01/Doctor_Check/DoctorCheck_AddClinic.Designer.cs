@@ -112,16 +112,17 @@
             this.DOPDA_save_btn.UseVisualStyleBackColor = false;
             this.DOPDA_save_btn.Click += new System.EventHandler(this.DOPDA_save_btn_Click);
             // 
-            // DoctorOPD_AddClinic
+            // DoctorCheck_AddClinic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 537);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(1024, 576);
-            this.Name = "DoctorOPD_AddClinic";
+            this.Name = "DoctorCheck_AddClinic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorOPD_AddClinic";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorCheck_AddClinic_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_bot_DOPDA.ResumeLayout(false);
             this.ResumeLayout(false);

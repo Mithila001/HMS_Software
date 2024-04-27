@@ -113,36 +113,39 @@ namespace HMS_Software_V._01.Doctor_OPD
 
                     string query = "SELECT P_RegistrationID FROM Patient WHERE P_RegistrationID = @PatientID";
 
-                    SqlCommand sqlCommand = new SqlCommand(query, connect);
-                    sqlCommand.Parameters.AddWithValue("@PatientID", "P"+DCD_enterPatientID_tbx.Text);
-
-                    SqlDataReader reader = sqlCommand.ExecuteReader();
-
-
-                    while (reader.Read())
+                    using (SqlCommand sqlCommand = new SqlCommand(query, connect))
                     {
-                        string patientID_str = reader.GetString(0);
-                        /*int patientID = int.Parse(patientID_str);*/
+                        sqlCommand.Parameters.AddWithValue("@PatientID", "P" + DCD_enterPatientID_tbx.Text);
 
-                        string inputIDstr = "P"+DCD_enterPatientID_tbx.Text;
-                        /*int inputID = int.Parse(inputIDstr);*/
-
-                        string doctorPosition = DCD_doctor_position_lbl.Text;
-                        string doctorName = DCD_doctorName_lbl.Text;
-
-                        if (patientID_str == inputIDstr)
+                        using (SqlDataReader reader = sqlCommand.ExecuteReader())
                         {
-                            // go to a from
-                            DoctorCheck_PatientCheck doctorCheck_PatientCheck = new DoctorCheck_PatientCheck(patientID_str, userID, doctorPosition, doctorName, unitType);
-                            doctorCheck_PatientCheck.Show();
-                            this.Hide();
-                            break;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalide Patient Number", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                            if (reader.Read())
+                            {
+                                string patientID_str = reader.GetString(0);
 
+                                string inputIDstr = "P" + DCD_enterPatientID_tbx.Text;
+
+                                string doctorPosition = DCD_doctor_position_lbl.Text;
+                                string doctorName = DCD_doctorName_lbl.Text;
+
+                                if (patientID_str == inputIDstr)
+                                {
+                                    // Go to a form
+                                    DoctorCheck_PatientCheck doctorCheck_PatientCheck = new DoctorCheck_PatientCheck(patientID_str, userID, doctorPosition, doctorName, unitType);
+                                    doctorCheck_PatientCheck.DoctorDashboardFromReferece = this;
+                                    doctorCheck_PatientCheck.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid Patient Number", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid Patient Number", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
 
 

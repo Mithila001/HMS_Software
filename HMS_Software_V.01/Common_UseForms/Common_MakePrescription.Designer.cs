@@ -573,7 +573,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(1024, 576);
             this.Name = "Common_MakePrescription";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Common_MakePrescription";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Common_MakePrescription_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_RD_top.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);

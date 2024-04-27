@@ -103,6 +103,7 @@ namespace HMS_Software_V._01.Common_UseForms
                             {
                                 DoctorCheck_Dashboard doctorOPD = new DoctorCheck_Dashboard(userID, unit);
                                 doctorOPD.Show();
+                                this.Hide();
 
                             }
                             else if (comboB_selcePosition.Text == "Nurse")
@@ -112,12 +113,13 @@ namespace HMS_Software_V._01.Common_UseForms
                             else
                             {
                                 Reception_Dashboard reception_Dashboard = new Reception_Dashboard(userID);
-                                reception_Dashboard.Show(); // To close the current from
+                                reception_Dashboard.Show(); 
+                                this.Hide();
 
                             }
 
-                            UserLogin userLogin = new UserLogin();
-                            userLogin.Close();
+                            /*UserLogin userLogin = new UserLogin();
+                            userLogin.Close();*/
                         }
 
                         else
