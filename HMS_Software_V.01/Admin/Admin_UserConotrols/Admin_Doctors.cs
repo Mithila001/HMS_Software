@@ -17,6 +17,15 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
             InitializeComponent();
         }
 
+        public void MySendDataToUserControl(string adminName, string date, string time)
+        {
+           
+            Ad_Doc_Date.Text = date;
+            Ad_Doc_time.Text = time;
+         
+        }
+
+
         private void searchDoctor_btn_Click(object sender, EventArgs e)
         {
             Admin_DoctorSearch admin_DoctorSearch = new Admin_DoctorSearch();  

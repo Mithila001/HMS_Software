@@ -95,8 +95,8 @@ namespace HMS_Software_V._01.Common_UseForms
 
                             if (comboB_selcePosition.Text == "Admin")
                             {
-                                /*Admin_Dashboard admin_Dashboard = new Admin_Dashboard(userID);
-                                admin_Dashboard.Show();*/
+                                Admin_Dashboard admin_Dashboard = new Admin_Dashboard(userID);
+                                admin_Dashboard.Show();
 
                             }
                             else if (comboB_selcePosition.Text == "Doctor")

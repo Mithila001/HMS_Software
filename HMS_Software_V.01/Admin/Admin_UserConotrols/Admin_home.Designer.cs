@@ -31,12 +31,12 @@
             this.Ad_home_top_panel = new System.Windows.Forms.Panel();
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
             this.TopTable_Panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.A_H_date = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.TopTable_Panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.A_H_time = new System.Windows.Forms.Label();
             this.TopTable_Panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.A_H_adminName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.label5 = new System.Windows.Forms.Label();
@@ -107,7 +107,7 @@
             // 
             // TopTable_Panel2
             // 
-            this.TopTable_Panel2.Controls.Add(this.label3);
+            this.TopTable_Panel2.Controls.Add(this.A_H_date);
             this.TopTable_Panel2.Controls.Add(this.materialDivider1);
             this.TopTable_Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TopTable_Panel2.Location = new System.Drawing.Point(330, 3);
@@ -115,16 +115,16 @@
             this.TopTable_Panel2.Size = new System.Drawing.Size(228, 127);
             this.TopTable_Panel2.TabIndex = 8;
             // 
-            // label3
+            // A_H_date
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Date";
+            this.A_H_date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.A_H_date.AutoSize = true;
+            this.A_H_date.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_H_date.Location = new System.Drawing.Point(52, 51);
+            this.A_H_date.Name = "A_H_date";
+            this.A_H_date.Size = new System.Drawing.Size(56, 24);
+            this.A_H_date.TabIndex = 3;
+            this.A_H_date.Text = "Date";
             // 
             // materialDivider1
             // 
@@ -141,27 +141,27 @@
             // 
             // TopTable_Panel3
             // 
-            this.TopTable_Panel3.Controls.Add(this.label4);
+            this.TopTable_Panel3.Controls.Add(this.A_H_time);
             this.TopTable_Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TopTable_Panel3.Location = new System.Drawing.Point(564, 3);
             this.TopTable_Panel3.Name = "TopTable_Panel3";
             this.TopTable_Panel3.Size = new System.Drawing.Size(228, 127);
             this.TopTable_Panel3.TabIndex = 9;
             // 
-            // label4
+            // A_H_time
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(78, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Time";
+            this.A_H_time.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.A_H_time.AutoSize = true;
+            this.A_H_time.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_H_time.Location = new System.Drawing.Point(78, 51);
+            this.A_H_time.Name = "A_H_time";
+            this.A_H_time.Size = new System.Drawing.Size(59, 24);
+            this.A_H_time.TabIndex = 5;
+            this.A_H_time.Text = "Time";
             // 
             // TopTable_Panel
             // 
-            this.TopTable_Panel.Controls.Add(this.label1);
+            this.TopTable_Panel.Controls.Add(this.A_H_adminName);
             this.TopTable_Panel.Controls.Add(this.label2);
             this.TopTable_Panel.Controls.Add(this.materialDivider2);
             this.TopTable_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,15 +170,15 @@
             this.TopTable_Panel.Size = new System.Drawing.Size(321, 127);
             this.TopTable_Panel.TabIndex = 7;
             // 
-            // label1
+            // A_H_adminName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Admin Name";
+            this.A_H_adminName.AutoSize = true;
+            this.A_H_adminName.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_H_adminName.Location = new System.Drawing.Point(16, 23);
+            this.A_H_adminName.Name = "A_H_adminName";
+            this.A_H_adminName.Size = new System.Drawing.Size(185, 32);
+            this.A_H_adminName.TabIndex = 0;
+            this.A_H_adminName.Text = "Admin Name";
             // 
             // label2
             // 
@@ -528,11 +528,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label A_H_adminName;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label A_H_date;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label A_H_time;
         private MaterialSkin.Controls.MaterialCard materialCard6;
         private System.Windows.Forms.Label AdminHome_TWard_lbl;
         private MaterialSkin.Controls.MaterialCard materialCard5;

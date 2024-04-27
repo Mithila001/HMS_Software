@@ -1,4 +1,5 @@
 ﻿using HMS_Software_V._01.Common_UseForms;
+using HMS_Software_V._01.Doctor_Check;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,8 @@ namespace HMS_Software_V._01.Doctor_OPD
 {
     public partial class DoctorCheck_PatientCheck : Form
     {
-        public Form DoctorDashboardFromReferece {  get; set; }
+        public Form DoctorPatientCheckFromReferece {  get; set; }
+
 
 
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
@@ -65,6 +67,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             public string PatientGender { get; set; }
             public string PatientMedicalEventID { get; set; }
             public string EventUnitType { get; set; }
+            public bool Isurgetn {  get; set; }
 
         }
         private string PatientMedicalEventID; //Storing PatientMedicalEventID 
@@ -180,6 +183,8 @@ namespace HMS_Software_V._01.Doctor_OPD
                     transport.PatientAge = reader2.GetString(1);
                     transport.PatientGender = reader2.GetString(2);
 
+                    
+
 
                 }
                 else
@@ -232,7 +237,7 @@ namespace HMS_Software_V._01.Doctor_OPD
 
 
             Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest(dataTranspoter);
-            common_MakeLabRequest.DoctorCkeckFromReferece = this; //crete a referece for this form
+            common_MakeLabRequest.DoctorPatientCheckFromReferece = this; //crete a referece for this form
             common_MakeLabRequest.Show();
             this.Hide();
         }
@@ -305,7 +310,16 @@ namespace HMS_Software_V._01.Doctor_OPD
                         Console.WriteLine("PatientExaminatioNote updated successfully.");
                         MessageBox.Show("PatientExaminatioNote updated successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        DoctorDashboardFromReferece.Show();
+
+                        // Moving to the Doctor Dashboard
+
+                        MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+                        dataTranspoter.DoctorID = userID;
+                        dataTranspoter.EventUnitType = unitType;
+
+                        DoctorCheck_Dashboard doctorCheck_Dashboard = new DoctorCheck_Dashboard(dataTranspoter.DoctorID, dataTranspoter.EventUnitType);
+                        doctorCheck_Dashboard.Show();
+
                         this.Close();
                     }
                     else
@@ -325,6 +339,30 @@ namespace HMS_Software_V._01.Doctor_OPD
             {
                 connect.Close();
             }
+        }
+
+        private void DOPDPC_admit_Click(object sender, EventArgs e)
+        {
+
+
+            MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+
+            dataTranspoter.Isurgetn = urgent_checkBox.Checked;
+            dataTranspoter.DoctorID = userID;
+            dataTranspoter.DoctorName = doctorName;
+            dataTranspoter.DoctorPosition = doctorPosition;
+            dataTranspoter.PatientRID = patientRID;
+            dataTranspoter.PatientMedicalEventID = PatientMedicalEventID;
+            dataTranspoter.PatientName = DOPDPC_patietName_lbl.Text;
+            dataTranspoter.PatientAge = DOPDPC_patietage_lbl.Text;
+            dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text; ;
+            dataTranspoter.EventUnitType = unitType;
+
+
+            Admit_ReferralNote admit_ReferralNote = new Admit_ReferralNote(dataTranspoter);
+           
+            admit_ReferralNote.ShowDialog();
+            this.Close();
         }
     }
 }

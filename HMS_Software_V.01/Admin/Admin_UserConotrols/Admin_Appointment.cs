@@ -16,5 +16,12 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
         {
             InitializeComponent();
         }
+
+        //Reciving Data from the form
+        public void MySendDataToUserControl(string adminName, string date, string time)
+        {
+            Ad_appointmetn_Date.Text = date;
+            Ad_appointmetn_time.Text = time;
+        }
     }
 }

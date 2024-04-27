@@ -31,10 +31,10 @@
             this.Ad_home_top_panel = new System.Windows.Forms.Panel();
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
             this.TopTable_Panel2 = new System.Windows.Forms.Panel();
-            this.Ad_Doc_Date = new System.Windows.Forms.Label();
+            this.Ad_reception_Date = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.TopTable_Panel3 = new System.Windows.Forms.Panel();
-            this.Ad_Doc_time = new System.Windows.Forms.Label();
+            this.Ad_Reception_time = new System.Windows.Forms.Label();
             this.TopTable_Panel = new System.Windows.Forms.Panel();
             this.Ad_Doc_lbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -88,7 +88,7 @@
             // 
             // TopTable_Panel2
             // 
-            this.TopTable_Panel2.Controls.Add(this.Ad_Doc_Date);
+            this.TopTable_Panel2.Controls.Add(this.Ad_reception_Date);
             this.TopTable_Panel2.Controls.Add(this.materialDivider1);
             this.TopTable_Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TopTable_Panel2.Location = new System.Drawing.Point(330, 3);
@@ -96,16 +96,16 @@
             this.TopTable_Panel2.Size = new System.Drawing.Size(228, 127);
             this.TopTable_Panel2.TabIndex = 8;
             // 
-            // Ad_Doc_Date
+            // Ad_reception_Date
             // 
-            this.Ad_Doc_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ad_Doc_Date.AutoSize = true;
-            this.Ad_Doc_Date.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_Doc_Date.Location = new System.Drawing.Point(81, 51);
-            this.Ad_Doc_Date.Name = "Ad_Doc_Date";
-            this.Ad_Doc_Date.Size = new System.Drawing.Size(56, 24);
-            this.Ad_Doc_Date.TabIndex = 3;
-            this.Ad_Doc_Date.Text = "Date";
+            this.Ad_reception_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ad_reception_Date.AutoSize = true;
+            this.Ad_reception_Date.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ad_reception_Date.Location = new System.Drawing.Point(81, 51);
+            this.Ad_reception_Date.Name = "Ad_reception_Date";
+            this.Ad_reception_Date.Size = new System.Drawing.Size(56, 24);
+            this.Ad_reception_Date.TabIndex = 3;
+            this.Ad_reception_Date.Text = "Date";
             // 
             // materialDivider1
             // 
@@ -122,23 +122,23 @@
             // 
             // TopTable_Panel3
             // 
-            this.TopTable_Panel3.Controls.Add(this.Ad_Doc_time);
+            this.TopTable_Panel3.Controls.Add(this.Ad_Reception_time);
             this.TopTable_Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TopTable_Panel3.Location = new System.Drawing.Point(564, 3);
             this.TopTable_Panel3.Name = "TopTable_Panel3";
             this.TopTable_Panel3.Size = new System.Drawing.Size(228, 127);
             this.TopTable_Panel3.TabIndex = 9;
             // 
-            // Ad_Doc_time
+            // Ad_Reception_time
             // 
-            this.Ad_Doc_time.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Ad_Doc_time.AutoSize = true;
-            this.Ad_Doc_time.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_Doc_time.Location = new System.Drawing.Point(78, 51);
-            this.Ad_Doc_time.Name = "Ad_Doc_time";
-            this.Ad_Doc_time.Size = new System.Drawing.Size(59, 24);
-            this.Ad_Doc_time.TabIndex = 5;
-            this.Ad_Doc_time.Text = "Time";
+            this.Ad_Reception_time.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Ad_Reception_time.AutoSize = true;
+            this.Ad_Reception_time.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ad_Reception_time.Location = new System.Drawing.Point(78, 51);
+            this.Ad_Reception_time.Name = "Ad_Reception_time";
+            this.Ad_Reception_time.Size = new System.Drawing.Size(59, 24);
+            this.Ad_Reception_time.TabIndex = 5;
+            this.Ad_Reception_time.Text = "Time";
             // 
             // TopTable_Panel
             // 
@@ -290,10 +290,10 @@
         private System.Windows.Forms.Panel Ad_home_top_panel;
         private System.Windows.Forms.TableLayoutPanel top_tableLayoutPanle;
         private System.Windows.Forms.Panel TopTable_Panel2;
-        private System.Windows.Forms.Label Ad_Doc_Date;
+        private System.Windows.Forms.Label Ad_reception_Date;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Panel TopTable_Panel3;
-        private System.Windows.Forms.Label Ad_Doc_time;
+        private System.Windows.Forms.Label Ad_Reception_time;
         private System.Windows.Forms.Panel TopTable_Panel;
         private System.Windows.Forms.Label Ad_Doc_lbl;
         private System.Windows.Forms.Label label2;

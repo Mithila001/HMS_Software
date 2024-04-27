@@ -17,6 +17,13 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
             InitializeComponent();
         }
 
+        //Reciving Data from the form
+        public void MySendDataToUserControl(string adminName, string date, string time)
+        {
+            Ad_reception_Date.Text = date;
+            Ad_Reception_time.Text = time;
+        }
+
         private void RegisterReception_btn_Click(object sender, EventArgs e)
         {
             Admin_ReceptionRegistration admin_ReceptionRegistration = new Admin_ReceptionRegistration();

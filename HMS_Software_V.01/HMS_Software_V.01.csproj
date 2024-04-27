@@ -183,6 +183,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_Check\Admit_ReferralNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Check\Admit_ReferralNote.Designer.cs">
+      <DependentUpon>Admit_ReferralNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor_Check\DoctorCheck_AddClinic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common_UseForms\UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Check\Admit_ReferralNote.resx">
+      <DependentUpon>Admit_ReferralNote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Check\DoctorCheck_AddClinic.resx">
       <DependentUpon>DoctorCheck_AddClinic.cs</DependentUpon>

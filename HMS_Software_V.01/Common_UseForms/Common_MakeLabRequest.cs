@@ -20,7 +20,7 @@ namespace HMS_Software_V._01.Common_UseForms
 {
     public partial class Common_MakeLabRequest : Form
     {
-        public Form DoctorCkeckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
+        public Form DoctorPatientCheckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
 
 
 
@@ -493,7 +493,7 @@ namespace HMS_Software_V._01.Common_UseForms
 
         private void Common_MakeLabRequest_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DoctorCkeckFromReferece.Show();
+            DoctorPatientCheckFromReferece.Show();
         }
     }
 }

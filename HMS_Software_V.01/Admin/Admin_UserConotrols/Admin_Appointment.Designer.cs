@@ -31,59 +31,59 @@
             this.RegisterAppointment_btn = new System.Windows.Forms.Button();
             this.bottom_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.midpanel = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tableLayP_panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.TopTable_Panel2 = new System.Windows.Forms.Panel();
-            this.Ad_Doc_Date = new System.Windows.Forms.Label();
+            this.Ad_appointmetn_Date = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.Ad_home_bottom_panel = new System.Windows.Forms.Panel();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.TopTable_Panel3 = new System.Windows.Forms.Panel();
-            this.Ad_Doc_time = new System.Windows.Forms.Label();
+            this.Ad_appointmetn_time = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TopTable_Panel = new System.Windows.Forms.Panel();
             this.Ad_Doc_lbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
             this.Ad_home_top_panel = new System.Windows.Forms.Panel();
-            this.midpanel = new System.Windows.Forms.Panel();
-            this.tableLayP_panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.bottom_tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.midpanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayP_panel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
             this.Ad_home_bottom_panel.SuspendLayout();
             this.TopTable_Panel3.SuspendLayout();
             this.TopTable_Panel.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
             this.Ad_home_top_panel.SuspendLayout();
-            this.midpanel.SuspendLayout();
-            this.tableLayP_panel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // RegisterAppointment_btn
@@ -128,9 +128,266 @@
             this.panel1.Size = new System.Drawing.Size(932, 86);
             this.panel1.TabIndex = 10;
             // 
+            // midpanel
+            // 
+            this.midpanel.Controls.Add(this.tableLayoutPanel1);
+            this.midpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.midpanel.Location = new System.Drawing.Point(3, 3);
+            this.midpanel.Name = "midpanel";
+            this.midpanel.Size = new System.Drawing.Size(932, 304);
+            this.midpanel.TabIndex = 11;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayP_panel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.02439F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.97561F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(932, 304);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Controls.Add(this.textBox7);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(469, 60);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(460, 57);
+            this.panel7.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(17, 2);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 17);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Ward:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(20, 22);
+            this.textBox7.MaximumSize = new System.Drawing.Size(500, 4);
+            this.textBox7.MinimumSize = new System.Drawing.Size(241, 25);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(241, 25);
+            this.textBox7.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(469, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(460, 51);
+            this.panel6.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(17, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 17);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Ward:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(20, 22);
+            this.textBox6.MaximumSize = new System.Drawing.Size(500, 4);
+            this.textBox6.MinimumSize = new System.Drawing.Size(241, 25);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(241, 25);
+            this.textBox6.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 243);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(460, 58);
+            this.panel5.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 2);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 17);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Ward:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(20, 22);
+            this.textBox5.MaximumSize = new System.Drawing.Size(500, 4);
+            this.textBox5.MinimumSize = new System.Drawing.Size(241, 25);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(241, 25);
+            this.textBox5.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 183);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(460, 54);
+            this.panel4.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(17, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Ward:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(20, 22);
+            this.textBox4.MaximumSize = new System.Drawing.Size(500, 4);
+            this.textBox4.MinimumSize = new System.Drawing.Size(241, 25);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(241, 25);
+            this.textBox4.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(460, 54);
+            this.panel3.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 17);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Ward:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(20, 22);
+            this.textBox3.MaximumSize = new System.Drawing.Size(500, 4);
+            this.textBox3.MinimumSize = new System.Drawing.Size(241, 25);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(241, 25);
+            this.textBox3.TabIndex = 0;
+            // 
+            // tableLayP_panel
+            // 
+            this.tableLayP_panel.Controls.Add(this.label1);
+            this.tableLayP_panel.Controls.Add(this.textBox1);
+            this.tableLayP_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayP_panel.Location = new System.Drawing.Point(3, 3);
+            this.tableLayP_panel.Name = "tableLayP_panel";
+            this.tableLayP_panel.Size = new System.Drawing.Size(460, 51);
+            this.tableLayP_panel.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Ward:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(20, 22);
+            this.textBox1.MaximumSize = new System.Drawing.Size(500, 4);
+            this.textBox1.MinimumSize = new System.Drawing.Size(241, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(241, 25);
+            this.textBox1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(460, 57);
+            this.panel2.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Ward:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(20, 22);
+            this.textBox2.MaximumSize = new System.Drawing.Size(500, 4);
+            this.textBox2.MinimumSize = new System.Drawing.Size(241, 25);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(241, 25);
+            this.textBox2.TabIndex = 0;
+            // 
             // TopTable_Panel2
             // 
-            this.TopTable_Panel2.Controls.Add(this.Ad_Doc_Date);
+            this.TopTable_Panel2.Controls.Add(this.Ad_appointmetn_Date);
             this.TopTable_Panel2.Controls.Add(this.materialDivider1);
             this.TopTable_Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TopTable_Panel2.Location = new System.Drawing.Point(330, 3);
@@ -138,16 +395,16 @@
             this.TopTable_Panel2.Size = new System.Drawing.Size(228, 127);
             this.TopTable_Panel2.TabIndex = 8;
             // 
-            // Ad_Doc_Date
+            // Ad_appointmetn_Date
             // 
-            this.Ad_Doc_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ad_Doc_Date.AutoSize = true;
-            this.Ad_Doc_Date.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_Doc_Date.Location = new System.Drawing.Point(81, 51);
-            this.Ad_Doc_Date.Name = "Ad_Doc_Date";
-            this.Ad_Doc_Date.Size = new System.Drawing.Size(56, 24);
-            this.Ad_Doc_Date.TabIndex = 3;
-            this.Ad_Doc_Date.Text = "Date";
+            this.Ad_appointmetn_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ad_appointmetn_Date.AutoSize = true;
+            this.Ad_appointmetn_Date.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ad_appointmetn_Date.Location = new System.Drawing.Point(81, 51);
+            this.Ad_appointmetn_Date.Name = "Ad_appointmetn_Date";
+            this.Ad_appointmetn_Date.Size = new System.Drawing.Size(56, 24);
+            this.Ad_appointmetn_Date.TabIndex = 3;
+            this.Ad_appointmetn_Date.Text = "Date";
             // 
             // materialDivider1
             // 
@@ -188,23 +445,23 @@
             // 
             // TopTable_Panel3
             // 
-            this.TopTable_Panel3.Controls.Add(this.Ad_Doc_time);
+            this.TopTable_Panel3.Controls.Add(this.Ad_appointmetn_time);
             this.TopTable_Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TopTable_Panel3.Location = new System.Drawing.Point(564, 3);
             this.TopTable_Panel3.Name = "TopTable_Panel3";
             this.TopTable_Panel3.Size = new System.Drawing.Size(228, 127);
             this.TopTable_Panel3.TabIndex = 9;
             // 
-            // Ad_Doc_time
+            // Ad_appointmetn_time
             // 
-            this.Ad_Doc_time.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Ad_Doc_time.AutoSize = true;
-            this.Ad_Doc_time.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_Doc_time.Location = new System.Drawing.Point(78, 51);
-            this.Ad_Doc_time.Name = "Ad_Doc_time";
-            this.Ad_Doc_time.Size = new System.Drawing.Size(59, 24);
-            this.Ad_Doc_time.TabIndex = 5;
-            this.Ad_Doc_time.Text = "Time";
+            this.Ad_appointmetn_time.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Ad_appointmetn_time.AutoSize = true;
+            this.Ad_appointmetn_time.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ad_appointmetn_time.Location = new System.Drawing.Point(78, 51);
+            this.Ad_appointmetn_time.Name = "Ad_appointmetn_time";
+            this.Ad_appointmetn_time.Size = new System.Drawing.Size(59, 24);
+            this.Ad_appointmetn_time.TabIndex = 5;
+            this.Ad_appointmetn_time.Text = "Time";
             // 
             // label2
             // 
@@ -278,263 +535,6 @@
             this.Ad_home_top_panel.Size = new System.Drawing.Size(938, 135);
             this.Ad_home_top_panel.TabIndex = 8;
             // 
-            // midpanel
-            // 
-            this.midpanel.Controls.Add(this.tableLayoutPanel1);
-            this.midpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.midpanel.Location = new System.Drawing.Point(3, 3);
-            this.midpanel.Name = "midpanel";
-            this.midpanel.Size = new System.Drawing.Size(932, 304);
-            this.midpanel.TabIndex = 11;
-            // 
-            // tableLayP_panel
-            // 
-            this.tableLayP_panel.Controls.Add(this.label1);
-            this.tableLayP_panel.Controls.Add(this.textBox1);
-            this.tableLayP_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayP_panel.Location = new System.Drawing.Point(3, 3);
-            this.tableLayP_panel.Name = "tableLayP_panel";
-            this.tableLayP_panel.Size = new System.Drawing.Size(460, 51);
-            this.tableLayP_panel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Ward:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 22);
-            this.textBox1.MaximumSize = new System.Drawing.Size(500, 0);
-            this.textBox1.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 25);
-            this.textBox1.TabIndex = 0;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayP_panel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.02439F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.97561F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(932, 304);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(460, 57);
-            this.panel2.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Ward:";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 123);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(460, 54);
-            this.panel3.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Ward:";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 183);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(460, 54);
-            this.panel4.TabIndex = 6;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Ward:";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 243);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(460, 58);
-            this.panel5.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 17);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Ward:";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.textBox6);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(469, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(460, 51);
-            this.panel6.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 17);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Ward:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(20, 22);
-            this.textBox6.MaximumSize = new System.Drawing.Size(500, 0);
-            this.textBox6.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(241, 25);
-            this.textBox6.TabIndex = 0;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(20, 22);
-            this.textBox7.MaximumSize = new System.Drawing.Size(500, 0);
-            this.textBox7.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(241, 25);
-            this.textBox7.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 17);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Ward:";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.textBox7);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(469, 60);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(460, 57);
-            this.panel7.TabIndex = 6;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(20, 22);
-            this.textBox5.MaximumSize = new System.Drawing.Size(500, 0);
-            this.textBox5.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(241, 25);
-            this.textBox5.TabIndex = 0;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(20, 22);
-            this.textBox4.MaximumSize = new System.Drawing.Size(500, 0);
-            this.textBox4.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(241, 25);
-            this.textBox4.TabIndex = 0;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(20, 22);
-            this.textBox3.MaximumSize = new System.Drawing.Size(500, 0);
-            this.textBox3.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 25);
-            this.textBox3.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(20, 22);
-            this.textBox2.MaximumSize = new System.Drawing.Size(500, 0);
-            this.textBox2.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 25);
-            this.textBox2.TabIndex = 0;
-            // 
             // Admin_Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,6 +545,22 @@
             this.Size = new System.Drawing.Size(938, 537);
             this.bottom_tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.midpanel.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.tableLayP_panel.ResumeLayout(false);
+            this.tableLayP_panel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.TopTable_Panel2.ResumeLayout(false);
             this.TopTable_Panel2.PerformLayout();
             this.Ad_home_bottom_panel.ResumeLayout(false);
@@ -555,22 +571,6 @@
             this.top_tableLayoutPanle.ResumeLayout(false);
             this.top_tableLayoutPanle.PerformLayout();
             this.Ad_home_top_panel.ResumeLayout(false);
-            this.midpanel.ResumeLayout(false);
-            this.tableLayP_panel.ResumeLayout(false);
-            this.tableLayP_panel.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -580,12 +580,12 @@
         private System.Windows.Forms.TableLayoutPanel bottom_tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel TopTable_Panel2;
-        private System.Windows.Forms.Label Ad_Doc_Date;
+        private System.Windows.Forms.Label Ad_appointmetn_Date;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Panel Ad_home_bottom_panel;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private System.Windows.Forms.Panel TopTable_Panel3;
-        private System.Windows.Forms.Label Ad_Doc_time;
+        private System.Windows.Forms.Label Ad_appointmetn_time;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel TopTable_Panel;
         private System.Windows.Forms.Label Ad_Doc_lbl;

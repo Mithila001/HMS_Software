@@ -41,8 +41,8 @@
             this.admin_Reception1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Reception();
             this.admin_Patients1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Patients();
             this.admin_Nurses1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Nurses();
-            this.admin_home1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_home();
             this.admin_Doctors1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_Doctors();
+            this.admin_home1 = new HMS_Software_V._01.Admin.Admin_UserConotrols.Admin_home();
             this.sidePanel.SuspendLayout();
             this.sidePanel_FlowLP.SuspendLayout();
             this.admin_mainPanel.SuspendLayout();
@@ -170,12 +170,12 @@
             // 
             // admin_mainPanel
             // 
-            this.admin_mainPanel.Controls.Add(this.admin_Appointment1);
-            this.admin_mainPanel.Controls.Add(this.admin_Reception1);
-            this.admin_mainPanel.Controls.Add(this.admin_Patients1);
-            this.admin_mainPanel.Controls.Add(this.admin_Nurses1);
             this.admin_mainPanel.Controls.Add(this.admin_home1);
             this.admin_mainPanel.Controls.Add(this.admin_Doctors1);
+            this.admin_mainPanel.Controls.Add(this.admin_Nurses1);
+            this.admin_mainPanel.Controls.Add(this.admin_Patients1);
+            this.admin_mainPanel.Controls.Add(this.admin_Reception1);
+            this.admin_mainPanel.Controls.Add(this.admin_Appointment1);
             this.admin_mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.admin_mainPanel.Location = new System.Drawing.Point(70, 0);
             this.admin_mainPanel.Name = "admin_mainPanel";
@@ -188,7 +188,7 @@
             this.admin_Appointment1.Location = new System.Drawing.Point(0, 0);
             this.admin_Appointment1.Name = "admin_Appointment1";
             this.admin_Appointment1.Size = new System.Drawing.Size(938, 537);
-            this.admin_Appointment1.TabIndex = 5;
+            this.admin_Appointment1.TabIndex = 0;
             // 
             // admin_Reception1
             // 
@@ -196,7 +196,7 @@
             this.admin_Reception1.Location = new System.Drawing.Point(0, 0);
             this.admin_Reception1.Name = "admin_Reception1";
             this.admin_Reception1.Size = new System.Drawing.Size(938, 537);
-            this.admin_Reception1.TabIndex = 4;
+            this.admin_Reception1.TabIndex = 1;
             // 
             // admin_Patients1
             // 
@@ -204,7 +204,7 @@
             this.admin_Patients1.Location = new System.Drawing.Point(0, 0);
             this.admin_Patients1.Name = "admin_Patients1";
             this.admin_Patients1.Size = new System.Drawing.Size(938, 537);
-            this.admin_Patients1.TabIndex = 3;
+            this.admin_Patients1.TabIndex = 2;
             // 
             // admin_Nurses1
             // 
@@ -212,16 +212,7 @@
             this.admin_Nurses1.Location = new System.Drawing.Point(0, 0);
             this.admin_Nurses1.Name = "admin_Nurses1";
             this.admin_Nurses1.Size = new System.Drawing.Size(938, 537);
-            this.admin_Nurses1.TabIndex = 2;
-            // 
-            // admin_home1
-            // 
-            this.admin_home1.BackColor = System.Drawing.Color.Gainsboro;
-            this.admin_home1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.admin_home1.Location = new System.Drawing.Point(0, 0);
-            this.admin_home1.Name = "admin_home1";
-            this.admin_home1.Size = new System.Drawing.Size(938, 537);
-            this.admin_home1.TabIndex = 1;
+            this.admin_Nurses1.TabIndex = 3;
             // 
             // admin_Doctors1
             // 
@@ -229,7 +220,16 @@
             this.admin_Doctors1.Location = new System.Drawing.Point(0, 0);
             this.admin_Doctors1.Name = "admin_Doctors1";
             this.admin_Doctors1.Size = new System.Drawing.Size(938, 537);
-            this.admin_Doctors1.TabIndex = 0;
+            this.admin_Doctors1.TabIndex = 4;
+            // 
+            // admin_home1
+            // 
+            this.admin_home1.BackColor = System.Drawing.Color.White;
+            this.admin_home1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.admin_home1.Location = new System.Drawing.Point(0, 0);
+            this.admin_home1.Name = "admin_home1";
+            this.admin_home1.Size = new System.Drawing.Size(938, 537);
+            this.admin_home1.TabIndex = 5;
             // 
             // Admin_Dashboard
             // 
@@ -258,14 +258,14 @@
         private System.Windows.Forms.Button admin_doctors_btn;
         private System.Windows.Forms.Button admin_nurse_btn;
         private System.Windows.Forms.Panel admin_mainPanel;
-        private Admin_UserConotrols.Admin_Doctors admin_Doctors1;
-        private Admin_UserConotrols.Admin_home admin_home1;
-        private Admin_UserConotrols.Admin_Nurses admin_Nurses1;
         private System.Windows.Forms.Button admin_patiets_btn;
-        private Admin_UserConotrols.Admin_Patients admin_Patients1;
         private System.Windows.Forms.Button admin_Reception_btn;
-        private Admin_UserConotrols.Admin_Reception admin_Reception1;
         private System.Windows.Forms.Button admin_Appointment_btn;
+        private Admin_UserConotrols.Admin_Doctors admin_Doctors1;
+        private Admin_UserConotrols.Admin_Nurses admin_Nurses1;
+        private Admin_UserConotrols.Admin_Patients admin_Patients1;
+        private Admin_UserConotrols.Admin_Reception admin_Reception1;
         private Admin_UserConotrols.Admin_Appointment admin_Appointment1;
+        private Admin_UserConotrols.Admin_home admin_home1;
     }
 }

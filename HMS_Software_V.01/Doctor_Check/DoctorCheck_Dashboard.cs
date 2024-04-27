@@ -1,4 +1,5 @@
 ﻿using HMS_Software_V._01.Common_UseForms;
+using HMS_Software_V._01.Doctor_Check;
 using HMS_Software_V._01.Reception;
 using System;
 using System.Collections.Generic;
@@ -15,17 +16,23 @@ namespace HMS_Software_V._01.Doctor_OPD
 {
     public partial class DoctorCheck_Dashboard : Form
     {
+        public Form DoctorDashboardFromReferece { get; set; }
+
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int userID;
         private string unitType;
-        public DoctorCheck_Dashboard(int userID, string unit)
+        public DoctorCheck_Dashboard(int userID , string unit )
         {
             InitializeComponent();
             this.userID = userID;
             this.unitType = unit;
             MyLoadbasicUIDeatils();
             getTableDate(); // Get Dashboard Data
+
+
+
+            
         }
 
 
@@ -132,7 +139,7 @@ namespace HMS_Software_V._01.Doctor_OPD
                                 {
                                     // Go to a form
                                     DoctorCheck_PatientCheck doctorCheck_PatientCheck = new DoctorCheck_PatientCheck(patientID_str, userID, doctorPosition, doctorName, unitType);
-                                    doctorCheck_PatientCheck.DoctorDashboardFromReferece = this;
+                                    doctorCheck_PatientCheck.DoctorPatientCheckFromReferece = this;
                                     doctorCheck_PatientCheck.Show();
                                     this.Hide();
                                 }

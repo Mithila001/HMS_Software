@@ -17,6 +17,8 @@ namespace HMS_Software_V._01.Admin
     public partial class Admin_DoctorRegister : Form
     {
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);//Call connection string from a class
+
+
         public Admin_DoctorRegister()
         {
             InitializeComponent();

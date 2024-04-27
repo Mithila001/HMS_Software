@@ -61,6 +61,7 @@
             this.DOPDPC_addPrescription = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DOPDPC_admit = new System.Windows.Forms.Button();
+            this.urgent_checkBox = new MaterialSkin.Controls.MaterialCheckbox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -480,6 +481,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.urgent_checkBox);
             this.panel4.Controls.Add(this.DOPDPC_admit);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 347);
@@ -497,12 +499,31 @@
             this.DOPDPC_admit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DOPDPC_admit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DOPDPC_admit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.DOPDPC_admit.Location = new System.Drawing.Point(52, 23);
+            this.DOPDPC_admit.Location = new System.Drawing.Point(52, 35);
             this.DOPDPC_admit.Name = "DOPDPC_admit";
             this.DOPDPC_admit.Size = new System.Drawing.Size(179, 39);
             this.DOPDPC_admit.TabIndex = 61;
             this.DOPDPC_admit.Text = "Admit";
             this.DOPDPC_admit.UseVisualStyleBackColor = false;
+            this.DOPDPC_admit.Click += new System.EventHandler(this.DOPDPC_admit_Click);
+            // 
+            // urgent_checkBox
+            // 
+            this.urgent_checkBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.urgent_checkBox.AutoSize = true;
+            this.urgent_checkBox.Depth = 0;
+            this.urgent_checkBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.urgent_checkBox.Location = new System.Drawing.Point(96, -4);
+            this.urgent_checkBox.Margin = new System.Windows.Forms.Padding(0);
+            this.urgent_checkBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.urgent_checkBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.urgent_checkBox.Name = "urgent_checkBox";
+            this.urgent_checkBox.ReadOnly = false;
+            this.urgent_checkBox.Ripple = true;
+            this.urgent_checkBox.Size = new System.Drawing.Size(81, 37);
+            this.urgent_checkBox.TabIndex = 62;
+            this.urgent_checkBox.Text = "Urgent";
+            this.urgent_checkBox.UseVisualStyleBackColor = true;
             // 
             // DoctorCheck_PatientCheck
             // 
@@ -527,6 +548,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -565,5 +587,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label DOPDPC_docID;
         private System.Windows.Forms.Label label2;
+        private MaterialSkin.Controls.MaterialCheckbox urgent_checkBox;
     }
 }

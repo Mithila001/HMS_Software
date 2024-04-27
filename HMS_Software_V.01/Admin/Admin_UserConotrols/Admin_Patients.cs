@@ -17,6 +17,13 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
             InitializeComponent();
         }
 
+        //Reciving Data from the form
+        public void MySendDataToUserControl(string adminName, string date, string time)
+        {
+            Ad_patient_Date.Text = date;
+            Ad_patient_time.Text = time;
+        }
+
         private void SearchPatient_btn_Click(object sender, EventArgs e)
         {
             Admin_PatientSearch admin_PatientSearch = new Admin_PatientSearch();
