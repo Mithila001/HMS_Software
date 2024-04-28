@@ -48,8 +48,9 @@ namespace HMS_Software_V._01.Doctor_Check
 
                 connect.Open();
 
-                string query = "INSERT INTO Patient_Admit (P_RegistrationID, P_NameWithInitials, P_Age, P_Gender, P_ReferralNote, Doctor_ID, Requested_Time, Requested_Date, Is_Urgent)"
-                    + " VALUES (@prID, @pName, @pAge, @pGender, @pReferralNote, @dID, @time, @date, @isUrgent)";
+                string query = "INSERT INTO Patient_Admit (P_RegistrationID, P_NameWithInitials, P_Age, P_Gender, P_ReferralNote,"+
+                    " Doctor_ID, Requested_Time, Requested_Date, Is_Urgent, Is_Admitted, Unit_Type)"
+                    + " VALUES (@prID, @pName, @pAge, @pGender, @pReferralNote, @dID, @time, @date, @isUrgent, @isAdmitted, @unitType)";
 
                 using (SqlCommand cmd = new SqlCommand(query, connect))
                 {
@@ -62,6 +63,8 @@ namespace HMS_Software_V._01.Doctor_Check
                     cmd.Parameters.AddWithValue("@time", currentTime);
                     cmd.Parameters.AddWithValue("@date", currentDate);
                     cmd.Parameters.AddWithValue("@isUrgent", dataImporter.Isurgetn);
+                    cmd.Parameters.AddWithValue("@isAdmitted", false);
+                    cmd.Parameters.AddWithValue("@unitType", dataImporter.EventUnitType);
 
 
                     int rowsAffected = cmd.ExecuteNonQuery();

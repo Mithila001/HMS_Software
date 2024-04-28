@@ -148,6 +148,24 @@
     <Compile Include="Admin\Admin_UserConotrols\Admin_Reception.Designer.cs">
       <DependentUpon>Admin_Reception.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admission Officer\AdmissionOfficer_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admission Officer\AdmissionOfficer_Dashboard.Designer.cs">
+      <DependentUpon>AdmissionOfficer_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admission Officer\AdmissionOfficer_ViewRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admission Officer\AdmissionOfficer_ViewRequest.Designer.cs">
+      <DependentUpon>AdmissionOfficer_ViewRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admission Officer\UserControls\AdmitRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admission Officer\UserControls\AdmitRequest.Designer.cs">
+      <DependentUpon>AdmitRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common_UseForms\Common_MakeLabRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +338,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_UserConotrols\Admin_Reception.resx">
       <DependentUpon>Admin_Reception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admission Officer\AdmissionOfficer_Dashboard.resx">
+      <DependentUpon>AdmissionOfficer_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admission Officer\AdmissionOfficer_ViewRequest.resx">
+      <DependentUpon>AdmissionOfficer_ViewRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admission Officer\UserControls\AdmitRequest.resx">
+      <DependentUpon>AdmitRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common_UseForms\Common_MakeLabRequest.resx">
       <DependentUpon>Common_MakeLabRequest.cs</DependentUpon>

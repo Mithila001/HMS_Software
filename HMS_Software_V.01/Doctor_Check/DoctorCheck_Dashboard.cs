@@ -22,7 +22,7 @@ namespace HMS_Software_V._01.Doctor_OPD
 
         private int userID;
         private string unitType;
-        public DoctorCheck_Dashboard(int userID , string unit )
+        public DoctorCheck_Dashboard(int userID =5 , string unit = "OPD" )
         {
             InitializeComponent();
             this.userID = userID;
