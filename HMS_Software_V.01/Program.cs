@@ -1,6 +1,7 @@
 ﻿using HMS_Software_V._01.Admition_Officer;
 using HMS_Software_V._01.Common_UseForms;
 using HMS_Software_V._01.Doctor_OPD;
+using HMS_Software_V._01.Doctor_Ward;
 using HMS_Software_V._01.Reception;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace HMS_Software_V._01.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdmissionOfficer_Dashboard());
+            Application.Run(new DoctorWard_Dashboard());
 
 
            

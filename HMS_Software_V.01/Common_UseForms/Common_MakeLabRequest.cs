@@ -42,7 +42,7 @@ namespace HMS_Software_V._01.Common_UseForms
             string FC_doctorName = dataImporter.DoctorName;
             string FC_unittype = dataImporter.EventUnitType;
             /*this.FormClosed += (s, e) => new DoctorCheck_PatientCheck(FC_patientID_str, FC_userID, FC_doctorPosition, FC_doctorName, FC_unittype).Show();*/
-            /*this.FormClosed += (s, e) => this.Show()*/;
+            /*this.FormClosed += (s, e) => this.Show()*/
         }
 
         /*private void MyloadResult()

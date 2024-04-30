@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HMS_Software_V._01.Admission_Officer.UserControls;
+using HMS_Software_V._01.Doctor_Ward.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,13 +17,173 @@ namespace HMS_Software_V._01.Doctor_Ward
     {
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
-        private MyTableData_Automation automation;
+        private MyTableData_Automation automation; //Automation
+
+        private int DoctorID = 6; // Just For Now !!!!!!!!!!
+
 
         public DoctorWard_Dashboard()
         {
             InitializeComponent();
+
+
+            //Automation to update Admitted_Patients_VisitEvent daily
             automation = new MyTableData_Automation();
-            /*automation.MyGetAdmittedPatientRecord();*/
+            automation.MyGetAdmittedPatientRecord(); 
+
+
+            LoadData();
+        }
+
+        // Doctor Table
+        string DoctorName;
+        string DoctorPosition;
+        string DoctorSpecialty;
+        string Doctor_RID;
+
+        //Admitted_Patients_VisitEvent Table
+        string PatientnRID;
+        string PatientName;
+        string PatientAge;
+        string PatientCondition;
+        bool IsVisitedByDoctor;
+        int PatientVisitCount;
+
+        string WardName;
+
+        private void LoadData()
+        {
+            DateTime today = DateTime.Today.Date;
+
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                   
+                    connect.Open();
+
+                    // Load Docotr Details ------------------------------------------------------------------------
+                    string query = "SELECT D_NameWithInitials, D_Position, D_Specialty, D_RegistrationID" +
+                    " FROM Doctor WHERE Doctor_ID = @doctorID";
+                    using (SqlCommand command = new SqlCommand(query, connect))
+                    {
+                        command.Parameters.AddWithValue("@doctorID", DoctorID);
+                        /*Console.WriteLine("DoctorID from dashboard: " + DoctorID);*/
+                        try
+                        {
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            // Check if any rows were returned
+                            if (reader.Read())
+                            {
+                                DoctorName = reader["D_NameWithInitials"].ToString();
+                                DoctorPosition = reader["D_Position"].ToString();
+                                DoctorSpecialty = reader["D_Specialty"].ToString();
+                                Doctor_RID = reader["D_RegistrationID"].ToString();
+
+                                DWD_name.Text = DoctorName;
+                                DWD_Position.Text = DoctorPosition;
+                                
+                            }
+                            else
+                            {
+                                MessageBox.Show("No matching record found.");
+                            }
+                            reader.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Console.WriteLine("Error1:" + ex);
+                        }
+                    }
+
+
+                    //Load Ward Details  ------------------------------------------------------------------------
+                    DWD_WarName.Text = "Temporary Ward"; //Need to change
+
+
+                    //Load Today Admitted Patient Events  ------------------------------------------------------------------------
+                    string query1 = "SELECT P_RID, P_NameWithInitials, P_Age, P_Gender, Visite_Round, Is_VisitedByDoctor, P_Condition, P_Ward FROM" +
+                       " Admitted_Patients_VisitEvent"+
+                       " WHERE Visite_Date = @visiteDate";
+
+                    using (SqlCommand cmd = new SqlCommand(query1, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@visiteDate", today);
+                        Console.WriteLine("visiteDate: " + today);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Console.WriteLine("Table Reads");
+                                try
+                                {
+                                    PatientnRID = reader["P_RID"].ToString();
+                                    PatientName = reader["P_NameWithInitials"].ToString();
+                                    PatientAge = reader["P_Age"].ToString();
+                                    /*PatientCondition = reader["P_Gender"].ToString();
+                                    Console.WriteLine("Patient Gender: " + PatientCondition);*/
+                                    PatientCondition = "Not Added Yet!!!";
+                                    IsVisitedByDoctor = (bool)reader["Is_VisitedByDoctor"];
+                                    PatientVisitCount = (int)reader["Visite_Round"];
+                                    WardName = reader["P_Ward"].ToString();
+
+
+                                }
+                                catch (FormatException)
+                                {
+                                    MessageBox.Show("Patient RID is not matched", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+
+                                ShowWaitionInPatients showWaitionInPatients = new ShowWaitionInPatients();
+                                // Adding Values to labels
+                                showWaitionInPatients.SWP_Name.Text = PatientName;
+                                showWaitionInPatients.SWP_RID.Text = PatientnRID;
+                                showWaitionInPatients.SWP_Age.Text = PatientAge;
+                                showWaitionInPatients.SWP_Condition.Text = PatientCondition;
+
+                                //Storing Valuse to user control
+                                showWaitionInPatients.SWP_PatientName = PatientName;
+                                showWaitionInPatients.SWP_PatientRID = PatientnRID;
+                                showWaitionInPatients.SWP_PatientCondition = PatientCondition;
+                                showWaitionInPatients.SWP_PatietnVisitCount = PatientVisitCount;
+
+                                showWaitionInPatients.SWP_D_ID = Doctor_RID;
+                                showWaitionInPatients.SWP_D_Name = DoctorName;
+                                showWaitionInPatients.SWP_D_Title = DoctorPosition;
+                                showWaitionInPatients.SWP_WardName = WardName;
+
+
+
+                                if (!IsVisitedByDoctor)
+                                {
+                                    DWD_DisplayInPatient_FlowLP.Controls.Add(showWaitionInPatients);
+
+                                   
+                                }
+
+                                DWD_DisplayInPatient_FlowLP.SizeChanged += (sender, e) =>
+                                {
+                                    // Adjust the width of the user control to match the width of the parent container
+                                    showWaitionInPatients.Width = DWD_DisplayInPatient_FlowLP.ClientSize.Width - showWaitionInPatients.Margin.Horizontal;
+                                };
+
+                            }
+                            reader.Close();
+                        }
+                    }
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error:2 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error2:" + ex);
+            }
+         
         }
     }
 }

@@ -249,6 +249,12 @@
     <Compile Include="Doctor_Ward\DoctorWard_Dashboard.Designer.cs">
       <DependentUpon>DoctorWard_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_Ward\UserControls\ShowWaitionInPatients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Doctor_Ward\UserControls\ShowWaitionInPatients.Designer.cs">
+      <DependentUpon>ShowWaitionInPatients.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyCommonConnecString.cs" />
     <Compile Include="MyTableData_Automation.cs" />
     <Compile Include="Program.cs" />
@@ -399,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Ward\DoctorWard_Dashboard.resx">
       <DependentUpon>DoctorWard_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Ward\UserControls\ShowWaitionInPatients.resx">
+      <DependentUpon>ShowWaitionInPatients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
