@@ -1,4 +1,5 @@
-﻿using HMS_Software_V._01.Admition_Officer;
+﻿using HMS_Software_V._01.Admission_Officer.UserControls;
+using HMS_Software_V._01.Admition_Officer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +19,29 @@ namespace HMS_Software_V._01.Admission_Officer
 
 
         private int AdmissionRequestID;
-        public AdmissionOfficer_ViewRequest(int admissionRequestID)
+
+        private string AO_Name;
+        private string AO_Position;
+        private string AO_Specialty;
+        private string AO_RegistrationID;
+        private int AO_ID;
+
+        public AdmissionOfficer_ViewRequest(int admissionRequestID,string AO_Name, string AO_Position,string AO_Specialty,string AO_RegistrationID, int AO_ID)
         {
             InitializeComponent();
+
+
+            //From Admit Request table
             this.AdmissionRequestID = admissionRequestID;
+
+            //Admission Office Details
+            this.AO_Name = AO_Name;
+            this.AO_Position = AO_Position;
+            this.AO_Specialty = AO_Specialty;
+            this.AO_RegistrationID = AO_RegistrationID;
+            this.AO_ID = AO_ID;
+
+
             Console.WriteLine("AdmissionRequestID Got reciverd to AdmissionOfficer_ViewRequest form:" + AdmissionRequestID);
             MyLoadData();
             MyDisplayData();
@@ -83,6 +103,7 @@ namespace HMS_Software_V._01.Admission_Officer
                 using (SqlCommand cmd2 = new SqlCommand(query2, connect))
                 {
                     cmd2.Parameters.AddWithValue("@dcotorID", Doctor_ID);
+                    Console.WriteLine("Doctor ID that getting from the Table:" + Doctor_ID);
 
                     using (SqlDataReader reader = cmd2.ExecuteReader())
                     {
@@ -117,6 +138,9 @@ namespace HMS_Software_V._01.Admission_Officer
         // Displaying recived Data
         private void MyDisplayData()
         {
+            AOVR_AO_Name.Text = AO_Name;
+
+
             AOVR_doc_Name.Text = D_NameWithInitials;
             AOVR_doc_ID.Text = Doctor_ID.ToString();
             AOVR_doc_Position.Text = D_Position;

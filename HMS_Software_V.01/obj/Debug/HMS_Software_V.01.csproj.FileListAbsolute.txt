@@ -50,3 +50,4 @@ E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Admition_Officer.AdmissionOfficer_Dashboard.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Admission_Officer.UserControls.AdmitRequest.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Admission_Officer.AdmissionOfficer_ViewRequest.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Admission_Officer.AdmissionOfficer_DirectAdmit.resources

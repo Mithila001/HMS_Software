@@ -38,12 +38,25 @@ namespace HMS_Software_V._01.Admission_Officer.UserControls
         }
 
         public int AdmitRequestID;
+
+        public string AO_Name {  get; set; }
+        public string AO_Position{get; set; }
+        public string AO_Specialty {  get; set; }
+        public string AO_RegistrationID {  get; set; }
+        public int AO_ID { get; set; }
         private void AdmitRequest_Click(object sender, EventArgs e)
         {
             Console.WriteLine("------ Clicked the user control. Sending request ID: "+ AdmitRequestID);
+            Console.WriteLine("------ Clicked the user control. Sending Admission Officer ID: " + AO_ID);
 
             //Moving to View Request Form
-            AdmissionOfficer_ViewRequest admissionOfficer_ViewRequest = new AdmissionOfficer_ViewRequest(AdmitRequestID);
+            AdmissionOfficer_ViewRequest admissionOfficer_ViewRequest = new AdmissionOfficer_ViewRequest(AdmitRequestID,
+                AO_Name,
+                AO_Position,
+                AO_Specialty,
+                AO_RegistrationID,
+                AO_ID);
+
             admissionOfficer_ViewRequest.Show();
 
             //Closing UserControl's Parent Form

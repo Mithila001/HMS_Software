@@ -154,6 +154,12 @@
     <Compile Include="Admission Officer\AdmissionOfficer_Dashboard.Designer.cs">
       <DependentUpon>AdmissionOfficer_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admission Officer\AdmissionOfficer_DirectAdmit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admission Officer\AdmissionOfficer_DirectAdmit.Designer.cs">
+      <DependentUpon>AdmissionOfficer_DirectAdmit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admission Officer\AdmissionOfficer_ViewRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,7 +243,14 @@
     <Compile Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.Designer.cs">
       <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_Ward\DoctorWard_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Ward\DoctorWard_Dashboard.Designer.cs">
+      <DependentUpon>DoctorWard_Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyCommonConnecString.cs" />
+    <Compile Include="MyTableData_Automation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reception\Reception_Appointment.cs">
@@ -342,6 +355,9 @@
     <EmbeddedResource Include="Admission Officer\AdmissionOfficer_Dashboard.resx">
       <DependentUpon>AdmissionOfficer_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admission Officer\AdmissionOfficer_DirectAdmit.resx">
+      <DependentUpon>AdmissionOfficer_DirectAdmit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admission Officer\AdmissionOfficer_ViewRequest.resx">
       <DependentUpon>AdmissionOfficer_ViewRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.resx">
       <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Ward\DoctorWard_Dashboard.resx">
+      <DependentUpon>DoctorWard_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

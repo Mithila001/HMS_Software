@@ -1,4 +1,5 @@
 ﻿using HMS_Software_V._01.Admin;
+using HMS_Software_V._01.Admition_Officer;
 using HMS_Software_V._01.Doctor_OPD;
 using HMS_Software_V._01.Reception;
 using System;
@@ -25,7 +26,7 @@ namespace HMS_Software_V._01.Common_UseForms
             selectedPosition = "Doctor"; //Doctor Selected assigned to variable
         }
 
-        private string unit; //Get the unit name to sned Doctor forms and nurse forms
+        private string unit; //Get the unit name to seed Doctor forms and nurse forms
         private void userLogin_btn_Click(object sender, EventArgs e)
         {
 
@@ -110,12 +111,18 @@ namespace HMS_Software_V._01.Common_UseForms
                             {
                                 MessageBox.Show("Not Added Yet", "Infromation Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
-                            else
+                            else if(comboB_selcePosition.Text == "Reception")
                             {
                                 Reception_Dashboard reception_Dashboard = new Reception_Dashboard(userID);
                                 reception_Dashboard.Show(); 
                                 this.Hide();
 
+                            }
+                            else
+                            {
+                                AdmissionOfficer_Dashboard admissionOfficer_Dashboard = new AdmissionOfficer_Dashboard(userID);
+                                admissionOfficer_Dashboard.Show();
+                                this.Hide();
                             }
 
                             /*UserLogin userLogin = new UserLogin();

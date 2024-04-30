@@ -30,6 +30,10 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.wardNumber_tbx = new System.Windows.Forms.TextBox();
+            this.warNumber_lbl = new System.Windows.Forms.Label();
+            this.unit_lbl = new System.Windows.Forms.Label();
+            this.comboB_selceUnit = new System.Windows.Forms.ComboBox();
             this.userLogin_btn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.comboB_selcePosition = new System.Windows.Forms.ComboBox();
@@ -39,10 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.unit_lbl = new System.Windows.Forms.Label();
-            this.comboB_selceUnit = new System.Windows.Forms.ComboBox();
-            this.warNumber_lbl = new System.Windows.Forms.Label();
-            this.wardNumber_tbx = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,6 +84,54 @@
             this.panel1.Size = new System.Drawing.Size(916, 326);
             this.panel1.TabIndex = 0;
             // 
+            // wardNumber_tbx
+            // 
+            this.wardNumber_tbx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.wardNumber_tbx.BackColor = System.Drawing.Color.White;
+            this.wardNumber_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wardNumber_tbx.Location = new System.Drawing.Point(650, 133);
+            this.wardNumber_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.wardNumber_tbx.MinimumSize = new System.Drawing.Size(100, 20);
+            this.wardNumber_tbx.Name = "wardNumber_tbx";
+            this.wardNumber_tbx.Size = new System.Drawing.Size(219, 22);
+            this.wardNumber_tbx.TabIndex = 62;
+            // 
+            // warNumber_lbl
+            // 
+            this.warNumber_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.warNumber_lbl.AutoSize = true;
+            this.warNumber_lbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warNumber_lbl.Location = new System.Drawing.Point(496, 132);
+            this.warNumber_lbl.Name = "warNumber_lbl";
+            this.warNumber_lbl.Size = new System.Drawing.Size(147, 22);
+            this.warNumber_lbl.TabIndex = 61;
+            this.warNumber_lbl.Text = "Ward Number: ";
+            // 
+            // unit_lbl
+            // 
+            this.unit_lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.unit_lbl.AutoSize = true;
+            this.unit_lbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unit_lbl.Location = new System.Drawing.Point(502, 58);
+            this.unit_lbl.Name = "unit_lbl";
+            this.unit_lbl.Size = new System.Drawing.Size(46, 22);
+            this.unit_lbl.TabIndex = 60;
+            this.unit_lbl.Text = "Unit";
+            // 
+            // comboB_selceUnit
+            // 
+            this.comboB_selceUnit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.comboB_selceUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboB_selceUnit.FormattingEnabled = true;
+            this.comboB_selceUnit.Items.AddRange(new object[] {
+            "Clinic",
+            "OPD",
+            "Ward"});
+            this.comboB_selceUnit.Location = new System.Drawing.Point(650, 57);
+            this.comboB_selceUnit.Name = "comboB_selceUnit";
+            this.comboB_selceUnit.Size = new System.Drawing.Size(219, 21);
+            this.comboB_selceUnit.TabIndex = 59;
+            // 
             // userLogin_btn
             // 
             this.userLogin_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -122,7 +170,8 @@
             "Doctor",
             "Nurse",
             "Admin",
-            "Reception"});
+            "Reception",
+            "Admission Officer"});
             this.comboB_selcePosition.Location = new System.Drawing.Point(186, 57);
             this.comboB_selcePosition.Name = "comboB_selcePosition";
             this.comboB_selcePosition.Size = new System.Drawing.Size(219, 21);
@@ -196,54 +245,6 @@
             this.label3.Size = new System.Drawing.Size(167, 34);
             this.label3.TabIndex = 8;
             this.label3.Text = "User Login";
-            // 
-            // unit_lbl
-            // 
-            this.unit_lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.unit_lbl.AutoSize = true;
-            this.unit_lbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.unit_lbl.Location = new System.Drawing.Point(502, 58);
-            this.unit_lbl.Name = "unit_lbl";
-            this.unit_lbl.Size = new System.Drawing.Size(46, 22);
-            this.unit_lbl.TabIndex = 60;
-            this.unit_lbl.Text = "Unit";
-            // 
-            // comboB_selceUnit
-            // 
-            this.comboB_selceUnit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboB_selceUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboB_selceUnit.FormattingEnabled = true;
-            this.comboB_selceUnit.Items.AddRange(new object[] {
-            "Clinic",
-            "OPD",
-            "Ward"});
-            this.comboB_selceUnit.Location = new System.Drawing.Point(650, 57);
-            this.comboB_selceUnit.Name = "comboB_selceUnit";
-            this.comboB_selceUnit.Size = new System.Drawing.Size(219, 21);
-            this.comboB_selceUnit.TabIndex = 59;
-            // 
-            // warNumber_lbl
-            // 
-            this.warNumber_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.warNumber_lbl.AutoSize = true;
-            this.warNumber_lbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warNumber_lbl.Location = new System.Drawing.Point(496, 132);
-            this.warNumber_lbl.Name = "warNumber_lbl";
-            this.warNumber_lbl.Size = new System.Drawing.Size(147, 22);
-            this.warNumber_lbl.TabIndex = 61;
-            this.warNumber_lbl.Text = "Ward Number: ";
-            // 
-            // wardNumber_tbx
-            // 
-            this.wardNumber_tbx.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.wardNumber_tbx.BackColor = System.Drawing.Color.White;
-            this.wardNumber_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wardNumber_tbx.Location = new System.Drawing.Point(650, 133);
-            this.wardNumber_tbx.MaximumSize = new System.Drawing.Size(500, 4);
-            this.wardNumber_tbx.MinimumSize = new System.Drawing.Size(100, 20);
-            this.wardNumber_tbx.Name = "wardNumber_tbx";
-            this.wardNumber_tbx.Size = new System.Drawing.Size(219, 20);
-            this.wardNumber_tbx.TabIndex = 62;
             // 
             // UserLogin
             // 
