@@ -79,6 +79,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(356, 71);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             // 
             // label2
             // 
@@ -197,6 +199,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ShowWaitionInPatients";
             this.Size = new System.Drawing.Size(1000, 71);
+            this.Click += new System.EventHandler(this.ShowWaitionInPatients_Click);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

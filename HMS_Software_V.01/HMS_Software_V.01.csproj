@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -243,6 +243,12 @@
     <Compile Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.Designer.cs">
       <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_Ward\DoctorWard_ProgressNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Ward\DoctorWard_ProgressNote.Designer.cs">
+      <DependentUpon>DoctorWard_ProgressNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor_Ward\DoctorWard_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.resx">
       <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Ward\DoctorWard_ProgressNote.resx">
+      <DependentUpon>DoctorWard_ProgressNote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Ward\DoctorWard_Dashboard.resx">
       <DependentUpon>DoctorWard_Dashboard.cs</DependentUpon>

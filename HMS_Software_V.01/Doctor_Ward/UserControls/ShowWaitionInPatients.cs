@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HMS_Software_V._01.Admition_Officer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace HMS_Software_V._01.Doctor_Ward.UserControls
             MyAttachClickEventHandlers(this);
         }
 
+
         public string SWP_PatientName { get; set; }
         public string SWP_PatientRID { get; set; }
         public string SWP_PatientCondition { get; set; }
@@ -25,7 +27,9 @@ namespace HMS_Software_V._01.Doctor_Ward.UserControls
 
         public string SWP_D_Name { get; set; }
         public string SWP_D_Title { get; set; }
-        public string SWP_D_ID { get; set; }
+        public string SWP_D_RID { get; set; }
+
+        public int SWP_D_ID {  get; set; }
 
         public string SWP_WardName { get; set; }
 
@@ -35,7 +39,7 @@ namespace HMS_Software_V._01.Doctor_Ward.UserControls
             foreach (Control control in parentControl.Controls)
             {
                 // Attach event handler for the current control
-                control.Click += AdmitRequest_Click;
+                control.Click += ShowWaitionInPatients_Click;
                 control.MouseEnter += panel1_MouseEnter;
                 control.MouseLeave += panel1_MouseLeave;
 
@@ -46,6 +50,46 @@ namespace HMS_Software_V._01.Doctor_Ward.UserControls
                     MyAttachClickEventHandlers(control);
                 }
             }
+        }
+
+        private void ShowWaitionInPatients_Click(object sender, EventArgs e)
+        {
+            //Moving to Another form Form
+            DoctorWard_ProgressNote doctorWard_ProgressNote = new DoctorWard_ProgressNote(
+                SWP_PatientName,
+                SWP_PatientRID,
+                SWP_PatientCondition,
+                SWP_PatietnVisitCount,
+                SWP_D_Name,
+                SWP_D_Title,
+                SWP_D_RID,
+                SWP_WardName,
+                SWP_D_ID);
+            doctorWard_ProgressNote.Show();
+
+            //Closing UserControl's Parent Form
+            DoctorWard_Dashboard parentForm = this.ParentForm as DoctorWard_Dashboard;
+            if (parentForm != null)
+            {
+                parentForm.Hide();
+            }
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(227, 227, 255);
+            panel2.BackColor = Color.FromArgb(227, 227, 255);
+            panel3.BackColor = Color.FromArgb(227, 227, 255);
+            panel4.BackColor = Color.FromArgb(227, 227, 255);
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.White;
+            panel2.BackColor = Color.White;
+            panel3.BackColor = Color.White;
+            panel4.BackColor = Color.White;
+
         }
     }
 }

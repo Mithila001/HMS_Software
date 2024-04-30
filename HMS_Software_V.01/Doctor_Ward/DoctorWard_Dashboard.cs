@@ -150,9 +150,11 @@ namespace HMS_Software_V._01.Doctor_Ward
                                 showWaitionInPatients.SWP_PatientCondition = PatientCondition;
                                 showWaitionInPatients.SWP_PatietnVisitCount = PatientVisitCount;
 
-                                showWaitionInPatients.SWP_D_ID = Doctor_RID;
+                                showWaitionInPatients.SWP_D_RID = Doctor_RID;
                                 showWaitionInPatients.SWP_D_Name = DoctorName;
                                 showWaitionInPatients.SWP_D_Title = DoctorPosition;
+                                showWaitionInPatients.SWP_D_ID = DoctorID;
+
                                 showWaitionInPatients.SWP_WardName = WardName;
 
 
