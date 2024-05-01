@@ -21,7 +21,7 @@ namespace HMS_Software_V._01.Admition_Officer
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int AdmissionOfficerID;
-        public AdmissionOfficer_Dashboard(int userID = 9)
+        public AdmissionOfficer_Dashboard(int userID)
         {
             InitializeComponent();
             this.AdmissionOfficerID = userID;
@@ -64,7 +64,7 @@ namespace HMS_Software_V._01.Admition_Officer
                         }
                         else
                         {
-                            MessageBox.Show("No matching record found.");
+                            MessageBox.Show("No matching Doctor record found.");
                         }
                     }
                     catch (Exception ex)
@@ -190,10 +190,10 @@ namespace HMS_Software_V._01.Admition_Officer
         string patientName;
         string patientAge;
         string patientGender;
+        bool dataReceived = false;
 
         private void AOD_directAdmit_btn_Click(object sender, EventArgs e)
         {
-           
 
             if (!string.IsNullOrEmpty(AOVR_ward_tbx.Text))
             {
@@ -201,12 +201,12 @@ namespace HMS_Software_V._01.Admition_Officer
                 {
                     connect.Open();
                     //Getting Admit Request Details from the Database
-                    string query1 = "SELECT P_RegistrationID, P_NameWithIinitials, P_Age, P_Gender FROM" +
+                    string query1 = "SELECT P_NameWithIinitials, P_Age, P_Gender FROM" +
                         " Patient WHERE P_RegistrationID = @patientRID";
 
                     using (SqlCommand cmd = new SqlCommand(query1, connect))
                     {
-                        cmd.Parameters.AddWithValue("@patientRID", AOVR_ward_tbx.Text);
+                        cmd.Parameters.AddWithValue("@patientRID", "P"+AOVR_ward_tbx.Text);
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -214,11 +214,11 @@ namespace HMS_Software_V._01.Admition_Officer
                             {
                                 try
                                 {
-                                    patientRID = reader["P_RegistrationID"].ToString();
-                                    patientName = reader["P_NameWithInitials"].ToString();
+                                   
+                                    patientName = reader["P_NameWithIinitials"].ToString();
                                     patientAge = reader["P_Age"].ToString();
                                     patientGender = reader["P_Gender"].ToString();
-
+                                    dataReceived = true;
                                 }
                                 catch (FormatException)
                                 {
@@ -228,11 +228,17 @@ namespace HMS_Software_V._01.Admition_Officer
                         }
                     }
 
-                    if (!string.IsNullOrEmpty(patientRID))
+                    if (dataReceived)
                     {
+                        MessageBox.Show("Success", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         AdmissionOfficer_DirectAdmit admissionOfficer_DirectAdmit = new AdmissionOfficer_DirectAdmit(patientName, patientAge, patientGender, AO_Name, patientRID, AdmissionOfficerID);
                         admissionOfficer_DirectAdmit.Show();
                         this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Patient RID is not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }

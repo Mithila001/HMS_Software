@@ -59,7 +59,7 @@ namespace HMS_Software_V._01
                             catch (Exception ex)
                             {
                                 // Handle exceptions
-                                Console.WriteLine("Error: " + ex.Message);
+                                Console.WriteLine("Error11: " + ex.Message);
                             }
                         }
                         UpdateLastExecutionDate();
@@ -71,7 +71,7 @@ namespace HMS_Software_V._01
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error22: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -133,7 +133,7 @@ namespace HMS_Software_V._01
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error updating last execution date: " + ex.Message);
+                Console.WriteLine("Error33 " + ex.Message);
             }
             
         }
@@ -176,7 +176,7 @@ namespace HMS_Software_V._01
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error44: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         
 

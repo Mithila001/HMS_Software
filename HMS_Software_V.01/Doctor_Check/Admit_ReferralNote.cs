@@ -77,7 +77,7 @@ namespace HMS_Software_V._01.Doctor_Check
 
 
                         // Moving to doctor Dashboard Form
-                        DoctorCheck_Dashboard doctorCheck_Dashboard = new DoctorCheck_Dashboard(dataImporter.DoctorID, dataImporter.EventUnitType);
+                        DoctorCheck_Dashboard doctorCheck_Dashboard = new DoctorCheck_Dashboard(dataImporter.DoctorID, dataImporter.EventUnitType, dataImporter.SendWardNumber);
                         doctorCheck_Dashboard.Show();
                         this.Close();
 

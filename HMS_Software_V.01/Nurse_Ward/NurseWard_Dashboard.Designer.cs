@@ -31,22 +31,22 @@
             this.Base_TableLP = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ND_ShowPatients_TableLP = new System.Windows.Forms.FlowLayoutPanel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.NWD_N_ID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.NWD_N_Name = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
+            this.NWD_WardName = new System.Windows.Forms.Label();
+            this.NWD_wardNumber = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.NWD_Date = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.NWD_TotalPendingPatients = new System.Windows.Forms.Label();
+            this.NWD_Total_Inpatients = new System.Windows.Forms.Label();
+            this.NWCP_ShowPatients_FlowLP = new System.Windows.Forms.FlowLayoutPanel();
             this.Base_TableLP.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             this.Base_TableLP.ColumnCount = 1;
             this.Base_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.Base_TableLP.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.Base_TableLP.Controls.Add(this.ND_ShowPatients_TableLP, 0, 1);
+            this.Base_TableLP.Controls.Add(this.NWCP_ShowPatients_FlowLP, 0, 1);
             this.Base_TableLP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Base_TableLP.Location = new System.Drawing.Point(0, 0);
             this.Base_TableLP.Margin = new System.Windows.Forms.Padding(0);
@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
@@ -94,44 +94,39 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.panel1.Controls.Add(this.materialDivider1);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.NWD_N_ID);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.NWD_N_Name);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(272, 100);
+            this.panel1.Size = new System.Drawing.Size(271, 100);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // materialDivider1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.panel2.Controls.Add(this.materialDivider2);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(272, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(272, 100);
-            this.panel2.TabIndex = 1;
+            this.materialDivider1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.materialDivider1.BackColor = System.Drawing.Color.Gray;
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(259, 12);
+            this.materialDivider1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(3, 80);
+            this.materialDivider1.TabIndex = 6;
+            this.materialDivider1.Text = "materialDivider1";
             // 
-            // panel3
+            // NWD_N_ID
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(544, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(363, 100);
-            this.panel3.TabIndex = 2;
+            this.NWD_N_ID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NWD_N_ID.AutoSize = true;
+            this.NWD_N_ID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWD_N_ID.Location = new System.Drawing.Point(14, 72);
+            this.NWD_N_ID.Name = "NWD_N_ID";
+            this.NWD_N_ID.Size = new System.Drawing.Size(53, 18);
+            this.NWD_N_ID.TabIndex = 5;
+            this.NWD_N_ID.Text = "10556";
             // 
             // label2
             // 
@@ -144,93 +139,113 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Nurse";
             // 
-            // label1
+            // NWD_N_Name
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nurse Name";
+            this.NWD_N_Name.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NWD_N_Name.AutoSize = true;
+            this.NWD_N_Name.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWD_N_Name.Location = new System.Drawing.Point(12, 9);
+            this.NWD_N_Name.Name = "NWD_N_Name";
+            this.NWD_N_Name.Size = new System.Drawing.Size(132, 24);
+            this.NWD_N_Name.TabIndex = 3;
+            this.NWD_N_Name.Text = "Nurse Name";
             // 
-            // label3
+            // panel2
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 18);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "10556";
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.panel2.Controls.Add(this.materialDivider2);
+            this.panel2.Controls.Add(this.NWD_WardName);
+            this.panel2.Controls.Add(this.NWD_wardNumber);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.NWD_Date);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(271, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(271, 100);
+            this.panel2.TabIndex = 1;
             // 
-            // label4
+            // materialDivider2
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(67, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Date";
+            this.materialDivider2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.materialDivider2.BackColor = System.Drawing.Color.Gray;
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(259, 12);
+            this.materialDivider2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(3, 80);
+            this.materialDivider2.TabIndex = 7;
+            this.materialDivider2.Text = "materialDivider2";
+            // 
+            // NWD_WardName
+            // 
+            this.NWD_WardName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NWD_WardName.AutoSize = true;
+            this.NWD_WardName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWD_WardName.Location = new System.Drawing.Point(66, 73);
+            this.NWD_WardName.Name = "NWD_WardName";
+            this.NWD_WardName.Size = new System.Drawing.Size(96, 19);
+            this.NWD_WardName.TabIndex = 7;
+            this.NWD_WardName.Text = "Ward Name";
+            // 
+            // NWD_wardNumber
+            // 
+            this.NWD_wardNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NWD_wardNumber.AutoSize = true;
+            this.NWD_wardNumber.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWD_wardNumber.Location = new System.Drawing.Point(142, 42);
+            this.NWD_wardNumber.Name = "NWD_wardNumber";
+            this.NWD_wardNumber.Size = new System.Drawing.Size(38, 24);
+            this.NWD_wardNumber.TabIndex = 6;
+            this.NWD_wardNumber.Text = "XX";
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(68, 46);
+            this.label5.Location = new System.Drawing.Point(67, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Ward No:";
             // 
-            // label6
+            // NWD_Date
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(143, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 24);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "XX";
+            this.NWD_Date.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NWD_Date.AutoSize = true;
+            this.NWD_Date.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWD_Date.Location = new System.Drawing.Point(66, 7);
+            this.NWD_Date.Name = "NWD_Date";
+            this.NWD_Date.Size = new System.Drawing.Size(56, 24);
+            this.NWD_Date.TabIndex = 4;
+            this.NWD_Date.Text = "Date";
             // 
-            // label7
+            // panel3
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(67, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Ward Name";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.NWD_TotalPendingPatients);
+            this.panel3.Controls.Add(this.NWD_Total_Inpatients);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(542, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(362, 100);
+            this.panel3.TabIndex = 2;
             // 
-            // label8
+            // label11
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(53, 58);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 24);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "XX";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(265, 56);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 24);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "XX";
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(224, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(118, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Pending Patients";
             // 
             // label10
             // 
@@ -243,51 +258,36 @@
             this.label10.TabIndex = 7;
             this.label10.Text = "Total Patients";
             // 
-            // label11
+            // NWD_TotalPendingPatients
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(225, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 17);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Pending Patients";
+            this.NWD_TotalPendingPatients.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.NWD_TotalPendingPatients.AutoSize = true;
+            this.NWD_TotalPendingPatients.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWD_TotalPendingPatients.Location = new System.Drawing.Point(264, 56);
+            this.NWD_TotalPendingPatients.Name = "NWD_TotalPendingPatients";
+            this.NWD_TotalPendingPatients.Size = new System.Drawing.Size(38, 24);
+            this.NWD_TotalPendingPatients.TabIndex = 6;
+            this.NWD_TotalPendingPatients.Text = "XX";
             // 
-            // ND_ShowPatients_TableLP
+            // NWD_Total_Inpatients
             // 
-            this.ND_ShowPatients_TableLP.AutoScroll = true;
-            this.ND_ShowPatients_TableLP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ND_ShowPatients_TableLP.Location = new System.Drawing.Point(3, 103);
-            this.ND_ShowPatients_TableLP.Name = "ND_ShowPatients_TableLP";
-            this.ND_ShowPatients_TableLP.Size = new System.Drawing.Size(1002, 431);
-            this.ND_ShowPatients_TableLP.TabIndex = 1;
+            this.NWD_Total_Inpatients.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NWD_Total_Inpatients.AutoSize = true;
+            this.NWD_Total_Inpatients.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWD_Total_Inpatients.Location = new System.Drawing.Point(53, 58);
+            this.NWD_Total_Inpatients.Name = "NWD_Total_Inpatients";
+            this.NWD_Total_Inpatients.Size = new System.Drawing.Size(38, 24);
+            this.NWD_Total_Inpatients.TabIndex = 5;
+            this.NWD_Total_Inpatients.Text = "XX";
             // 
-            // materialDivider1
+            // NWCP_ShowPatients_FlowLP
             // 
-            this.materialDivider1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.materialDivider1.BackColor = System.Drawing.Color.Gray;
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(260, 12);
-            this.materialDivider1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(3, 80);
-            this.materialDivider1.TabIndex = 6;
-            this.materialDivider1.Text = "materialDivider1";
-            // 
-            // materialDivider2
-            // 
-            this.materialDivider2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.materialDivider2.BackColor = System.Drawing.Color.Gray;
-            this.materialDivider2.Depth = 0;
-            this.materialDivider2.Location = new System.Drawing.Point(260, 12);
-            this.materialDivider2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider2.Name = "materialDivider2";
-            this.materialDivider2.Size = new System.Drawing.Size(3, 80);
-            this.materialDivider2.TabIndex = 7;
-            this.materialDivider2.Text = "materialDivider2";
+            this.NWCP_ShowPatients_FlowLP.AutoScroll = true;
+            this.NWCP_ShowPatients_FlowLP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NWCP_ShowPatients_FlowLP.Location = new System.Drawing.Point(3, 103);
+            this.NWCP_ShowPatients_FlowLP.Name = "NWCP_ShowPatients_FlowLP";
+            this.NWCP_ShowPatients_FlowLP.Size = new System.Drawing.Size(1002, 431);
+            this.NWCP_ShowPatients_FlowLP.TabIndex = 1;
             // 
             // NurseWard_Dashboard
             // 
@@ -295,7 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 537);
             this.Controls.Add(this.Base_TableLP);
-            this.MaximumSize = new System.Drawing.Size(1024, 576);
+            this.MinimumSize = new System.Drawing.Size(1024, 576);
             this.Name = "NurseWard_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NurseWard_Dashboard";
@@ -318,18 +318,18 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label NWD_N_ID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label NWD_N_Name;
+        private System.Windows.Forms.Label NWD_WardName;
+        private System.Windows.Forms.Label NWD_wardNumber;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label NWD_Date;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.FlowLayoutPanel ND_ShowPatients_TableLP;
+        private System.Windows.Forms.Label NWD_TotalPendingPatients;
+        private System.Windows.Forms.Label NWD_Total_Inpatients;
+        private System.Windows.Forms.FlowLayoutPanel NWCP_ShowPatients_FlowLP;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
     }

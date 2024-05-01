@@ -1,6 +1,8 @@
 ﻿using HMS_Software_V._01.Admin;
 using HMS_Software_V._01.Admition_Officer;
 using HMS_Software_V._01.Doctor_OPD;
+using HMS_Software_V._01.Doctor_Ward;
+using HMS_Software_V._01.Nurse_Ward;
 using HMS_Software_V._01.Reception;
 using System;
 using System.Collections.Generic;
@@ -27,30 +29,63 @@ namespace HMS_Software_V._01.Common_UseForms
         }
 
         private string unit; //Get the unit name to seed Doctor forms and nurse forms
+        private int WardNumber;
         private void userLogin_btn_Click(object sender, EventArgs e)
         {
 
          
             if (comboB_selcePosition.Text == "Doctor")
             {
-
-                if (comboB_selceUnit.SelectedItem == null || string.IsNullOrEmpty(wardNumber_tbx.Text))
-
+                if (comboB_selceUnit.SelectedItem == null)
                 {
-                    MessageBox.Show("Fill all the blanks","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Add a Unit", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                else if (string.IsNullOrEmpty(wardNumber_tbx.Text))
+                {
+                    MessageBox.Show("Add a Ward Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (!int.TryParse(wardNumber_tbx.Text, out _))
+                {
+                    MessageBox.Show("Please enter a valid ward number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    // All conditions are met
+                    WardNumber = int.Parse(wardNumber_tbx.Text);
+                    unit = comboB_selceUnit.Text;
 
-                unit = comboB_selceUnit.Text;
+                    /* Console.WriteLine("Unit selected: " + comboB_selceUnit.SelectedItem.ToString());
+                     Console.WriteLine("Ward number entered: " + wardNumber);*/
+
+                }
+
             }
             else if (comboB_selcePosition.Text == "Nurse")
             {
                 if (string.IsNullOrEmpty(wardNumber_tbx.Text))
                 {
-                    MessageBox.Show("Fill all the blanks", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Add a Ward Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                unit = comboB_selceUnit.Text;
+                else if (!int.TryParse(wardNumber_tbx.Text, out _))
+                {
+                    MessageBox.Show("Please enter a valid ward number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    // All conditions are met
+                    WardNumber = int.Parse(wardNumber_tbx.Text);
+                    unit = comboB_selceUnit.Text;
+
+                    /* Console.WriteLine("Unit selected: " + comboB_selceUnit.SelectedItem.ToString());
+                     Console.WriteLine("Ward number entered: " + wardNumber);*/
+
+                }
+
             }
             else
             {
@@ -102,14 +137,39 @@ namespace HMS_Software_V._01.Common_UseForms
                             }
                             else if (comboB_selcePosition.Text == "Doctor")
                             {
-                                DoctorCheck_Dashboard doctorOPD = new DoctorCheck_Dashboard(userID, unit);
-                                doctorOPD.Show();
-                                this.Hide();
+                                if (unit == "Clinic")
+                                {
+                                    DoctorCheck_Dashboard doctorCheck_Dashboard = new DoctorCheck_Dashboard(userID, unit, WardNumber);
+                                    doctorCheck_Dashboard.Show();
+                                    this.Hide();
+
+                                }
+                                else if(unit == "Ward")
+                                {
+                                    DoctorWard_Dashboard doctorWard_DASH = new DoctorWard_Dashboard(userID, unit, WardNumber);
+                                    doctorWard_DASH.Show();
+                                    this.Hide();
+                                   
+
+                                }
+                                else if(unit == "OPD")
+                                {
+                                    DoctorCheck_Dashboard doctorOPD = new DoctorCheck_Dashboard(userID, unit, WardNumber);
+                                    doctorOPD.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Unit Not Found", "error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                
 
                             }
                             else if (comboB_selcePosition.Text == "Nurse")
                             {
-                                MessageBox.Show("Not Added Yet", "Infromation Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                NurseWard_Dashboard nurseWard_Dashboard = new NurseWard_Dashboard(userID, WardNumber);
+                                nurseWard_Dashboard.Show();
+                                this.Hide();
                             }
                             else if(comboB_selcePosition.Text == "Reception")
                             {

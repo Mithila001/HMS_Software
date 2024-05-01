@@ -269,6 +269,18 @@
     <Compile Include="Nurse_Ward\NurseWard_Dashboard.Designer.cs">
       <DependentUpon>NurseWard_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nurse_Ward\NurseWard_TreatePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nurse_Ward\NurseWard_TreatePatient.Designer.cs">
+      <DependentUpon>NurseWard_TreatePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nurse_Ward\UserControls\NWTP_PatientMedicalEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nurse_Ward\UserControls\NWTP_PatientMedicalEvents.Designer.cs">
+      <DependentUpon>NWTP_PatientMedicalEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nurse_Ward\UserControls\N_ShowAllPatients.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -432,6 +444,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse_Ward\NurseWard_Dashboard.resx">
       <DependentUpon>NurseWard_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nurse_Ward\NurseWard_TreatePatient.resx">
+      <DependentUpon>NurseWard_TreatePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nurse_Ward\UserControls\NWTP_PatientMedicalEvents.resx">
+      <DependentUpon>NWTP_PatientMedicalEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse_Ward\UserControls\N_ShowAllPatients.resx">
       <DependentUpon>N_ShowAllPatients.cs</DependentUpon>

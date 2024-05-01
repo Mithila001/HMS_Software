@@ -27,6 +27,7 @@ namespace HMS_Software_V._01.Doctor_OPD
         private string doctorPosition;
         private string doctorName;
         private string unitType;
+        private int WardNumber;
 
 
 
@@ -34,7 +35,7 @@ namespace HMS_Software_V._01.Doctor_OPD
 
 
 
-        public DoctorCheck_PatientCheck(string patientID_str, int userID, string doctorPosition, string doctorName, string unittype)
+        public DoctorCheck_PatientCheck(string patientID_str, int userID, string doctorPosition, string doctorName, string unittype, int WardNumber)
         {
             InitializeComponent();
             this.unitType = unittype;
@@ -42,6 +43,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             this.userID = userID;
             this.doctorPosition = doctorPosition;
             this.doctorName = doctorName;
+            this.WardNumber = WardNumber;
 
             DOPDPC_doctorName.Text = doctorName;
             DOPDPC_docPosition.Text = doctorPosition;
@@ -68,6 +70,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             public string PatientMedicalEventID { get; set; }
             public string EventUnitType { get; set; }
             public bool Isurgetn {  get; set; }
+            public int SendWardNumber { get; set; }
 
         }
         private string PatientMedicalEventID; //Storing PatientMedicalEventID 
@@ -316,8 +319,9 @@ namespace HMS_Software_V._01.Doctor_OPD
                         MyDataStoringClass dataTranspoter = new MyDataStoringClass();
                         dataTranspoter.DoctorID = userID;
                         dataTranspoter.EventUnitType = unitType;
+                        dataTranspoter.SendWardNumber = WardNumber;
 
-                        DoctorCheck_Dashboard doctorCheck_Dashboard = new DoctorCheck_Dashboard(dataTranspoter.DoctorID, dataTranspoter.EventUnitType);
+                        DoctorCheck_Dashboard doctorCheck_Dashboard = new DoctorCheck_Dashboard(dataTranspoter.DoctorID, dataTranspoter.EventUnitType, dataTranspoter.SendWardNumber);
                         doctorCheck_Dashboard.Show();
 
                         this.Close();

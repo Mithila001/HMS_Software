@@ -43,9 +43,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.NSAP_age = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.NSAP_Condition = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SWP_NurseName = new System.Windows.Forms.Label();
+            this.NSAP_Condition = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,6 +74,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -83,6 +84,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.materialDivider1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.NSAP_id);
@@ -94,6 +96,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(392, 87);
             this.panel2.TabIndex = 1;
+            this.panel2.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
+            this.panel2.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
             // 
             // materialDivider1
             // 
@@ -154,6 +158,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.materialDivider2);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.NSAP_gender);
@@ -225,6 +230,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.SWP_NurseName);
             this.panel4.Controls.Add(this.NSAP_Condition);
@@ -234,17 +240,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(392, 87);
             this.panel4.TabIndex = 3;
-            // 
-            // NSAP_Condition
-            // 
-            this.NSAP_Condition.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NSAP_Condition.AutoSize = true;
-            this.NSAP_Condition.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NSAP_Condition.Location = new System.Drawing.Point(17, 18);
-            this.NSAP_Condition.Name = "NSAP_Condition";
-            this.NSAP_Condition.Size = new System.Drawing.Size(141, 19);
-            this.NSAP_Condition.TabIndex = 15;
-            this.NSAP_Condition.Text = "Patient Condition";
             // 
             // label3
             // 
@@ -268,6 +263,17 @@
             this.SWP_NurseName.TabIndex = 16;
             this.SWP_NurseName.Text = "Nurse Name";
             // 
+            // NSAP_Condition
+            // 
+            this.NSAP_Condition.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NSAP_Condition.AutoSize = true;
+            this.NSAP_Condition.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NSAP_Condition.Location = new System.Drawing.Point(17, 18);
+            this.NSAP_Condition.Name = "NSAP_Condition";
+            this.NSAP_Condition.Size = new System.Drawing.Size(141, 19);
+            this.NSAP_Condition.TabIndex = 15;
+            this.NSAP_Condition.Text = "Patient Condition";
+            // 
             // N_ShowAllPatients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +281,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "N_ShowAllPatients";
             this.Size = new System.Drawing.Size(1000, 87);
+            this.Click += new System.EventHandler(this.N_ShowAllPatients_Click);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

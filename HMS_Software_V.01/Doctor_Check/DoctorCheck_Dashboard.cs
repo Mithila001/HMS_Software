@@ -20,13 +20,17 @@ namespace HMS_Software_V._01.Doctor_OPD
 
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
-        private int userID;
-        private string unitType;
-        public DoctorCheck_Dashboard(int userID , string unit)
+        private int DoctorID;
+        private string unitTypeName;
+        private int WardNumber;
+        public DoctorCheck_Dashboard(int userID , string unit, int WardNumber)
         {
             InitializeComponent();
-            this.userID = userID;
-            this.unitType = unit;
+
+            this.DoctorID = userID;
+            this.unitTypeName = unit;
+            this.WardNumber = WardNumber;
+
             MyLoadbasicUIDeatils();
             getTableDate(); // Get Dashboard Data
 
@@ -39,21 +43,21 @@ namespace HMS_Software_V._01.Doctor_OPD
         //Load Basic Details for the dashboard
         private void MyLoadbasicUIDeatils()
         {
-            if(unitType == "OPD")
+            if(unitTypeName == "OPD")
             {
                 DisplayUnittype_doctors.Text = "Available OPD Doctors";
                 DisplayUnittype_patient.Text = "Total OPD Patients";
                 DisplayUnittype_title.Text = "Outpatient Department";
 
             }
-            else if(unitType == "Ward")
+            else if(unitTypeName == "Ward")
             {
                 DisplayUnittype_doctors.Text = "Available Ward Doctors";
                 DisplayUnittype_patient.Text = "Total Ward Patients";
                 DisplayUnittype_title.Text = "Inpatient Department";
 
             }
-            else if(unitType == "Clinic")
+            else if(unitTypeName == "Clinic")
             {
                 DisplayUnittype_doctors.Text = "Available Clinci Doctors";
                 DisplayUnittype_patient.Text = "Total Clinci Patients";
@@ -62,7 +66,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             }
             else
             {
-                MessageBox.Show("Unit Type is not valid:"+ unitType, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Unit Type is not valid:"+ unitTypeName, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -77,7 +81,7 @@ namespace HMS_Software_V._01.Doctor_OPD
                 string query = "SELECT D_NameWithInitials, D_Position, Doctor_ID FROM Doctor WHERE Doctor_ID = @UserID";
 
                 SqlCommand sqlCommand = new SqlCommand(query, connect);
-                sqlCommand.Parameters.AddWithValue("@UserID", userID);
+                sqlCommand.Parameters.AddWithValue("@UserID", DoctorID);
                 SqlDataReader reader = sqlCommand.ExecuteReader();
                 
 
@@ -138,7 +142,7 @@ namespace HMS_Software_V._01.Doctor_OPD
                                 if (patientID_str == inputIDstr)
                                 {
                                     // Go to a form
-                                    DoctorCheck_PatientCheck doctorCheck_PatientCheck = new DoctorCheck_PatientCheck(patientID_str, userID, doctorPosition, doctorName, unitType);
+                                    DoctorCheck_PatientCheck doctorCheck_PatientCheck = new DoctorCheck_PatientCheck(patientID_str, DoctorID, doctorPosition, doctorName, unitTypeName, WardNumber);
                                     doctorCheck_PatientCheck.DoctorPatientCheckFromReferece = this;
                                     doctorCheck_PatientCheck.Show();
                                     this.Hide();

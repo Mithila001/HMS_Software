@@ -19,12 +19,18 @@ namespace HMS_Software_V._01.Doctor_Ward
 
         private MyTableData_Automation automation; //Automation
 
-        private int DoctorID = 6; // Just For Now !!!!!!!!!!
+        private int DoctorID;
+        private string UnitName;
+        private int WardNumber;
 
 
-        public DoctorWard_Dashboard()
+        public DoctorWard_Dashboard(int userID, string unit, int WardNumber)
         {
             InitializeComponent();
+
+            this.DoctorID = userID;
+            this.UnitName = unit;
+            this.WardNumber = WardNumber;
 
 
             //Automation to update Admitted_Patients_VisitEvent daily
@@ -101,6 +107,41 @@ namespace HMS_Software_V._01.Doctor_Ward
 
                     //Load Ward Details  ------------------------------------------------------------------------
                     DWD_WarName.Text = "Temporary Ward"; //Need to change
+
+                    string query2 = "SELECT WardNumber, D_Position, D_Specialty, D_RegistrationID" +
+                    " FROM Doctor WHERE Doctor_ID = @doctorID";
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        command.Parameters.AddWithValue("@doctorID", DoctorID);
+                        /*Console.WriteLine("DoctorID from dashboard: " + DoctorID);*/
+                        try
+                        {
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            // Check if any rows were returned
+                            if (reader.Read())
+                            {
+                                DoctorName = reader["D_NameWithInitials"].ToString();
+                                DoctorPosition = reader["D_Position"].ToString();
+                                DoctorSpecialty = reader["D_Specialty"].ToString();
+                                Doctor_RID = reader["D_RegistrationID"].ToString();
+
+                                DWD_name.Text = DoctorName;
+                                DWD_Position.Text = DoctorPosition;
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("No matching record found.");
+                            }
+                            reader.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Console.WriteLine("Error1:" + ex);
+                        }
+                    }
 
 
                     //Load Today Admitted Patient Events  ------------------------------------------------------------------------

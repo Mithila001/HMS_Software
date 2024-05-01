@@ -68,7 +68,7 @@ namespace HMS_Software_V._01.Admission_Officer
                 connect.Open();
 
                 //Getting Admit Request Details from the Database
-                string query1 = "SELECT P_RegistrationID, P_NameWithInitials, P_Age, P_Gender, Doctor_ID, Unit_Type FROM" +
+                string query1 = "SELECT P_RegistrationID, P_NameWithInitials, P_Age, P_Gender, Doctor_ID, Unit_Type, P_ReferralNote FROM" +
                     " Patient_Admit WHERE PatientAdmit_ID = @admitID";
 
                 using (SqlCommand cmd = new SqlCommand(query1, connect))
@@ -87,6 +87,7 @@ namespace HMS_Software_V._01.Admission_Officer
                                 P_Gender = reader["P_Gender"].ToString();
                                 Doctor_ID = Convert.ToInt32(reader["Doctor_ID"]);
                                 Unit_Type = reader["Unit_Type"].ToString();
+                                displayReferralNote_tbx.Text = reader["P_ReferralNote"].ToString();
 
                             }
                             catch (FormatException)
@@ -284,7 +285,7 @@ namespace HMS_Software_V._01.Admission_Officer
                     {
                         MessageBox.Show("Success", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        AdmissionOfficer_Dashboard admissionOfficer_Dashboard = new AdmissionOfficer_Dashboard();
+                        AdmissionOfficer_Dashboard admissionOfficer_Dashboard = new AdmissionOfficer_Dashboard(AO_ID);
                         admissionOfficer_Dashboard.Show();
 
                         this.Hide();
@@ -304,7 +305,7 @@ namespace HMS_Software_V._01.Admission_Officer
 
         private void AdmissionOfficer_ViewRequest_FormClosed(object sender, FormClosedEventArgs e)
         {
-            AdmissionOfficer_Dashboard admissionOfficer_Dashboard = new AdmissionOfficer_Dashboard();
+            AdmissionOfficer_Dashboard admissionOfficer_Dashboard = new AdmissionOfficer_Dashboard(AO_ID);
             admissionOfficer_Dashboard.Show();
             
         }
