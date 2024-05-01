@@ -58,3 +58,12 @@ E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.UserControls.N_ShowAllPatients.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.NurseWard_TreatePatient.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.UserControls.NWTP_PatientMedicalEvents.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_CompleteTestDetails.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_Dashboard.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_DoTest.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_EmployeeStatus.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_EmployeeStatus_Edit.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_Inventory.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_TestToDo.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_UpdateTestDetails.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Lab_Management.Lab_Update_Inventory.resources

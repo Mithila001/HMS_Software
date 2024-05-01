@@ -261,6 +261,60 @@
     <Compile Include="Doctor_Ward\UserControls\ShowWaitionInPatients.Designer.cs">
       <DependentUpon>ShowWaitionInPatients.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lab_Management\Lab_CompleteTestDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_CompleteTestDetails.Designer.cs">
+      <DependentUpon>Lab_CompleteTestDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_Dashboard.Designer.cs">
+      <DependentUpon>Lab_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_DoTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_DoTest.Designer.cs">
+      <DependentUpon>Lab_DoTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_EmployeeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_EmployeeStatus.Designer.cs">
+      <DependentUpon>Lab_EmployeeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_EmployeeStatus_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_EmployeeStatus_Edit.Designer.cs">
+      <DependentUpon>Lab_EmployeeStatus_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_Inventory.Designer.cs">
+      <DependentUpon>Lab_Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_TestToDo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_TestToDo.Designer.cs">
+      <DependentUpon>Lab_TestToDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_UpdateTestDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_UpdateTestDetails.Designer.cs">
+      <DependentUpon>Lab_UpdateTestDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_Update_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_Management\Lab_Update_Inventory.Designer.cs">
+      <DependentUpon>Lab_Update_Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyCommonConnecString.cs" />
     <Compile Include="MyTableData_Automation.cs" />
     <Compile Include="Nurse_Ward\NurseWard_Dashboard.cs">
@@ -441,6 +495,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Ward\UserControls\ShowWaitionInPatients.resx">
       <DependentUpon>ShowWaitionInPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_CompleteTestDetails.resx">
+      <DependentUpon>Lab_CompleteTestDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_Dashboard.resx">
+      <DependentUpon>Lab_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_DoTest.resx">
+      <DependentUpon>Lab_DoTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_EmployeeStatus.resx">
+      <DependentUpon>Lab_EmployeeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_EmployeeStatus_Edit.resx">
+      <DependentUpon>Lab_EmployeeStatus_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_Inventory.resx">
+      <DependentUpon>Lab_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_TestToDo.resx">
+      <DependentUpon>Lab_TestToDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_UpdateTestDetails.resx">
+      <DependentUpon>Lab_UpdateTestDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_Management\Lab_Update_Inventory.resx">
+      <DependentUpon>Lab_Update_Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse_Ward\NurseWard_Dashboard.resx">
       <DependentUpon>NurseWard_Dashboard.cs</DependentUpon>

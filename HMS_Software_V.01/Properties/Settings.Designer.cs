@@ -33,5 +33,202 @@ namespace HMS_Software_V._01.Properties {
                 return ((string)(this["DatabaseMithilaHMSConnectionString"]));
             }
         }
+
+        //Extra Added codes
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Value1
+        {
+            get
+            {
+                return ((string)(this["Value1"]));
+            }
+            set
+            {
+                this["Value1"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Value2
+        {
+            get
+            {
+                return ((string)(this["Value2"]));
+            }
+            set
+            {
+                this["Value2"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Value3
+        {
+            get
+            {
+                return ((string)(this["Value3"]));
+            }
+            set
+            {
+                this["Value3"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Value4
+        {
+            get
+            {
+                return ((string)(this["Value4"]));
+            }
+            set
+            {
+                this["Value4"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Value5
+        {
+            get
+            {
+                return ((string)(this["Value5"]));
+            }
+            set
+            {
+                this["Value5"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Value6
+        {
+            get
+            {
+                return ((string)(this["Value6"]));
+            }
+            set
+            {
+                this["Value6"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string result
+        {
+            get
+            {
+                return ((string)(this["result"]));
+            }
+            set
+            {
+                this["result"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string result2
+        {
+            get
+            {
+                return ((string)(this["result2"]));
+            }
+            set
+            {
+                this["result2"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string result3
+        {
+            get
+            {
+                return ((string)(this["result3"]));
+            }
+            set
+            {
+                this["result3"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string result4
+        {
+            get
+            {
+                return ((string)(this["result4"]));
+            }
+            set
+            {
+                this["result4"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string result5
+        {
+            get
+            {
+                return ((string)(this["result5"]));
+            }
+            set
+            {
+                this["result5"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string result6
+        {
+            get
+            {
+                return ((string)(this["result6"]));
+            }
+            set
+            {
+                this["result6"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Count
+        {
+            get
+            {
+                return ((int)(this["Count"]));
+            }
+            set
+            {
+                this["Count"] = value;
+            }
+        }
     }
 }
