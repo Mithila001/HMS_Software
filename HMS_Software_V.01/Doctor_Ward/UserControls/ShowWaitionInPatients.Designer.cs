@@ -143,7 +143,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 30);
+            this.label5.Location = new System.Drawing.Point(17, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 15);
             this.label5.TabIndex = 11;
@@ -154,7 +154,7 @@
             this.SWP_RID.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.SWP_RID.AutoSize = true;
             this.SWP_RID.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SWP_RID.Location = new System.Drawing.Point(44, 26);
+            this.SWP_RID.Location = new System.Drawing.Point(44, 14);
             this.SWP_RID.Name = "SWP_RID";
             this.SWP_RID.Size = new System.Drawing.Size(77, 22);
             this.SWP_RID.TabIndex = 10;

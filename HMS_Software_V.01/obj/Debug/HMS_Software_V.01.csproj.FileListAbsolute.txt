@@ -54,3 +54,5 @@ E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_Ward.DoctorWard_Dashboard.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_Ward.UserControls.ShowWaitionInPatients.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_Ward.DoctorWard_ProgressNote.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.NurseWard_Dashboard.resources
+E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.UserControls.N_ShowAllPatients.resources
