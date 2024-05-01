@@ -88,12 +88,12 @@ namespace HMS_Software_V._01.Doctor_Ward
                     connect.Open();
 
                     // Find the Ward Number -------------------------------------------------------------------------------------------------
-                    string query1 = "SELECT WardNumber FROM" + " WardTypes" + " WHERE WardNumber = @wardName";
+                    string query1 = "SELECT WardNumber FROM WardTypes WHERE WardName = @wardName";
 
                     using (SqlCommand command = new SqlCommand(query1, connect))
                     {
                         command.Parameters.AddWithValue("@wardName", WardName);
-                        /*Console.WriteLine("DoctorID from dashboard: " + DoctorID);*/
+                        Console.WriteLine("Ward Name " + WardName);
                         try
                         {
                             SqlDataReader reader = command.ExecuteReader();
@@ -112,8 +112,8 @@ namespace HMS_Software_V._01.Doctor_Ward
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            Console.WriteLine("Error1:" + ex);
+                            MessageBox.Show("Error:11 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Console.WriteLine("Error11:" + ex);
                         }
                     }
 
@@ -154,8 +154,8 @@ namespace HMS_Software_V._01.Doctor_Ward
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error:2 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine("Error2:" + ex);
+                MessageBox.Show("Error:22 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error22:" + ex);
             }
         }
 

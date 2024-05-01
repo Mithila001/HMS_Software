@@ -146,7 +146,7 @@ namespace HMS_Software_V._01.Common_UseForms
                                 }
                                 else if(unit == "Ward")
                                 {
-                                    DoctorWard_Dashboard doctorWard_DASH = new DoctorWard_Dashboard(userID, unit, WardNumber);
+                                    DoctorWard_Dashboard doctorWard_DASH = new DoctorWard_Dashboard(userID, WardNumber);
                                     doctorWard_DASH.Show();
                                     this.Hide();
                                    

@@ -20,16 +20,14 @@ namespace HMS_Software_V._01.Doctor_Ward
         private MyTableData_Automation automation; //Automation
 
         private int DoctorID;
-        private string UnitName;
         private int WardNumber;
 
 
-        public DoctorWard_Dashboard(int userID, string unit, int WardNumber)
+        public DoctorWard_Dashboard(int userID =8, int WardNumber = 8)
         {
             InitializeComponent();
 
             this.DoctorID = userID;
-            this.UnitName = unit;
             this.WardNumber = WardNumber;
 
 
@@ -74,7 +72,7 @@ namespace HMS_Software_V._01.Doctor_Ward
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
                         command.Parameters.AddWithValue("@doctorID", DoctorID);
-                        /*Console.WriteLine("DoctorID from dashboard: " + DoctorID);*/
+                        Console.WriteLine("DoctorID from dashboard: " + DoctorID);
                         try
                         {
                             SqlDataReader reader = command.ExecuteReader();
@@ -108,15 +106,15 @@ namespace HMS_Software_V._01.Doctor_Ward
                     //Load Ward Details  ------------------------------------------------------------------------
                     DWD_WarName.Text = "Temporary Ward"; //Need to change
 
-                    string query2 = "SELECT WardNumber, D_Position, D_Specialty, D_RegistrationID" +
+                    string query2 = "SELECT D_NameWithInitials, D_Position, D_Specialty, D_RegistrationID" +
                     " FROM Doctor WHERE Doctor_ID = @doctorID";
-                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    using (SqlCommand command2 = new SqlCommand(query2, connect))
                     {
-                        command.Parameters.AddWithValue("@doctorID", DoctorID);
+                        command2.Parameters.AddWithValue("@doctorID", DoctorID);
                         /*Console.WriteLine("DoctorID from dashboard: " + DoctorID);*/
                         try
                         {
-                            SqlDataReader reader = command.ExecuteReader();
+                            SqlDataReader reader = command2.ExecuteReader();
 
                             // Check if any rows were returned
                             if (reader.Read())
@@ -138,8 +136,8 @@ namespace HMS_Software_V._01.Doctor_Ward
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            Console.WriteLine("Error1:" + ex);
+                            MessageBox.Show("Error:3 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Console.WriteLine("Error3:" + ex);
                         }
                     }
 
