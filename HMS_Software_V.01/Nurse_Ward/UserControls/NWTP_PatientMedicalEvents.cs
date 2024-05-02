@@ -16,5 +16,10 @@ namespace HMS_Software_V._01.Nurse_Ward.UserControls
         {
             InitializeComponent();
         }
+
+        public bool NWTP_IsCheckBoxCkecked {  get; set; }
+        public int NWTP_NuresID { get; set; }
+        public string NWTP_Patient_RID {  get; set; }
+        public int NWTP_Patient_MEID {  get; set; }
     }
 }

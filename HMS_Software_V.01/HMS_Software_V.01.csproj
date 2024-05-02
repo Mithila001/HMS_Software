@@ -589,6 +589,7 @@
     <None Include="DatabaseMithilaHMSDataSet.xss">
       <DependentUpon>DatabaseMithilaHMSDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Nurse_Ward\JSON file\NWPC_userControlDetails.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

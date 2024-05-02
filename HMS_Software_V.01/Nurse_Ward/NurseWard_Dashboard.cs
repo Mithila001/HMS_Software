@@ -50,6 +50,7 @@ namespace HMS_Software_V._01.Nurse_Ward
         private string NurseTreatmentStatus;
         private int VisitedNurseID;
         private string WardName;
+        private bool IsNurseVisited;
 
 
         string NureseName;
@@ -138,7 +139,7 @@ namespace HMS_Software_V._01.Nurse_Ward
 
 
                     //Load Today Admitted Patient Events  ------------------------------------------------------------------------
-                    string query1 = "SELECT P_RID, P_NameWithInitials, P_Age, P_Gender, Visite_Round, P_Condition, P_MedicalEventID, N_TreatmentStatus, Visited_Nurse_ID, P_Ward, N_TreatmentStatus FROM" +
+                    string query1 = "SELECT P_RID, P_NameWithInitials, P_Age, P_Gender, Visite_Round, P_Condition, P_MedicalEventID, N_TreatmentStatus, Visited_Nurse_ID, P_Ward, N_TreatmentStatus, Is_VisitedByNurse FROM" +
                        " Admitted_Patients_VisitEvent" +
                        " WHERE Visite_Date = @visite_Date";
 
@@ -164,6 +165,16 @@ namespace HMS_Software_V._01.Nurse_Ward
                                     NurseTreatmentStatus = reader["N_TreatmentStatus"].ToString();  
                                     VisitRound = (int)reader["Visite_Round"];
                                     N_TreatmentStatus = reader["N_TreatmentStatus"].ToString();
+                                    object value = reader["Is_VisitedByNurse"];
+
+                                    if (value == DBNull.Value || !Convert.ToBoolean(value))
+                                    {
+                                        IsNurseVisited = false;
+                                    }
+                                    else
+                                    {
+                                        IsNurseVisited = true;
+                                    }
 
                                     VisitedNurseID = reader.IsDBNull(reader.GetOrdinal("Visited_Nurse_ID")) ? 0 : (int)reader["Visited_Nurse_ID"];
 
@@ -201,7 +212,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                                 // Generate UserControls to only records with Patient Medical Evenets. Why? Becouse There are nothing to Treate if the doctor didint gave instructions
                                 // So that meand Patient Medical event is neccessary in ordert to display user control in this form.
                                 // 
-                                if (P_MedicalEventID != 0)
+                                if (P_MedicalEventID != 0 && !IsNurseVisited)
                                 {
                                     Console.WriteLine(" -------------------- Medical Event Found -------------------- " + P_MedicalEventID);
 

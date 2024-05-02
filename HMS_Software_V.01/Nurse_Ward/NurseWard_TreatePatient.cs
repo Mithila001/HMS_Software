@@ -1,5 +1,6 @@
 ﻿using HMS_Software_V._01.Common_UseForms.UserControls;
 using HMS_Software_V._01.Nurse_Ward.UserControls;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,10 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using Newtonsoft.Json;
+using System.IO;
+
 
 namespace HMS_Software_V._01.Nurse_Ward
 {
@@ -48,8 +53,145 @@ namespace HMS_Software_V._01.Nurse_Ward
 
 
             LoadBasicData();
-            LoadData();
+
+            MyReadJSON();
+
+            MyDataLoeadingController();
+            /*LoadData();*/
+
+            /*MyReadJSON();
+            MyAssignedToJSON();*/
         }
+
+        private bool isMatchFoundFromJSON = false;
+        private void MyReadJSON()
+        {
+            string json = File.ReadAllText(@"E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json");
+
+            List<UserControlDetails> userControlDetailsList = JsonConvert.DeserializeObject<List<UserControlDetails>>(json);
+
+            if (userControlDetailsList != null && userControlDetailsList.Any())
+            {
+                foreach (var userDetails in userControlDetailsList)
+                {
+                    Console.WriteLine($"Checking user control details for NurseID: {userDetails.JSON_NurseID} and PatientID: {userDetails.JSON_PatientID}");
+
+                    // Check if the NurseID matches the desired NurseID
+                    if (userDetails.JSON_NurseID == NurseID && userDetails.JSON_PatientID == PatientRID)
+                    {
+                        Console.WriteLine("Match found for NurseID and PatientID.");
+                        isMatchFoundFromJSON = true;
+
+                        Console.WriteLine("Creating new user control...");
+
+                        // Assign values to the user controls
+                        NWTP_PatientMedicalEvents nWTP_PatientMedicalEvents2 = new NWTP_PatientMedicalEvents();
+
+                        nWTP_PatientMedicalEvents2.NWTPUC_checkBox.Checked = userDetails.JSON_IsCompleted;
+                        nWTP_PatientMedicalEvents2.NWTPUC_RequestType.Text = userDetails.JSON_RequestType;
+                        nWTP_PatientMedicalEvents2.NWTPUC_RequestDetaills.Text = userDetails.JSON_RequestDetails;
+
+                        Console.WriteLine("Adding user control to the panel...");
+                        P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents2);
+
+                        Console.WriteLine("User control added successfully.");
+
+                        // Find the corresponding user control by iterating through controls
+                        foreach (Control control in P_MedicalEvents_FlowLP.Controls)
+                        {
+                            if (control is NWTP_PatientMedicalEvents nWTP_PatientMedicalEvents)
+                            {
+                                Console.WriteLine("Found NWTP_PatientMedicalEvents control.");
+
+                                // Check if the NurseID matches the desired NurseID
+                                if (nWTP_PatientMedicalEvents.NWTP_NuresID == userDetails.JSON_NurseID)
+                                {
+
+
+                                    break; // Exit the loop after assigning values to the matched control
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                isMatchFoundFromJSON = false;
+            }
+
+
+            
+        }
+
+        private void MyDataLoeadingController()
+        {
+            // Check if at least one match is found
+            if (isMatchFoundFromJSON)
+            {
+                Console.WriteLine("At least one match is found.");
+                
+            }
+            else
+            {
+                Console.WriteLine("No match is found.");
+                LoadData();
+            }
+        }
+       
+        private void MyAssignedToJSON()
+        {
+            // Define a list to hold the details of multiple user controls
+            List<UserControlDetails> NWPC_userControlDetails = new List<UserControlDetails>();
+
+           
+            foreach (Control control in P_MedicalEvents_FlowLP.Controls)
+            {
+                if (control is NWTP_PatientMedicalEvents nWTP_PatientMedicalEvents)
+                {
+                    // Extract the details from the user control
+                    string UC_JSON__RequestType = nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text;
+                    bool UC_JSON_IsCompleted = nWTP_PatientMedicalEvents.NWTPUC_checkBox.Checked;
+                    string UC_JSON_RequestDetails = nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text;
+
+                    // Create an instance of UserControlDetails and add it to the list
+                    var userDetails = new UserControlDetails
+                    {
+                        JSON_PatientID = PatientRID,
+                        JSON_NurseID = NurseID,
+                        JSON_RequestType = UC_JSON__RequestType,
+                        JSON_IsCompleted = UC_JSON_IsCompleted,
+                        JSON_RequestDetails = UC_JSON_RequestDetails,
+                        JSON_PrescriptionID = PrescriptionRequestIDs,
+                        JSON_LabRequesID_List = LabRequestID_Lists
+                    };
+                    NWPC_userControlDetails.Add(userDetails);
+                }
+            }
+
+            // Serialize the list to JSON format
+            string json = JsonConvert.SerializeObject(NWPC_userControlDetails);
+
+            // Write the JSON data to a file
+            File.WriteAllText(@"E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json", json);
+
+        }
+
+
+
+        // Define a class to hold the details of each user control
+        public class UserControlDetails //For JSON 
+        {
+            public string JSON_RequestType { get; set; }
+            public int  JSON_NurseID { get; set; }
+            public bool JSON_IsCompleted { get; set; }
+            public string JSON_PatientID { get; set; }
+            public string JSON_RequestDetails {  get; set; }
+
+            public string JSON_PrescriptionID {  get; set; }
+            public List<int> JSON_LabRequesID_List { get; set; }
+        }
+
 
 
         string LabRequestIDs;
@@ -75,6 +217,7 @@ namespace HMS_Software_V._01.Nurse_Ward
         }
 
 
+        private List<int> LabRequestID_Lists;
         private void LoadData()
         {
             try
@@ -100,7 +243,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                         {
                             while (reader.Read())
                             {
-                                Console.WriteLine("Admitted Patient Medical Events Recived. ");
+                               /* Console.WriteLine("Admitted Patient Medical Events Recived. ");*/
                                 try
                                 {
                                     LabRequestIDs = reader["LabRequest_ID"].ToString();
@@ -109,10 +252,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                                     // Becouse if ID is empt, there going to be an error
                                     PatientMonitorRequestID = !reader.IsDBNull(reader.GetOrdinal("PatinetMonitortRequest_ID")) ? Convert.ToInt32(reader["PatinetMonitortRequest_ID"]) : 0;
 
-                                    Console.WriteLine("++ LabRequestIDs assigned: " + LabRequestIDs);
-                                    Console.WriteLine("++ PrescriptionRequestIDs assigned: " + PrescriptionRequestIDs);
-                                    Console.WriteLine("++ PatientMonitorRequestID assigned: " + PatientMonitorRequestID);
-
+                                  
                                 }
                                 catch (FormatException)
                                 {
@@ -123,48 +263,34 @@ namespace HMS_Software_V._01.Nurse_Ward
                                 NWTP_PatientMedicalEvents nWTP_PatientMedicalEvents = new NWTP_PatientMedicalEvents();
 
                                 //Since there are calling a single Patient Medical Event Record, there will be no Loops.
-                                
 
-                                
-                                /*List<int> PrescriptionRequestID_List = MyConvertStringRequestIDtoInt(PrescriptionRequestIDs);*/
+                                nWTP_PatientMedicalEvents.NWTP_NuresID = NurseID;
+                                nWTP_PatientMedicalEvents.NWTP_Patient_RID = PatientRID;
+                                nWTP_PatientMedicalEvents.NWTP_Patient_MEID = PatientMEID;
 
+                               
                                 //--------------------------------------------------------------------------------------------------------------------------------
                                 //Check If there are Prescription request table is available
                                 if (!string.IsNullOrEmpty(PrescriptionRequestIDs))
                                 {
-                                    Console.WriteLine("Prescription Request IDs is available");
+                                    /*Console.WriteLine("Prescription Request IDs is available");*/
 
                                     nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text = "Medication";
                                     nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text = PrescriptionRequestIDs + " for Now";
-                                    
-                                    //Check if the task is alrady completed.
-                                    bool IsComplteted = MyIfTaskIsCompleted(PrescriptionRequestIDs);
-                                    if (IsComplteted)
-                                    {
-                                        nWTP_PatientMedicalEvents.NWTPUC_checkBox.Checked = true;
-                                        P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents); // Generate A Single User Control
-                                    }
-                                    else
-                                    {
-                                        nWTP_PatientMedicalEvents.NWTPUC_checkBox.Checked = false;
-                                        P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents); // Generate A Single User Control
-                                    }
+
+                                    P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents);
+
                                 }
 
                                 // Check if the Lab Request available
                                 if (!string.IsNullOrEmpty(LabRequestIDs))
                                 {
-                                    Console.WriteLine("LabRequestIDs is available");
+                               
 
                                     // Assigne string IDs to int list
-                                    List<int> LabRequestID_Lists = MyConvertStringRequestIDtoInt(LabRequestIDs);
+                                    LabRequestID_Lists = MyConvertStringRequestIDtoInt(LabRequestIDs);
 
-                                    Console.WriteLine("Received the list. Lets Generate UserControl for that list:");
-
-                                    /*foreach (int id in LabRequestID_Lists)
-                                    {
-                                        Console.WriteLine(id);
-                                    }*/
+                                  
 
                                     // Generate UserControl for that list
                                     MyGenerateLabTaks(LabRequestID_Lists);
@@ -184,6 +310,8 @@ namespace HMS_Software_V._01.Nurse_Ward
 
                 }
 
+                MyAssignedToJSON(); // To store current Generated data to JSON file
+
             }
 
 
@@ -198,7 +326,7 @@ namespace HMS_Software_V._01.Nurse_Ward
         // Method to convert a string to a list of integers
         private static List<int> MyConvertStringRequestIDtoInt(string value) // Dividi Table Cells that contain mutiple ID in string fomat
         {
-            Console.WriteLine($"Input string: {value}");
+            /*Console.WriteLine($"Input string: {value}");*/
 
             // Split the input string by comma delimiter
             string[] parts = value.Split(',');
@@ -210,14 +338,14 @@ namespace HMS_Software_V._01.Nurse_Ward
                 // Skip empty or whitespace-only parts
                 if (string.IsNullOrWhiteSpace(part))
                 {
-                    Console.WriteLine($"Skipping empty or whitespace-only part.");
+                    /*Console.WriteLine($"Skipping empty or whitespace-only part.");*/
                     continue;
                 }
 
                 // Attempt to parse the part as an integer
                 if (int.TryParse(part.Trim(), out int num))
                 {
-                    Console.WriteLine($"Processing part: {part}. Parsed integer: {num}");
+                    /*Console.WriteLine($"Processing part: {part}. Parsed integer: {num}");*/
                     intList.Add(num);
                 }
                 else
@@ -226,37 +354,27 @@ namespace HMS_Software_V._01.Nurse_Ward
                 }
             }
 
-            Console.WriteLine("Conversion completed.");
+            /*Console.WriteLine("Conversion completed.");*/
             return intList;
         }
 
         
         static bool MyIfTaskIsCompleted(string input) //To Check tasks are completed
         {
-            Console.WriteLine("Input string: " + input);
-
+          
             string[] parts = input.Split(',');
-
-            // Output all the parts
-            Console.WriteLine("Parts:");
-            foreach (string part in parts)
-            {
-                Console.WriteLine("  " + part.Trim());
-            }
-
+           
             // Check if the last part is "off"
             string lastPart = parts[parts.Length - 1].Trim(); // Trim to remove any leading/trailing whitespace
 
             if (lastPart.Equals("yes", StringComparison.OrdinalIgnoreCase))
             {
-                // "yes" is present at the end
-                Console.WriteLine("Last task is completed: Yes");
+                // "yes" is present at the end 
                 return true;
             }
             else
             {
                 // "off" is not present at the end
-                Console.WriteLine("Last task is completed: No");
                 return false;
             }
         }
@@ -280,7 +398,7 @@ namespace HMS_Software_V._01.Nurse_Ward
 
                     foreach (int id in LabRequestID_Lists) // For each Lab Request IDs, generate a user control
                     {
-                        Console.WriteLine("MyGenerateLabTaks --> LabID: " + id);
+                        /*Console.WriteLine("MyGenerateLabTaks --> LabID: " + id);*/
 
                         using (SqlCommand cmd = new SqlCommand(query1, connect))
                         {
@@ -292,22 +410,22 @@ namespace HMS_Software_V._01.Nurse_Ward
                                 {
                                     if (reader.Read()) // Check if there is data available
                                     {
-                                        Console.WriteLine("MyGenerateLabTaks --> Lab Record Found for LabID: " + id);
+                                        /*Console.WriteLine("MyGenerateLabTaks --> Lab Record Found for LabID: " + id);*/
 
                                         string investigationName = reader["LR_InvestigationName"].ToString();
                                         string specimentName = reader["LR_SpecimenName"].ToString();
                                         string labelNumber = reader["LR_LabelNumber"].ToString();
 
-                                        Console.WriteLine($"Investigation Name: {investigationName}");
+                                        /*Console.WriteLine($"Investigation Name: {investigationName}");
                                         Console.WriteLine($"Specimen Name: {specimentName}");
-                                        Console.WriteLine($"Label Number: {labelNumber}");
+                                        Console.WriteLine($"Label Number: {labelNumber}");*/
 
 
                                         // Create a string to store investigationName, specimentName, and labelNumber
                                         string DisplayLabInfo = "Investigation: " + investigationName + "\n" +
                                             "Specimen: " + specimentName + "\n" + labelNumber;
 
-                                        Console.WriteLine("Create a string to store investigationName, specimentName, and labelNumber: " + DisplayLabInfo);
+                                        /*Console.WriteLine("Create a string to store investigationName, specimentName, and labelNumber: " + DisplayLabInfo);*/
 
                                         // Add values to the user control
                                         nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text = "Lab Request";
@@ -329,7 +447,7 @@ namespace HMS_Software_V._01.Nurse_Ward
 
                                         //Check if the task is alrady completed.
                                         bool IsComplteted = MyIfTaskIsCompleted(LabRequestIDs);
-                                        Console.WriteLine("Is last task completed? " + IsComplteted);
+                                        /*Console.WriteLine("Is last task completed? " + IsComplteted);*/
 
                                         if (IsComplteted)
                                         {
@@ -395,14 +513,23 @@ namespace HMS_Software_V._01.Nurse_Ward
 
         private void NWTP_Save_btn_Click(object sender, EventArgs e)
         {
-            foreach (Control control in P_MedicalEvents_FlowLP.Controls)
+            Console.WriteLine("--------------------------------------------------- Save Click Event Started ---------------------------------------------------");
+
+            MyAssignedToJSON();
+
+            /*foreach (Control control in P_MedicalEvents_FlowLP.Controls)
             {
                 if (control is NWTP_PatientMedicalEvents nWTP_PatientMedicalEvents)
                 {
 
-                    /*string NWTP_RequestDetails = nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text;*/
+                    *//*string NWTP_RequestDetails = nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text;*//*
                     string NWTP_RequestType = nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text;
+
                     bool NWTP_IsCompleted = nWTP_PatientMedicalEvents.NWTPUC_checkBox.Checked;
+                    *//*nWTP_PatientMedicalEvents.NWTP_IsCheckBoxCkecked = NWTP_IsCompleted;*//*
+
+                    Console.WriteLine("NWTP_RequestType: "+ NWTP_RequestType);
+                    Console.WriteLine("NWTP_IsCompleted: "+ NWTP_IsCompleted);
 
                     General_boolList.Add(NWTP_IsCompleted); // To deside what should we display in Nures dashboard Patient status --> Pending,Completed or None
 
@@ -411,12 +538,13 @@ namespace HMS_Software_V._01.Nurse_Ward
                     if (NWTP_RequestType == "Lab Request")
                     {
                         Lab_boolList.Add(NWTP_IsCompleted);
-
+                        Console.WriteLine("This is a Lab Request Type");
 
                     }
                     else if(NWTP_RequestType == "Medication")
                     {
-                        if(NWTP_IsCompleted)
+                        Console.WriteLine("This is a Medication Request Type");
+                        if (NWTP_IsCompleted)
                         {
                             IsMedicationRequestComplete = true;
                         }
@@ -426,13 +554,14 @@ namespace HMS_Software_V._01.Nurse_Ward
                 }
 
             }
-            MyUpdateDataTables();
+            MyUpdateDataTables();*/
         }
 
 
         string LabRequestCompleteStatus;
         private void MyUpdateDataTables()
         {
+            // The following code only check Lab Requests
 
             // If the list is empty, return false
             if (Lab_boolList.Count == 0)
@@ -473,14 +602,18 @@ namespace HMS_Software_V._01.Nurse_Ward
                     connect.Open();
 
 
-                    string query = "INSERT INTO Admitted_Patients_VisitEvent (N_TreatmentStatus)" +
-                    " VALUES (@N_TreatmentStatus)";
+                    string query = "UPDATE Admitted_Patients_VisitEvent " +
+                                               "SET N_TreatmentStatus = @N_TreatmentStatus " +
+                                               "WHERE P_RID = @P_RID";
 
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
-                        Console.WriteLine("Inserting to Admitted_Patients_VisitEvent table, LabRequestCompleteStatus : " + LabRequestCompleteStatus);
-                      
+                        Console.WriteLine("N_TreatmentStatus : " + LabRequestCompleteStatus);
+                        Console.WriteLine("P_RID : " + PatientRID);
+
+                        cmd.Parameters.AddWithValue("@P_RID", PatientRID);
                         cmd.Parameters.AddWithValue("@N_TreatmentStatus", LabRequestCompleteStatus);
+
 
                         cmd.ExecuteNonQuery();
                     }
@@ -493,6 +626,140 @@ namespace HMS_Software_V._01.Nurse_Ward
                 MessageBox.Show("Error:3 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine("Error3:" + ex);
             }
+
+        }
+
+        bool Requests_IsCompleted =false;
+        private List<bool> IsAllRequestsCompleted = new List<bool>();
+
+
+        private void NWTP_Completed_btn_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in P_MedicalEvents_FlowLP.Controls)
+            {
+                if (control is NWTP_PatientMedicalEvents nWTP_PatientMedicalEvents)
+                {
+
+                    /*string NWTP_RequestDetails = nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text;*/
+                    string NWTP_RequestType = nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text;
+                    Requests_IsCompleted = nWTP_PatientMedicalEvents.NWTPUC_checkBox.Checked;
+
+                    IsAllRequestsCompleted.Add(Requests_IsCompleted); // To deside what should we display in Nures dashboard Patient status --> Pending,Completed or None
+
+
+                }
+
+            }
+
+            // Use LINQ's All method to check if all values are true
+            bool isAllCompleted = IsAllRequestsCompleted.All(value => value);
+
+            if (!isAllCompleted) // If all the Requests are Not Completed
+            {
+                DialogResult result = MessageBox.Show("All the reqest are not completed! Want To Completed?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                        {
+                            connect.Open();
+
+
+                            string query = "UPDATE Admitted_Patients_VisitEvent " +
+                                       "SET N_TreatmentStatus = @N_TreatmentStatus, Is_VisitedByNurse = @Is_VisitedByNurse " +
+                                       "WHERE P_RID = @P_RID";
+
+
+                            using (SqlCommand cmd = new SqlCommand(query, connect))
+                            {
+                                Console.WriteLine("Inserting to Admitted_Patients_VisitEvent table, LabRequestCompleteStatus : " + LabRequestCompleteStatus);
+
+                                cmd.Parameters.AddWithValue("@P_RID", PatientRID);
+                                cmd.Parameters.AddWithValue("@Is_VisitedByNurse", 1);
+                                cmd.Parameters.AddWithValue("@N_TreatmentStatus", "Completed");
+
+
+                                cmd.ExecuteNonQuery();
+                            }
+
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error:3 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Console.WriteLine("Error3:" + ex);
+                    }
+                }
+                else if (result == DialogResult.No)
+                {
+                    return;
+                }
+
+            }
+            else // If all the Requests are Completed
+            {
+
+                try
+                {
+                    using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                    {
+                        connect.Open();
+
+
+                        string query = "UPDATE Admitted_Patients_VisitEvent " +
+                                            "SET N_TreatmentStatus = @N_TreatmentStatus, Is_VisitedByNurse = @Is_VisitedByNurse " +
+                                            "WHERE P_RID = @P_RID";
+
+
+                        using (SqlCommand cmd = new SqlCommand(query, connect))
+                        {
+                            Console.WriteLine(" P_RID::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: " + PatientRID);
+             
+                            cmd.Parameters.AddWithValue("@P_RID", PatientRID);
+                            cmd.Parameters.AddWithValue("@Is_VisitedByNurse", 1);
+                            cmd.Parameters.AddWithValue("@N_TreatmentStatus", "Completed");
+
+
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show(" Success!  ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+                            //Remove JSON Data 
+
+                            // Read the JSON data from the file
+                            string filePath = @"E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json";
+                            string json = File.ReadAllText(filePath);
+
+                            // Deserialize JSON data into a list of UserControlDetails
+                            List<UserControlDetails> userControlDetailsList = JsonConvert.DeserializeObject<List<UserControlDetails>>(json);
+
+                            // Remove items that meet the specified conditions
+                            userControlDetailsList.RemoveAll(item => item.JSON_PatientID == PatientRID && item.JSON_NurseID == NurseID);
+
+                            // Serialize the updated list to JSON format
+                            string updatedJson = JsonConvert.SerializeObject(userControlDetailsList);
+
+                            // Write the updated JSON data back to the file
+                            File.WriteAllText(filePath, updatedJson);
+
+
+                        }
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:4 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Console.WriteLine("Error4:" + ex);
+                }
+
+            }
+
 
         }
     }

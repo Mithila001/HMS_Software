@@ -54,8 +54,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.P_MedicalEvents_FlowLP = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.NWTP_Save_btn = new System.Windows.Forms.Button();
             this.NWTP_Completed_btn = new System.Windows.Forms.Button();
+            this.NWTP_Save_btn = new System.Windows.Forms.Button();
             this.Base_TableLP.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -387,6 +387,25 @@
             this.panel5.Size = new System.Drawing.Size(1008, 50);
             this.panel5.TabIndex = 2;
             // 
+            // NWTP_Completed_btn
+            // 
+            this.NWTP_Completed_btn.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.NWTP_Completed_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.NWTP_Completed_btn.FlatAppearance.BorderSize = 0;
+            this.NWTP_Completed_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.NWTP_Completed_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.NWTP_Completed_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NWTP_Completed_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWTP_Completed_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.NWTP_Completed_btn.Location = new System.Drawing.Point(549, 6);
+            this.NWTP_Completed_btn.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.NWTP_Completed_btn.Name = "NWTP_Completed_btn";
+            this.NWTP_Completed_btn.Size = new System.Drawing.Size(200, 39);
+            this.NWTP_Completed_btn.TabIndex = 64;
+            this.NWTP_Completed_btn.Text = "Completed";
+            this.NWTP_Completed_btn.UseVisualStyleBackColor = false;
+            this.NWTP_Completed_btn.Click += new System.EventHandler(this.NWTP_Completed_btn_Click);
+            // 
             // NWTP_Save_btn
             // 
             this.NWTP_Save_btn.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -405,24 +424,6 @@
             this.NWTP_Save_btn.Text = "Save";
             this.NWTP_Save_btn.UseVisualStyleBackColor = false;
             this.NWTP_Save_btn.Click += new System.EventHandler(this.NWTP_Save_btn_Click);
-            // 
-            // NWTP_Completed_btn
-            // 
-            this.NWTP_Completed_btn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.NWTP_Completed_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.NWTP_Completed_btn.FlatAppearance.BorderSize = 0;
-            this.NWTP_Completed_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.NWTP_Completed_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.NWTP_Completed_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NWTP_Completed_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NWTP_Completed_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.NWTP_Completed_btn.Location = new System.Drawing.Point(549, 6);
-            this.NWTP_Completed_btn.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
-            this.NWTP_Completed_btn.Name = "NWTP_Completed_btn";
-            this.NWTP_Completed_btn.Size = new System.Drawing.Size(200, 39);
-            this.NWTP_Completed_btn.TabIndex = 64;
-            this.NWTP_Completed_btn.Text = "Completed";
-            this.NWTP_Completed_btn.UseVisualStyleBackColor = false;
             // 
             // NurseWard_TreatePatient
             // 
