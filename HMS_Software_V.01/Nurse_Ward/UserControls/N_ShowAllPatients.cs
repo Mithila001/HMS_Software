@@ -13,6 +13,12 @@ namespace HMS_Software_V._01.Nurse_Ward.UserControls
 {
     public partial class N_ShowAllPatients : UserControl
     {
+
+        // Property to hold the reference to the form
+        public Form DashboardFormReference { get; set; }
+
+
+
         public N_ShowAllPatients()
         {
             InitializeComponent();
@@ -51,8 +57,23 @@ namespace HMS_Software_V._01.Nurse_Ward.UserControls
 
         private void N_ShowAllPatients_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Clicked the user Control");
+
             NurseWard_TreatePatient nurseWard_TreatePatient = new NurseWard_TreatePatient(NSAPUC_P_Name, NSAPUC_P_RID, NSAPUC_P_Age, NSAPUC_P_Gender,
                 NSAPUC_P_Condition, NSAPUC_P_MedicalEventID, NSAPUC_NureseID, NSAPUC_P_Ward);
+
+            /*Console.WriteLine("Patient Name: " + NSAPUC_P_Name);
+            Console.WriteLine("Patient RID: " + NSAPUC_P_RID);
+            Console.WriteLine("Patient Age: " + NSAPUC_P_Age);
+            Console.WriteLine("Patient Gender: " + NSAPUC_P_Gender);
+            Console.WriteLine("Patient Condition: " + NSAPUC_P_Condition);
+            Console.WriteLine("Medical Event ID: " + NSAPUC_P_MedicalEventID);
+            Console.WriteLine("Nurse ID: " + NSAPUC_NureseID);
+            Console.WriteLine("Patient Ward: " + NSAPUC_P_Ward);*/
+
+            // Set the reference to the NurseWard_Dashboard form
+            nurseWard_TreatePatient.DashboardFormReference = this.DashboardFormReference;
+
             nurseWard_TreatePatient.Show();
 
             //Closing UserControl's Parent Form

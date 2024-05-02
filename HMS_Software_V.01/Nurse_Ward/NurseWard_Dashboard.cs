@@ -16,6 +16,10 @@ namespace HMS_Software_V._01.Nurse_Ward
 {
     public partial class NurseWard_Dashboard : Form
     {
+
+        public Form NurseWard_TreatePatientFromReferece { get; set; }
+
+
         private MyTableData_Automation automation; //Automation
 
 
@@ -60,6 +64,7 @@ namespace HMS_Software_V._01.Nurse_Ward
 
                 NWD_Date.Text = today.ToString("yyyy-MM-dd");
                 NWD_wardNumber.Text = WardNumber.ToString();
+               
 
                 using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
                 {
@@ -83,6 +88,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                                 NureseName = reader["N_NameWithInitials"].ToString();
                                 NWD_N_Name.Text = NureseName;
 
+                                Console.WriteLine("Nurse Name Found:" + NureseName);
                             }
                             else
                             {
@@ -114,6 +120,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                             {
                                 WardName = reader["WardName"].ToString();
                                 NWD_WardName.Text = WardName;
+                                Console.WriteLine("Ward Name Found:" + WardName);
                             }
                             else
                             {
@@ -168,7 +175,9 @@ namespace HMS_Software_V._01.Nurse_Ward
 
                                     
 
-                                    Console.WriteLine("PatientRID: " + PatientRID);
+                                    Console.WriteLine("Loaded PatientRID:::::: " + PatientRID);
+                                    Console.WriteLine("Loaded P_MedicalEventID: " + P_MedicalEventID);
+                                    Console.WriteLine("Loaded Visited_Nurse_ID: " + VisitedNurseID);
                                     /*Console.WriteLine("PatientName: " + PatientName);
                                     Console.WriteLine("PatientAge: " + PatientAge);
                                     Console.WriteLine("PatientGender: " + PatientGender);
@@ -194,7 +203,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                                 // 
                                 if (P_MedicalEventID != 0)
                                 {
-                                    Console.WriteLine("---- N_TreatmentStatus is Null or Empty,  MEID: ----: " + P_MedicalEventID);
+                                    Console.WriteLine(" -------------------- Medical Event Found -------------------- " + P_MedicalEventID);
 
                                     // Adding Values to labels
                                     n_ShowAllPatients.NSAP_name.Text = PatientName;
@@ -206,6 +215,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                                     if (string.IsNullOrEmpty(NurseTreatmentStatus))
                                     {
                                         n_ShowAllPatients.panel1.BackColor = Color.FromArgb(255, 205, 101);
+                                        Console.WriteLine("NurseTreatmentStatus --> Not Treated: " + VisitedNurseID);
                                     }
                                     else if (NurseTreatmentStatus == "Pending")
                                     {
@@ -213,12 +223,14 @@ namespace HMS_Software_V._01.Nurse_Ward
 
                                         // Show Nurse ID if Nurese Visited at least one time
                                         n_ShowAllPatients.SWP_NurseName.Text = VisitedNurseID.ToString();
+                                        Console.WriteLine("NurseTreatmentStatus --> Pending " + VisitedNurseID);
                                     }
                                     else
                                     {
                                         // Show Nurse ID if Nurese Visited even after patient treatment is completed.
                                         n_ShowAllPatients.SWP_NurseName.Text = VisitedNurseID.ToString();
                                         n_ShowAllPatients.panel1.BackColor = Color.FromArgb(83, 217, 72);
+                                        Console.WriteLine("NurseTreatmentStatus --> Completed " + VisitedNurseID);
                                     }
 
                                     //Storing Valuse to user control
@@ -232,7 +244,9 @@ namespace HMS_Software_V._01.Nurse_Ward
                                     n_ShowAllPatients.NSAPUC_P_MedicalEventID = P_MedicalEventID;
 
 
-
+                                    // Set the reference to the current instance of the form
+                                    n_ShowAllPatients.DashboardFormReference = this;
+                                   
                                     NWCP_ShowPatients_FlowLP.Controls.Add(n_ShowAllPatients);
 
 

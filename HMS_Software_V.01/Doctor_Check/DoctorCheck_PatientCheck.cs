@@ -243,7 +243,7 @@ namespace HMS_Software_V._01.Doctor_OPD
             Console.WriteLine($"PatientMedicalEventID: {dataTranspoter.PatientMedicalEventID}");*/
 
 
-            Doctor_Check_to_LabRequest DC_labRequestData = new Doctor_Check_to_LabRequest();
+            Common_UseForms.OOP.Doctor_Check DC_labRequestData = new Common_UseForms.OOP.Doctor_Check();
             DC_labRequestData.DoctorID = userID;
             DC_labRequestData.DoctorName = doctorName;
             DC_labRequestData.DoctorPosition = doctorPosition;
@@ -266,9 +266,9 @@ namespace HMS_Software_V._01.Doctor_OPD
         // Move To Lab Prescription form
         private void DOPDPC_addPrescription_Click(object sender, EventArgs e)
         {
-            MyDataStoringClass dataTranspoter = new MyDataStoringClass();
-            
-            dataTranspoter.DoctorID = userID;
+            /*MyDataStoringClass dataTranspoter = new MyDataStoringClass();*/
+
+            /*dataTranspoter.DoctorID = userID;
             dataTranspoter.DoctorName = doctorName;
             dataTranspoter.DoctorPosition = doctorPosition;
             dataTranspoter.PatientRID = patientRID;
@@ -276,15 +276,28 @@ namespace HMS_Software_V._01.Doctor_OPD
             dataTranspoter.PatientName = DOPDPC_patietName_lbl.Text;
             dataTranspoter.PatientAge = DOPDPC_patietage_lbl.Text;
             dataTranspoter.PatientGender = DOPDPC_patietGender_lbl.Text;;
-            dataTranspoter.EventUnitType = unitType;
+            dataTranspoter.EventUnitType = unitType;*/
+
+            Common_UseForms.OOP.Doctor_Check DC_addPrescription = new Common_UseForms.OOP.Doctor_Check();
+
+            DC_addPrescription.DoctorID = userID;
+            DC_addPrescription.DoctorName = doctorName;
+            DC_addPrescription.DoctorPosition = doctorPosition;
+            DC_addPrescription.PatientRID = patientRID;
+            DC_addPrescription.PatientMedicalEventID = PatientMedicalEventID;
+            DC_addPrescription.PatientName = DOPDPC_patietName_lbl.Text;
+            DC_addPrescription.PatientAge = DOPDPC_patietage_lbl.Text;
+            DC_addPrescription.PatientGender = DOPDPC_patietGender_lbl.Text; ;
+            DC_addPrescription.EventUnitType = unitType;
+            DC_addPrescription.WardNumber = WardNumber;
 
 
-            Common_MakePrescription common_MakePrescription = new Common_MakePrescription(dataTranspoter);
+            Common_MakePrescription common_MakePrescription = new Common_MakePrescription(DC_addPrescription);
+            common_MakePrescription.DoctorPatientCheckFromReferece = this; //crete a referece for this form
             common_MakePrescription.Show();
-            common_MakePrescription.DoctorCkeckFromReferece = this; //crete a referece for this form
             this.Hide();
 
-            Console.WriteLine($"PatientMedicalEventID from PatientCkeck from: {dataTranspoter.PatientMedicalEventID}");
+           /* Console.WriteLine($"PatientMedicalEventID from PatientCkeck from: {dataTranspoter.PatientMedicalEventID}");*/
         }
 
 

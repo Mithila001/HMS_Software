@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.NWTPUC_View_btn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.NWTPUC_RequestDetaills = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.NWTPUC_RequestType = new System.Windows.Forms.Label();
-            this.NWTPUC_RequestDetaills = new System.Windows.Forms.Label();
-            this.NWTPUC_View_btn = new System.Windows.Forms.Button();
             this.NWTPUC_checkBox = new MaterialSkin.Controls.MaterialCheckbox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -61,6 +62,45 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 89);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // NWTPUC_View_btn
+            // 
+            this.NWTPUC_View_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.NWTPUC_View_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
+            this.NWTPUC_View_btn.FlatAppearance.BorderSize = 0;
+            this.NWTPUC_View_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.NWTPUC_View_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
+            this.NWTPUC_View_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NWTPUC_View_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWTPUC_View_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
+            this.NWTPUC_View_btn.Location = new System.Drawing.Point(758, 25);
+            this.NWTPUC_View_btn.Name = "NWTPUC_View_btn";
+            this.NWTPUC_View_btn.Size = new System.Drawing.Size(133, 39);
+            this.NWTPUC_View_btn.TabIndex = 58;
+            this.NWTPUC_View_btn.Text = "View";
+            this.NWTPUC_View_btn.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.NWTPUC_RequestDetaills);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(312, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(438, 89);
+            this.panel3.TabIndex = 2;
+            // 
+            // NWTPUC_RequestDetaills
+            // 
+            this.NWTPUC_RequestDetaills.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NWTPUC_RequestDetaills.AutoSize = true;
+            this.NWTPUC_RequestDetaills.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWTPUC_RequestDetaills.Location = new System.Drawing.Point(25, 31);
+            this.NWTPUC_RequestDetaills.Name = "NWTPUC_RequestDetaills";
+            this.NWTPUC_RequestDetaills.Size = new System.Drawing.Size(168, 24);
+            this.NWTPUC_RequestDetaills.TabIndex = 7;
+            this.NWTPUC_RequestDetaills.Text = "Request Details";
             // 
             // panel1
             // 
@@ -81,16 +121,6 @@
             this.panel2.Size = new System.Drawing.Size(292, 89);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.NWTPUC_RequestDetaills);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(312, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 89);
-            this.panel3.TabIndex = 2;
-            // 
             // NWTPUC_RequestType
             // 
             this.NWTPUC_RequestType.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -101,34 +131,6 @@
             this.NWTPUC_RequestType.Size = new System.Drawing.Size(147, 24);
             this.NWTPUC_RequestType.TabIndex = 6;
             this.NWTPUC_RequestType.Text = "Request Type";
-            // 
-            // NWTPUC_RequestDetaills
-            // 
-            this.NWTPUC_RequestDetaills.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NWTPUC_RequestDetaills.AutoSize = true;
-            this.NWTPUC_RequestDetaills.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NWTPUC_RequestDetaills.Location = new System.Drawing.Point(25, 31);
-            this.NWTPUC_RequestDetaills.Name = "NWTPUC_RequestDetaills";
-            this.NWTPUC_RequestDetaills.Size = new System.Drawing.Size(168, 24);
-            this.NWTPUC_RequestDetaills.TabIndex = 7;
-            this.NWTPUC_RequestDetaills.Text = "Request Details";
-            // 
-            // NWTPUC_View_btn
-            // 
-            this.NWTPUC_View_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.NWTPUC_View_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(46)))), ((int)(((byte)(219)))));
-            this.NWTPUC_View_btn.FlatAppearance.BorderSize = 0;
-            this.NWTPUC_View_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.NWTPUC_View_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(35)))), ((int)(((byte)(122)))));
-            this.NWTPUC_View_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NWTPUC_View_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NWTPUC_View_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(239)))));
-            this.NWTPUC_View_btn.Location = new System.Drawing.Point(758, 25);
-            this.NWTPUC_View_btn.Name = "NWTPUC_View_btn";
-            this.NWTPUC_View_btn.Size = new System.Drawing.Size(133, 39);
-            this.NWTPUC_View_btn.TabIndex = 58;
-            this.NWTPUC_View_btn.Text = "View";
-            this.NWTPUC_View_btn.UseVisualStyleBackColor = false;
             // 
             // NWTPUC_checkBox
             // 
@@ -155,10 +157,10 @@
             this.Size = new System.Drawing.Size(1000, 89);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

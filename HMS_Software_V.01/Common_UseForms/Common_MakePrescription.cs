@@ -1,4 +1,5 @@
-﻿using HMS_Software_V._01.Common_UseForms.UserControls;
+﻿using HMS_Software_V._01.Common_UseForms.OOP;
+using HMS_Software_V._01.Common_UseForms.UserControls;
 using HMS_Software_V._01.Doctor_OPD;
 using System;
 using System.Collections.Generic;
@@ -17,30 +18,39 @@ namespace HMS_Software_V._01.Common_UseForms
 {
     public partial class Common_MakePrescription : Form
     {
-        public Form DoctorCkeckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
+        public Form DoctorPatientCheckFromReferece { get; set; } // Referecne from the Outpations
+        public Form DoctorPatientCheckWardFromReferece { get; set; } // From the Ward 
+
 
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
-        private MyDataStoringClass dataImporter;
+        /*private MyDataStoringClass dataImporter;*/
 
+        string FC_patientID_str;
+        int FC_userID;
+        string FC_doctorPosition;
+        string FC_doctorName;
+        string FC_unittype;
 
-
-
-        public Common_MakePrescription(MyDataStoringClass dataImporter)
+        private ForCommonLabRequests doctorDataAddPrescription; // To get data from Patietn Check Form
+        public Common_MakePrescription(ForCommonLabRequests doctorDataAddPrescription)
         {
+            this.doctorDataAddPrescription = doctorDataAddPrescription; // To get data from Patietn Check Form
+
             InitializeComponent();
-            this.dataImporter = dataImporter; // Put it befor MyLoadBasicDetails()  --ChatGPT
             MyLoadBasicDetails();
+           /* this.dataImporter = dataImporter; // Put it befor MyLoadBasicDetails()  --ChatGPT*/
 
             // In order form to close, DoctorCheck_PatientCheck required values. So we get original values from DoctorCheck_PatientCheck public class 
-            string FC_patientID_str = dataImporter.PatientRID;
-            int FC_userID = dataImporter.DoctorID;
-            string FC_doctorPosition = dataImporter.DoctorPosition;
-            string FC_doctorName = dataImporter.DoctorName;
-            string FC_unittype = dataImporter.EventUnitType;
+            FC_patientID_str = doctorDataAddPrescription.PatientRID;
+            FC_userID = doctorDataAddPrescription.DoctorID;
+            FC_doctorPosition = doctorDataAddPrescription.DoctorPosition;
+            FC_doctorName = doctorDataAddPrescription.DoctorName;
+            FC_unittype = doctorDataAddPrescription.EventUnitType;
             /*this.FormClosed += (s, e) => new DoctorCheck_PatientCheck(FC_patientID_str, FC_userID, FC_doctorPosition, FC_doctorName, FC_unittype).Show();*/
            /* this.FormClosed += (s, e) => this.Show();*/
         }
+        
 
         private void MyLoadBasicDetails() //Load basic UI info
         {
@@ -48,12 +58,12 @@ namespace HMS_Software_V._01.Common_UseForms
             CMP_durationType_combx.SelectedIndex = 0;
 
 
-            DOPDPC_doctorName.Text = dataImporter.DoctorName;
-            DOPDPC_docPosition.Text = dataImporter.DoctorPosition;
-            DOPDPC_docID.Text = dataImporter.DoctorID.ToString();
-            DOPDPC_patietName_lbl.Text = dataImporter.PatientName;
-            DOPDPC_patietage_lbl.Text = dataImporter.PatientAge;
-            DOPDPC_patietGender_lbl.Text = dataImporter.PatientGender;
+            DOPDPC_doctorName.Text = doctorDataAddPrescription.DoctorName;
+            DOPDPC_docPosition.Text = doctorDataAddPrescription.DoctorPosition;
+            DOPDPC_docID.Text = doctorDataAddPrescription.DoctorID.ToString();
+            DOPDPC_patietName_lbl.Text = doctorDataAddPrescription.PatientName;
+            DOPDPC_patietage_lbl.Text = doctorDataAddPrescription.PatientAge;
+            DOPDPC_patietGender_lbl.Text = doctorDataAddPrescription.PatientGender;
 
             // Adding date and time
             DateTime currentDate = DateTime.Today;
@@ -275,7 +285,7 @@ namespace HMS_Software_V._01.Common_UseForms
                     using (SqlCommand cmd = new SqlCommand(query, connect))
                     {
                         Console.WriteLine("Inserting Prescription Request ID to the table : " + DB_medicinID);
-                        Console.WriteLine("Inserting Patient Medical Event ID to the table : " + dataImporter.PatientMedicalEventID);
+                        Console.WriteLine("Inserting Patient Medical Event ID to the table : " + doctorDataAddPrescription.PatientMedicalEventID);
 
                         cmd.Parameters.AddWithValue("@route", DB_route);
                         cmd.Parameters.AddWithValue("@medicin", DB_medicin);
@@ -283,7 +293,7 @@ namespace HMS_Software_V._01.Common_UseForms
                         cmd.Parameters.AddWithValue("@frequency", DB_frequency);
                         cmd.Parameters.AddWithValue("@duration", DB_duration);
                         cmd.Parameters.AddWithValue("@medicinID", DB_medicinID);
-                        cmd.Parameters.AddWithValue("@patienRID", dataImporter.PatientMedicalEventID);
+                        cmd.Parameters.AddWithValue("@patienRID", doctorDataAddPrescription.PatientMedicalEventID);
 
 
                         cmd.ExecuteNonQuery();
@@ -305,7 +315,7 @@ namespace HMS_Software_V._01.Common_UseForms
 
                 using (SqlCommand getIdCommand = new SqlCommand(query2, connect))
                 {
-                    getIdCommand.Parameters.AddWithValue("@pmeID", dataImporter.PatientMedicalEventID);
+                    getIdCommand.Parameters.AddWithValue("@pmeID", doctorDataAddPrescription.PatientMedicalEventID);
 
                     using (SqlDataReader reader = getIdCommand.ExecuteReader())
                     {
@@ -335,7 +345,7 @@ namespace HMS_Software_V._01.Common_UseForms
                         using (SqlCommand updateCommand = new SqlCommand(updateQuery, connect))
                         {
                             updateCommand.Parameters.AddWithValue("@prescriptionRequestID", PrescriptionRequestIDlistStrig);
-                            updateCommand.Parameters.AddWithValue("@pmeID", dataImporter.PatientMedicalEventID);
+                            updateCommand.Parameters.AddWithValue("@pmeID", doctorDataAddPrescription.PatientMedicalEventID);
 
                             int rowsAffected = updateCommand.ExecuteNonQuery();
                             if (rowsAffected > 0)
@@ -392,7 +402,18 @@ namespace HMS_Software_V._01.Common_UseForms
 
         private void Common_MakePrescription_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DoctorCkeckFromReferece.Show();
+            Console.WriteLine("Common_MakePrescription_FormClosed: FC_unittype =  " + FC_unittype);
+
+            if(FC_unittype == "OPD"|| FC_unittype == "Clinic")
+            {
+                // Show Patient Check Form
+                DoctorPatientCheckFromReferece.Show();
+            }
+            else
+            {
+                DoctorPatientCheckWardFromReferece.Show();
+            }
+            
         }
     }
 }

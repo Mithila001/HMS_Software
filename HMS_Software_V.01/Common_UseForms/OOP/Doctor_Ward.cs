@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HMS_Software_V._01.Common_UseForms.OOP
 {
-    internal class Doctor_Check_to_LabRequest: ForCommonLabRequests
+    internal class Doctor_Ward : ForCommonLabRequests
     {
         public int DoctorID { get; set; }
         public string DoctorName { get; set; }

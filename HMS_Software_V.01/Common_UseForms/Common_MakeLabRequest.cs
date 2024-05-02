@@ -22,12 +22,19 @@ namespace HMS_Software_V._01.Common_UseForms
 {
     public partial class Common_MakeLabRequest : Form
     {
-        public Form DoctorPatientCheckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
-        public Form DoctorWard_ProgressNote_Refferece { get; set; }
+        public Form DoctorPatientCheckFromReferece { get; set; } // Referecne from the Outpations
 
-
+        public Form DoctorPatientCheckWardFromReferece { get; set; } // Reference From the Ward
 
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
+
+        string FC_patientID_str;
+        int FC_userID;
+        string FC_doctorPosition;
+        string FC_doctorName;
+        string FC_unittype;
+
+
 
         private ForCommonLabRequests doctorDataSendToLabRequest;
         public Common_MakeLabRequest(ForCommonLabRequests doctorDataSendToLabRequest)
@@ -41,11 +48,11 @@ namespace HMS_Software_V._01.Common_UseForms
 
 
             // In order form to close, DoctorCheck_PatientCheck required values. So we get original values from DoctorCheck_PatientCheck public class 
-            string FC_patientID_str = doctorDataSendToLabRequest.PatientRID;
-            int FC_userID = doctorDataSendToLabRequest.DoctorID;
-            string FC_doctorPosition = doctorDataSendToLabRequest.DoctorPosition;
-            string FC_doctorName = doctorDataSendToLabRequest.DoctorName;
-            string FC_unittype = doctorDataSendToLabRequest.EventUnitType;
+            FC_patientID_str = doctorDataSendToLabRequest.PatientRID;
+            FC_userID = doctorDataSendToLabRequest.DoctorID;
+            FC_doctorPosition = doctorDataSendToLabRequest.DoctorPosition;
+            FC_doctorName = doctorDataSendToLabRequest.DoctorName;
+            FC_unittype = doctorDataSendToLabRequest.EventUnitType;
             /*this.FormClosed += (s, e) => new DoctorCheck_PatientCheck(FC_patientID_str, FC_userID, FC_doctorPosition, FC_doctorName, FC_unittype).Show();*/
             /*this.FormClosed += (s, e) => this.Show()*/
         }
@@ -498,7 +505,21 @@ namespace HMS_Software_V._01.Common_UseForms
 
         private void Common_MakeLabRequest_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DoctorPatientCheckFromReferece.Show();
+            
+
+            Console.WriteLine("Common_MakePrescription_FormClosed: FC_unittype =  " + FC_unittype);
+
+            if (FC_unittype == "OPD" || FC_unittype == "Clinic")
+            {
+                // Show Patient Check Form
+                DoctorPatientCheckFromReferece.Show();
+            }
+            else
+            {
+                DoctorPatientCheckWardFromReferece.Show();
+            }
+
+            // Currently this Closing method is properly working only if there are 2 forms accessing this form.
         }
     }
 }
