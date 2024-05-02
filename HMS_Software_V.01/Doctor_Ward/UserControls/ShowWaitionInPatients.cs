@@ -24,6 +24,8 @@ namespace HMS_Software_V._01.Doctor_Ward.UserControls
         public string SWP_PatientRID { get; set; }
         public string SWP_PatientCondition { get; set; }
         public int SWP_PatietnVisitCount { get; set; }
+        public string SWP_PatientAge {  get; set; }
+        public string SWP_PatientGender {  get; set; }
 
         public string SWP_D_Name { get; set; }
         public string SWP_D_Title { get; set; }
@@ -64,7 +66,9 @@ namespace HMS_Software_V._01.Doctor_Ward.UserControls
                 SWP_D_Title,
                 SWP_D_RID,
                 SWP_WardName,
-                SWP_D_ID);
+                SWP_D_ID,
+                SWP_PatientAge,
+                SWP_PatientGender);
             doctorWard_ProgressNote.Show();
 
             //Closing UserControl's Parent Form

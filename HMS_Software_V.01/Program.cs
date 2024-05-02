@@ -2,6 +2,7 @@
 using HMS_Software_V._01.Common_UseForms;
 using HMS_Software_V._01.Doctor_OPD;
 using HMS_Software_V._01.Doctor_Ward;
+using HMS_Software_V._01.Lab_Management;
 using HMS_Software_V._01.Nurse_Ward;
 using HMS_Software_V._01.Reception;
 using System;
@@ -22,7 +23,7 @@ namespace HMS_Software_V._01.Admin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoctorWard_Dashboard()
+            Application.Run(new UserLogin()
             {
 
             });

@@ -52,6 +52,7 @@ namespace HMS_Software_V._01.Doctor_Ward
         string PatientCondition;
         bool IsVisitedByDoctor;
         int PatientVisitCount;
+        string PatientGender;
 
         string WardName;
 
@@ -162,8 +163,8 @@ namespace HMS_Software_V._01.Doctor_Ward
                                     PatientnRID = reader["P_RID"].ToString();
                                     PatientName = reader["P_NameWithInitials"].ToString();
                                     PatientAge = reader["P_Age"].ToString();
-                                    /*PatientCondition = reader["P_Gender"].ToString();
-                                    Console.WriteLine("Patient Gender: " + PatientCondition);*/
+                                    PatientGender = reader["P_Gender"].ToString();
+                                    /*Console.WriteLine("Patient Gender: " + PatientCondition);*/
                                     PatientCondition = "Not Added Yet!!!";
                                     IsVisitedByDoctor = (bool)reader["Is_VisitedByDoctor"];
                                     PatientVisitCount = (int)reader["Visite_Round"];
@@ -188,6 +189,8 @@ namespace HMS_Software_V._01.Doctor_Ward
                                 showWaitionInPatients.SWP_PatientRID = PatientnRID;
                                 showWaitionInPatients.SWP_PatientCondition = PatientCondition;
                                 showWaitionInPatients.SWP_PatietnVisitCount = PatientVisitCount;
+                                showWaitionInPatients.SWP_PatientAge = PatientAge;
+                                showWaitionInPatients.SWP_PatientGender = PatientGender;
 
                                 showWaitionInPatients.SWP_D_RID = Doctor_RID;
                                 showWaitionInPatients.SWP_D_Name = DoctorName;

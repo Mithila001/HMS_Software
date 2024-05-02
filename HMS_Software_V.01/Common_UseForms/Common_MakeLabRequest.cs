@@ -14,6 +14,8 @@ using static HMS_Software_V._01.Doctor_OPD.DoctorCheck_PatientCheck;
 
 using Newtonsoft.Json;
 using HMS_Software_V._01.Doctor_OPD; //To convert data to json fomat
+using HMS_Software_V._01.Common_UseForms.OOP;
+
 
 
 namespace HMS_Software_V._01.Common_UseForms
@@ -21,26 +23,29 @@ namespace HMS_Software_V._01.Common_UseForms
     public partial class Common_MakeLabRequest : Form
     {
         public Form DoctorPatientCheckFromReferece { get; set; } // To get Patient Check from referecein for proper form close
+        public Form DoctorWard_ProgressNote_Refferece { get; set; }
 
 
 
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
-        private MyDataStoringClass dataImporter; 
-        public Common_MakeLabRequest(MyDataStoringClass dataImporter)
+        private ForCommonLabRequests doctorDataSendToLabRequest;
+        public Common_MakeLabRequest(ForCommonLabRequests doctorDataSendToLabRequest)
         {
-            this.dataImporter = dataImporter; // Put it befor MyLoadBasicDetails()  --ChatGPT
+            this.doctorDataSendToLabRequest = doctorDataSendToLabRequest;
+            /*this.dataImporter = dataImporter; // Put it befor MyLoadBasicDetails()  --ChatGPT
+            this.dataImporter2 = dataImporter2;*/
             InitializeComponent();
             MyLoadBasicDetails();
 
 
 
             // In order form to close, DoctorCheck_PatientCheck required values. So we get original values from DoctorCheck_PatientCheck public class 
-            string FC_patientID_str = dataImporter.PatientRID;
-            int FC_userID = dataImporter.DoctorID;
-            string FC_doctorPosition = dataImporter.DoctorPosition;
-            string FC_doctorName = dataImporter.DoctorName;
-            string FC_unittype = dataImporter.EventUnitType;
+            string FC_patientID_str = doctorDataSendToLabRequest.PatientRID;
+            int FC_userID = doctorDataSendToLabRequest.DoctorID;
+            string FC_doctorPosition = doctorDataSendToLabRequest.DoctorPosition;
+            string FC_doctorName = doctorDataSendToLabRequest.DoctorName;
+            string FC_unittype = doctorDataSendToLabRequest.EventUnitType;
             /*this.FormClosed += (s, e) => new DoctorCheck_PatientCheck(FC_patientID_str, FC_userID, FC_doctorPosition, FC_doctorName, FC_unittype).Show();*/
             /*this.FormClosed += (s, e) => this.Show()*/
         }
@@ -87,12 +92,12 @@ namespace HMS_Software_V._01.Common_UseForms
 
         private void MyLoadBasicDetails() //Load basic UI info
         {
-            CMLR_doctorName.Text = dataImporter.DoctorName;
-            CMLR_DocPosition.Text = dataImporter.DoctorPosition;
-            CMLR_DocID.Text = dataImporter.DoctorID.ToString();
-            CMLR_Pati_Name.Text = dataImporter.PatientName;
-            CMLR_Pati_Age.Text = dataImporter.PatientAge;
-            CMLR_Pati_Gender.Text = dataImporter.PatientGender;
+            CMLR_doctorName.Text = doctorDataSendToLabRequest.DoctorName;
+            CMLR_DocPosition.Text = doctorDataSendToLabRequest.DoctorPosition;
+            CMLR_DocID.Text = doctorDataSendToLabRequest.DoctorID.ToString();
+            CMLR_Pati_Name.Text = doctorDataSendToLabRequest.PatientName;
+            CMLR_Pati_Age.Text = doctorDataSendToLabRequest.PatientAge;
+            CMLR_Pati_Gender.Text = doctorDataSendToLabRequest.PatientGender;
 
             // Adding date and time
             DateTime currentDate = DateTime.Today;
@@ -397,12 +402,12 @@ namespace HMS_Software_V._01.Common_UseForms
                 {
                     cmd.Parameters.AddWithValue("@investigationID", getInvstigationID);
                     cmd.Parameters.AddWithValue("@specimenID", getSpecimenID);
-                    cmd.Parameters.AddWithValue("@patientMedicalEventID", dataImporter.PatientMedicalEventID);
+                    cmd.Parameters.AddWithValue("@patientMedicalEventID", doctorDataSendToLabRequest.PatientMedicalEventID);
                     cmd.Parameters.AddWithValue("@investigationName", investigationName);
                     cmd.Parameters.AddWithValue("@specimenName", scpecimenName);
                     cmd.Parameters.AddWithValue("@lableNumber", generatedNumber);
-                    cmd.Parameters.AddWithValue("@patientID", dataImporter.PatientRID);
-                    cmd.Parameters.AddWithValue("@doctorID", dataImporter.DoctorID);
+                    cmd.Parameters.AddWithValue("@patientID", doctorDataSendToLabRequest.PatientRID);
+                    cmd.Parameters.AddWithValue("@doctorID", doctorDataSendToLabRequest.DoctorID);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -414,7 +419,7 @@ namespace HMS_Software_V._01.Common_UseForms
 
                 using (SqlCommand getIdCommand = new SqlCommand(query2, connect))
                 {
-                    getIdCommand.Parameters.AddWithValue("@pmeID", dataImporter.PatientMedicalEventID);
+                    getIdCommand.Parameters.AddWithValue("@pmeID", doctorDataSendToLabRequest.PatientMedicalEventID);
 
                     using (SqlDataReader reader = getIdCommand.ExecuteReader())
                     {
@@ -443,7 +448,7 @@ namespace HMS_Software_V._01.Common_UseForms
                     using (SqlCommand updateCommand = new SqlCommand(updateQuery, connect))
                     {
                         updateCommand.Parameters.AddWithValue("@labRequestID", labRequestIDlistStrig);
-                        updateCommand.Parameters.AddWithValue("@pmeID", dataImporter.PatientMedicalEventID);
+                        updateCommand.Parameters.AddWithValue("@pmeID", doctorDataSendToLabRequest.PatientMedicalEventID);
 
                         int rowsAffected = updateCommand.ExecuteNonQuery();
                         if (rowsAffected > 0)

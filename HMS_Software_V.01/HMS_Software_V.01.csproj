@@ -184,6 +184,9 @@
     <Compile Include="Common_UseForms\Common_MakePrescription.Designer.cs">
       <DependentUpon>Common_MakePrescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common_UseForms\OOP\DoctorW_to_LabRequest.cs" />
+    <Compile Include="Common_UseForms\OOP\Doctor_Check_to_LabRequest.cs" />
+    <Compile Include="Common_UseForms\OOP\ForCommonLabRequests.cs" />
     <Compile Include="Common_UseForms\UserControls\AddLabRequest.cs">
       <SubType>UserControl</SubType>
     </Compile>

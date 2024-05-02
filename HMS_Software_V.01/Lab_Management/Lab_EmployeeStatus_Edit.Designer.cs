@@ -444,7 +444,7 @@
             this.label4.Text = "Employee Status";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // Form2
+            // Lab_EmployeeStatus_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -469,7 +469,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Name = "Form2";
+            this.Name = "Lab_EmployeeStatus_Edit";
             this.Text = "Hospital Management System";
             this.panel8.ResumeLayout(false);
             this.panel14.ResumeLayout(false);

@@ -1,4 +1,5 @@
 ﻿using HMS_Software_V._01.Common_UseForms;
+using HMS_Software_V._01.Common_UseForms.OOP;
 using HMS_Software_V._01.Doctor_Check;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace HMS_Software_V._01.Doctor_OPD
 {
@@ -211,10 +213,13 @@ namespace HMS_Software_V._01.Doctor_OPD
         }
 
 
+        private ForCommonLabRequests doctorDataSendToLabRequest;
+
         // Move To Lab Request form
         private void DOPDPC_addLabRequest_Click(object sender, EventArgs e)
         {
-            MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+            /*MyDataStoringClass dataTranspoter = new MyDataStoringClass();
+            MyDataStoringClass dataTranspoter2 = new MyDataStoringClass();
 
             dataTranspoter.DoctorID = userID;
             dataTranspoter.DoctorName = doctorName;
@@ -235,11 +240,24 @@ namespace HMS_Software_V._01.Doctor_OPD
             Console.WriteLine($"PatientName: {dataTranspoter.PatientName}");
             Console.WriteLine($"PatientAge: {dataTranspoter.PatientAge}");
             Console.WriteLine($"PatientGender: {dataTranspoter.PatientGender}");
-            Console.WriteLine($"PatientMedicalEventID: {dataTranspoter.PatientMedicalEventID}");
+            Console.WriteLine($"PatientMedicalEventID: {dataTranspoter.PatientMedicalEventID}");*/
+
+
+            Doctor_Check_to_LabRequest DC_labRequestData = new Doctor_Check_to_LabRequest();
+            DC_labRequestData.DoctorID = userID;
+            DC_labRequestData.DoctorName = doctorName;
+            DC_labRequestData.DoctorPosition = doctorPosition;
+            DC_labRequestData.PatientRID = patientRID;
+            DC_labRequestData.PatientName = DOPDPC_patietName_lbl.Text;
+            DC_labRequestData.PatientAge = DOPDPC_patietage_lbl.Text;
+            DC_labRequestData.PatientGender = DOPDPC_patietGender_lbl.Text;
+            DC_labRequestData.PatientMedicalEventID = PatientMedicalEventID;
+            DC_labRequestData.EventUnitType = unitType;
+            DC_labRequestData.WardNumber = WardNumber;
 
 
 
-            Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest(dataTranspoter);
+            Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest(DC_labRequestData);
             common_MakeLabRequest.DoctorPatientCheckFromReferece = this; //crete a referece for this form
             common_MakeLabRequest.Show();
             this.Hide();

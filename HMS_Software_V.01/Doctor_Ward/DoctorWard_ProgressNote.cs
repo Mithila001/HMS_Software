@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HMS_Software_V._01.Common_UseForms;
+using HMS_Software_V._01.Common_UseForms.OOP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +12,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
+
 namespace HMS_Software_V._01.Doctor_Ward
 {
     public partial class DoctorWard_ProgressNote : Form
     {
+       
+
+
         string PatienName;
         string PatientRID;
         string P_Condition;
@@ -23,6 +29,8 @@ namespace HMS_Software_V._01.Doctor_Ward
         string WardName;
         string DoctorTitle;
         int DoctorID;
+        string PatientAge;
+        string PatientGender;
         public DoctorWard_ProgressNote(
                 string SWP_PatientName,
                 string SWP_PatientRID,
@@ -32,7 +40,9 @@ namespace HMS_Software_V._01.Doctor_Ward
                 string SWP_D_Title,
                 string SWP_D_RID,
                 string SWP_WardName,
-                int SWP_D_ID)
+                int SWP_D_ID,
+                string SWP_PatientAge,
+                string SWP_PatientGender)
         {
 
             InitializeComponent();
@@ -46,6 +56,8 @@ namespace HMS_Software_V._01.Doctor_Ward
             this.WardName = SWP_WardName;
             this.DoctorTitle = SWP_D_Title;
             this.DoctorID = SWP_D_ID;
+            this.PatientAge = SWP_PatientAge;
+            this.PatientGender = SWP_PatientGender;
 
 
             MyLoadBasicDetails();
@@ -300,6 +312,59 @@ namespace HMS_Software_V._01.Doctor_Ward
             }
 
             
+        }
+
+        // -------------------------------------------------------------------------- Reference for this form
+        public Form DoctorWard_ProgressNote_Refferece { get; set; }
+
+        // =========================== Data Transporter =============================
+        public class MyDataStoringClass
+        {
+            public int DoctorID { get; set; }
+            public string DoctorName { get; set; }
+            public string DoctorPosition { get; set; }
+            public string PatientRID { get; set; }
+            public string PatientName { get; set; }
+            public string PatientAge { get; set; }
+            public string PatientGender { get; set; }
+            public string PatientMedicalEventID { get; set; }
+            public string EventUnitType { get; set; }
+            public int WardNumber { get; set; }
+
+        }
+
+        private ForCommonLabRequests doctorDataSendToLabRequest;
+        private void DWPN_P_LabRequest_btn_Click(object sender, EventArgs e)
+        {
+
+
+            /* dataTranspoter2.DoctorID = DoctorID;
+             dataTranspoter2.DoctorName = DoctorName;
+             dataTranspoter2.DoctorPosition = DoctorTitle;
+             dataTranspoter2.PatientRID = PatientRID;
+             dataTranspoter2.PatientName = PatienName;
+             dataTranspoter2.PatientAge = PatientAge;
+             dataTranspoter2.PatientGender = PatientGender;
+             dataTranspoter2.PatientMedicalEventID = PatientMID;
+             dataTranspoter2.EventUnitType = "Ward "+ WardName;*/
+
+            DoctorW_to_LabRequest doctorW_To_LabRequest = new DoctorW_to_LabRequest();
+            doctorW_To_LabRequest.DoctorID = DoctorID;
+            doctorW_To_LabRequest.DoctorName = DoctorName;
+            doctorW_To_LabRequest.DoctorPosition = DoctorTitle;
+            doctorW_To_LabRequest.PatientRID = PatienName;
+            doctorW_To_LabRequest.PatientName = PatienName;
+            doctorW_To_LabRequest.PatientAge = PatientAge;
+            doctorW_To_LabRequest.PatientGender = PatientGender;
+            doctorW_To_LabRequest.PatientMedicalEventID = PatientMID;
+            doctorW_To_LabRequest.EventUnitType = "Ward " + WardName;
+            doctorW_To_LabRequest.WardNumber = WardID;
+
+
+            Common_MakeLabRequest common_MakeLabRequest = new Common_MakeLabRequest(doctorW_To_LabRequest);
+            common_MakeLabRequest.DoctorWard_ProgressNote_Refferece = this;
+            common_MakeLabRequest.Show();
+            this.Hide();
         }
     }
 }
