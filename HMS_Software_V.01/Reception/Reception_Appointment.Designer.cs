@@ -171,6 +171,7 @@
             this.Name = "Reception_Appointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reception_Appointment";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Reception_Appointment_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_RA_top.ResumeLayout(false);
             this.panel_RA_top.PerformLayout();

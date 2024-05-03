@@ -39,12 +39,12 @@
             this.Ad_Doc_lbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.label5 = new System.Windows.Forms.Label();
             this.Ad_home_bottom_panel = new System.Windows.Forms.Panel();
             this.bottom_tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RegisterReception_btn = new System.Windows.Forms.Button();
             this.reception_DataGView = new System.Windows.Forms.DataGridView();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.Ad_home_top_panel.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
             this.TopTable_Panel2.SuspendLayout();
@@ -54,6 +54,7 @@
             this.bottom_tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reception_DataGView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // Ad_home_top_panel
@@ -74,10 +75,10 @@
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.top_tableLayoutPanle.Controls.Add(this.pictureBox_LOGO, 3, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel2, 1, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel3, 2, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel, 0, 0);
-            this.top_tableLayoutPanle.Controls.Add(this.label5, 3, 0);
             this.top_tableLayoutPanle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.top_tableLayoutPanle.Location = new System.Drawing.Point(0, 0);
             this.top_tableLayoutPanle.Name = "top_tableLayoutPanle";
@@ -184,17 +185,6 @@
             this.materialDivider2.TabIndex = 4;
             this.materialDivider2.Text = "materialDivider2";
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(830, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "LOGO";
-            // 
             // Ad_home_bottom_panel
             // 
             this.Ad_home_bottom_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -261,6 +251,17 @@
             this.reception_DataGView.Size = new System.Drawing.Size(932, 304);
             this.reception_DataGView.TabIndex = 11;
             // 
+            // pictureBox_LOGO
+            // 
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(815, 16);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_LOGO.TabIndex = 11;
+            this.pictureBox_LOGO.TabStop = false;
+            // 
             // Admin_Reception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,7 +272,6 @@
             this.Size = new System.Drawing.Size(938, 537);
             this.Ad_home_top_panel.ResumeLayout(false);
             this.top_tableLayoutPanle.ResumeLayout(false);
-            this.top_tableLayoutPanle.PerformLayout();
             this.TopTable_Panel2.ResumeLayout(false);
             this.TopTable_Panel2.PerformLayout();
             this.TopTable_Panel3.ResumeLayout(false);
@@ -282,6 +282,7 @@
             this.bottom_tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reception_DataGView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,11 +299,11 @@
         private System.Windows.Forms.Label Ad_Doc_lbl;
         private System.Windows.Forms.Label label2;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel Ad_home_bottom_panel;
         private System.Windows.Forms.TableLayoutPanel bottom_tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button RegisterReception_btn;
         private System.Windows.Forms.DataGridView reception_DataGView;
+        private System.Windows.Forms.PictureBox pictureBox_LOGO;
     }
 }

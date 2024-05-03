@@ -175,6 +175,7 @@
             this.Name = "Reception_PatientSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reception_PatientSearch";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Reception_PatientSearch_FormClosed);
             this.Load += new System.EventHandler(this.Reception_PatientSearch_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_R_PatS_top.ResumeLayout(false);

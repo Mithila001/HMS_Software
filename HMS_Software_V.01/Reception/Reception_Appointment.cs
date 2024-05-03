@@ -18,10 +18,12 @@ namespace HMS_Software_V._01.Reception
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int _clinicId;
-        public Reception_Appointment()
+        int UserID;
+        public Reception_Appointment(int userID)
         {
             InitializeComponent();
             LoadUserData();
+            this.UserID = userID;
             /*this.FormClosed += (s, e) => new Reception_Dashboard().Show();*/
 
 
@@ -218,6 +220,14 @@ namespace HMS_Software_V._01.Reception
             {
                 connect.Close();
             }
+        }
+
+        private void Reception_Appointment_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+            Reception_Dashboard reception_Dashboard = new Reception_Dashboard(UserID);
+            reception_Dashboard.Show();
+            this.Hide();
         }
     }
 }

@@ -43,9 +43,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -171,7 +173,8 @@
             "Nurse",
             "Admin",
             "Reception",
-            "Admission Officer"});
+            "Admission Officer",
+            "LabEmployee"});
             this.comboB_selcePosition.Location = new System.Drawing.Point(186, 57);
             this.comboB_selcePosition.Name = "comboB_selcePosition";
             this.comboB_selcePosition.Size = new System.Drawing.Size(219, 21);
@@ -226,7 +229,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.panel2.Controls.Add(this.pictureBox_LOGO);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -240,11 +244,22 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(146, 19);
+            this.label3.Location = new System.Drawing.Point(46, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 34);
             this.label3.TabIndex = 8;
             this.label3.Text = "User Login";
+            // 
+            // pictureBox_LOGO
+            // 
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(788, 22);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_LOGO.TabIndex = 9;
+            this.pictureBox_LOGO.TabStop = false;
             // 
             // UserLogin
             // 
@@ -261,6 +276,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,5 +298,6 @@
         private System.Windows.Forms.ComboBox comboB_selceUnit;
         private System.Windows.Forms.Label warNumber_lbl;
         private System.Windows.Forms.TextBox wardNumber_tbx;
+        private System.Windows.Forms.PictureBox pictureBox_LOGO;
     }
 }

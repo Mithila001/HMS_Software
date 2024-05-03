@@ -33,7 +33,7 @@ namespace HMS_Software_V._01.Nurse_Ward.UserControls
         public int NSAPUC_P_MedicalEventID { get; set; }
         public int NSAPUC_NureseID { get; set; }
         public string NSAPUC_P_Ward { get; set; }
-
+        public int NSAPUC_P_WardNumber {  get; set; }
 
 
 
@@ -60,7 +60,7 @@ namespace HMS_Software_V._01.Nurse_Ward.UserControls
             Console.WriteLine("Clicked the user Control");
 
             NurseWard_TreatePatient nurseWard_TreatePatient = new NurseWard_TreatePatient(NSAPUC_P_Name, NSAPUC_P_RID, NSAPUC_P_Age, NSAPUC_P_Gender,
-                NSAPUC_P_Condition, NSAPUC_P_MedicalEventID, NSAPUC_NureseID, NSAPUC_P_Ward);
+                NSAPUC_P_Condition, NSAPUC_P_MedicalEventID, NSAPUC_NureseID, NSAPUC_P_Ward, NSAPUC_P_WardNumber);
 
             /*Console.WriteLine("Patient Name: " + NSAPUC_P_Name);
             Console.WriteLine("Patient RID: " + NSAPUC_P_RID);

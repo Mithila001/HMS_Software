@@ -21,7 +21,7 @@ namespace HMS_Software_V._01.Reception
         private int userID; // Getting userID from Login form
         
         private string receptionName; 
-        public Reception_Dashboard(int userID =5)
+        public Reception_Dashboard(int userID /*=5*/)
         {
             InitializeComponent();
 
@@ -296,14 +296,14 @@ namespace HMS_Software_V._01.Reception
 
         private void R_search_btn_Click(object sender, EventArgs e)
         {
-            Reception_PatientSearch reception_PatientSearch = new Reception_PatientSearch();
+            Reception_PatientSearch reception_PatientSearch = new Reception_PatientSearch(userID);
             reception_PatientSearch.Show();
             this.Hide();
         }
 
         private void R_Clinic_btn_Click(object sender, EventArgs e)
         {
-            Reception_Appointment reception_Appointment = new Reception_Appointment();
+            Reception_Appointment reception_Appointment = new Reception_Appointment(userID);
             reception_Appointment.Show();
             this.Hide();
         }

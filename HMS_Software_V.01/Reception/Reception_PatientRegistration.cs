@@ -91,6 +91,10 @@ namespace HMS_Software_V._01.Reception
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Added successfully!"
                                        , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Reception_Dashboard reception_Dashboard = new Reception_Dashboard(userID);
+                            reception_Dashboard.Show();
+                            this.Hide();
                         }
 
                     }

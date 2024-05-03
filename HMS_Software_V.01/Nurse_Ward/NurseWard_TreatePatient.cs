@@ -38,9 +38,10 @@ namespace HMS_Software_V._01.Nurse_Ward
         int PatientMEID;
         int NurseID;
         string PatientWard;
+        int WardNumber;
 
         public NurseWard_TreatePatient(string NSAPUC_P_Name, string NSAPUC_P_RID, string NSAPUC_P_Age, string NSAPUC_P_Gender,
-                string NSAPUC_P_Condition, int NSAPUC_P_MedicalEventID, int NSAPUC_NureseID, string NSAPUC_P_Ward)
+                string NSAPUC_P_Condition, int NSAPUC_P_MedicalEventID, int NSAPUC_NureseID, string NSAPUC_P_Ward, int NSAPUC_P_WardNumber)
         {
             InitializeComponent();
 
@@ -52,6 +53,7 @@ namespace HMS_Software_V._01.Nurse_Ward
             this.PatientMEID = NSAPUC_P_MedicalEventID;
             this.NurseID = NSAPUC_NureseID;
             this.PatientWard = NSAPUC_P_Ward;
+            this.WardNumber = NSAPUC_P_WardNumber;
 
 
             LoadBasicData();
@@ -310,7 +312,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                                 if(PatientMonitorRequestID != 0)
                                 {
                                     nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text = "Monitor";
-                                    nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text = PatientMonitorRequestID + " for Now";
+                                    nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text = "IDs : "+ PatientMonitorRequestID;
                                     P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents);
 
                                     nWTP_PatientMedicalEvents.NWTP_RequestType = "Monitor";
@@ -517,7 +519,7 @@ namespace HMS_Software_V._01.Nurse_Ward
 
         private void NurseWard_TreatePatient_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (DashboardFormReference != null && !DashboardFormReference.IsDisposed)
+            /*if (DashboardFormReference != null && !DashboardFormReference.IsDisposed)
             {
                 DashboardFormReference.Show();
             }
@@ -525,7 +527,11 @@ namespace HMS_Software_V._01.Nurse_Ward
             {
                 // Handle the situation where the reference form is closed or disposed
                 Console.WriteLine("Dashboard form is closed or disposed.");
-            }
+            }*/
+
+            NurseWard_Dashboard nurseWard_Dashboard = new NurseWard_Dashboard(NurseID, WardNumber);
+            nurseWard_Dashboard.Show();
+            this.Hide();
         }
 
 

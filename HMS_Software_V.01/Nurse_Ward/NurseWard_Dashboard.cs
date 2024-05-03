@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace HMS_Software_V._01.Nurse_Ward
@@ -32,11 +33,71 @@ namespace HMS_Software_V._01.Nurse_Ward
             this.NurseID = userID;
             this.WardNumber = WardNumber;
 
+            MyLoadDashboardData();
+
             LoadData();
 
             automation = new MyTableData_Automation();
             automation.MyGetAdmittedPatientRecord();
         }
+
+
+        int Dashboard_TotalPatients;
+        int Dashboard_TotalPending;
+        private void MyLoadDashboardData()
+        {
+            
+
+
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+
+                    // Create a SQL query to count the records matching today's date
+                    string query = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query, connect))
+                    {
+
+                        Dashboard_TotalPatients = (int)command.ExecuteScalar();
+
+                    }
+
+
+                    // Create a SQL query to count the records matching today's date
+                    string query2 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByNurse = @Is_VisitedByNurse";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        command.Parameters.AddWithValue("@Is_VisitedByNurse", 0);
+
+                        Dashboard_TotalPatients = (int)command.ExecuteScalar();
+
+
+                    }
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message
+                               , "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            NWD_Total_Inpatients.Text = Dashboard_TotalPatients.ToString();
+            NWD_TotalPendingPatients.Text = Dashboard_TotalPending.ToString();
+
+            NWD_wardNumber.Text = WardNumber.ToString();
+            NWD_WardName.Text = WardName.ToString();
+        }
+
+
+
 
         private string DoctorName;
 
@@ -253,6 +314,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                                     n_ShowAllPatients.NSAPUC_NureseID = NurseID;
                                     n_ShowAllPatients.NSAPUC_P_Ward = WardName;
                                     n_ShowAllPatients.NSAPUC_P_MedicalEventID = P_MedicalEventID;
+                                    n_ShowAllPatients.NSAPUC_P_WardNumber = WardNumber;
 
 
                                     // Set the reference to the current instance of the form

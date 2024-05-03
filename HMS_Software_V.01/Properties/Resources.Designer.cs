@@ -93,6 +93,16 @@ namespace HMS_Software_V._01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HMS_Logo_100_ {
+            get {
+                object obj = ResourceManager.GetObject("HMS_Logo(100)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_icon {
             get {
                 object obj = ResourceManager.GetObject("Home_icon", resourceCulture);

@@ -647,6 +647,7 @@
     <Content Include="Assests\icons\Appointment_icon.png" />
     <Content Include="Assests\icons\Delete_icon33.png" />
     <Content Include="Assests\icons\Doctor_icon.png" />
+    <Content Include="Assests\icons\HMS_Logo%28100%29.png" />
     <Content Include="Assests\icons\Home_icon.png" />
     <Content Include="Assests\icons\Nurse_icon.png" />
     <Content Include="Assests\icons\Patient_icon.png" />
