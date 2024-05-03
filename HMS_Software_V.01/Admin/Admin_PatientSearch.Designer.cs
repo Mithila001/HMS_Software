@@ -32,7 +32,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1_top2 = new System.Windows.Forms.Panel();
             this.A_D_search_tbx = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.TopTable_Panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.top_tableLayoutPanle = new System.Windows.Forms.TableLayoutPanel();
             this.TopTable_Panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1_top2.SuspendLayout();
             this.TopTable_Panel.SuspendLayout();
@@ -52,6 +52,7 @@
             this.top_tableLayoutPanle.SuspendLayout();
             this.TopTable_Panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -103,17 +104,6 @@
             this.A_D_search_tbx.Name = "A_D_search_tbx";
             this.A_D_search_tbx.Size = new System.Drawing.Size(252, 25);
             this.A_D_search_tbx.TabIndex = 27;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(890, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "LOGO";
             // 
             // materialDivider2
             // 
@@ -225,10 +215,10 @@
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.44112F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.top_tableLayoutPanle.Controls.Add(this.pictureBox_LOGO, 3, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel2, 1, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel3, 2, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel, 0, 0);
-            this.top_tableLayoutPanle.Controls.Add(this.label5, 3, 0);
             this.top_tableLayoutPanle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.top_tableLayoutPanle.Location = new System.Drawing.Point(3, 3);
             this.top_tableLayoutPanle.Name = "top_tableLayoutPanle";
@@ -264,6 +254,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 537);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // pictureBox_LOGO
+            // 
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(876, 3);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 89);
+            this.pictureBox_LOGO.TabIndex = 11;
+            this.pictureBox_LOGO.TabStop = false;
+            // 
             // Admin_PatientSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,10 +283,10 @@
             this.TopTable_Panel2.ResumeLayout(false);
             this.TopTable_Panel2.PerformLayout();
             this.top_tableLayoutPanle.ResumeLayout(false);
-            this.top_tableLayoutPanle.PerformLayout();
             this.TopTable_Panel3.ResumeLayout(false);
             this.TopTable_Panel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,7 +297,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1_top2;
         private System.Windows.Forms.TextBox A_D_search_tbx;
-        private System.Windows.Forms.Label label5;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private System.Windows.Forms.Panel TopTable_Panel;
         private System.Windows.Forms.Label label1;
@@ -309,5 +309,6 @@
         private System.Windows.Forms.TableLayoutPanel top_tableLayoutPanle;
         private System.Windows.Forms.Panel TopTable_Panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox_LOGO;
     }
 }

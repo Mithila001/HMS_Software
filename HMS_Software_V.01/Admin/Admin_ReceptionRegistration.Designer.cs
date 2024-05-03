@@ -43,8 +43,9 @@
             this.TopTable_Panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1_mid_mid = new System.Windows.Forms.Panel();
+            this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.A_R_certificate_tbx = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -73,8 +74,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.A_R_NameWithInitials_tbx = new System.Windows.Forms.TextBox();
             this.A_R_fullName_tbx = new System.Windows.Forms.TextBox();
-            this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1_top.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
@@ -84,6 +84,7 @@
             this.panel1_mid_mid.SuspendLayout();
             this.panel1_mid_right.SuspendLayout();
             this.panel1_mid_left.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -146,10 +147,10 @@
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.44112F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.top_tableLayoutPanle.Controls.Add(this.pictureBox_LOGO, 3, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel2, 1, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel3, 2, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel, 0, 0);
-            this.top_tableLayoutPanle.Controls.Add(this.label5, 3, 0);
             this.top_tableLayoutPanle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.top_tableLayoutPanle.Location = new System.Drawing.Point(0, 0);
             this.top_tableLayoutPanle.Name = "top_tableLayoutPanle";
@@ -269,17 +270,6 @@
             this.materialDivider2.TabIndex = 4;
             this.materialDivider2.Text = "materialDivider2";
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(890, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "LOGO";
-            // 
             // panel1_mid_mid
             // 
             this.panel1_mid_mid.Controls.Add(this.D_Register_DTimePicker);
@@ -298,6 +288,27 @@
             this.panel1_mid_mid.Padding = new System.Windows.Forms.Padding(5);
             this.panel1_mid_mid.Size = new System.Drawing.Size(330, 433);
             this.panel1_mid_mid.TabIndex = 2;
+            // 
+            // D_Register_DTimePicker
+            // 
+            this.D_Register_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.D_Register_DTimePicker.Location = new System.Drawing.Point(11, 299);
+            this.D_Register_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
+            this.D_Register_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
+            this.D_Register_DTimePicker.Name = "D_Register_DTimePicker";
+            this.D_Register_DTimePicker.Size = new System.Drawing.Size(310, 20);
+            this.D_Register_DTimePicker.TabIndex = 50;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 279);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 15);
+            this.label13.TabIndex = 49;
+            this.label13.Text = "Date of Birth";
             // 
             // label20
             // 
@@ -634,26 +645,16 @@
             this.A_R_fullName_tbx.Size = new System.Drawing.Size(310, 22);
             this.A_R_fullName_tbx.TabIndex = 8;
             // 
-            // D_Register_DTimePicker
+            // pictureBox_LOGO
             // 
-            this.D_Register_DTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.D_Register_DTimePicker.Location = new System.Drawing.Point(11, 299);
-            this.D_Register_DTimePicker.MaximumSize = new System.Drawing.Size(500, 4);
-            this.D_Register_DTimePicker.MinimumSize = new System.Drawing.Size(241, 20);
-            this.D_Register_DTimePicker.Name = "D_Register_DTimePicker";
-            this.D_Register_DTimePicker.Size = new System.Drawing.Size(310, 20);
-            this.D_Register_DTimePicker.TabIndex = 50;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 279);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 15);
-            this.label13.TabIndex = 49;
-            this.label13.Text = "Date of Birth";
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(876, 3);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 86);
+            this.pictureBox_LOGO.TabIndex = 11;
+            this.pictureBox_LOGO.TabStop = false;
             // 
             // Admin_ReceptionRegistration
             // 
@@ -668,7 +669,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1_top.ResumeLayout(false);
             this.top_tableLayoutPanle.ResumeLayout(false);
-            this.top_tableLayoutPanle.PerformLayout();
             this.TopTable_Panel2.ResumeLayout(false);
             this.TopTable_Panel2.PerformLayout();
             this.TopTable_Panel3.ResumeLayout(false);
@@ -680,6 +680,7 @@
             this.panel1_mid_right.ResumeLayout(false);
             this.panel1_mid_left.ResumeLayout(false);
             this.panel1_mid_left.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -701,7 +702,6 @@
         private System.Windows.Forms.Panel TopTable_Panel;
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1_mid_mid;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox A_R_certificate_tbx;
@@ -733,5 +733,6 @@
         private System.Windows.Forms.TextBox A_R_fullName_tbx;
         private System.Windows.Forms.DateTimePicker D_Register_DTimePicker;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox_LOGO;
     }
 }

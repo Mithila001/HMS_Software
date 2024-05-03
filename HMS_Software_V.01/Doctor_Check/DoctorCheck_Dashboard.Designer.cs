@@ -56,6 +56,7 @@
             this.DOPD_date = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.DOPD_time = new System.Windows.Forms.Label();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,6 +64,7 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -93,6 +95,7 @@
             // 
             this.panel_RD_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panel_RD_top, 4);
+            this.panel_RD_top.Controls.Add(this.pictureBox_LOGO);
             this.panel_RD_top.Controls.Add(this.DisplayUnittype_title);
             this.panel_RD_top.Controls.Add(this.materialDivider1);
             this.panel_RD_top.Controls.Add(this.DCD_doctor_position_lbl);
@@ -108,7 +111,7 @@
             this.DisplayUnittype_title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DisplayUnittype_title.AutoSize = true;
             this.DisplayUnittype_title.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayUnittype_title.Location = new System.Drawing.Point(509, 29);
+            this.DisplayUnittype_title.Location = new System.Drawing.Point(437, 31);
             this.DisplayUnittype_title.Name = "DisplayUnittype_title";
             this.DisplayUnittype_title.Size = new System.Drawing.Size(331, 34);
             this.DisplayUnittype_title.TabIndex = 6;
@@ -421,6 +424,17 @@
             this.DOPD_time.Text = "Time";
             this.DOPD_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox_LOGO
+            // 
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(893, -3);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_LOGO.TabIndex = 12;
+            this.pictureBox_LOGO.TabStop = false;
+            // 
             // DoctorCheck_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,6 +458,7 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +493,6 @@
         private System.Windows.Forms.Button DCD_confrim_btn;
         private System.Windows.Forms.Label DOPD_date;
         private System.Windows.Forms.Label DOPD_time;
+        private System.Windows.Forms.PictureBox pictureBox_LOGO;
     }
 }

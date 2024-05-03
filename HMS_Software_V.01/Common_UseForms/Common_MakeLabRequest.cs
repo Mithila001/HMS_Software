@@ -399,6 +399,29 @@ namespace HMS_Software_V._01.Common_UseForms
                 
                 connect.Open();
 
+                // Create a Lab Request record for  Lab_Request1 table ------------------------
+                string query1 = "INSERT INTO Lab_Reques1t (LR_InvestigationID, LR_SpecimenID, PatientMedicalEvent_ID, LR_InvestigationName," +
+                    " LR_SpecimenName, LR_LabelNumber, Patient_ID, Doctor_ID)" +
+
+                    " VALUES (@investigationID,@specimenID, @patientMedicalEventID, @investigationName," +
+                    " @specimenName, @lableNumber, @patientID, @doctorID)";
+                using (SqlCommand cmd = new SqlCommand(query1, connect))
+                {
+                    cmd.Parameters.AddWithValue("@investigationID", getInvstigationID);
+                    cmd.Parameters.AddWithValue("@specimenID", getSpecimenID);
+                    cmd.Parameters.AddWithValue("@patientMedicalEventID", doctorDataSendToLabRequest.PatientMedicalEventID);
+                    cmd.Parameters.AddWithValue("@investigationName", investigationName);
+                    cmd.Parameters.AddWithValue("@specimenName", scpecimenName);
+                    cmd.Parameters.AddWithValue("@lableNumber", generatedNumber);
+                    cmd.Parameters.AddWithValue("@patientID", doctorDataSendToLabRequest.PatientRID);
+                    cmd.Parameters.AddWithValue("@doctorID", doctorDataSendToLabRequest.DoctorID);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+
+
+
                 // Create a Lab Request record in Lab_Request table
                 string query = "INSERT INTO Lab_Request (LR_InvestigationID, LR_SpecimenID, PatientMedicalEvent_ID, LR_InvestigationName,"+
                     " LR_SpecimenName, LR_LabelNumber, Patient_ID, Doctor_ID)" +

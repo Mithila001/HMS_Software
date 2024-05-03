@@ -478,12 +478,12 @@
             // pictureBox_LOGO
             // 
             this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo_100_;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
             this.pictureBox_LOGO.Location = new System.Drawing.Point(815, 16);
             this.pictureBox_LOGO.Name = "pictureBox_LOGO";
             this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox_LOGO.TabIndex = 10;
+            this.pictureBox_LOGO.TabIndex = 11;
             this.pictureBox_LOGO.TabStop = false;
             // 
             // Admin_home

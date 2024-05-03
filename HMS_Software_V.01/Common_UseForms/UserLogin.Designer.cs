@@ -88,7 +88,7 @@
             // 
             // wardNumber_tbx
             // 
-            this.wardNumber_tbx.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.wardNumber_tbx.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.wardNumber_tbx.BackColor = System.Drawing.Color.White;
             this.wardNumber_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wardNumber_tbx.Location = new System.Drawing.Point(650, 133);
@@ -100,7 +100,7 @@
             // 
             // warNumber_lbl
             // 
-            this.warNumber_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.warNumber_lbl.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.warNumber_lbl.AutoSize = true;
             this.warNumber_lbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warNumber_lbl.Location = new System.Drawing.Point(496, 132);
@@ -253,12 +253,12 @@
             // pictureBox_LOGO
             // 
             this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo_100_;
-            this.pictureBox_LOGO.Location = new System.Drawing.Point(788, 22);
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(790, 22);
             this.pictureBox_LOGO.Name = "pictureBox_LOGO";
             this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox_LOGO.TabIndex = 9;
+            this.pictureBox_LOGO.TabIndex = 11;
             this.pictureBox_LOGO.TabStop = false;
             // 
             // UserLogin
@@ -267,7 +267,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 462);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(483, 501);
+            this.MaximumSize = new System.Drawing.Size(950, 550);
+            this.MinimumSize = new System.Drawing.Size(932, 501);
             this.Name = "UserLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserLogin";

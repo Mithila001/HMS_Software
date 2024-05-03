@@ -92,8 +92,7 @@ namespace HMS_Software_V._01.Nurse_Ward
             NWD_Total_Inpatients.Text = Dashboard_TotalPatients.ToString();
             NWD_TotalPendingPatients.Text = Dashboard_TotalPending.ToString();
 
-            NWD_wardNumber.Text = WardNumber.ToString();
-            NWD_WardName.Text = WardName.ToString();
+           
         }
 
 
@@ -315,6 +314,10 @@ namespace HMS_Software_V._01.Nurse_Ward
                                     n_ShowAllPatients.NSAPUC_P_Ward = WardName;
                                     n_ShowAllPatients.NSAPUC_P_MedicalEventID = P_MedicalEventID;
                                     n_ShowAllPatients.NSAPUC_P_WardNumber = WardNumber;
+
+
+                                    NWD_wardNumber.Text = WardNumber.ToString();
+                                    NWD_WardName.Text = WardName.ToString();
 
 
                                     // Set the reference to the current instance of the form

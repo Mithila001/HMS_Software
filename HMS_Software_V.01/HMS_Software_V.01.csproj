@@ -644,10 +644,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assests\icons\HMS_LOGO3.jpg" />
     <Content Include="Assests\icons\Appointment_icon.png" />
     <Content Include="Assests\icons\Delete_icon33.png" />
     <Content Include="Assests\icons\Doctor_icon.png" />
     <Content Include="Assests\icons\HMS_Logo%28100%29.png" />
+    <Content Include="Assests\icons\HMS_LOGO2.jpg" />
+    <Content Include="Assests\icons\HMS_Logo4%28100%29.png" />
     <Content Include="Assests\icons\Home_icon.png" />
     <Content Include="Assests\icons\Nurse_icon.png" />
     <Content Include="Assests\icons\Patient_icon.png" />
@@ -661,6 +664,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DatabaseMithilaHMS.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\HMS_Logo4%28100%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assests\Doctor_Images\" />

@@ -369,16 +369,16 @@
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.top_tableLayoutPanle.Controls.Add(this.pictureBox_LOGO, 3, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel2, 1, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel3, 2, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel, 0, 0);
-            this.top_tableLayoutPanle.Controls.Add(this.pictureBox_LOGO, 3, 0);
             this.top_tableLayoutPanle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.top_tableLayoutPanle.Location = new System.Drawing.Point(0, 0);
             this.top_tableLayoutPanle.Name = "top_tableLayoutPanle";
             this.top_tableLayoutPanle.RowCount = 1;
             this.top_tableLayoutPanle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.top_tableLayoutPanle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.top_tableLayoutPanle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.top_tableLayoutPanle.Size = new System.Drawing.Size(936, 133);
             this.top_tableLayoutPanle.TabIndex = 7;
             // 
@@ -396,12 +396,12 @@
             // pictureBox_LOGO
             // 
             this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo_100_;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
             this.pictureBox_LOGO.Location = new System.Drawing.Point(815, 16);
             this.pictureBox_LOGO.Name = "pictureBox_LOGO";
             this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox_LOGO.TabIndex = 10;
+            this.pictureBox_LOGO.TabIndex = 11;
             this.pictureBox_LOGO.TabStop = false;
             // 
             // Admin_Doctors

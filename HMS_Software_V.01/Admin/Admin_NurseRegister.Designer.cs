@@ -78,13 +78,13 @@
             this.A_DR_time = new System.Windows.Forms.Label();
             this.TopTable_Panel = new System.Windows.Forms.Panel();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1_mid_mid = new System.Windows.Forms.Panel();
             this.panel1_mid_right = new System.Windows.Forms.Panel();
             this.D_Register_DTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             this.A_N_Save_btn = new System.Windows.Forms.Button();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.panel1_mid_left.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1_top.SuspendLayout();
@@ -94,6 +94,7 @@
             this.TopTable_Panel.SuspendLayout();
             this.panel1_mid_mid.SuspendLayout();
             this.panel1_mid_right.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // A_N_address_tbx
@@ -575,10 +576,10 @@
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.44112F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.top_tableLayoutPanle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.top_tableLayoutPanle.Controls.Add(this.pictureBox_LOGO, 3, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel2, 1, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel3, 2, 0);
             this.top_tableLayoutPanle.Controls.Add(this.TopTable_Panel, 0, 0);
-            this.top_tableLayoutPanle.Controls.Add(this.label5, 3, 0);
             this.top_tableLayoutPanle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.top_tableLayoutPanle.Location = new System.Drawing.Point(0, 0);
             this.top_tableLayoutPanle.Name = "top_tableLayoutPanle";
@@ -688,17 +689,6 @@
             this.materialDivider2.TabIndex = 4;
             this.materialDivider2.Text = "materialDivider2";
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(890, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "LOGO";
-            // 
             // panel1_mid_mid
             // 
             this.panel1_mid_mid.Controls.Add(this.label19);
@@ -788,6 +778,17 @@
             this.A_N_Save_btn.UseVisualStyleBackColor = false;
             this.A_N_Save_btn.Click += new System.EventHandler(this.A_N_Save_btn_Click);
             // 
+            // pictureBox_LOGO
+            // 
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(876, 3);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 86);
+            this.pictureBox_LOGO.TabIndex = 11;
+            this.pictureBox_LOGO.TabStop = false;
+            // 
             // Admin_NurseRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -803,7 +804,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1_top.ResumeLayout(false);
             this.top_tableLayoutPanle.ResumeLayout(false);
-            this.top_tableLayoutPanle.PerformLayout();
             this.TopTable_Panel2.ResumeLayout(false);
             this.TopTable_Panel2.PerformLayout();
             this.TopTable_Panel3.ResumeLayout(false);
@@ -814,6 +814,7 @@
             this.panel1_mid_mid.PerformLayout();
             this.panel1_mid_right.ResumeLayout(false);
             this.panel1_mid_right.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -867,7 +868,6 @@
         private System.Windows.Forms.Label A_DR_time;
         private System.Windows.Forms.Panel TopTable_Panel;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1_mid_mid;
         private System.Windows.Forms.Panel panel1_mid_right;
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
@@ -876,5 +876,6 @@
         private System.Windows.Forms.TextBox A_N_Email_tbx;
         private System.Windows.Forms.DateTimePicker D_Register_DTimePicker;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox_LOGO;
     }
 }
