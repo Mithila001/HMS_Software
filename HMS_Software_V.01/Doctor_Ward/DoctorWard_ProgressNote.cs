@@ -224,7 +224,7 @@ namespace HMS_Software_V._01.Doctor_Ward
             }
             else
             {
-                // If every validation is passed
+                // If every Condtion is passed
                 bool Admitted_Patients = false;
                 bool Admitted_Patients_VisitEvent = false;
 
@@ -326,13 +326,13 @@ namespace HMS_Software_V._01.Doctor_Ward
                             if (rowsAffected > 0)
                             {
                                 // Query executed successfully
-                                Console.WriteLine("UPDATE Admitted_Patients successfully.");
+                                Console.WriteLine("UPDATE Admitted_Patients_VisitEvent successfully.");
                                 Admitted_Patients_VisitEvent = true;
                             }
                             else
                             {
                                 // No rows affected (possible validation)
-                                Console.WriteLine("Failed to UPDATE Admitted_Patients.");
+                                Console.WriteLine("Failed to UPDATE Admitted_Patients_VisitEvent.");
                             }
                         }
 
@@ -347,6 +347,10 @@ namespace HMS_Software_V._01.Doctor_Ward
                 if((Admitted_Patients) && (Admitted_Patients_VisitEvent))
                 {
                     MessageBox.Show("Success!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    DoctorWard_Dashboard doctorWard_Dashboard = new DoctorWard_Dashboard(DoctorID, WardID);
+                    doctorWard_Dashboard.Show();
+                    this.Hide();
                 }
             }
 
@@ -447,6 +451,74 @@ namespace HMS_Software_V._01.Doctor_Ward
             doctorWard_Monitor.DoctorPatientCheckWardFromReferece = this;
             doctorWard_Monitor.Show();
             
+
+        }
+
+        private void DoctorWard_ProgressNote_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DoctorWard_Dashboard doctorWard_Dashboard = new DoctorWard_Dashboard(DoctorID, WardID);
+            doctorWard_Dashboard.Show();
+            this.Hide();
+        }
+
+        private void DWPN_DischargeBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    string query1 = "INSERT INTO Patient_Discharge (Patient_RID, Doctor_ID) VALUES (@Patient_RID, @Doctor_ID)";
+                    using (SqlCommand command = new SqlCommand(query1, connect))
+                    {
+                        // Add parameters
+                        command.Parameters.AddWithValue("@Patient_RID", PatientRID);
+                        command.Parameters.AddWithValue("@Doctor_ID", DoctorID);
+
+                        // Execute the query
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Check if rows were affected
+                        if (rowsAffected > 0)
+                        {
+                            
+                            Console.WriteLine("Record Found");
+
+                            string deleteQuery = "DELETE FROM Admitted_Patients WHERE P_RID = @PatientRID";
+                            using (SqlCommand deleteCommand = new SqlCommand(deleteQuery, connect))
+                            {
+                                // Add parameter for P_RID
+                                deleteCommand.Parameters.AddWithValue("@PatientRID", PatientRID);
+
+                                // Execute the delete query
+                                int deletedRows = deleteCommand.ExecuteNonQuery();
+
+                                // Check if any rows were deleted
+                                if (deletedRows > 0)
+                                {
+                                    MessageBox.Show("Successfully Discharged", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Delete row Error");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to Discharged", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:3 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error3:" + ex);
+
+            }
 
         }
     }

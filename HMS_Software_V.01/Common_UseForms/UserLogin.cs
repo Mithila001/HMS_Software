@@ -2,6 +2,7 @@
 using HMS_Software_V._01.Admition_Officer;
 using HMS_Software_V._01.Doctor_OPD;
 using HMS_Software_V._01.Doctor_Ward;
+using HMS_Software_V._01.Lab_Management;
 using HMS_Software_V._01.Nurse_Ward;
 using HMS_Software_V._01.Reception;
 using System;
@@ -139,9 +140,10 @@ namespace HMS_Software_V._01.Common_UseForms
                             {
                                 if (unit == "Clinic")
                                 {
-                                    DoctorCheck_Dashboard doctorCheck_Dashboard = new DoctorCheck_Dashboard(userID, unit, WardNumber);
-                                    doctorCheck_Dashboard.Show();
+                                    DoctorWard_Dashboard doctorWard_Dashboard = new DoctorWard_Dashboard(userID, WardNumber);
+                                    doctorWard_Dashboard.Show();
                                     this.Hide();
+
 
                                 }
                                 else if(unit == "Ward")
@@ -178,11 +180,18 @@ namespace HMS_Software_V._01.Common_UseForms
                                 this.Hide();
 
                             }
-                            else
+                            else if(comboB_selcePosition.Text == "Admission Officer")
                             {
                                 AdmissionOfficer_Dashboard admissionOfficer_Dashboard = new AdmissionOfficer_Dashboard(userID);
                                 admissionOfficer_Dashboard.Show();
                                 this.Hide();
+                            }
+                            else
+                            {
+                                Lab_Dashboard lab_Dashboard = new Lab_Dashboard();
+                                lab_Dashboard.Show();
+                                this.Hide();
+
                             }
 
                             /*UserLogin userLogin = new UserLogin();
@@ -253,13 +262,31 @@ namespace HMS_Software_V._01.Common_UseForms
                 selectedPosition = "Admin";
 
             }
-            else
+            else if(comboB_selcePosition.Text == "Reception")
             {
                 comboB_selceUnit.Visible = false;
                 unit_lbl.Visible = false;
                 wardNumber_tbx.Visible = false;
                 warNumber_lbl.Visible = false;
                 selectedPosition = "Reception";
+
+            }
+            else if(comboB_selcePosition.Text == "LabEmployee")
+            {
+                comboB_selceUnit.Visible = false;
+                unit_lbl.Visible = false;
+                wardNumber_tbx.Visible = false;
+                warNumber_lbl.Visible = false;
+                selectedPosition = "LabEmployee";
+
+            }
+            else
+            {
+                comboB_selceUnit.Visible = false;
+                unit_lbl.Visible = false;
+                wardNumber_tbx.Visible = false;
+                warNumber_lbl.Visible = false;
+                selectedPosition = "Admission Officer";
 
             }
 

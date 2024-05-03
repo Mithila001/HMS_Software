@@ -23,7 +23,7 @@ namespace HMS_Software_V._01.Doctor_OPD
         private int DoctorID;
         private string unitTypeName;
         private int WardNumber;
-        public DoctorCheck_Dashboard(int userID =8 , string unit = "OPD", int WardNumber = 8)
+        public DoctorCheck_Dashboard(int userID /*=8 */, string unit /*= "OPD"*/, int WardNumber/* = 8*/)
         {
             InitializeComponent();
 
@@ -41,32 +41,102 @@ namespace HMS_Software_V._01.Doctor_OPD
 
 
         //Load Basic Details for the dashboard
+
+        int TotalPatient_Count;
+        int Today_Clinic_Doctors;
+        int Lab_Request_Count;
+        int Prescription_request_Count;
+        int Inpatient_Request_Count;
         private void MyLoadbasicUIDeatils()
         {
-            if(unitTypeName == "OPD")
-            {
-                DisplayUnittype_doctors.Text = "Available OPD Doctors";
-                DisplayUnittype_patient.Text = "Total OPD Patients";
-                DisplayUnittype_title.Text = "Outpatient Department";
+            /* if(unitTypeName == "OPD")
+             {
+                 DisplayUnittype_doctors.Text = "Available OPD Doctors";
+                 DisplayUnittype_patient.Text = "Total OPD Patients";
+                 DisplayUnittype_title.Text = "Outpatient Department";
 
-            }
-            else if(unitTypeName == "Ward")
-            {
-                DisplayUnittype_doctors.Text = "Available Ward Doctors";
-                DisplayUnittype_patient.Text = "Total Ward Patients";
-                DisplayUnittype_title.Text = "Inpatient Department";
+             }
+             else if(unitTypeName == "Ward")
+             {
+                 DisplayUnittype_doctors.Text = "Available Ward Doctors";
+                 DisplayUnittype_patient.Text = "Total Ward Patients";
+                 DisplayUnittype_title.Text = "Inpatient Department";
 
-            }
-            else if(unitTypeName == "Clinic")
-            {
-                DisplayUnittype_doctors.Text = "Available Clinci Doctors";
-                DisplayUnittype_patient.Text = "Total Clinci Patients";
-                DisplayUnittype_title.Text = "Clinic Department";
+             }
+             else if(unitTypeName == "Clinic")
+             {
+                 DisplayUnittype_doctors.Text = "Available Clinci Doctors";
+                 DisplayUnittype_patient.Text = "Total Clinci Patients";
+                 DisplayUnittype_title.Text = "Clinic Department";
 
-            }
-            else
+             }
+             else
+             {
+                 MessageBox.Show("Unit Type is not valid:"+ unitTypeName, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+             }*/
+
+            DateTime currentDate = DateTime.Today;
+            string formattedDate = currentDate.ToString("d MMMM yyyy"); // Format the date like "24th August 2024"
+
+            DateTime currentTime = DateTime.Now;
+            string formattedTime = currentTime.ToString("h.mm tt"); // Format the time like "1.00 pm"
+
+            DOPD_date.Text = formattedDate;
+            DOPD_time.Text = formattedTime;
+
+
+            try
             {
-                MessageBox.Show("Unit Type is not valid:"+ unitTypeName, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    string query1 = "SELECT COUNT(*) FROM Patient WHERE CONVERT(date, P_RegisteredDate) = @TodayDate";
+                    using (SqlCommand command = new SqlCommand(query1, connect))
+                    {
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+                        TotalPatient_Count = (int)command.ExecuteScalar();
+                    }
+
+                    string query2 = "SELECT COUNT(*) FROM ClinicEvents WHERE CONVERT(date, CE_Date) = @TodayDate";
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+                        Today_Clinic_Doctors = (int)command.ExecuteScalar();
+                    }
+
+                    string query3 = "SELECT COUNT(*) FROM Lab_Request1";
+                    using (SqlCommand command = new SqlCommand(query3, connect))
+                    {
+                        command.Parameters.AddWithValue("@Is_VisitedByDoctor", 1);
+                        command.Parameters.AddWithValue("@Visited_Doctor_ID", DoctorID);
+                        Lab_Request_Count = (int)command.ExecuteScalar();
+                    }
+
+                    string query4 = "SELECT COUNT(*) FROM PatientMedical_Event WHERE ISNULL(PrescriptionRequest_ID, '') = ''";
+                    using (SqlCommand command = new SqlCommand(query4, connect))
+                    {
+                        Prescription_request_Count = (int)command.ExecuteScalar();
+                    }
+
+                    string query5 = "SELECT COUNT(*) FROM Patient_Admit WHERE Is_Admitted = @Is_Admitted";
+                    using (SqlCommand command = new SqlCommand(query5, connect))
+                    {
+                        command.Parameters.AddWithValue("@Is_Admitted", 0);
+                        Inpatient_Request_Count = (int)command.ExecuteScalar();
+                    }
+                }
+
+                DashB_TotalPatientsToday.Text = TotalPatient_Count.ToString();
+                DashB_ClinicDoctorsToday.Text = Today_Clinic_Doctors.ToString();
+                DashB_LabRequestCount.Text = Lab_Request_Count.ToString();
+                DashB_PrescriptionRequestCount.Text = Prescription_request_Count.ToString();
+                DashB_InpatientRequestCount.Text = Inpatient_Request_Count.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex);
             }
         }
 

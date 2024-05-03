@@ -26,7 +26,7 @@ namespace HMS_Software_V._01.Nurse_Ward
         private int NurseID;
         /*private string UnitName;*/
         private int WardNumber;
-        public NurseWard_Dashboard(int userID =5, int WardNumber = 5)
+        public NurseWard_Dashboard(int userID/* =5*/, int WardNumber/* = 5*/)
         {
             InitializeComponent();
             this.NurseID = userID;

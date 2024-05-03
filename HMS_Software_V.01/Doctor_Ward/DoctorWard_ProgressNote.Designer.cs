@@ -440,6 +440,7 @@
             this.DWPN_DischargeBtn.TabIndex = 66;
             this.DWPN_DischargeBtn.Text = "Disharge";
             this.DWPN_DischargeBtn.UseVisualStyleBackColor = false;
+            this.DWPN_DischargeBtn.Click += new System.EventHandler(this.DWPN_DischargeBtn_Click);
             // 
             // DWPN_P_Confirm_btn
             // 
@@ -607,6 +608,7 @@
             this.Name = "DoctorWard_ProgressNote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorWard_Progress Note";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorWard_ProgressNote_FormClosed);
             this.Base_TableLP.ResumeLayout(false);
             this.Top_TableLP.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

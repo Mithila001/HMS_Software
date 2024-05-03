@@ -24,7 +24,7 @@ namespace HMS_Software_V._01.Doctor_Ward
         private int WardNumber;
 
 
-        public DoctorWard_Dashboard(int userID =8, int WardNumber = 8)
+        public DoctorWard_Dashboard(int userID/* =8*/, int WardNumber/* = 8*/)
         {
             InitializeComponent();
 
@@ -36,9 +36,9 @@ namespace HMS_Software_V._01.Doctor_Ward
             automation = new MyTableData_Automation();
             automation.MyGetAdmittedPatientRecord();
 
-            LoadDashboardData();
 
             LoadData();
+            LoadDashboardData();
         }
 
         int IsCompletedCount;

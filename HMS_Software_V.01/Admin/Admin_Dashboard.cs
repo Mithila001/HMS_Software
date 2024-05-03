@@ -18,7 +18,7 @@ namespace HMS_Software_V._01.Admin
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int userID;
-        public Admin_Dashboard(int userID =3)
+        public Admin_Dashboard(int userID = 3)
         {
             InitializeComponent();
             this.userID = userID;

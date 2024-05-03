@@ -22,7 +22,7 @@ namespace HMS_Software_V._01.Admition_Officer
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int AdmissionOfficerID;
-        public AdmissionOfficer_Dashboard(int userID =7)
+        public AdmissionOfficer_Dashboard(int userID/* =7*/)
         {
             InitializeComponent();
             this.AdmissionOfficerID = userID;

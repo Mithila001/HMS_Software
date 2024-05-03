@@ -36,16 +36,16 @@
             this.DCD_doctorName_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.DashB_ClinicDoctorsToday = new System.Windows.Forms.Label();
             this.DisplayUnittype_doctors = new System.Windows.Forms.Label();
-            this.DashB_TotalPatients = new System.Windows.Forms.Label();
+            this.DashB_TotalPatientsToday = new System.Windows.Forms.Label();
             this.DisplayUnittype_patient = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.DashB_InpatientRequestCount = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.DashB_PrescriptionRequestCount = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.DashB_LabRequestCount = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DCD_reset_btn = new System.Windows.Forms.Button();
@@ -53,9 +53,9 @@
             this.DCD_enterPatientID_tbx = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
+            this.DOPD_date = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.DOPD_time = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -161,9 +161,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.DashB_ClinicDoctorsToday);
             this.panel2.Controls.Add(this.DisplayUnittype_doctors);
-            this.panel2.Controls.Add(this.DashB_TotalPatients);
+            this.panel2.Controls.Add(this.DashB_TotalPatientsToday);
             this.panel2.Controls.Add(this.DisplayUnittype_patient);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(255, 103);
@@ -171,16 +171,16 @@
             this.panel2.Size = new System.Drawing.Size(246, 299);
             this.panel2.TabIndex = 4;
             // 
-            // label9
+            // DashB_ClinicDoctorsToday
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(96, 221);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 34);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "20";
+            this.DashB_ClinicDoctorsToday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DashB_ClinicDoctorsToday.AutoSize = true;
+            this.DashB_ClinicDoctorsToday.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashB_ClinicDoctorsToday.Location = new System.Drawing.Point(96, 221);
+            this.DashB_ClinicDoctorsToday.Name = "DashB_ClinicDoctorsToday";
+            this.DashB_ClinicDoctorsToday.Size = new System.Drawing.Size(47, 34);
+            this.DashB_ClinicDoctorsToday.TabIndex = 10;
+            this.DashB_ClinicDoctorsToday.Text = "20";
             // 
             // DisplayUnittype_doctors
             // 
@@ -193,16 +193,16 @@
             this.DisplayUnittype_doctors.TabIndex = 9;
             this.DisplayUnittype_doctors.Text = "Clinc Doctors";
             // 
-            // DashB_TotalPatients
+            // DashB_TotalPatientsToday
             // 
-            this.DashB_TotalPatients.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DashB_TotalPatients.AutoSize = true;
-            this.DashB_TotalPatients.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashB_TotalPatients.Location = new System.Drawing.Point(97, 96);
-            this.DashB_TotalPatients.Name = "DashB_TotalPatients";
-            this.DashB_TotalPatients.Size = new System.Drawing.Size(47, 34);
-            this.DashB_TotalPatients.TabIndex = 8;
-            this.DashB_TotalPatients.Text = "20";
+            this.DashB_TotalPatientsToday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DashB_TotalPatientsToday.AutoSize = true;
+            this.DashB_TotalPatientsToday.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashB_TotalPatientsToday.Location = new System.Drawing.Point(97, 96);
+            this.DashB_TotalPatientsToday.Name = "DashB_TotalPatientsToday";
+            this.DashB_TotalPatientsToday.Size = new System.Drawing.Size(47, 34);
+            this.DashB_TotalPatientsToday.TabIndex = 8;
+            this.DashB_TotalPatientsToday.Text = "20";
             // 
             // DisplayUnittype_patient
             // 
@@ -218,11 +218,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.DashB_InpatientRequestCount);
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.DashB_PrescriptionRequestCount);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.DashB_LabRequestCount);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(507, 103);
@@ -230,16 +230,16 @@
             this.panel3.Size = new System.Drawing.Size(246, 299);
             this.panel3.TabIndex = 5;
             // 
-            // label14
+            // DashB_InpatientRequestCount
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(102, 247);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 34);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "20";
+            this.DashB_InpatientRequestCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DashB_InpatientRequestCount.AutoSize = true;
+            this.DashB_InpatientRequestCount.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashB_InpatientRequestCount.Location = new System.Drawing.Point(102, 247);
+            this.DashB_InpatientRequestCount.Name = "DashB_InpatientRequestCount";
+            this.DashB_InpatientRequestCount.Size = new System.Drawing.Size(47, 34);
+            this.DashB_InpatientRequestCount.TabIndex = 16;
+            this.DashB_InpatientRequestCount.Text = "20";
             // 
             // label15
             // 
@@ -252,16 +252,16 @@
             this.label15.TabIndex = 15;
             this.label15.Text = "Inpatient Requests";
             // 
-            // label12
+            // DashB_PrescriptionRequestCount
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(102, 147);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 34);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "20";
+            this.DashB_PrescriptionRequestCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DashB_PrescriptionRequestCount.AutoSize = true;
+            this.DashB_PrescriptionRequestCount.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashB_PrescriptionRequestCount.Location = new System.Drawing.Point(102, 147);
+            this.DashB_PrescriptionRequestCount.Name = "DashB_PrescriptionRequestCount";
+            this.DashB_PrescriptionRequestCount.Size = new System.Drawing.Size(47, 34);
+            this.DashB_PrescriptionRequestCount.TabIndex = 14;
+            this.DashB_PrescriptionRequestCount.Text = "20";
             // 
             // label13
             // 
@@ -274,16 +274,16 @@
             this.label13.TabIndex = 13;
             this.label13.Text = "Prescription Requests";
             // 
-            // label10
+            // DashB_LabRequestCount
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(102, 51);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 34);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "20";
+            this.DashB_LabRequestCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DashB_LabRequestCount.AutoSize = true;
+            this.DashB_LabRequestCount.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashB_LabRequestCount.Location = new System.Drawing.Point(102, 51);
+            this.DashB_LabRequestCount.Name = "DashB_LabRequestCount";
+            this.DashB_LabRequestCount.Size = new System.Drawing.Size(47, 34);
+            this.DashB_LabRequestCount.TabIndex = 12;
+            this.DashB_LabRequestCount.Text = "20";
             // 
             // label11
             // 
@@ -369,45 +369,57 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.SetColumnSpan(this.panel5, 2);
-            this.panel5.Controls.Add(this.label17);
+            this.panel5.Controls.Add(this.DOPD_date);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 408);
+            this.panel5.Location = new System.Drawing.Point(20, 425);
+            this.panel5.Margin = new System.Windows.Forms.Padding(20);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(498, 126);
+            this.panel5.Size = new System.Drawing.Size(464, 92);
             this.panel5.TabIndex = 7;
             // 
-            // label17
+            // DOPD_date
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(216, 54);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 24);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Date";
+            this.DOPD_date.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DOPD_date.AutoSize = true;
+            this.DOPD_date.BackColor = System.Drawing.Color.White;
+            this.DOPD_date.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOPD_date.Location = new System.Drawing.Point(118, 5);
+            this.DOPD_date.Margin = new System.Windows.Forms.Padding(0);
+            this.DOPD_date.Name = "DOPD_date";
+            this.DOPD_date.Padding = new System.Windows.Forms.Padding(20);
+            this.DOPD_date.Size = new System.Drawing.Size(140, 84);
+            this.DOPD_date.TabIndex = 5;
+            this.DOPD_date.Text = "Date";
+            this.DOPD_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.SetColumnSpan(this.panel6, 2);
-            this.panel6.Controls.Add(this.label18);
+            this.panel6.Controls.Add(this.DOPD_time);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(507, 408);
+            this.panel6.Location = new System.Drawing.Point(524, 425);
+            this.panel6.Margin = new System.Windows.Forms.Padding(20);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(498, 126);
+            this.panel6.Size = new System.Drawing.Size(464, 92);
             this.panel6.TabIndex = 8;
             // 
-            // label18
+            // DOPD_time
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(209, 45);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 24);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "Time";
+            this.DOPD_time.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DOPD_time.AutoSize = true;
+            this.DOPD_time.BackColor = System.Drawing.Color.White;
+            this.DOPD_time.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOPD_time.Location = new System.Drawing.Point(138, 6);
+            this.DOPD_time.Margin = new System.Windows.Forms.Padding(0);
+            this.DOPD_time.Name = "DOPD_time";
+            this.DOPD_time.Padding = new System.Windows.Forms.Padding(20);
+            this.DOPD_time.Size = new System.Drawing.Size(145, 84);
+            this.DOPD_time.TabIndex = 6;
+            this.DOPD_time.Text = "Time";
+            this.DOPD_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DoctorCheck_Dashboard
             // 
@@ -451,20 +463,20 @@
         private System.Windows.Forms.Label DisplayUnittype_patient;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label DashB_ClinicDoctorsToday;
         private System.Windows.Forms.Label DisplayUnittype_doctors;
-        private System.Windows.Forms.Label DashB_TotalPatients;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label DashB_TotalPatientsToday;
+        private System.Windows.Forms.Label DashB_InpatientRequestCount;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label DashB_PrescriptionRequestCount;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label DashB_LabRequestCount;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox DCD_enterPatientID_tbx;
         private System.Windows.Forms.Button DCD_reset_btn;
         private System.Windows.Forms.Button DCD_confrim_btn;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label DOPD_date;
+        private System.Windows.Forms.Label DOPD_time;
     }
 }
