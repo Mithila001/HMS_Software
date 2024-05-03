@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,11 +34,62 @@ namespace HMS_Software_V._01.Doctor_Ward
 
             //Automation to update Admitted_Patients_VisitEvent daily
             automation = new MyTableData_Automation();
-            automation.MyGetAdmittedPatientRecord(); 
+            automation.MyGetAdmittedPatientRecord();
 
+            LoadDashboardData();
 
             LoadData();
         }
+
+        int IsCompletedCount;
+        int IsNotCompledCount;
+        int IsCompletedByDoctorCount;
+
+        private void LoadDashboardData()
+        {
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    string query1 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByDoctor = @Is_VisitedByDoctor";
+                    using (SqlCommand command = new SqlCommand(query1, connect))
+                    {
+                        command.Parameters.AddWithValue("@Is_VisitedByDoctor", 1);
+                        IsCompletedCount = (int)command.ExecuteScalar();
+                    }
+
+                    string query2 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByDoctor = @Is_VisitedByDoctor";
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        command.Parameters.AddWithValue("@Is_VisitedByDoctor", 0);
+                        IsNotCompledCount = (int)command.ExecuteScalar();
+                    }
+
+                    string query3 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByDoctor = @Is_VisitedByDoctor AND Visited_Doctor_ID = @Visited_Doctor_ID";
+                    using (SqlCommand command = new SqlCommand(query3, connect))
+                    {
+                        command.Parameters.AddWithValue("@Is_VisitedByDoctor", 1);
+                        command.Parameters.AddWithValue("@Visited_Doctor_ID", DoctorID);
+                        IsCompletedByDoctorCount = (int)command.ExecuteScalar();
+                    }
+                }
+
+                DWD_Completed.Text = IsCompletedByDoctorCount.ToString()+" Completed";
+                DWD_TotalPending.Text = IsNotCompledCount.ToString();
+                DWD_TotalCompleted.Text = IsCompletedCount.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex);
+            }
+        }
+
+
+
+
 
         // Doctor Table
         string DoctorName;

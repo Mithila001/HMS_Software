@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +17,8 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
         public Admin_Reception()
         {
             InitializeComponent();
+
+            MyLoadTablData();
         }
 
         //Reciving Data from the form
@@ -31,6 +35,37 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
 
             Form parentForm = this.FindForm();
             parentForm.Hide();
+        }
+
+        private void MyLoadTablData()
+        {
+            string query = "SELECT * FROM Reception";
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
+                    adapter.Fill(dataTable);
+                    reception_DataGView.DataSource = dataTable;
+
+                    
+
+
+                }
+                    
+                
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex);
+            }
         }
     }
 }

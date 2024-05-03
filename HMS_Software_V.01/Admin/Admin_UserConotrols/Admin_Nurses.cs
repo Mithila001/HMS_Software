@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
         public Admin_Nurses()
         {
             InitializeComponent();
+
+            MyLoadDashboardData();
         }
 
         //Reciving Data from the form
@@ -40,6 +43,51 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
 
             Form parentForm = this.FindForm();
             parentForm.Hide();
+        }
+
+        int TotalNurses;
+        int TotalSisters;
+        
+        private void MyLoadDashboardData()
+        {
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    // Total Doctors
+                    string query1 = "SELECT COUNT(*) FROM Nurse";
+
+                    using (SqlCommand command = new SqlCommand(query1, connect))
+                    {
+                        TotalNurses = (int)command.ExecuteScalar();
+
+                    }
+
+                    // Total Clinic and OPD Doctors
+                    string query2 = "SELECT COUNT(*) FROM Nurse WHERE N_Position = @N_Position";
+
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        command.Parameters.AddWithValue("@N_Position", "sister");
+
+                        TotalSisters = (int)command.ExecuteScalar();
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error1: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            Ad_Nurse_TotNurse_lbl.Text = TotalNurses.ToString();
+            Ad_Nurse_TotSisters_lbl.Text = TotalSisters.ToString();
+           
+
         }
     }
 }

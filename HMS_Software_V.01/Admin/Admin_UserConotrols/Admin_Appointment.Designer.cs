@@ -35,25 +35,25 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.location_tbx = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.slots_tbx = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.date_tbx = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.duration_tbx = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.time_tbx = new System.Windows.Forms.TextBox();
             this.tableLayP_panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ward_tbx = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.doctorName_tvx = new System.Windows.Forms.TextBox();
             this.TopTable_Panel2 = new System.Windows.Forms.Panel();
             this.Ad_appointmetn_Date = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -164,7 +164,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.textBox7);
+            this.panel7.Controls.Add(this.location_tbx);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(469, 60);
             this.panel7.Name = "panel7";
@@ -178,25 +178,25 @@
             this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(17, 2);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 17);
+            this.label9.Size = new System.Drawing.Size(67, 17);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Ward:";
+            this.label9.Text = "Location:";
             // 
-            // textBox7
+            // location_tbx
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(20, 22);
-            this.textBox7.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox7.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(241, 25);
-            this.textBox7.TabIndex = 0;
+            this.location_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.location_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.location_tbx.Location = new System.Drawing.Point(20, 22);
+            this.location_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.location_tbx.MinimumSize = new System.Drawing.Size(241, 25);
+            this.location_tbx.Name = "location_tbx";
+            this.location_tbx.Size = new System.Drawing.Size(241, 25);
+            this.location_tbx.TabIndex = 0;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.slots_tbx);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(469, 3);
             this.panel6.Name = "panel6";
@@ -210,25 +210,25 @@
             this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(17, 2);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 17);
+            this.label8.Size = new System.Drawing.Size(45, 17);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Ward:";
+            this.label8.Text = "Slots:";
             // 
-            // textBox6
+            // slots_tbx
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(20, 22);
-            this.textBox6.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox6.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(241, 25);
-            this.textBox6.TabIndex = 0;
+            this.slots_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.slots_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slots_tbx.Location = new System.Drawing.Point(20, 22);
+            this.slots_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.slots_tbx.MinimumSize = new System.Drawing.Size(241, 25);
+            this.slots_tbx.Name = "slots_tbx";
+            this.slots_tbx.Size = new System.Drawing.Size(241, 25);
+            this.slots_tbx.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.date_tbx);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 243);
             this.panel5.Name = "panel5";
@@ -242,25 +242,25 @@
             this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(17, 2);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 17);
+            this.label7.Size = new System.Drawing.Size(43, 17);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Ward:";
+            this.label7.Text = "Date:";
             // 
-            // textBox5
+            // date_tbx
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(20, 22);
-            this.textBox5.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox5.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(241, 25);
-            this.textBox5.TabIndex = 0;
+            this.date_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.date_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_tbx.Location = new System.Drawing.Point(20, 22);
+            this.date_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.date_tbx.MinimumSize = new System.Drawing.Size(241, 25);
+            this.date_tbx.Name = "date_tbx";
+            this.date_tbx.Size = new System.Drawing.Size(241, 25);
+            this.date_tbx.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.duration_tbx);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 183);
             this.panel4.Name = "panel4";
@@ -274,25 +274,25 @@
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(17, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 17);
+            this.label6.Size = new System.Drawing.Size(67, 17);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Ward:";
+            this.label6.Text = "Duration:";
             // 
-            // textBox4
+            // duration_tbx
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(20, 22);
-            this.textBox4.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox4.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(241, 25);
-            this.textBox4.TabIndex = 0;
+            this.duration_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.duration_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duration_tbx.Location = new System.Drawing.Point(20, 22);
+            this.duration_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.duration_tbx.MinimumSize = new System.Drawing.Size(241, 25);
+            this.duration_tbx.Name = "duration_tbx";
+            this.duration_tbx.Size = new System.Drawing.Size(241, 25);
+            this.duration_tbx.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.time_tbx);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 123);
             this.panel3.Name = "panel3";
@@ -306,25 +306,25 @@
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(17, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
+            this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Ward:";
+            this.label4.Text = "Time:";
             // 
-            // textBox3
+            // time_tbx
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(20, 22);
-            this.textBox3.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox3.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 25);
-            this.textBox3.TabIndex = 0;
+            this.time_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.time_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_tbx.Location = new System.Drawing.Point(20, 22);
+            this.time_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.time_tbx.MinimumSize = new System.Drawing.Size(241, 25);
+            this.time_tbx.Name = "time_tbx";
+            this.time_tbx.Size = new System.Drawing.Size(241, 25);
+            this.time_tbx.TabIndex = 0;
             // 
             // tableLayP_panel
             // 
             this.tableLayP_panel.Controls.Add(this.label1);
-            this.tableLayP_panel.Controls.Add(this.textBox1);
+            this.tableLayP_panel.Controls.Add(this.ward_tbx);
             this.tableLayP_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayP_panel.Location = new System.Drawing.Point(3, 3);
             this.tableLayP_panel.Name = "tableLayP_panel";
@@ -342,21 +342,21 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Ward:";
             // 
-            // textBox1
+            // ward_tbx
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 22);
-            this.textBox1.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox1.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 25);
-            this.textBox1.TabIndex = 0;
+            this.ward_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ward_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ward_tbx.Location = new System.Drawing.Point(20, 22);
+            this.ward_tbx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.ward_tbx.MinimumSize = new System.Drawing.Size(241, 25);
+            this.ward_tbx.Name = "ward_tbx";
+            this.ward_tbx.Size = new System.Drawing.Size(241, 25);
+            this.ward_tbx.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.doctorName_tvx);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 60);
             this.panel2.Name = "panel2";
@@ -370,20 +370,20 @@
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(17, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ward:";
+            this.label3.Text = "Doctor:";
             // 
-            // textBox2
+            // doctorName_tvx
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(20, 22);
-            this.textBox2.MaximumSize = new System.Drawing.Size(500, 4);
-            this.textBox2.MinimumSize = new System.Drawing.Size(241, 25);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 25);
-            this.textBox2.TabIndex = 0;
+            this.doctorName_tvx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.doctorName_tvx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doctorName_tvx.Location = new System.Drawing.Point(20, 22);
+            this.doctorName_tvx.MaximumSize = new System.Drawing.Size(500, 4);
+            this.doctorName_tvx.MinimumSize = new System.Drawing.Size(241, 25);
+            this.doctorName_tvx.Name = "doctorName_tvx";
+            this.doctorName_tvx.Size = new System.Drawing.Size(241, 25);
+            this.doctorName_tvx.TabIndex = 0;
             // 
             // TopTable_Panel2
             // 
@@ -487,12 +487,12 @@
             // Ad_Doc_lbl
             // 
             this.Ad_Doc_lbl.AutoSize = true;
-            this.Ad_Doc_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ad_Doc_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ad_Doc_lbl.Location = new System.Drawing.Point(16, 23);
             this.Ad_Doc_lbl.Name = "Ad_Doc_lbl";
-            this.Ad_Doc_lbl.Size = new System.Drawing.Size(147, 32);
+            this.Ad_Doc_lbl.Size = new System.Drawing.Size(276, 24);
             this.Ad_Doc_lbl.TabIndex = 0;
-            this.Ad_Doc_lbl.Text = "Reception";
+            this.Ad_Doc_lbl.Text = "Appointment Management";
             // 
             // label5
             // 
@@ -595,11 +595,11 @@
         private System.Windows.Forms.Panel midpanel;
         private System.Windows.Forms.Panel tableLayP_panel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ward_tbx;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox slots_tbx;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
@@ -610,10 +610,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox location_tbx;
+        private System.Windows.Forms.TextBox date_tbx;
+        private System.Windows.Forms.TextBox duration_tbx;
+        private System.Windows.Forms.TextBox time_tbx;
+        private System.Windows.Forms.TextBox doctorName_tvx;
     }
 }

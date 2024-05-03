@@ -17,7 +17,7 @@ namespace HMS_Software_V._01.Nurse_Ward
     public partial class NurseWard_Dashboard : Form
     {
 
-        public Form NurseWard_TreatePatientFromReferece { get; set; }
+        /*public Form NurseWard_TreatePatientFromReferece { get; set; }*/
 
 
         private MyTableData_Automation automation; //Automation

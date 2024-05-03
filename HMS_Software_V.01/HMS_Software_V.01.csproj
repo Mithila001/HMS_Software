@@ -246,6 +246,12 @@
     <Compile Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.Designer.cs">
       <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_Ward\DoctorWard_Monitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor_Ward\DoctorWard_Monitor.Designer.cs">
+      <DependentUpon>DoctorWard_Monitor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor_Ward\DoctorWard_ProgressNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,18 @@
     </Compile>
     <Compile Include="Nurse_Ward\NurseWard_Dashboard.Designer.cs">
       <DependentUpon>NurseWard_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nurse_Ward\NurseWard_P_Medication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nurse_Ward\NurseWard_P_Medication.Designer.cs">
+      <DependentUpon>NurseWard_P_Medication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nurse_Ward\NurseWard_P_Monitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nurse_Ward\NurseWard_P_Monitor.Designer.cs">
+      <DependentUpon>NurseWard_P_Monitor.cs</DependentUpon>
     </Compile>
     <Compile Include="Nurse_Ward\NurseWard_TreatePatient.cs">
       <SubType>Form</SubType>
@@ -490,6 +508,9 @@
     <EmbeddedResource Include="Doctor_Check\UserControls\DoctorCheck_showAddedClinics.resx">
       <DependentUpon>DoctorCheck_showAddedClinics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctor_Ward\DoctorWard_Monitor.resx">
+      <DependentUpon>DoctorWard_Monitor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor_Ward\DoctorWard_ProgressNote.resx">
       <DependentUpon>DoctorWard_ProgressNote.cs</DependentUpon>
     </EmbeddedResource>
@@ -528,6 +549,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse_Ward\NurseWard_Dashboard.resx">
       <DependentUpon>NurseWard_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nurse_Ward\NurseWard_P_Medication.resx">
+      <DependentUpon>NurseWard_P_Medication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nurse_Ward\NurseWard_P_Monitor.resx">
+      <DependentUpon>NurseWard_P_Monitor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse_Ward\NurseWard_TreatePatient.resx">
       <DependentUpon>NurseWard_TreatePatient.cs</DependentUpon>

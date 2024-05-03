@@ -407,7 +407,7 @@
             this.Bot_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Bot_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.Bot_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.Bot_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.Bot_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
             this.Bot_TableLP.Controls.Add(this.DWPN_DischargeBtn, 0, 0);
             this.Bot_TableLP.Controls.Add(this.DWPN_P_Confirm_btn, 4, 0);
             this.Bot_TableLP.Controls.Add(this.DWPN_P_LabRequest_btn, 3, 0);
@@ -524,6 +524,7 @@
             this.DWPN_Monitor_btn.Text = "Monitor";
             this.DWPN_Monitor_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DWPN_Monitor_btn.UseVisualStyleBackColor = false;
+            this.DWPN_Monitor_btn.Click += new System.EventHandler(this.DWPN_Monitor_btn_Click);
             // 
             // panel5
             // 

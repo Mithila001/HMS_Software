@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace HMS_Software_V._01.Reception
 {
@@ -20,9 +21,11 @@ namespace HMS_Software_V._01.Reception
         private int userID; // Getting userID from Login form
         
         private string receptionName; 
-        public Reception_Dashboard(int userID)
+        public Reception_Dashboard(int userID =5)
         {
             InitializeComponent();
+
+            MyLoadDashboadDetails();
 
             
             this.userID = userID; // Assign the parameter value to the class-level variable
@@ -30,6 +33,55 @@ namespace HMS_Software_V._01.Reception
             MyGetGeneralDetails();
             MyAddGeneralDetals();
             MyLoadUserData();
+        }
+
+        int TodayClinic_Count;
+        int TodayPatienRegistration_Count;
+        private void MyLoadDashboadDetails()
+        {
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    // Create a SQL query to count the records matching today's date
+                    string query = "SELECT COUNT(*) FROM ClinicEvents WHERE CONVERT(date, CE_Date) = @TodayDate";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query, connect))
+                    {
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+
+                        TodayClinic_Count = (int)command.ExecuteScalar();
+
+                  
+                    }
+
+
+                    // Select today Registered patieetns
+                    string query2 = "SELECT COUNT(*) FROM Patient WHERE CONVERT(date, P_RegisteredDate) = @TodayDate";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+
+                        TodayPatienRegistration_Count = (int)command.ExecuteScalar();
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+
+            TodayAvailable_Clinis_lbl.Text = TodayClinic_Count.ToString();
+            Today_Patients_lbl.Text = TodayPatienRegistration_Count.ToString();
+
         }
 
         private void MyGetGeneralDetails()

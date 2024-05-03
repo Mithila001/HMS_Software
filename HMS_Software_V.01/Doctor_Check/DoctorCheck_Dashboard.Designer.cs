@@ -38,7 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.DisplayUnittype_doctors = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.DashB_TotalPatients = new System.Windows.Forms.Label();
             this.DisplayUnittype_patient = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -163,7 +163,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.DisplayUnittype_doctors);
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.DashB_TotalPatients);
             this.panel2.Controls.Add(this.DisplayUnittype_patient);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(255, 103);
@@ -187,22 +187,22 @@
             this.DisplayUnittype_doctors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DisplayUnittype_doctors.AutoSize = true;
             this.DisplayUnittype_doctors.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayUnittype_doctors.Location = new System.Drawing.Point(17, 180);
+            this.DisplayUnittype_doctors.Location = new System.Drawing.Point(56, 180);
             this.DisplayUnittype_doctors.Name = "DisplayUnittype_doctors";
-            this.DisplayUnittype_doctors.Size = new System.Drawing.Size(205, 22);
+            this.DisplayUnittype_doctors.Size = new System.Drawing.Size(124, 22);
             this.DisplayUnittype_doctors.TabIndex = 9;
-            this.DisplayUnittype_doctors.Text = "Available OPD Doctors";
+            this.DisplayUnittype_doctors.Text = "Clinc Doctors";
             // 
-            // label7
+            // DashB_TotalPatients
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(97, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 34);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "20";
+            this.DashB_TotalPatients.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DashB_TotalPatients.AutoSize = true;
+            this.DashB_TotalPatients.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashB_TotalPatients.Location = new System.Drawing.Point(97, 96);
+            this.DashB_TotalPatients.Name = "DashB_TotalPatients";
+            this.DashB_TotalPatients.Size = new System.Drawing.Size(47, 34);
+            this.DashB_TotalPatients.TabIndex = 8;
+            this.DashB_TotalPatients.Text = "20";
             // 
             // DisplayUnittype_patient
             // 
@@ -211,9 +211,9 @@
             this.DisplayUnittype_patient.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisplayUnittype_patient.Location = new System.Drawing.Point(38, 59);
             this.DisplayUnittype_patient.Name = "DisplayUnittype_patient";
-            this.DisplayUnittype_patient.Size = new System.Drawing.Size(170, 22);
+            this.DisplayUnittype_patient.Size = new System.Drawing.Size(179, 22);
             this.DisplayUnittype_patient.TabIndex = 7;
-            this.DisplayUnittype_patient.Text = "Total OPD Patients";
+            this.DisplayUnittype_patient.Text = "Total Patients Today";
             // 
             // panel3
             // 
@@ -453,7 +453,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label DisplayUnittype_doctors;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label DashB_TotalPatients;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label12;

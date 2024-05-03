@@ -46,6 +46,9 @@ namespace HMS_Software_V._01.Admission_Officer
             AODA_patient_Name.Text = PatientName;
             AODA_patient_Gender.Text = PatientGender;
             AODA_patient_Age.Text = PatientAge;
+
+            AOVR_date.Text = DateTime.Now.ToString("d MMMM yyyy");
+            AOVR_time.Text = DateTime.Now.ToString("hh:mm tt");
         }
 
         private void MyCreateMedicalEvnet()

@@ -24,6 +24,8 @@ namespace HMS_Software_V._01.Nurse_Ward
 {
     public partial class NurseWard_TreatePatient : Form
     {
+        
+        
 
         public Form DashboardFormReference { get; set; } //Getting Dashboard From refferece from the user control
 
@@ -74,15 +76,15 @@ namespace HMS_Software_V._01.Nurse_Ward
             {
                 foreach (var userDetails in userControlDetailsList)
                 {
-                    Console.WriteLine($"Checking user control details for NurseID: {userDetails.JSON_NurseID} and PatientID: {userDetails.JSON_PatientID}");
+                    
 
                     // Check if the NurseID matches the desired NurseID
                     if (userDetails.JSON_NurseID == NurseID && userDetails.JSON_PatientID == PatientRID)
                     {
-                        Console.WriteLine("Match found for NurseID and PatientID.");
+                       
                         isMatchFoundFromJSON = true;
 
-                        Console.WriteLine("Creating new user control...");
+              
 
                         // Assign values to the user controls
                         NWTP_PatientMedicalEvents nWTP_PatientMedicalEvents2 = new NWTP_PatientMedicalEvents();
@@ -91,10 +93,10 @@ namespace HMS_Software_V._01.Nurse_Ward
                         nWTP_PatientMedicalEvents2.NWTPUC_RequestType.Text = userDetails.JSON_RequestType;
                         nWTP_PatientMedicalEvents2.NWTPUC_RequestDetaills.Text = userDetails.JSON_RequestDetails;
 
-                        Console.WriteLine("Adding user control to the panel...");
+                      
                         P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents2);
 
-                        Console.WriteLine("User control added successfully.");
+ 
 
                         // Find the corresponding user control by iterating through controls
                         foreach (Control control in P_MedicalEvents_FlowLP.Controls)
@@ -267,8 +269,15 @@ namespace HMS_Software_V._01.Nurse_Ward
                                 nWTP_PatientMedicalEvents.NWTP_NuresID = NurseID;
                                 nWTP_PatientMedicalEvents.NWTP_Patient_RID = PatientRID;
                                 nWTP_PatientMedicalEvents.NWTP_Patient_MEID = PatientMEID;
+                                nWTP_PatientMedicalEvents.NWTTP_MonitorRequest_ID = PatientMonitorRequestID;
+                                nWTP_PatientMedicalEvents.NWTP_PrescriptionRequestIDs = PrescriptionRequestIDs;
 
-                               
+
+
+                                // Referecne 
+                                /*nWTP_PatientMedicalEvents.NurseWard_TreatePatientFormReference = this;*/
+
+
                                 //--------------------------------------------------------------------------------------------------------------------------------
                                 //Check If there are Prescription request table is available
                                 if (!string.IsNullOrEmpty(PrescriptionRequestIDs))
@@ -276,7 +285,9 @@ namespace HMS_Software_V._01.Nurse_Ward
                                     /*Console.WriteLine("Prescription Request IDs is available");*/
 
                                     nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text = "Medication";
-                                    nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text = PrescriptionRequestIDs + " for Now";
+                                    nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text = "IDs: "+PrescriptionRequestIDs;
+
+                                    nWTP_PatientMedicalEvents.NWTP_RequestType = "Medication";
 
                                     P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents);
 
@@ -294,6 +305,15 @@ namespace HMS_Software_V._01.Nurse_Ward
 
                                     // Generate UserControl for that list
                                     MyGenerateLabTaks(LabRequestID_Lists);
+                                }
+
+                                if(PatientMonitorRequestID != 0)
+                                {
+                                    nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text = "Monitor";
+                                    nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text = PatientMonitorRequestID + " for Now";
+                                    P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents);
+
+                                    nWTP_PatientMedicalEvents.NWTP_RequestType = "Monitor";
                                 }
 
 
@@ -430,6 +450,8 @@ namespace HMS_Software_V._01.Nurse_Ward
                                         // Add values to the user control
                                         nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text = "Lab Request";
                                         nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text = DisplayLabInfo;
+
+                                        nWTP_PatientMedicalEvents.NWTP_RequestType = "Lab Request";
 
                                         //---------------------------------------------------------------------------------------------------------------------------------------
 

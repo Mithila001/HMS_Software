@@ -63,6 +63,10 @@ namespace HMS_Software_V._01.Admission_Officer
         //Getting Data from tables
         private void MyLoadData()
         {
+            AOVR_date.Text = DateTime.Now.ToString("d MMMM yyyy");
+            AOVR_time.Text = DateTime.Now.ToString("hh:mm tt");
+
+
             try
             {
                 connect.Open();

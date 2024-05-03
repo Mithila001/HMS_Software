@@ -39,24 +39,18 @@
             this.DWD_name = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.label5 = new System.Windows.Forms.Label();
-            this.DWD_Round = new System.Windows.Forms.Label();
+            this.DWD_TotalPending = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             this.label9 = new System.Windows.Forms.Label();
             this.DWD_TotalCompleted = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.DWD_TotalPending = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.DWD_SearchPatient_tbx = new System.Windows.Forms.TextBox();
             this.DWD_DisplayInPatient_FlowLP = new System.Windows.Forms.FlowLayoutPanel();
             this.base_TableLP.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // base_TableLP
@@ -65,16 +59,15 @@
             this.base_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.base_TableLP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.base_TableLP.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.base_TableLP.Controls.Add(this.panel4, 0, 1);
-            this.base_TableLP.Controls.Add(this.DWD_DisplayInPatient_FlowLP, 0, 2);
+            this.base_TableLP.Controls.Add(this.DWD_DisplayInPatient_FlowLP, 0, 1);
             this.base_TableLP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.base_TableLP.Location = new System.Drawing.Point(0, 0);
             this.base_TableLP.Margin = new System.Windows.Forms.Padding(0);
             this.base_TableLP.Name = "base_TableLP";
-            this.base_TableLP.RowCount = 3;
+            this.base_TableLP.RowCount = 2;
             this.base_TableLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.base_TableLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.base_TableLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.base_TableLP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.base_TableLP.Size = new System.Drawing.Size(1008, 537);
             this.base_TableLP.TabIndex = 0;
             // 
@@ -189,8 +182,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.panel2.Controls.Add(this.materialDivider1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.DWD_Round);
+            this.panel2.Controls.Add(this.DWD_TotalPending);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(454, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -211,27 +204,27 @@
             this.materialDivider1.TabIndex = 12;
             this.materialDivider1.Text = "materialDivider1";
             // 
-            // label5
+            // DWD_TotalPending
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 18);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Round: ";
+            this.DWD_TotalPending.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DWD_TotalPending.AutoSize = true;
+            this.DWD_TotalPending.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DWD_TotalPending.Location = new System.Drawing.Point(142, 33);
+            this.DWD_TotalPending.Name = "DWD_TotalPending";
+            this.DWD_TotalPending.Size = new System.Drawing.Size(44, 32);
+            this.DWD_TotalPending.TabIndex = 11;
+            this.DWD_TotalPending.Text = "34";
             // 
-            // DWD_Round
+            // label7
             // 
-            this.DWD_Round.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DWD_Round.AutoSize = true;
-            this.DWD_Round.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DWD_Round.Location = new System.Drawing.Point(126, 32);
-            this.DWD_Round.Name = "DWD_Round";
-            this.DWD_Round.Size = new System.Drawing.Size(44, 32);
-            this.DWD_Round.TabIndex = 9;
-            this.DWD_Round.Text = "34";
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(19, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 18);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Total Pending:";
             // 
             // panel3
             // 
@@ -239,8 +232,6 @@
             this.panel3.Controls.Add(this.materialDivider3);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.DWD_TotalCompleted);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.DWD_TotalPending);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(681, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
@@ -266,7 +257,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 62);
+            this.label9.Location = new System.Drawing.Point(27, 40);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 18);
             this.label9.TabIndex = 14;
@@ -277,76 +268,21 @@
             this.DWD_TotalCompleted.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DWD_TotalCompleted.AutoSize = true;
             this.DWD_TotalCompleted.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DWD_TotalCompleted.Location = new System.Drawing.Point(151, 55);
+            this.DWD_TotalCompleted.Location = new System.Drawing.Point(158, 33);
             this.DWD_TotalCompleted.Name = "DWD_TotalCompleted";
             this.DWD_TotalCompleted.Size = new System.Drawing.Size(44, 32);
             this.DWD_TotalCompleted.TabIndex = 13;
             this.DWD_TotalCompleted.Text = "34";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 18);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Total Pending:";
-            // 
-            // DWD_TotalPending
-            // 
-            this.DWD_TotalPending.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DWD_TotalPending.AutoSize = true;
-            this.DWD_TotalPending.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DWD_TotalPending.Location = new System.Drawing.Point(151, 9);
-            this.DWD_TotalPending.Name = "DWD_TotalPending";
-            this.DWD_TotalPending.Size = new System.Drawing.Size(44, 32);
-            this.DWD_TotalPending.TabIndex = 11;
-            this.DWD_TotalPending.Text = "34";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.base_TableLP.SetColumnSpan(this.panel4, 2);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.DWD_SearchPatient_tbx);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 103);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1008, 47);
-            this.panel4.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(844, 14);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 18);
-            this.label11.TabIndex = 59;
-            this.label11.Text = "Search by RID";
-            // 
-            // DWD_SearchPatient_tbx
-            // 
-            this.DWD_SearchPatient_tbx.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.DWD_SearchPatient_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DWD_SearchPatient_tbx.Location = new System.Drawing.Point(620, 11);
-            this.DWD_SearchPatient_tbx.Name = "DWD_SearchPatient_tbx";
-            this.DWD_SearchPatient_tbx.Size = new System.Drawing.Size(217, 25);
-            this.DWD_SearchPatient_tbx.TabIndex = 58;
             // 
             // DWD_DisplayInPatient_FlowLP
             // 
             this.DWD_DisplayInPatient_FlowLP.AutoScroll = true;
             this.base_TableLP.SetColumnSpan(this.DWD_DisplayInPatient_FlowLP, 2);
             this.DWD_DisplayInPatient_FlowLP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DWD_DisplayInPatient_FlowLP.Location = new System.Drawing.Point(1, 151);
-            this.DWD_DisplayInPatient_FlowLP.Margin = new System.Windows.Forms.Padding(1);
+            this.DWD_DisplayInPatient_FlowLP.Location = new System.Drawing.Point(1, 110);
+            this.DWD_DisplayInPatient_FlowLP.Margin = new System.Windows.Forms.Padding(1, 10, 1, 1);
             this.DWD_DisplayInPatient_FlowLP.Name = "DWD_DisplayInPatient_FlowLP";
-            this.DWD_DisplayInPatient_FlowLP.Size = new System.Drawing.Size(1006, 385);
+            this.DWD_DisplayInPatient_FlowLP.Size = new System.Drawing.Size(1006, 426);
             this.DWD_DisplayInPatient_FlowLP.TabIndex = 2;
             // 
             // DoctorWard_Dashboard
@@ -367,8 +303,6 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -385,15 +319,10 @@
         private System.Windows.Forms.Label DWD_WarName;
         private System.Windows.Forms.Label DWD_Completed;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label DWD_Round;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label DWD_TotalCompleted;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label DWD_TotalPending;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox DWD_SearchPatient_tbx;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.FlowLayoutPanel DWD_DisplayInPatient_FlowLP;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;

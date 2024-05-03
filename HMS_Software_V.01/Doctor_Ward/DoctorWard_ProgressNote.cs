@@ -440,5 +440,14 @@ namespace HMS_Software_V._01.Doctor_Ward
             this.Hide();
 
         }
+
+        private void DWPN_Monitor_btn_Click(object sender, EventArgs e)
+        {
+            DoctorWard_Monitor doctorWard_Monitor = new DoctorWard_Monitor(DoctorName,WardName,PatientRID, PatientMID, DoctorID);
+            doctorWard_Monitor.DoctorPatientCheckWardFromReferece = this;
+            doctorWard_Monitor.Show();
+            
+
+        }
     }
 }

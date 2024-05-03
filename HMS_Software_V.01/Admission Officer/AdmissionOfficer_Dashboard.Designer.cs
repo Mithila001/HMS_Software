@@ -30,18 +30,19 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.TotalToday_Patients = new System.Windows.Forms.Label();
+            this.lab = new System.Windows.Forms.Label();
+            this.TotalAdmitted_Patients = new System.Windows.Forms.Label();
             this.DisplayUnittype_doctors = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Total_Admitted_Today = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.TotalAdmitRequests = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.TodayTime_lbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.AOVR_ward_tbx = new System.Windows.Forms.TextBox();
             this.AOD_directAdmit_btn = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.admitRequests_FlowLP = new System.Windows.Forms.FlowLayoutPanel();
@@ -56,7 +57,6 @@
             this.panel7_2nd = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
-            this.AOVR_ward_tbx = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -93,9 +93,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.TotalToday_Patients);
+            this.panel1.Controls.Add(this.lab);
+            this.panel1.Controls.Add(this.TotalAdmitted_Patients);
             this.panel1.Controls.Add(this.DisplayUnittype_doctors);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 120);
@@ -104,56 +104,56 @@
             this.panel1.Size = new System.Drawing.Size(212, 257);
             this.panel1.TabIndex = 3;
             // 
-            // label3
+            // TotalToday_Patients
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(82, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 34);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "20";
+            this.TotalToday_Patients.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TotalToday_Patients.AutoSize = true;
+            this.TotalToday_Patients.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalToday_Patients.Location = new System.Drawing.Point(82, 189);
+            this.TotalToday_Patients.Name = "TotalToday_Patients";
+            this.TotalToday_Patients.Size = new System.Drawing.Size(47, 34);
+            this.TotalToday_Patients.TabIndex = 14;
+            this.TotalToday_Patients.Text = "20";
             // 
-            // label4
+            // lab
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 17);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Total OPD Patients";
+            this.lab.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lab.AutoSize = true;
+            this.lab.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab.Location = new System.Drawing.Point(38, 161);
+            this.lab.Name = "lab";
+            this.lab.Size = new System.Drawing.Size(137, 17);
+            this.lab.TabIndex = 13;
+            this.lab.Text = "Total Patients Today";
             // 
-            // label9
+            // TotalAdmitted_Patients
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(82, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 34);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "20";
+            this.TotalAdmitted_Patients.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TotalAdmitted_Patients.AutoSize = true;
+            this.TotalAdmitted_Patients.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAdmitted_Patients.Location = new System.Drawing.Point(82, 69);
+            this.TotalAdmitted_Patients.Name = "TotalAdmitted_Patients";
+            this.TotalAdmitted_Patients.Size = new System.Drawing.Size(47, 34);
+            this.TotalAdmitted_Patients.TabIndex = 12;
+            this.TotalAdmitted_Patients.Text = "20";
             // 
             // DisplayUnittype_doctors
             // 
             this.DisplayUnittype_doctors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DisplayUnittype_doctors.AutoSize = true;
             this.DisplayUnittype_doctors.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayUnittype_doctors.Location = new System.Drawing.Point(38, 43);
+            this.DisplayUnittype_doctors.Location = new System.Drawing.Point(28, 43);
             this.DisplayUnittype_doctors.Name = "DisplayUnittype_doctors";
-            this.DisplayUnittype_doctors.Size = new System.Drawing.Size(135, 17);
+            this.DisplayUnittype_doctors.Size = new System.Drawing.Size(155, 17);
             this.DisplayUnittype_doctors.TabIndex = 11;
-            this.DisplayUnittype_doctors.Text = "Total Clinic Patients";
+            this.DisplayUnittype_doctors.Text = "Total Admitted Patients";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.Total_Admitted_Today);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.TotalAdmitRequests);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(272, 120);
@@ -162,16 +162,16 @@
             this.panel2.Size = new System.Drawing.Size(212, 257);
             this.panel2.TabIndex = 4;
             // 
-            // label7
+            // Total_Admitted_Today
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(81, 189);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 34);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "20";
+            this.Total_Admitted_Today.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Total_Admitted_Today.AutoSize = true;
+            this.Total_Admitted_Today.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Admitted_Today.Location = new System.Drawing.Point(81, 189);
+            this.Total_Admitted_Today.Name = "Total_Admitted_Today";
+            this.Total_Admitted_Today.Size = new System.Drawing.Size(47, 34);
+            this.Total_Admitted_Today.TabIndex = 16;
+            this.Total_Admitted_Today.Text = "20";
             // 
             // label8
             // 
@@ -184,16 +184,16 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Admited Today";
             // 
-            // label5
+            // TotalAdmitRequests
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(81, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 34);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "20";
+            this.TotalAdmitRequests.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TotalAdmitRequests.AutoSize = true;
+            this.TotalAdmitRequests.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAdmitRequests.Location = new System.Drawing.Point(81, 69);
+            this.TotalAdmitRequests.Name = "TotalAdmitRequests";
+            this.TotalAdmitRequests.Size = new System.Drawing.Size(47, 34);
+            this.TotalAdmitRequests.TabIndex = 14;
+            this.TotalAdmitRequests.Text = "20";
             // 
             // label6
             // 
@@ -209,7 +209,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.TodayTime_lbl);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(20, 417);
             this.panel3.Margin = new System.Windows.Forms.Padding(20);
@@ -217,16 +217,16 @@
             this.panel3.Size = new System.Drawing.Size(212, 100);
             this.panel3.TabIndex = 5;
             // 
-            // label10
+            // TodayTime_lbl
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(166, 41);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "12.40 pm";
+            this.TodayTime_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TodayTime_lbl.AutoSize = true;
+            this.TodayTime_lbl.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TodayTime_lbl.Location = new System.Drawing.Point(21, 32);
+            this.TodayTime_lbl.Name = "TodayTime_lbl";
+            this.TodayTime_lbl.Size = new System.Drawing.Size(166, 41);
+            this.TodayTime_lbl.TabIndex = 13;
+            this.TodayTime_lbl.Text = "12.40 pm";
             // 
             // panel4
             // 
@@ -238,6 +238,15 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(246, 134);
             this.panel4.TabIndex = 6;
+            // 
+            // AOVR_ward_tbx
+            // 
+            this.AOVR_ward_tbx.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AOVR_ward_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AOVR_ward_tbx.Location = new System.Drawing.Point(35, 49);
+            this.AOVR_ward_tbx.Name = "AOVR_ward_tbx";
+            this.AOVR_ward_tbx.Size = new System.Drawing.Size(181, 25);
+            this.AOVR_ward_tbx.TabIndex = 57;
             // 
             // AOD_directAdmit_btn
             // 
@@ -361,7 +370,7 @@
             this.AOD_time.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AOD_time.AutoSize = true;
             this.AOD_time.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AOD_time.Location = new System.Drawing.Point(75, 57);
+            this.AOD_time.Location = new System.Drawing.Point(46, 57);
             this.AOD_time.Name = "AOD_time";
             this.AOD_time.Size = new System.Drawing.Size(59, 24);
             this.AOD_time.TabIndex = 7;
@@ -372,7 +381,7 @@
             this.AOD_date.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AOD_date.AutoSize = true;
             this.AOD_date.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AOD_date.Location = new System.Drawing.Point(75, 15);
+            this.AOD_date.Location = new System.Drawing.Point(46, 15);
             this.AOD_date.Name = "AOD_date";
             this.AOD_date.Size = new System.Drawing.Size(56, 24);
             this.AOD_date.TabIndex = 6;
@@ -413,15 +422,6 @@
             this.materialDivider2.Size = new System.Drawing.Size(3, 80);
             this.materialDivider2.TabIndex = 10;
             this.materialDivider2.Text = "materialDivider2";
-            // 
-            // AOVR_ward_tbx
-            // 
-            this.AOVR_ward_tbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AOVR_ward_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AOVR_ward_tbx.Location = new System.Drawing.Point(35, 49);
-            this.AOVR_ward_tbx.Name = "AOVR_ward_tbx";
-            this.AOVR_ward_tbx.Size = new System.Drawing.Size(181, 25);
-            this.AOVR_ward_tbx.TabIndex = 57;
             // 
             // AdmissionOfficer_Dashboard
             // 
@@ -472,15 +472,15 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label TotalToday_Patients;
+        private System.Windows.Forms.Label lab;
+        private System.Windows.Forms.Label TotalAdmitted_Patients;
         private System.Windows.Forms.Label DisplayUnittype_doctors;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Total_Admitted_Today;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label TotalAdmitRequests;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label TodayTime_lbl;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button AOD_directAdmit_btn;
         private System.Windows.Forms.TextBox AOVR_ward_tbx;

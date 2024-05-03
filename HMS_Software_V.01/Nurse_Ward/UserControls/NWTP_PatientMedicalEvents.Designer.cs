@@ -79,6 +79,7 @@
             this.NWTPUC_View_btn.TabIndex = 58;
             this.NWTPUC_View_btn.Text = "View";
             this.NWTPUC_View_btn.UseVisualStyleBackColor = false;
+            this.NWTPUC_View_btn.Click += new System.EventHandler(this.NWTPUC_View_btn_Click);
             // 
             // panel3
             // 

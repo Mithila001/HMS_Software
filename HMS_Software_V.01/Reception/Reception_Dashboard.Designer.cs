@@ -32,7 +32,6 @@
             this.flowLayoutPanel_RD_mid = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel_RD_left = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_RD_top = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.time_lbl = new System.Windows.Forms.Label();
             this.date_lbl = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -40,9 +39,9 @@
             this.RD_receptionName_lbl = new System.Windows.Forms.Label();
             this.panel_RD_midTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Today_Patients_lbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.TodayAvailable_Clinis_lbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_RD_right = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_RD_midBot = new System.Windows.Forms.Panel();
@@ -129,7 +128,6 @@
             // 
             this.panel_RD_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.tableLayoutPanel_R_D.SetColumnSpan(this.panel_RD_top, 3);
-            this.panel_RD_top.Controls.Add(this.label5);
             this.panel_RD_top.Controls.Add(this.time_lbl);
             this.panel_RD_top.Controls.Add(this.date_lbl);
             this.panel_RD_top.Controls.Add(this.materialDivider1);
@@ -141,25 +139,14 @@
             this.panel_RD_top.Size = new System.Drawing.Size(1002, 94);
             this.panel_RD_top.TabIndex = 1;
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(677, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Time";
-            // 
             // time_lbl
             // 
             this.time_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.time_lbl.AutoSize = true;
-            this.time_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time_lbl.Location = new System.Drawing.Point(427, 58);
+            this.time_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time_lbl.Location = new System.Drawing.Point(411, 34);
             this.time_lbl.Name = "time_lbl";
-            this.time_lbl.Size = new System.Drawing.Size(59, 24);
+            this.time_lbl.Size = new System.Drawing.Size(81, 32);
             this.time_lbl.TabIndex = 5;
             this.time_lbl.Text = "Time";
             // 
@@ -167,10 +154,10 @@
             // 
             this.date_lbl.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.date_lbl.AutoSize = true;
-            this.date_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_lbl.Location = new System.Drawing.Point(427, 16);
+            this.date_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_lbl.Location = new System.Drawing.Point(588, 34);
             this.date_lbl.Name = "date_lbl";
-            this.date_lbl.Size = new System.Drawing.Size(56, 24);
+            this.date_lbl.Size = new System.Drawing.Size(73, 32);
             this.date_lbl.TabIndex = 4;
             this.date_lbl.Text = "Date";
             // 
@@ -213,7 +200,7 @@
             // 
             this.panel_RD_midTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel_RD_midTop.Controls.Add(this.panel1);
-            this.panel_RD_midTop.Controls.Add(this.label9);
+            this.panel_RD_midTop.Controls.Add(this.TodayAvailable_Clinis_lbl);
             this.panel_RD_midTop.Controls.Add(this.label8);
             this.panel_RD_midTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_RD_midTop.Location = new System.Drawing.Point(3, 103);
@@ -229,23 +216,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.Today_Patients_lbl);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(26, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 89);
             this.panel1.TabIndex = 10;
             // 
-            // label11
+            // Today_Patients_lbl
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(114, 51);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 32);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "10";
+            this.Today_Patients_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Today_Patients_lbl.AutoSize = true;
+            this.Today_Patients_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Today_Patients_lbl.Location = new System.Drawing.Point(114, 51);
+            this.Today_Patients_lbl.Name = "Today_Patients_lbl";
+            this.Today_Patients_lbl.Size = new System.Drawing.Size(44, 32);
+            this.Today_Patients_lbl.TabIndex = 11;
+            this.Today_Patients_lbl.Text = "10";
             // 
             // label10
             // 
@@ -258,16 +245,16 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "Todays Patients";
             // 
-            // label9
+            // TodayAvailable_Clinis_lbl
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(141, 143);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 29);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "10";
+            this.TodayAvailable_Clinis_lbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TodayAvailable_Clinis_lbl.AutoSize = true;
+            this.TodayAvailable_Clinis_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TodayAvailable_Clinis_lbl.Location = new System.Drawing.Point(141, 143);
+            this.TodayAvailable_Clinis_lbl.Name = "TodayAvailable_Clinis_lbl";
+            this.TodayAvailable_Clinis_lbl.Size = new System.Drawing.Size(39, 29);
+            this.TodayAvailable_Clinis_lbl.TabIndex = 9;
+            this.TodayAvailable_Clinis_lbl.Text = "10";
             // 
             // label8
             // 
@@ -460,15 +447,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button R_Clinic_btn;
         private System.Windows.Forms.Button R_search_btn;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel_topMid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel_topRight;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label TodayAvailable_Clinis_lbl;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Today_Patients_lbl;
         private System.Windows.Forms.Panel panel1;
     }
 }

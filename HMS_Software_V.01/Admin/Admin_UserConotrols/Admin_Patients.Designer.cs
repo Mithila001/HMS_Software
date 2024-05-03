@@ -45,13 +45,13 @@
             this.buttonPanel = new System.Windows.Forms.Panel();
             this.SearchPatient_btn = new System.Windows.Forms.Button();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.Ad_Doc_TotOPDDoc_lbl = new System.Windows.Forms.Label();
+            this.Tot_ClinicPatients = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.Ad_Doc_TotalCon_lbl = new System.Windows.Forms.Label();
+            this.Total_Patients = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.Ad_Doc_TotalDoc_lbl = new System.Windows.Forms.Label();
+            this.Total_Inpatients = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Ad_home_top_panel.SuspendLayout();
             this.top_tableLayoutPanle.SuspendLayout();
@@ -271,7 +271,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.Ad_Doc_TotOPDDoc_lbl);
+            this.materialCard3.Controls.Add(this.Tot_ClinicPatients);
             this.materialCard3.Controls.Add(this.label11);
             this.materialCard3.Depth = 0;
             this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -283,27 +283,27 @@
             this.materialCard3.Size = new System.Drawing.Size(234, 121);
             this.materialCard3.TabIndex = 6;
             // 
-            // Ad_Doc_TotOPDDoc_lbl
+            // Tot_ClinicPatients
             // 
-            this.Ad_Doc_TotOPDDoc_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Ad_Doc_TotOPDDoc_lbl.AutoSize = true;
-            this.Ad_Doc_TotOPDDoc_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_Doc_TotOPDDoc_lbl.Location = new System.Drawing.Point(95, 67);
-            this.Ad_Doc_TotOPDDoc_lbl.Name = "Ad_Doc_TotOPDDoc_lbl";
-            this.Ad_Doc_TotOPDDoc_lbl.Size = new System.Drawing.Size(44, 32);
-            this.Ad_Doc_TotOPDDoc_lbl.TabIndex = 5;
-            this.Ad_Doc_TotOPDDoc_lbl.Text = "51";
+            this.Tot_ClinicPatients.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Tot_ClinicPatients.AutoSize = true;
+            this.Tot_ClinicPatients.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tot_ClinicPatients.Location = new System.Drawing.Point(95, 67);
+            this.Tot_ClinicPatients.Name = "Tot_ClinicPatients";
+            this.Tot_ClinicPatients.Size = new System.Drawing.Size(44, 32);
+            this.Tot_ClinicPatients.TabIndex = 5;
+            this.Tot_ClinicPatients.Text = "51";
             // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 14);
+            this.label11.Location = new System.Drawing.Point(14, 14);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(219, 24);
+            this.label11.Size = new System.Drawing.Size(207, 24);
             this.label11.TabIndex = 4;
-            this.label11.Text = "Today Clinic Patients";
+            this.label11.Text = "Total Clinic Patients";
             // 
             // materialCard2
             // 
@@ -311,7 +311,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.Ad_Doc_TotalCon_lbl);
+            this.materialCard2.Controls.Add(this.Total_Patients);
             this.materialCard2.Controls.Add(this.label9);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -323,27 +323,27 @@
             this.materialCard2.Size = new System.Drawing.Size(232, 121);
             this.materialCard2.TabIndex = 6;
             // 
-            // Ad_Doc_TotalCon_lbl
+            // Total_Patients
             // 
-            this.Ad_Doc_TotalCon_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Ad_Doc_TotalCon_lbl.AutoSize = true;
-            this.Ad_Doc_TotalCon_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_Doc_TotalCon_lbl.Location = new System.Drawing.Point(93, 67);
-            this.Ad_Doc_TotalCon_lbl.Name = "Ad_Doc_TotalCon_lbl";
-            this.Ad_Doc_TotalCon_lbl.Size = new System.Drawing.Size(44, 32);
-            this.Ad_Doc_TotalCon_lbl.TabIndex = 5;
-            this.Ad_Doc_TotalCon_lbl.Text = "51";
+            this.Total_Patients.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Total_Patients.AutoSize = true;
+            this.Total_Patients.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Patients.Location = new System.Drawing.Point(93, 67);
+            this.Total_Patients.Name = "Total_Patients";
+            this.Total_Patients.Size = new System.Drawing.Size(44, 32);
+            this.Total_Patients.TabIndex = 5;
+            this.Total_Patients.Text = "51";
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 14);
+            this.label9.Location = new System.Drawing.Point(46, 14);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(209, 24);
+            this.label9.Size = new System.Drawing.Size(146, 24);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Today OPD Patients";
+            this.label9.Text = "Total Patients";
             // 
             // materialCard1
             // 
@@ -351,7 +351,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.Ad_Doc_TotalDoc_lbl);
+            this.materialCard1.Controls.Add(this.Total_Inpatients);
             this.materialCard1.Controls.Add(this.label6);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -363,16 +363,16 @@
             this.materialCard1.Size = new System.Drawing.Size(232, 121);
             this.materialCard1.TabIndex = 0;
             // 
-            // Ad_Doc_TotalDoc_lbl
+            // Total_Inpatients
             // 
-            this.Ad_Doc_TotalDoc_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Ad_Doc_TotalDoc_lbl.AutoSize = true;
-            this.Ad_Doc_TotalDoc_lbl.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_Doc_TotalDoc_lbl.Location = new System.Drawing.Point(90, 67);
-            this.Ad_Doc_TotalDoc_lbl.Name = "Ad_Doc_TotalDoc_lbl";
-            this.Ad_Doc_TotalDoc_lbl.Size = new System.Drawing.Size(44, 32);
-            this.Ad_Doc_TotalDoc_lbl.TabIndex = 5;
-            this.Ad_Doc_TotalDoc_lbl.Text = "51";
+            this.Total_Inpatients.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Total_Inpatients.AutoSize = true;
+            this.Total_Inpatients.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total_Inpatients.Location = new System.Drawing.Point(90, 67);
+            this.Total_Inpatients.Name = "Total_Inpatients";
+            this.Total_Inpatients.Size = new System.Drawing.Size(44, 32);
+            this.Total_Inpatients.TabIndex = 5;
+            this.Total_Inpatients.Text = "51";
             // 
             // label6
             // 
@@ -432,13 +432,13 @@
         private System.Windows.Forms.Panel Ad_home_bottom_panel;
         private System.Windows.Forms.TableLayoutPanel bottom_tableLayoutPanel1;
         private MaterialSkin.Controls.MaterialCard materialCard3;
-        private System.Windows.Forms.Label Ad_Doc_TotOPDDoc_lbl;
+        private System.Windows.Forms.Label Tot_ClinicPatients;
         private System.Windows.Forms.Label label11;
         private MaterialSkin.Controls.MaterialCard materialCard2;
-        private System.Windows.Forms.Label Ad_Doc_TotalCon_lbl;
+        private System.Windows.Forms.Label Total_Patients;
         private System.Windows.Forms.Label label9;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.Label Ad_Doc_TotalDoc_lbl;
+        private System.Windows.Forms.Label Total_Inpatients;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel buttonPanel;
         private System.Windows.Forms.Button SearchPatient_btn;

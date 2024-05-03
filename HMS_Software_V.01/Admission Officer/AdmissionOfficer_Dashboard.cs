@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace HMS_Software_V._01.Admition_Officer
 {
@@ -21,16 +22,103 @@ namespace HMS_Software_V._01.Admition_Officer
         SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString);
 
         private int AdmissionOfficerID;
-        public AdmissionOfficer_Dashboard(int userID)
+        public AdmissionOfficer_Dashboard(int userID =7)
         {
             InitializeComponent();
             this.AdmissionOfficerID = userID;
 
+            MyLoadDashboadDetails();
+
             LoadBasicData();
+
 
             LoadAdmitRequestData();
 
         }
+
+
+        int TotalAdmitted_Patients_Count;
+        int Total_Patients_Today;
+        int Admit_RequestCount;
+        int Admitted_TodayCount;
+       
+        private void MyLoadDashboadDetails()
+        {
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    // Create a SQL query to count the records matching today's date
+                    string query1 = "SELECT COUNT(*) FROM Admitted_Patients";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query1, connect))
+                    {
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+
+                        TotalAdmitted_Patients_Count = (int)command.ExecuteScalar();
+
+
+                    }
+
+
+                    // Select today Registered patieetns
+                    string query2 = "SELECT COUNT(*) FROM Admitted_Patients WHERE CONVERT(date, P_Admitted_Date) = @TodayDate";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+
+                        Total_Patients_Today = (int)command.ExecuteScalar();
+
+
+                    }
+
+                    // Select today Registered patieetns
+                    string query3 = "SELECT COUNT(*) FROM Patient_Admit WHERE Is_Admitted = @Is_Admitted";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query3, connect))
+                    {
+                        command.Parameters.AddWithValue("@Is_Admitted", 0);
+
+                        Admit_RequestCount = (int)command.ExecuteScalar();
+
+
+                    }
+
+                    // Select today Registered patieetns
+                    string query4 = "SELECT COUNT(*) FROM Patient_Admit WHERE Is_Admitted = @Is_Admitted AND CONVERT(date, Requested_Date) = @TodayDate";
+
+                    // Create a command with the SQL query and the connection
+                    using (SqlCommand command = new SqlCommand(query4, connect))
+                    {
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+
+                        Admitted_TodayCount = (int)command.ExecuteScalar();
+
+
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+
+            TotalAdmitted_Patients.Text = TotalAdmitted_Patients_Count.ToString();
+            TotalToday_Patients.Text = Total_Patients_Today.ToString();
+            TotalAdmitRequests.Text = Admit_RequestCount.ToString();
+            Total_Admitted_Today.Text = Admitted_TodayCount.ToString();
+
+        }
+
 
         private string AO_Name;
         private string AO_Position;
@@ -75,9 +163,14 @@ namespace HMS_Software_V._01.Admition_Officer
                 }
 
                 AOD_name.Text = AO_Name;
+                TodayTime_lbl.Text = DateTime.Now.ToString("hh:mm tt");
+
+                AOD_date.Text = DateTime.Now.ToString("d MMMM yyyy");
+                AOD_time.Text = DateTime.Now.ToString("hh:mm tt");
+
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine("Error1:" + ex);

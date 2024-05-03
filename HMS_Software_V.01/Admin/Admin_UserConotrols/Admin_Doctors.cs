@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace HMS_Software_V._01.Admin.Admin_UserConotrols
 {
@@ -15,6 +17,8 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
         public Admin_Doctors()
         {
             InitializeComponent();
+
+            MyLoadDashboardData();
         }
 
         public void MySendDataToUserControl(string adminName, string date, string time)
@@ -45,6 +49,54 @@ namespace HMS_Software_V._01.Admin.Admin_UserConotrols
             Form parentForm = this.FindForm();  
             parentForm.Hide();
             
+        }
+
+        int TotalDoctors;
+        int TotalOPDDoctors;
+        int TotalPatients;
+        int TotalReceptions;
+        int TotalWards;
+        int TotalClinics;
+
+        private void MyLoadDashboardData()
+        {
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
+                {
+                    connect.Open();
+
+                    // Total Doctors
+                    string query1 = "SELECT COUNT(*) FROM Doctor";
+
+                    using (SqlCommand command = new SqlCommand(query1, connect))
+                    {
+                        TotalDoctors = (int)command.ExecuteScalar();
+                        
+                    }
+
+                    // Total Clinic and OPD Doctors
+                    string query2 = "SELECT COUNT(DISTINCT Doctor_ID) FROM ClinicEvents";
+
+                    using (SqlCommand command = new SqlCommand(query2, connect))
+                    {
+                        TotalOPDDoctors = (int)command.ExecuteScalar();
+                        
+                    }
+                }
+                    
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error1: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            Ad_Doc_TotalDoc_lbl.Text = TotalDoctors.ToString();
+            Ad_Doc_TotClincDoc_lbl.Text = TotalOPDDoctors.ToString();
+            Ad_Doc_TotOPDDoc_lbl.Text = TotalOPDDoctors.ToString();
+
+
         }
     }
 }

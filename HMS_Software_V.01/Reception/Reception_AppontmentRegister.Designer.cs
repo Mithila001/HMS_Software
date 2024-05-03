@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.RPR_clinicName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.RPR_RegistrationNo_tbx = new System.Windows.Forms.TextBox();
             this.RPR_assign_btn = new System.Windows.Forms.Button();
+            this.RPR_RegistrationNo_tbx = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.RPR_clinicName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,36 +47,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(621, 283);
             this.panel1.TabIndex = 0;
-            // 
-            // RPR_clinicName
-            // 
-            this.RPR_clinicName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.RPR_clinicName.AutoSize = true;
-            this.RPR_clinicName.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RPR_clinicName.Location = new System.Drawing.Point(48, 23);
-            this.RPR_clinicName.Name = "RPR_clinicName";
-            this.RPR_clinicName.Size = new System.Drawing.Size(140, 29);
-            this.RPR_clinicName.TabIndex = 2;
-            this.RPR_clinicName.Text = "Clinic Type";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Registration No:";
-            // 
-            // RPR_RegistrationNo_tbx
-            // 
-            this.RPR_RegistrationNo_tbx.Font = new System.Drawing.Font("Arial", 15.75F);
-            this.RPR_RegistrationNo_tbx.Location = new System.Drawing.Point(241, 118);
-            this.RPR_RegistrationNo_tbx.Name = "RPR_RegistrationNo_tbx";
-            this.RPR_RegistrationNo_tbx.Size = new System.Drawing.Size(231, 32);
-            this.RPR_RegistrationNo_tbx.TabIndex = 4;
             // 
             // RPR_assign_btn
             // 
@@ -95,6 +65,36 @@
             this.RPR_assign_btn.Text = "Assign";
             this.RPR_assign_btn.UseVisualStyleBackColor = false;
             this.RPR_assign_btn.Click += new System.EventHandler(this.RPR_assign_btn_Click);
+            // 
+            // RPR_RegistrationNo_tbx
+            // 
+            this.RPR_RegistrationNo_tbx.Font = new System.Drawing.Font("Arial", 15.75F);
+            this.RPR_RegistrationNo_tbx.Location = new System.Drawing.Point(241, 118);
+            this.RPR_RegistrationNo_tbx.Name = "RPR_RegistrationNo_tbx";
+            this.RPR_RegistrationNo_tbx.Size = new System.Drawing.Size(231, 32);
+            this.RPR_RegistrationNo_tbx.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(49, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Registration No:";
+            // 
+            // RPR_clinicName
+            // 
+            this.RPR_clinicName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.RPR_clinicName.AutoSize = true;
+            this.RPR_clinicName.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RPR_clinicName.Location = new System.Drawing.Point(48, 23);
+            this.RPR_clinicName.Name = "RPR_clinicName";
+            this.RPR_clinicName.Size = new System.Drawing.Size(140, 29);
+            this.RPR_clinicName.TabIndex = 2;
+            this.RPR_clinicName.Text = "Clinic Type";
             // 
             // Reception_AppontmentRegister
             // 
