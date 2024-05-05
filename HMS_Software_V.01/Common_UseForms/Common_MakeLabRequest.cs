@@ -400,7 +400,7 @@ namespace HMS_Software_V._01.Common_UseForms
                 connect.Open();
 
                 // Create a Lab Request record for  Lab_Request1 table ------------------------
-                string query1 = "INSERT INTO Lab_Reques1t (LR_InvestigationID, LR_SpecimenID, PatientMedicalEvent_ID, LR_InvestigationName," +
+                string query1 = "INSERT INTO Lab_Request1 (LR_InvestigationID, LR_SpecimenID, PatientMedicalEvent_ID, LR_InvestigationName," +
                     " LR_SpecimenName, LR_LabelNumber, Patient_ID, Doctor_ID)" +
 
                     " VALUES (@investigationID,@specimenID, @patientMedicalEventID, @investigationName," +

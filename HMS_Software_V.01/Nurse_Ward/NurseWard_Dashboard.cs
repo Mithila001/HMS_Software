@@ -69,14 +69,15 @@ namespace HMS_Software_V._01.Nurse_Ward
 
 
                     // Create a SQL query to count the records matching today's date
-                    string query2 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByNurse = @Is_VisitedByNurse";
+                    string query2 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE CONVERT(date, Visite_Date) = @TodayDate AND Is_VisitedByNurse = @Is_VisitedByNurse OR Is_VisitedByNurse IS NULL";
 
                     // Create a command with the SQL query and the connection
                     using (SqlCommand command = new SqlCommand(query2, connect))
                     {
                         command.Parameters.AddWithValue("@Is_VisitedByNurse", 0);
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
 
-                        Dashboard_TotalPatients = (int)command.ExecuteScalar();
+                        Dashboard_TotalPending = (int)command.ExecuteScalar();
 
 
                     }

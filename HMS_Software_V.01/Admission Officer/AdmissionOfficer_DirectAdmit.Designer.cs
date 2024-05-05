@@ -440,6 +440,7 @@
             this.Name = "AdmissionOfficer_DirectAdmit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmissionOfficer_DirectAdmit";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdmissionOfficer_DirectAdmit_FormClosed);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel7_2nd.ResumeLayout(false);

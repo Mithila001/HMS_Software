@@ -39,7 +39,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                 using (SqlConnection connect = new SqlConnection(MyCommonConnecString.ConnectionString))
                 {
                     connect.Open();
-
+                    Console.WriteLine("Monitor Request ID: "+ P_MonitorRequest_ID);
                     // Load Monitor request Details ------------------------------------------------------------------------
                     string query = "SELECT MR_Info" +
                                 " FROM Monitor_Request WHERE MonitorRequest_ID = @MonitorRequest_ID";

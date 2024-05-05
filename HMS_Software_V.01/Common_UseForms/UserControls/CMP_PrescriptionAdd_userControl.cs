@@ -15,6 +15,7 @@ namespace HMS_Software_V._01.Common_UseForms.UserControls
         public CMP_PrescriptionAdd_userControl()
         {
             InitializeComponent();
+            CMP_UserCntr_add_btn.Visible = false;
         }
     }
 }

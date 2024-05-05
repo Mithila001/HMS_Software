@@ -250,5 +250,12 @@ namespace HMS_Software_V._01.Doctor_OPD
             }
 
         }
+
+        private void DoctorCheck_Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UserLogin userLogin = new UserLogin();
+            userLogin.Show();
+            this.Hide();
+        }
     }
 }

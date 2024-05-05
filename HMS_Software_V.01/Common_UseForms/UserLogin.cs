@@ -25,7 +25,7 @@ namespace HMS_Software_V._01.Common_UseForms
         {
             InitializeComponent();
 
-            comboB_selcePosition.SelectedIndex = 0; //Doctor Selected in ComboBox
+            comboB_selcePosition.SelectedIndex = 0; //Default ComboBox Selection --> Doctor
             selectedPosition = "Doctor"; //Doctor Selected assigned to variable
         }
 
@@ -34,7 +34,8 @@ namespace HMS_Software_V._01.Common_UseForms
         private void userLogin_btn_Click(object sender, EventArgs e)
         {
 
-         
+            // Combo Box check -------------------------------------------------------------------------------------------------------------------
+
             if (comboB_selcePosition.Text == "Doctor")
             {
                 if (comboB_selceUnit.SelectedItem == null)
@@ -54,12 +55,9 @@ namespace HMS_Software_V._01.Common_UseForms
                 }
                 else
                 {
-                    // All conditions are met
+                    // If All conditions are met
                     WardNumber = int.Parse(wardNumber_tbx.Text);
                     unit = comboB_selceUnit.Text;
-
-                    /* Console.WriteLine("Unit selected: " + comboB_selceUnit.SelectedItem.ToString());
-                     Console.WriteLine("Ward number entered: " + wardNumber);*/
 
                 }
 
@@ -78,12 +76,9 @@ namespace HMS_Software_V._01.Common_UseForms
                 }
                 else
                 {
-                    // All conditions are met
+                    //If All conditions are met
                     WardNumber = int.Parse(wardNumber_tbx.Text);
                     unit = comboB_selceUnit.Text;
-
-                    /* Console.WriteLine("Unit selected: " + comboB_selceUnit.SelectedItem.ToString());
-                     Console.WriteLine("Ward number entered: " + wardNumber);*/
 
                 }
 
@@ -94,12 +89,16 @@ namespace HMS_Software_V._01.Common_UseForms
             }
 
 
+            // Tex box Check -------------------------------------------------------------------------------------------------------------------
+
+
             if (!string.IsNullOrWhiteSpace(useName_tbx.Text) && !string.IsNullOrEmpty(userPassword_tbx.Text))
             {
                 try
                 {
                     connect.Open();
 
+                    // Getting Login User Details
                     string query = "SELECT UserID, UserPosition, UserName, UserPassword FROM UserLogin";
 
                     using (SqlCommand sqlCommand = new SqlCommand(query, connect))
@@ -125,7 +124,8 @@ namespace HMS_Software_V._01.Common_UseForms
                             }
 
                         }
-                        // Check if login was successful
+
+                        // Check if login was successful ---------------------------------------------------------------------------------------
                         if (loginSuccessful)
                         {
                             MessageBox.Show("Login Successful", "Infromation Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -140,8 +140,8 @@ namespace HMS_Software_V._01.Common_UseForms
                             {
                                 if (unit == "Clinic")
                                 {
-                                    DoctorWard_Dashboard doctorWard_Dashboard = new DoctorWard_Dashboard(userID, WardNumber);
-                                    doctorWard_Dashboard.Show();
+                                    DoctorCheck_Dashboard doctorOPD = new DoctorCheck_Dashboard(userID, unit, WardNumber);
+                                    doctorOPD.Show();
                                     this.Hide();
 
 
@@ -186,7 +186,7 @@ namespace HMS_Software_V._01.Common_UseForms
                                 admissionOfficer_Dashboard.Show();
                                 this.Hide();
                             }
-                            else
+                            else // To Lab_Managment
                             {
                                 Lab_Dashboard lab_Dashboard = new Lab_Dashboard();
                                 lab_Dashboard.Show();
@@ -194,18 +194,13 @@ namespace HMS_Software_V._01.Common_UseForms
 
                             }
 
-                            /*UserLogin userLogin = new UserLogin();
-                            userLogin.Close();*/
                         }
-
                         else
                         {
                             MessageBox.Show("Invalid Username or Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                     }
-                    
-
 
                 }
                 catch (Exception ex)
@@ -218,21 +213,18 @@ namespace HMS_Software_V._01.Common_UseForms
                 {
                     connect.Close();
                 }
-
             }
             else
             {
                 MessageBox.Show("Error", "Error Messsage", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
 
-            
         }
 
 
         private string selectedPosition;
 
-        // When Positon is selected 
+        // To Hide/Unhide Texbox according to the Position
         private void comboB_selcePosition_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboB_selcePosition.Text == "Doctor")

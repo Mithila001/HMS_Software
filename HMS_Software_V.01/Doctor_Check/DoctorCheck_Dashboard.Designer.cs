@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_RD_top = new System.Windows.Forms.Panel();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.DisplayUnittype_title = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.DCD_doctor_position_lbl = new System.Windows.Forms.Label();
@@ -56,15 +57,14 @@
             this.DOPD_date = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.DOPD_time = new System.Windows.Forms.Label();
-            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -105,6 +105,17 @@
             this.panel_RD_top.Name = "panel_RD_top";
             this.panel_RD_top.Size = new System.Drawing.Size(1002, 94);
             this.panel_RD_top.TabIndex = 2;
+            // 
+            // pictureBox_LOGO
+            // 
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(893, -3);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox_LOGO.TabIndex = 12;
+            this.pictureBox_LOGO.TabStop = false;
             // 
             // DisplayUnittype_title
             // 
@@ -349,8 +360,7 @@
             // 
             // DCD_enterPatientID_tbx
             // 
-            this.DCD_enterPatientID_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DCD_enterPatientID_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.DCD_enterPatientID_tbx.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DCD_enterPatientID_tbx.Location = new System.Drawing.Point(30, 107);
             this.DCD_enterPatientID_tbx.MaximumSize = new System.Drawing.Size(500, 4);
@@ -424,17 +434,6 @@
             this.DOPD_time.Text = "Time";
             this.DOPD_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox_LOGO
-            // 
-            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
-            this.pictureBox_LOGO.Location = new System.Drawing.Point(893, -3);
-            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
-            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox_LOGO.TabIndex = 12;
-            this.pictureBox_LOGO.TabStop = false;
-            // 
             // DoctorCheck_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,9 +444,11 @@
             this.Name = "DoctorCheck_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorOPD_Dashboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoctorCheck_Dashboard_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel_RD_top.ResumeLayout(false);
             this.panel_RD_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -458,7 +459,6 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -32,6 +32,7 @@
             this.flowLayoutPanel_RD_mid = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel_RD_left = new System.Windows.Forms.FlowLayoutPanel();
             this.panel_RD_top = new System.Windows.Forms.Panel();
+            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.time_lbl = new System.Windows.Forms.Label();
             this.date_lbl = new System.Windows.Forms.Label();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -53,16 +54,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel_topRight = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox_LOGO = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel_R_D.SuspendLayout();
             this.panel_RD_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.panel_RD_midTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_RD_midBot.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel_topMid.SuspendLayout();
             this.panel_topRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel_R_D
@@ -141,6 +141,17 @@
             this.panel_RD_top.Name = "panel_RD_top";
             this.panel_RD_top.Size = new System.Drawing.Size(1002, 94);
             this.panel_RD_top.TabIndex = 1;
+            // 
+            // pictureBox_LOGO
+            // 
+            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
+            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
+            this.pictureBox_LOGO.Location = new System.Drawing.Point(893, -3);
+            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
+            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 102);
+            this.pictureBox_LOGO.TabIndex = 12;
+            this.pictureBox_LOGO.TabStop = false;
             // 
             // time_lbl
             // 
@@ -272,6 +283,7 @@
             // 
             // flowLayoutPanel_RD_right
             // 
+            this.flowLayoutPanel_RD_right.AutoScroll = true;
             this.flowLayoutPanel_RD_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.flowLayoutPanel_RD_right.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel_RD_right.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -405,17 +417,6 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Discharging Patients";
             // 
-            // pictureBox_LOGO
-            // 
-            this.pictureBox_LOGO.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox_LOGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
-            this.pictureBox_LOGO.Image = global::HMS_Software_V._01.Properties.Resources.HMS_Logo4_100_;
-            this.pictureBox_LOGO.Location = new System.Drawing.Point(893, -3);
-            this.pictureBox_LOGO.Name = "pictureBox_LOGO";
-            this.pictureBox_LOGO.Size = new System.Drawing.Size(100, 102);
-            this.pictureBox_LOGO.TabIndex = 12;
-            this.pictureBox_LOGO.TabStop = false;
-            // 
             // Reception_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +430,7 @@
             this.tableLayoutPanel_R_D.ResumeLayout(false);
             this.panel_RD_top.ResumeLayout(false);
             this.panel_RD_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.panel_RD_midTop.ResumeLayout(false);
             this.panel_RD_midTop.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -439,7 +441,6 @@
             this.panel_topMid.PerformLayout();
             this.panel_topRight.ResumeLayout(false);
             this.panel_topRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LOGO)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,5 +1,6 @@
 ﻿using HMS_Software_V._01.Admission_Officer;
 using HMS_Software_V._01.Admission_Officer.UserControls;
+using HMS_Software_V._01.Common_UseForms;
 using HMS_Software_V._01.Doctor_OPD.UserControls;
 using System;
 using System.Collections;
@@ -50,10 +51,10 @@ namespace HMS_Software_V._01.Admition_Officer
                 {
                     connect.Open();
 
-                    // Create a SQL query to count the records matching today's date
+                    // Find Total Admitted Patient Count
                     string query1 = "SELECT COUNT(*) FROM Admitted_Patients";
 
-                    // Create a command with the SQL query and the connection
+                   
                     using (SqlCommand command = new SqlCommand(query1, connect))
                     {
                         command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
@@ -97,6 +98,7 @@ namespace HMS_Software_V._01.Admition_Officer
                     using (SqlCommand command = new SqlCommand(query4, connect))
                     {
                         command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
+                        command.Parameters.AddWithValue("@Is_Admitted", 1);
 
                         Admitted_TodayCount = (int)command.ExecuteScalar();
 
@@ -351,6 +353,13 @@ namespace HMS_Software_V._01.Admition_Officer
                 MessageBox.Show("Add Patient RID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void AdmissionOfficer_Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UserLogin userLogin = new UserLogin();
+            userLogin.Show();
+            this.Hide();
         }
     }
 }

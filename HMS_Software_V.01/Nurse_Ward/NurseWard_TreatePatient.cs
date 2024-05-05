@@ -95,6 +95,11 @@ namespace HMS_Software_V._01.Nurse_Ward
                         nWTP_PatientMedicalEvents2.NWTPUC_RequestType.Text = userDetails.JSON_RequestType;
                         nWTP_PatientMedicalEvents2.NWTPUC_RequestDetaills.Text = userDetails.JSON_RequestDetails;
 
+                        if(nWTP_PatientMedicalEvents2.NWTPUC_RequestType.Text == "Lab Request")
+                        {
+                            nWTP_PatientMedicalEvents2.NWTPUC_View_btn.Visible = false;
+                        }
+
                       
                         P_MedicalEvents_FlowLP.Controls.Add(nWTP_PatientMedicalEvents2);
 
@@ -157,6 +162,11 @@ namespace HMS_Software_V._01.Nurse_Ward
                     string UC_JSON__RequestType = nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text;
                     bool UC_JSON_IsCompleted = nWTP_PatientMedicalEvents.NWTPUC_checkBox.Checked;
                     string UC_JSON_RequestDetails = nWTP_PatientMedicalEvents.NWTPUC_RequestDetaills.Text;
+
+                    if (nWTP_PatientMedicalEvents.NWTPUC_RequestType.Text == "Lab Request")
+                    {
+                        nWTP_PatientMedicalEvents.NWTPUC_View_btn.Visible = false;
+                    }
 
                     // Create an instance of UserControlDetails and add it to the list
                     var userDetails = new UserControlDetails

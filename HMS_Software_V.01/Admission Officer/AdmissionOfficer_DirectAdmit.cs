@@ -134,28 +134,31 @@ namespace HMS_Software_V._01.Admission_Officer
         {
             if (AODA_switch_Ward.Checked)
             {
-                AODA_switch_Ward.Checked = false;
-                AODA_switch_Ward.Checked = false;
+                AODA_switch_ETU.Checked = false;
+                AODA_switch_PCU.Checked = false;
+                AODA_switch_Ward.Checked = true;
             }
 
         }
 
         private void AODA_switch_ETU_CheckedChanged(object sender, EventArgs e)
         {
-            if (AODA_switch_Ward.Checked)
+            if (AODA_switch_ETU.Checked)
             {
                 AODA_switch_Ward.Checked = false;
-                AODA_switch_Ward.Checked = false;
+                AODA_switch_PCU.Checked = false;
+                AODA_switch_ETU.Checked = true;
             }
 
         }
 
         private void AODA_switch_PCU_CheckedChanged(object sender, EventArgs e)
         {
-            if (AODA_switch_Ward.Checked)
+            if (AODA_switch_PCU.Checked)
             {
                 AODA_switch_Ward.Checked = false;
-                AODA_switch_Ward.Checked = false;
+                AODA_switch_ETU.Checked = false;
+                AODA_switch_PCU.Checked = true;
             }
 
         }
@@ -288,6 +291,13 @@ namespace HMS_Software_V._01.Admission_Officer
             {
                 MessageBox.Show("Fill the note", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void AdmissionOfficer_DirectAdmit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            AdmissionOfficer_Dashboard admissionOfficer_Dashboard = new AdmissionOfficer_Dashboard(AdmissionOfficerID);
+            admissionOfficer_Dashboard.Show();
+            this.Hide();
         }
     }
 }

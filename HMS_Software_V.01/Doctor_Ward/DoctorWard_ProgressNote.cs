@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -60,6 +61,9 @@ namespace HMS_Software_V._01.Doctor_Ward
             this.PatientAge = SWP_PatientAge;
             this.PatientGender = SWP_PatientGender;
 
+
+            DWPN_P_ViewHistory_btn.Visible = false;
+            label20.Visible = false;
 
             MyLoadBasicDetails();
             MyCreateMedicalEvetn();
@@ -469,12 +473,14 @@ namespace HMS_Software_V._01.Doctor_Ward
                 {
                     connect.Open();
 
-                    string query1 = "INSERT INTO Patient_Discharge (Patient_RID, Doctor_ID) VALUES (@Patient_RID, @Doctor_ID)";
+                    string query1 = "INSERT INTO Patient_Discharge (Patient_RID, Doctor_ID, Patient_Name, WardNumber) VALUES (@Patient_RID, @Doctor_ID, @Patient_Name, @WardNumber)";
                     using (SqlCommand command = new SqlCommand(query1, connect))
                     {
                         // Add parameters
                         command.Parameters.AddWithValue("@Patient_RID", PatientRID);
                         command.Parameters.AddWithValue("@Doctor_ID", DoctorID);
+                        command.Parameters.AddWithValue("@Patient_Name", PatienName);
+                        command.Parameters.AddWithValue("@WardNumber", WardID);
 
                         // Execute the query
                         int rowsAffected = command.ExecuteNonQuery();

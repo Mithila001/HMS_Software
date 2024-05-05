@@ -433,6 +433,7 @@
             this.Name = "AdmissionOfficer_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmissionOfficer_Dashboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdmissionOfficer_Dashboard_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

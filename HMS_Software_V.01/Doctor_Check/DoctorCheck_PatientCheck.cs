@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace HMS_Software_V._01.Doctor_OPD
 
 
 
-
+        
 
 
 
@@ -51,7 +52,8 @@ namespace HMS_Software_V._01.Doctor_OPD
             DOPDPC_docPosition.Text = doctorPosition;
             DOPDPC_docID.Text = userID.ToString();
 
-           
+            DOPDPC_viewPatientProfiel.Visible = false;
+            label1.Visible = false;
 
             MyGetPatientDetails();
             MyStartPatientMedicalEvent();

@@ -53,10 +53,11 @@ namespace HMS_Software_V._01.Doctor_Ward
                 {
                     connect.Open();
 
-                    string query1 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByDoctor = @Is_VisitedByDoctor";
+                    string query1 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByDoctor = @Is_VisitedByDoctor AND CONVERT(date, Visite_Date) = @TodayDate";
                     using (SqlCommand command = new SqlCommand(query1, connect))
                     {
                         command.Parameters.AddWithValue("@Is_VisitedByDoctor", 1);
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
                         IsCompletedCount = (int)command.ExecuteScalar();
                     }
 
@@ -67,11 +68,12 @@ namespace HMS_Software_V._01.Doctor_Ward
                         IsNotCompledCount = (int)command.ExecuteScalar();
                     }
 
-                    string query3 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByDoctor = @Is_VisitedByDoctor AND Visited_Doctor_ID = @Visited_Doctor_ID";
+                    string query3 = "SELECT COUNT(*) FROM Admitted_Patients_VisitEvent WHERE Is_VisitedByDoctor = @Is_VisitedByDoctor AND Visited_Doctor_ID = @Visited_Doctor_ID AND CONVERT(date, Visite_Date) = @TodayDate";
                     using (SqlCommand command = new SqlCommand(query3, connect))
                     {
                         command.Parameters.AddWithValue("@Is_VisitedByDoctor", 1);
                         command.Parameters.AddWithValue("@Visited_Doctor_ID", DoctorID);
+                        command.Parameters.AddWithValue("@TodayDate", DateTime.Today);
                         IsCompletedByDoctorCount = (int)command.ExecuteScalar();
                     }
                 }
@@ -217,7 +219,7 @@ namespace HMS_Software_V._01.Doctor_Ward
                                     PatientAge = reader["P_Age"].ToString();
                                     PatientGender = reader["P_Gender"].ToString();
                                     /*Console.WriteLine("Patient Gender: " + PatientCondition);*/
-                                    PatientCondition = "Not Added Yet!!!";
+                                    PatientCondition = reader["P_Condition"].ToString();
                                     IsVisitedByDoctor = (bool)reader["Is_VisitedByDoctor"];
                                     PatientVisitCount = (int)reader["Visite_Round"];
                                     WardName = reader["P_Ward"].ToString();

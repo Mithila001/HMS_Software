@@ -30,10 +30,6 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_RA_top = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_R_A_left = new System.Windows.Forms.FlowLayoutPanel();
@@ -63,10 +59,6 @@
             // 
             this.panel_RA_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panel_RA_top, 2);
-            this.panel_RA_top.Controls.Add(this.label5);
-            this.panel_RA_top.Controls.Add(this.label4);
-            this.panel_RA_top.Controls.Add(this.label3);
-            this.panel_RA_top.Controls.Add(this.materialDivider1);
             this.panel_RA_top.Controls.Add(this.label2);
             this.panel_RA_top.Controls.Add(this.label1);
             this.panel_RA_top.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -74,52 +66,6 @@
             this.panel_RA_top.Name = "panel_RA_top";
             this.panel_RA_top.Size = new System.Drawing.Size(1002, 94);
             this.panel_RA_top.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(677, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 24);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Time";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(427, 58);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Time";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(427, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Date";
-            // 
-            // materialDivider1
-            // 
-            this.materialDivider1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.materialDivider1.BackColor = System.Drawing.Color.Gray;
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(392, 8);
-            this.materialDivider1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(3, 80);
-            this.materialDivider1.TabIndex = 3;
-            this.materialDivider1.Text = "materialDivider1";
             // 
             // label2
             // 
@@ -183,10 +129,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel_RA_top;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_R_A_left;

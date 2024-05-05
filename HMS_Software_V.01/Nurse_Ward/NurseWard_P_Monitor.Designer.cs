@@ -31,11 +31,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.NWPM_ShowDetails = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NWPM_P_RID = new System.Windows.Forms.Label();
             this.NWPM_DoctorName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.NWPM_Save_btn = new System.Windows.Forms.Button();
             this.NWPM_richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.NWPM_P_RID = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +61,7 @@
             // 
             // NWPM_ShowDetails
             // 
+            this.NWPM_ShowDetails.AutoSize = true;
             this.NWPM_ShowDetails.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NWPM_ShowDetails.Location = new System.Drawing.Point(5, 70);
             this.NWPM_ShowDetails.Margin = new System.Windows.Forms.Padding(5, 10, 3, 0);
@@ -80,6 +81,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1008, 60);
             this.panel1.TabIndex = 0;
+            // 
+            // NWPM_P_RID
+            // 
+            this.NWPM_P_RID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.NWPM_P_RID.AutoSize = true;
+            this.NWPM_P_RID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NWPM_P_RID.Location = new System.Drawing.Point(174, 19);
+            this.NWPM_P_RID.Name = "NWPM_P_RID";
+            this.NWPM_P_RID.Size = new System.Drawing.Size(134, 24);
+            this.NWPM_P_RID.TabIndex = 7;
+            this.NWPM_P_RID.Text = "Patient RID: ";
             // 
             // NWPM_DoctorName
             // 
@@ -133,17 +145,6 @@
             this.NWPM_richTextBox1.TabIndex = 0;
             this.NWPM_richTextBox1.Text = "";
             // 
-            // NWPM_P_RID
-            // 
-            this.NWPM_P_RID.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NWPM_P_RID.AutoSize = true;
-            this.NWPM_P_RID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NWPM_P_RID.Location = new System.Drawing.Point(174, 19);
-            this.NWPM_P_RID.Name = "NWPM_P_RID";
-            this.NWPM_P_RID.Size = new System.Drawing.Size(134, 24);
-            this.NWPM_P_RID.TabIndex = 7;
-            this.NWPM_P_RID.Text = "Patient RID: ";
-            // 
             // NurseWard_P_Monitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +156,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NurseWard_P_Monitor";
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
