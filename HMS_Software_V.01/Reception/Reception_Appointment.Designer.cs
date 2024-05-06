@@ -31,7 +31,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_RA_top = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_R_A_left = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPflowLayoutPanel_R_A_right = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -48,11 +47,12 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPflowLayoutPanel_R_A_right, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 537);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1344, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel_RA_top
@@ -60,11 +60,11 @@
             this.panel_RA_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.tableLayoutPanel1.SetColumnSpan(this.panel_RA_top, 2);
             this.panel_RA_top.Controls.Add(this.label2);
-            this.panel_RA_top.Controls.Add(this.label1);
             this.panel_RA_top.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_RA_top.Location = new System.Drawing.Point(3, 3);
+            this.panel_RA_top.Location = new System.Drawing.Point(4, 4);
+            this.panel_RA_top.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_RA_top.Name = "panel_RA_top";
-            this.panel_RA_top.Size = new System.Drawing.Size(1002, 94);
+            this.panel_RA_top.Size = new System.Drawing.Size(1336, 115);
             this.panel_RA_top.TabIndex = 2;
             // 
             // label2
@@ -72,48 +72,41 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 60);
+            this.label2.Location = new System.Drawing.Point(27, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 22);
+            this.label2.Size = new System.Drawing.Size(120, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Reception";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Reception Name";
             // 
             // flowLayoutPanel_R_A_left
             // 
             this.flowLayoutPanel_R_A_left.AutoScroll = true;
             this.flowLayoutPanel_R_A_left.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_R_A_left.Location = new System.Drawing.Point(3, 103);
+            this.flowLayoutPanel_R_A_left.Location = new System.Drawing.Point(4, 127);
+            this.flowLayoutPanel_R_A_left.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel_R_A_left.Name = "flowLayoutPanel_R_A_left";
-            this.flowLayoutPanel_R_A_left.Size = new System.Drawing.Size(422, 431);
+            this.flowLayoutPanel_R_A_left.Size = new System.Drawing.Size(562, 530);
             this.flowLayoutPanel_R_A_left.TabIndex = 3;
             // 
             // flowLayoutPflowLayoutPanel_R_A_right
             // 
             this.flowLayoutPflowLayoutPanel_R_A_right.AutoScroll = true;
             this.flowLayoutPflowLayoutPanel_R_A_right.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPflowLayoutPanel_R_A_right.Location = new System.Drawing.Point(431, 103);
+            this.flowLayoutPflowLayoutPanel_R_A_right.Location = new System.Drawing.Point(574, 127);
+            this.flowLayoutPflowLayoutPanel_R_A_right.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPflowLayoutPanel_R_A_right.Name = "flowLayoutPflowLayoutPanel_R_A_right";
-            this.flowLayoutPflowLayoutPanel_R_A_right.Size = new System.Drawing.Size(574, 431);
+            this.flowLayoutPflowLayoutPanel_R_A_right.Size = new System.Drawing.Size(766, 530);
             this.flowLayoutPflowLayoutPanel_R_A_right.TabIndex = 4;
             // 
             // Reception_Appointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.ClientSize = new System.Drawing.Size(1344, 661);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(1024, 576);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1359, 698);
             this.Name = "Reception_Appointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reception_Appointment";
@@ -130,7 +123,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel_RA_top;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_R_A_left;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPflowLayoutPanel_R_A_right;
     }

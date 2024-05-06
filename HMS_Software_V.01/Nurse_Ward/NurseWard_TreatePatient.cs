@@ -70,7 +70,7 @@ namespace HMS_Software_V._01.Nurse_Ward
         private bool isMatchFoundFromJSON = false;
         private void MyReadJSON()
         {
-            string json = File.ReadAllText(@"E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json");
+            string json = File.ReadAllText(@"D:\Programming\Github\Repositories - Local\HMS\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json");
 
             List<UserControlDetails> userControlDetailsList = JsonConvert.DeserializeObject<List<UserControlDetails>>(json);
 
@@ -187,7 +187,7 @@ namespace HMS_Software_V._01.Nurse_Ward
             string json = JsonConvert.SerializeObject(NWPC_userControlDetails);
 
             // Write the JSON data to a file
-            File.WriteAllText(@"E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json", json);
+            File.WriteAllText(@"D:\Programming\Github\Repositories - Local\HMS\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json", json);
 
         }
 
@@ -769,7 +769,7 @@ namespace HMS_Software_V._01.Nurse_Ward
                             //Remove JSON Data 
 
                             // Read the JSON data from the file
-                            string filePath = @"E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json";
+                            string filePath = @"D:\Programming\Github\Repositories - Local\HMS\HMS_Software_V.01\Nurse_Ward\JSON file\NWPC_userControlDetails.json";
                             string json = File.ReadAllText(filePath);
 
                             // Deserialize JSON data into a list of UserControlDetails

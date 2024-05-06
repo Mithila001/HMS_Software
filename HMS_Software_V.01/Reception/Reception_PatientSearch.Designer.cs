@@ -55,12 +55,13 @@
             this.tableLayoutPanel1.Controls.Add(this.panel_R_PatS_bot, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 537);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1344, 661);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel_R_PatS_top
@@ -68,9 +69,10 @@
             this.panel_R_PatS_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.panel_R_PatS_top.Controls.Add(this.label1);
             this.panel_R_PatS_top.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_R_PatS_top.Location = new System.Drawing.Point(3, 3);
+            this.panel_R_PatS_top.Location = new System.Drawing.Point(4, 4);
+            this.panel_R_PatS_top.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_R_PatS_top.Name = "panel_R_PatS_top";
-            this.panel_R_PatS_top.Size = new System.Drawing.Size(1002, 64);
+            this.panel_R_PatS_top.Size = new System.Drawing.Size(1336, 78);
             this.panel_R_PatS_top.TabIndex = 0;
             // 
             // label1
@@ -78,9 +80,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 18);
+            this.label1.Location = new System.Drawing.Point(43, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 29);
+            this.label1.Size = new System.Drawing.Size(224, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Search Patient";
             // 
@@ -90,9 +93,10 @@
             this.panel_R_PatS_mid.Controls.Add(this.R_PaSearch_combobox);
             this.panel_R_PatS_mid.Controls.Add(this.R_PaSearch_tbx);
             this.panel_R_PatS_mid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_R_PatS_mid.Location = new System.Drawing.Point(3, 73);
+            this.panel_R_PatS_mid.Location = new System.Drawing.Point(4, 90);
+            this.panel_R_PatS_mid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_R_PatS_mid.Name = "panel_R_PatS_mid";
-            this.panel_R_PatS_mid.Size = new System.Drawing.Size(1002, 57);
+            this.panel_R_PatS_mid.Size = new System.Drawing.Size(1336, 70);
             this.panel_R_PatS_mid.TabIndex = 1;
             // 
             // R_PaSearch_combobox
@@ -107,9 +111,10 @@
             this.R_PaSearch_combobox.Items.AddRange(new object[] {
             "By ID",
             "By NIC"});
-            this.R_PaSearch_combobox.Location = new System.Drawing.Point(843, 18);
+            this.R_PaSearch_combobox.Location = new System.Drawing.Point(1124, 22);
+            this.R_PaSearch_combobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.R_PaSearch_combobox.Name = "R_PaSearch_combobox";
-            this.R_PaSearch_combobox.Size = new System.Drawing.Size(121, 24);
+            this.R_PaSearch_combobox.Size = new System.Drawing.Size(160, 28);
             this.R_PaSearch_combobox.TabIndex = 49;
             // 
             // R_PaSearch_tbx
@@ -117,21 +122,24 @@
             this.R_PaSearch_tbx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.R_PaSearch_tbx.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R_PaSearch_tbx.Location = new System.Drawing.Point(585, 17);
-            this.R_PaSearch_tbx.MaximumSize = new System.Drawing.Size(500, 50);
-            this.R_PaSearch_tbx.MinimumSize = new System.Drawing.Size(241, 20);
+            this.R_PaSearch_tbx.Location = new System.Drawing.Point(780, 21);
+            this.R_PaSearch_tbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.R_PaSearch_tbx.MaximumSize = new System.Drawing.Size(665, 50);
+            this.R_PaSearch_tbx.MinimumSize = new System.Drawing.Size(320, 20);
             this.R_PaSearch_tbx.Name = "R_PaSearch_tbx";
-            this.R_PaSearch_tbx.Size = new System.Drawing.Size(252, 25);
+            this.R_PaSearch_tbx.Size = new System.Drawing.Size(335, 29);
             this.R_PaSearch_tbx.TabIndex = 48;
+            this.R_PaSearch_tbx.TextChanged += new System.EventHandler(this.R_PaSearch_tbx_TextChanged);
             // 
             // panel_R_PatS_bot
             // 
             this.panel_R_PatS_bot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(254)))), ((int)(((byte)(249)))));
             this.panel_R_PatS_bot.Controls.Add(this.dataGridView_R_PaSearch);
             this.panel_R_PatS_bot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_R_PatS_bot.Location = new System.Drawing.Point(3, 136);
+            this.panel_R_PatS_bot.Location = new System.Drawing.Point(4, 168);
+            this.panel_R_PatS_bot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_R_PatS_bot.Name = "panel_R_PatS_bot";
-            this.panel_R_PatS_bot.Size = new System.Drawing.Size(1002, 398);
+            this.panel_R_PatS_bot.Size = new System.Drawing.Size(1336, 489);
             this.panel_R_PatS_bot.TabIndex = 2;
             // 
             // dataGridView_R_PaSearch
@@ -152,6 +160,7 @@
             this.dataGridView_R_PaSearch.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_R_PaSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_R_PaSearch.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_R_PaSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView_R_PaSearch.Name = "dataGridView_R_PaSearch";
             this.dataGridView_R_PaSearch.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -162,16 +171,18 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView_R_PaSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView_R_PaSearch.Size = new System.Drawing.Size(1002, 398);
+            this.dataGridView_R_PaSearch.RowHeadersWidth = 51;
+            this.dataGridView_R_PaSearch.Size = new System.Drawing.Size(1336, 489);
             this.dataGridView_R_PaSearch.TabIndex = 0;
             // 
             // Reception_PatientSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.ClientSize = new System.Drawing.Size(1344, 661);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(1024, 576);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1359, 698);
             this.Name = "Reception_PatientSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reception_PatientSearch";

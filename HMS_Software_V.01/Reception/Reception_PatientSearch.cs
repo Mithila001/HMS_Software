@@ -82,5 +82,35 @@ namespace HMS_Software_V._01.Reception
             reception_Dashboard.Show();
             this.Hide();
         }
+
+        private void R_PaSearch_tbx_TextChanged(object sender, EventArgs e)
+        {
+            SearchData(R_PaSearch_tbx.Text);
+        }
+
+
+
+        private void SearchData(string searchTerm)
+        {
+
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                if (R_PaSearch_tbx.Text == "By ID")
+                {
+
+                    bs.Filter = $"Convert(Patient_ID, 'System.String') like '%{searchTerm}%'"; // Becouse ID is an int ??
+                }
+                else
+                {
+
+                    bs.Filter = $"P_NIC like '%{searchTerm}%'";
+                }
+            }
+            else
+            {
+                // If searchTerm is empty or null, clear the filter
+                bs.Filter = string.Empty;
+            }
+        }
     }
 }

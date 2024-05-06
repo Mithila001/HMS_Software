@@ -139,3 +139,6 @@ E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.NurseWard_P_Medication.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.NurseWard_P_Monitor.resources
 E:\Programming\Github\HMS_Software_V.01\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_Ward.DoctorWard_Monitor.resources
+D:\Programming\Github\Repositories - Local\HMS\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Doctor_Ward.DoctorWard_Monitor.resources
+D:\Programming\Github\Repositories - Local\HMS\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.NurseWard_P_Medication.resources
+D:\Programming\Github\Repositories - Local\HMS\HMS_Software_V.01\obj\Debug\HMS_Software_V._01.Nurse_Ward.NurseWard_P_Monitor.resources
